@@ -1,0 +1,21 @@
+# Configuração pessoal, credenciais e arquivos de ambiente
+.env
+.env.*
+!.env.example
+.aws/
+.codex/
+.agents/
+.vscode/
+
+# Arquivos locais e temporários
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.tmp
+*.bak
+~$*
+
+# Artefatos de ferramentas; este repositório contém apenas documentação
+node_modules/
+.cache/
+tmp/
