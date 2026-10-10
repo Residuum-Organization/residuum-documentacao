@@ -7,7 +7,8 @@ Repositório dedicado aos documentos do projeto Residuum. A finalidade é manter
 1. Leia a [visão do projeto](docs/visao/visao-do-projeto.md).
 2. Consulte o [levantamento de requisitos do MVP — V6](docs/requisitos/requisitos-mvp-v6.md), documento consolidado atual para validação da equipe.
 3. Use a seção **Pendências de decisão** da V6 para identificar as questões ainda abertas.
-4. Consulte as [tasks de desenvolvimento do MVP](docs/planejamento/tasks-desenvolvimento-mvp-v1.md), organizadas por perfil e jornada, para diagnosticar o MVP e refinar as entregas da equipe.
+4. Leia o [diagnóstico comparativo do MVP do estágio](docs/diagnostico/comparativo-mvp-estagio-v1.md), com evidências do frontend/backend, resultados locais e adequações necessárias.
+5. Consulte as [tasks de desenvolvimento do MVP](docs/planejamento/tasks-desenvolvimento-mvp-v1.md), organizadas por perfil e jornada, e refine as entregas usando o diagnóstico.
 
 A V6 distingue decisões confirmadas, conteúdo herdado e propostas para validação. Os status de entrega presentes nos arquivos históricos não comprovam o funcionamento do MVP.
 
@@ -26,6 +27,8 @@ residuum-documentacao/
     │   └── requisitos-mvp-v6.md
     ├── planejamento/
     │   └── tasks-desenvolvimento-mvp-v1.md
+    ├── diagnostico/
+    │   └── comparativo-mvp-estagio-v1.md
     └── historico/
         ├── levantamento-requisitos-v4.md
         ├── levantamento-requisitos-v5.md
@@ -38,6 +41,7 @@ residuum-documentacao/
 | `docs/visao` | Contexto, proposta e referências do projeto |
 | `docs/requisitos` | Especificação consolidada que orienta a revisão do MVP |
 | `docs/planejamento` | Tasks por perfil, entregas, dependências e decisões para refinamento |
+| `docs/diagnostico` | Comparação do código existente com o escopo atual, evidências e verificações |
 | `docs/historico` | Versões anteriores e planejamento original, preservados para rastreabilidade |
 
 ## Documentos
@@ -48,6 +52,7 @@ residuum-documentacao/
 | [Referências](docs/visao/referencias.md) | Fontes e inspirações reunidas pelo projeto |
 | [Requisitos MVP V6](docs/requisitos/requisitos-mvp-v6.md) | 53 RF, 12 RNF, regras, critérios BDD, diagramas, comparativo e pendências |
 | [Tasks de desenvolvimento MVP V1](docs/planejamento/tasks-desenvolvimento-mvp-v1.md) | 93 tarefas por perfil: diagnóstico, funcionalidades, qualidade e decisões; cobertura dos 53 RF e 12 RNF |
+| [Diagnóstico comparativo do MVP do estágio V1](docs/diagnostico/comparativo-mvp-estagio-v1.md) | Comparativo dos 53 RF e 12 RNF; 16 achados, build do frontend, testes e reproduções locais do backend |
 | [Levantamento V4](docs/historico/levantamento-requisitos-v4.md) | Catálogo anterior e priorização |
 | [Levantamento V5](docs/historico/levantamento-requisitos-v5.md) | Revisão anterior da presença por GPS |
 | [Backlog V2](docs/historico/backlog-v2.md) | Prioridades e entregas declaradas no planejamento anterior |

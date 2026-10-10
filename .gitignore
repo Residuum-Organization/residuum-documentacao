@@ -18,4 +18,5 @@ Desktop.ini
 # Artefatos de ferramentas; este repositório contém apenas documentação
 node_modules/
 .cache/
+/.pnpm-store/
 tmp/

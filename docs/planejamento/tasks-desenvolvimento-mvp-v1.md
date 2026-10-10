@@ -3756,3 +3756,11 @@ Uma linha por requisito define sua tarefa principal. Tarefas de qualidade podem 
 Esta versão possui **93 tarefas**: 53 funcionais, 12 de qualidade, 27 de decisão/investigação e uma de diagnóstico. Cobertura planejada: **53 RF, 12 RNF e 27 PD**. Cada implementação começa a diagnosticar; prioridades e sequência são propostas de planejamento para a equipe.
 
 O conteúdo foi verificado documentalmente quanto a identificadores, referências, cobertura e preservação das regras principais. Homologação depende da aplicação, dos parâmetros aprovados e das evidências previstas nas tarefas.
+
+## 13. Diagnóstico do código disponível
+
+O [comparativo do MVP do estágio V1](../diagnostico/comparativo-mvp-estagio-v1.md) registra a análise dos commits indicados de frontend e backend, a estratégia por requisito e as verificações locais. Use essa evidência para refinar as fichas, sem importar regras antigas como decisões atuais.
+
+TSK-TRA-000 avançou com a inspeção do código, build e testes locais, mas permanece parcial: faltam ambiente implantado, banco de avaliação com migrations, jornadas HTTP/navegador e validação da equipe. As demais tarefas não foram implementadas por esta análise.
+
+Priorizar os achados de integridade e acesso do comparativo: dupla baixa/crédito, regra de 10 pontos por operação, autorização por vínculo e retirada que preserve material remanescente. Responsáveis nominais, esforço, sprint e datas continuam a definir.
