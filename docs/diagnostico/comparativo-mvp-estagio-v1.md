@@ -5,6 +5,24 @@
 **Referência de negócio:** [Visão do projeto](../visao/visao-do-projeto.md), [requisitos V6](../requisitos/requisitos-mvp-v6.md) e [tasks V1](../planejamento/tasks-desenvolvimento-mvp-v1.md).
 **Objetivo:** identificar bases reaproveitáveis, adequações e capacidades a construir, com evidência do código e verificações locais.
 
+**Público:** equipe de produto, desenvolvimento e qualidade do Residuum.
+
+Este documento é uma avaliação separada do MVP existente. Complementa a visão, os requisitos V6 e o backlog; não altera regras aprovadas, resolve pendências de negócio ou declara funcionalidades homologadas. As classificações abaixo orientam o refinamento das entregas pela equipe.
+
+## Guia de leitura para a equipe
+
+| Etapa | Conteúdo | Uso na revisão |
+|---|---|---|
+| 1 | Conclusão e limites — seção 1 | Entender o resultado, a base examinada e o alcance das verificações. |
+| 2 | Bases que vale preservar — seção 2 | Identificar componentes e capacidades que podem ser reaproveitados. |
+| 3 | Achados prioritários — seção 3 | Revisar riscos, diferenças de comportamento e evidências antes de planejar correções. |
+| 4 | Comparativo com os requisitos e tarefas — seção 4 | Localizar cada RF/RNF e discutir ajustes, construção e validação. |
+| 5 | Verificações executadas — seção 5 | Distinguir resultados reproduzidos localmente de condições ainda não verificadas. |
+| 6 | Orientação do desenvolvimento — seção 6 | Refinar a ordem de trabalho, as dependências e as decisões pendentes. |
+| 7 | Relação com o backlog — seção 7 | Registrar os próximos passos e manter a rastreabilidade das entregas. |
+
+Na reunião, use a classificação como ponto de partida: confirme o comportamento esperado na V6, examine a evidência do código e defina a entrega e sua verificação. Estimativas e responsáveis devem ser definidos pela equipe após esse refinamento.
+
 ## 1. Conclusão e limites
 
 O MVP possui uma base substancial em React/Vite e FastAPI/SQLAlchemy: autenticação, perfil, inventário, mapas, administração, Loja e solicitações/coletas. Recomenda-se evolução dessa base por capacidade, sem reconstrução integral presumida.

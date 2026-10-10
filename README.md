@@ -2,6 +2,14 @@
 
 Repositório dedicado aos documentos do projeto Residuum. A finalidade é manter uma referência comum para a equipe e permitir a continuidade do trabalho em computadores diferentes.
 
+## Em destaque — comparativo do MVP para a equipe
+
+**[Abrir o diagnóstico comparativo do MVP do estágio](docs/diagnostico/comparativo-mvp-estagio-v1.md)**
+
+Documento separado para orientar a revisão do código existente: o que reaproveitar, ajustar, construir e verificar antes das próximas entregas. Inclui a comparação dos **53 requisitos funcionais e 12 não funcionais**, **16 achados com evidências** e os resultados das verificações locais.
+
+Para a reunião da equipe, comece pela conclusão, revise os achados prioritários e consulte a sequência de desenvolvimento proposta. A matriz permite localizar cada requisito e sua tarefa relacionada. O diagnóstico complementa os requisitos V6, que permanecem preservados.
+
 ## Comece por aqui
 
 1. Leia a [visão do projeto](docs/visao/visao-do-projeto.md).
