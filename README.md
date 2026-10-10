@@ -7,6 +7,7 @@ Repositório dedicado aos documentos do projeto Residuum. A finalidade é manter
 1. Leia a [visão do projeto](docs/visao/visao-do-projeto.md).
 2. Consulte o [levantamento de requisitos do MVP — V6](docs/requisitos/requisitos-mvp-v6.md), documento consolidado atual para validação da equipe.
 3. Use a seção **Pendências de decisão** da V6 para identificar as questões ainda abertas.
+4. Consulte as [tasks de desenvolvimento do MVP](docs/planejamento/tasks-desenvolvimento-mvp-v1.md), organizadas por perfil e jornada, para diagnosticar o MVP e refinar as entregas da equipe.
 
 A V6 distingue decisões confirmadas, conteúdo herdado e propostas para validação. Os status de entrega presentes nos arquivos históricos não comprovam o funcionamento do MVP.
 
@@ -23,6 +24,8 @@ residuum-documentacao/
     │   └── referencias.md
     ├── requisitos/
     │   └── requisitos-mvp-v6.md
+    ├── planejamento/
+    │   └── tasks-desenvolvimento-mvp-v1.md
     └── historico/
         ├── levantamento-requisitos-v4.md
         ├── levantamento-requisitos-v5.md
@@ -34,6 +37,7 @@ residuum-documentacao/
 |---|---|
 | `docs/visao` | Contexto, proposta e referências do projeto |
 | `docs/requisitos` | Especificação consolidada que orienta a revisão do MVP |
+| `docs/planejamento` | Tasks por perfil, entregas, dependências e decisões para refinamento |
 | `docs/historico` | Versões anteriores e planejamento original, preservados para rastreabilidade |
 
 ## Documentos
@@ -43,6 +47,7 @@ residuum-documentacao/
 | [Visão do projeto](docs/visao/visao-do-projeto.md) | Problema de negócio e solução proposta |
 | [Referências](docs/visao/referencias.md) | Fontes e inspirações reunidas pelo projeto |
 | [Requisitos MVP V6](docs/requisitos/requisitos-mvp-v6.md) | 53 RF, 12 RNF, regras, critérios BDD, diagramas, comparativo e pendências |
+| [Tasks de desenvolvimento MVP V1](docs/planejamento/tasks-desenvolvimento-mvp-v1.md) | 93 tarefas por perfil: diagnóstico, funcionalidades, qualidade e decisões; cobertura dos 53 RF e 12 RNF |
 | [Levantamento V4](docs/historico/levantamento-requisitos-v4.md) | Catálogo anterior e priorização |
 | [Levantamento V5](docs/historico/levantamento-requisitos-v5.md) | Revisão anterior da presença por GPS |
 | [Backlog V2](docs/historico/backlog-v2.md) | Prioridades e entregas declaradas no planejamento anterior |
