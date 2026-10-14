@@ -21,6 +21,7 @@ Responsáveis, datas, estimativas e compromissos finais de sprint são preenchid
 | Quadro do time | [Uso do Kanban](planejamento/kanban-miro.md) |
 | Reuniões | [Rotina](planejamento/rotina-de-reunioes.md) |
 | Estudos e implementação examinada | [Estudos](estudos/estudos-do-projeto.md) e [diagnóstico](diagnostico/comparativo-mvp-estagio-v1.md) |
+| Pesquisa de negócio e mercado | [Índice de pesquisas](pesquisa/README.md) |
 | Tecnologia | [Stacks e integrações](tecnologia/stacks-e-integracoes.md) |
 | Experiência do morador | [Handoff](ux/morador-v6-handoff.md), [validação registrada](ux/morador-v6-validacao.md) e [teste com moradores](ux/morador-v6-teste-usuarios.md) |
 | Demonstração independente V2 | [Estado e limites](ux/residuum-v2-lovable-status.md) |
@@ -28,6 +29,6 @@ Responsáveis, datas, estimativas e compromissos finais de sprint são preenchid
 
 ## Qual referência utilizar
 
-O documento geral orienta a execução atual. A V6 e as decisões posteriores do handoff orientam comportamento e regras; a proposta de Scrum organiza objetivos e responsabilidades; o diagnóstico e os registros de UX descrevem evidências com versões e limites próprios. O estado atual do trabalho é acompanhado no quadro da equipe, não inferido dos documentos históricos.
+O documento geral orienta a execução atual. A V6 e as decisões posteriores do handoff orientam comportamento e regras; a proposta de Scrum organiza objetivos e responsabilidades; o diagnóstico e os registros de UX descrevem evidências com versões e limites próprios. As pesquisas de negócio registram hipóteses e referências externas e não substituem requisitos aprovados. O estado atual do trabalho é acompanhado no quadro da equipe, não inferido dos documentos históricos.
 
 Os arquivos de tasks V1 e de adequação foram preservados no histórico como fontes. Seus identificadores continuam vinculados ao documento atual para rastreabilidade, sem duplicar entregas. Testes preparados permanecem diferentes de testes executados e aprovados.

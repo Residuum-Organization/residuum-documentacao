@@ -12,6 +12,12 @@ Sequência de entregas: **morador → ponto de coleta → cooperativa → admini
 
 Responsáveis, datas individuais e conteúdo definitivo das sprints estão **a definir pela equipe**. O prazo informado é **20/11/2026**; não é uma garantia de conclusão de todo o backlog.
 
+## Pesquisa da ideia e do negócio
+
+**[Abrir o índice das pesquisas](docs/pesquisa/README.md)**
+
+Pesquisas de mercado e concorrentes, sistema de pontos, dados no Amazonas, monetização, expansão territorial, piloto e validação com o ecossistema. O índice também reúne as fontes, hipóteses e questões pendentes. Esses documentos apoiam a descoberta e o embasamento do negócio; decisões aprovadas continuam registradas nos requisitos e no planejamento.
+
 ## Consulta de apoio
 
 | Preciso consultar | Documento |
