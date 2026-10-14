@@ -10,6 +10,7 @@ Os 27 pacotes ADE agrupam o mesmo trabalho TSK. Os seis recortes técnicos inclu
 
 ## Navegação
 
+- [Fluxo de atividades: desenvolvimento, QA e conclusão](#fluxo-de-atividades)
 - [1. Morador](#morador)
 - [2. Ponto de coleta](#ponto)
 - [3. Cooperativa](#cooperativa)
@@ -24,7 +25,42 @@ Os 27 pacotes ADE agrupam o mesmo trabalho TSK. Os seis recortes técnicos inclu
 
 **Consulta alternativa:** [Guia e fichas por módulo](README.md).
 
-## Fluxo de trabalho e conclusão
+<a id="fluxo-de-atividades"></a>
+
+## Fluxo de atividades: desenvolvimento, QA e conclusão
+
+Os diagramas seguem da **esquerda para a direita**. O primeiro mostra a entrega aprovada; os seguintes explicam correções e dúvidas.
+
+### Caminho principal
+
+```mermaid
+flowchart LR
+    A["1. Analista de sistemas<br/>detalha e encaminha a atividade"] --> B["2. Equipe desenvolve<br/>e revisa a atividade"]
+    B --> C["3. QA valida pelos<br/>critérios de aceite"]
+    C -->|"Aprovada, com evidências"| D["4. Atividade concluída"]
+```
+
+### Quando o QA encontrar problemas
+
+```mermaid
+flowchart LR
+    E["QA registra os problemas<br/>e devolve a atividade"] --> F["Equipe de desenvolvimento<br/>faz as correções"]
+    F --> G["QA valida novamente<br/>os critérios e as correções"]
+```
+
+O QA registra o resultado esperado, o observado e as evidências do problema. **Se a nova validação aprovar, a atividade é concluída. Se ainda houver problemas, retorna ao desenvolvimento e passa por nova validação após a correção.** Esse ciclo se repete até atender os critérios e a definição de conclusão.
+
+### Quando houver dúvidas durante o desenvolvimento
+
+```mermaid
+flowchart LR
+    H["Equipe identifica<br/>uma dúvida"] --> I["Consulta o analista<br/>de sistemas ou o QA"]
+    I --> J["Dúvida esclarecida:<br/>equipe continua a atividade"]
+```
+
+Dúvidas que alterem requisitos ou regras devem ter a decisão registrada e os critérios atualizados antes da implementação do trecho afetado. Quando uma dúvida impedir o avanço, registrar o bloqueio e a pessoa responsável por esclarecê-la; os trechos independentes podem continuar.
+
+### Responsabilidades e conclusão
 
 O analista detalha e esclarece requisitos; a equipe organiza a execução; a entrega passa por revisão e QA. Critérios atendidos e evidências registradas permitem concluir a atividade. Problemas retornam ao desenvolvimento e são validados novamente após correção. Dúvidas podem ser esclarecidas com analista ou QA durante todo o processo.
 
