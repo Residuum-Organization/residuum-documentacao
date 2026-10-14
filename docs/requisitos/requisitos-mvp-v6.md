@@ -180,7 +180,7 @@ flowchart TD
     tela --> loja["Ir para a Loja"]
 ```
 
-A forma de persistir o item no caminho rápido é uma proposta técnica em RF-MVP-014; em qualquer alternativa, registro não pode gerar pontos e conclusão não pode duplicar o item.
+Decisão aprovada em 10/10/2026 para RF-MVP-014/PD-006: o caminho rápido mantém rascunho somente na memória do fluxo. Cancelar, sair do fluxo, recarregar ou fechar a aba elimina o rascunho. Abrir a rota em outra aba mantém os itens; ao retornar é obrigatório obter GPS novo. Registro não gera pontos e confirmação não duplica efeitos. Ver [handoff do morador](../ux/morador-v6-handoff.md).
 
 ### 5.2 Jornada da coleta
 
@@ -454,9 +454,9 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 **Pré-condições:** itens confirmados. **Fluxo:** salvar entradas; listar nome, material e quantidade; selecionar itens e quantidades disponíveis; iniciar escolha de ponto. Identificação e quantidade não equivalem a peso medido.
 
-**Proposta para validação:** o caminho rápido também salva os itens revisados no estoque e os seleciona automaticamente. Se o usuário abandonar o trajeto, permanecem disponíveis. Confirmar esta persistência em PD-006; alternativa possível é manter rascunho até a conclusão.
+**Decisão aprovada pelo solicitante em 10/10/2026:** Registrar salva os itens revisados no estoque sem gerar pontos. Descarte rápido mantém os itens somente como rascunho na memória do fluxo, sem gravação prévia no estoque. Cancelar, navegar para outra área, recarregar ou fechar a aba descarta o rascunho. A rota externa abre em outra aba e preserva ponto/itens; ao retornar, o GPS anterior é invalidado. Erros recuperáveis preservam os dados enquanto o usuário permanece no fluxo.
 
-**Exceções:** impedir seleção superior à quantidade disponível; evitar gravação duplicada por repetição de confirmação. Exclusão e ajustes manuais do estoque são PD-006.
+**Exceções:** impedir seleção superior à quantidade disponível; aceitar descarte parcial com baixa apenas das unidades escolhidas; permitir ajuste manual de unidades e remoção do registro ao zerar, sem recompensas; evitar gravação duplicada por repetição de confirmação. Ajustes e exclusões reais exigem autorização, controle de concorrência e contrato de backend.
 
 **Dependências:** RF-MVP-015 e RF-MVP-019.
 
@@ -511,7 +511,7 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 **Pré-condições:** ponto selecionado com coordenadas válidas. **Fluxo:** oferecer navegação; abrir aplicativo/serviço externo com o ponto como destino; permitir retorno ao fluxo para confirmar a entrega.
 
-**Exceções:** indisponibilidade do navegador de mapas deve preservar ponto e itens. Não marcar chegada ou descarte com base apenas na abertura da rota. Persistência da seleção após encerrar o navegador é PD-006.
+**Exceções:** indisponibilidade do navegador de mapas deve preservar ponto e itens. Não marcar chegada ou descarte com base apenas na abertura da rota. A seleção não persiste após recarregar ou encerrar a aba; ao retornar da rota externa, obter uma nova leitura de GPS (decisão PD-006 de 10/10/2026).
 
 **Dependências:** RF-MVP-015, RF-MVP-018 e integração I03.
 
@@ -1599,7 +1599,7 @@ As pendências não são tarefas automaticamente autorizadas. “Responsável su
 | PD-003 | Campos obrigatórios por perfil, CPF/documentos do ponto, verificação de e-mail, recuperação e habilitação de acesso administrativo | RF-MVP-003 a RF-MVP-008, RF-MVP-031, RF-MVP-038 | Produto/equipe técnica |
 | PD-004 | Tipos de notas e identificadores, fonte de consulta, catálogo de produtos, cobertura, autorização, limites e falhas dos serviços | RF-MVP-010, RF-MVP-011 | Equipe técnica/produto |
 | PD-005 | Pode importar a mesma nota novamente? Como evitar inclusão involuntária repetida e selecionar apenas embalagens realmente disponíveis? | RF-MVP-011, RF-MVP-013 | Produto |
-| PD-006 | Persistência dos itens no caminho rápido, retorno após abandono, validade da seleção, edição/exclusão do estoque e descarte parcial do morador | RF-MVP-014, RF-MVP-017, RF-MVP-019 | Produto |
+| PD-006 | Decisão de UX aprovada em 10/10/2026: rascunho rápido em memória do fluxo, abandono elimina, rota em outra aba preserva, GPS novo no retorno; seleção parcial e ajuste/remoção sem pontos. Contratos reais de ajuste/exclusão, concorrência e confirmação continuam pendentes; ver handoff. | RF-MVP-014, RF-MVP-017, RF-MVP-019 | Produto e backend |
 | PD-007 | Busca sem GPS, materiais mistos em pontos diferentes, recebimento fora do horário ou com ponto cheio e escolha do serviço de mapa do morador | RF-MVP-015 a RF-MVP-017 | Produto/operação |
 | PD-008 | Raio, precisão, idade da posição, tentativas e timeout do GPS; critério de campo para autorizar presença | RF-MVP-018 e RNF-MVP-004 | Produto/equipe técnica |
 | PD-009 | Unidade/cálculo da capacidade e lotação, parâmetros de alertas, regras de funcionamento, tags, edição de horários e saldo ao encerrar evento | RF-MVP-031 a RF-MVP-036 | Produto/operação |

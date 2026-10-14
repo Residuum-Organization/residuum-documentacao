@@ -1,0 +1,79 @@
+{
+  "fileKey": "baSbCELQOjRlof8fZvWZCe",
+  "pageId": "0:1",
+  "screenCount": 35,
+  "screens": {
+    "home": "3:5",
+    "homeTablet": "3:6",
+    "homeDesktop": "3:4",
+    "login": "19:255",
+    "invite": "19:279",
+    "recovery": "19:307",
+    "recoverySent": "19:325",
+    "register": "19:339",
+    "quick": "19:397",
+    "scan": "19:455",
+    "camera": "19:509",
+    "note": "19:555",
+    "review": "19:605",
+    "stock": "19:659",
+    "stockSelect": "19:711",
+    "map": "19:765",
+    "choosePoint": "19:820",
+    "point": "19:875",
+    "gps": "19:924",
+    "gpsValid": "19:980",
+    "gpsError": "19:1031",
+    "noPoint": "19:1081",
+    "success": "19:1129",
+    "history": "19:1180",
+    "discardDetail": "19:1229",
+    "statement": "19:1278",
+    "shop": "19:1330",
+    "raffles": "19:1384",
+    "voucher": "19:1433",
+    "spend": "19:1485",
+    "raffleDetail": "19:1534",
+    "campaign": "19:1586",
+    "rewards": "19:1635",
+    "profile": "19:1682",
+    "editProfile": "19:1737"
+  },
+  "components": {
+    "header": "19:32",
+    "bottomNav": "19:2",
+    "button": "12:84",
+    "field": "12:102"
+  },
+  "sections": {
+    "context": "23:1077",
+    "flows": "23:1086",
+    "handoff": "23:1098"
+  },
+  "collections": {
+    "primitive": "VariableCollectionId:12:2",
+    "semantic": "VariableCollectionId:12:3"
+  },
+  "prototypeStart": [
+    {
+      "nodeId": "19:279",
+      "name": "Cadastro"
+    },
+    {
+      "nodeId": "19:339",
+      "name": "Registrar"
+    },
+    {
+      "nodeId": "19:397",
+      "name": "Rápido"
+    },
+    {
+      "nodeId": "19:659",
+      "name": "Estoque parcial"
+    },
+    {
+      "nodeId": "19:1330",
+      "name": "Recompensas"
+    }
+  ]
+}

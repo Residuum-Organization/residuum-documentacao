@@ -1,133 +1,34 @@
-# Residuum — documentação
+# Residuum — documentação para o time
 
-Repositório dedicado aos documentos do projeto Residuum. A finalidade é manter uma referência comum para a equipe e permitir a continuidade do trabalho em computadores diferentes.
+## Comece pelas tasks
 
-## Em destaque — execução da adequação do MVP
+**[Abrir o documento geral das tasks](docs/planejamento/modulos/tasks-gerais.md)**
 
-**[Abrir as tasks direcionadas de adequação e reativação](docs/planejamento/tasks-adequacao-reativacao-mvp-v1.md)**
+Referência principal para organizar as 93 atividades no modelo da equipe: objetivo, responsável, início, entrega, descrição, regras, critérios de aceite, dependências e evidências. Inclui matriz de importância, recortes de arquitetura/refatoração/banco e vínculos para os testes detalhados.
 
-Para orientar o trabalho da equipe, este roteiro reúne **27 pacotes de execução** com situação atual, base a reaproveitar, mudanças necessárias, dependências, decisões bloqueantes e critérios de aceite. Cobre os **53 RF, 12 RNF e 16 achados** do diagnóstico e referencia as tasks originais. Comece pela ordem de trabalho e depois abra a ficha da jornada que será desenvolvida.
+**[Abrir a proposta de Scrum e sprints](docs/planejamento/modulos/scrum-e-sequencia.md)**
 
-Os requisitos V6 e as tasks V1 permanecem preservados. O roteiro direciona a adequação do código existente; as regras e pendências continuam sendo conferidas na V6.
+Sequência de entregas: **morador → ponto de coleta → cooperativa → administrador**, com QA durante as sprints e um ciclo final de integração. A proposta deve ser refinada conforme capacidade e decisões da equipe.
 
-## Diagnóstico que fundamenta as entregas
+Responsáveis, datas individuais e conteúdo definitivo das sprints estão **a definir pela equipe**. O prazo informado é **20/11/2026**; não é uma garantia de conclusão de todo o backlog.
 
-**[Abrir o diagnóstico comparativo do MVP do estágio](docs/diagnostico/comparativo-mvp-estagio-v1.md)**
+## Consulta de apoio
 
-Documento separado para orientar a revisão do código existente: o que reaproveitar, ajustar, construir e verificar antes das próximas entregas. Inclui a comparação dos **53 requisitos funcionais e 12 não funcionais**, **16 achados com evidências** e os resultados das verificações locais.
-
-Para a reunião da equipe, comece pela conclusão, revise os achados prioritários e consulte a sequência de desenvolvimento proposta. A matriz permite localizar cada requisito e sua tarefa relacionada. O diagnóstico complementa os requisitos V6, que permanecem preservados.
-
-## Comece por aqui
-
-1. Leia a [visão do projeto](docs/visao/visao-do-projeto.md).
-2. Consulte o [levantamento de requisitos do MVP — V6](docs/requisitos/requisitos-mvp-v6.md), documento consolidado atual para validação da equipe.
-3. Use a seção **Pendências de decisão** da V6 para identificar as questões ainda abertas.
-4. Leia o [diagnóstico comparativo do MVP do estágio](docs/diagnostico/comparativo-mvp-estagio-v1.md), com evidências do frontend/backend, resultados locais e adequações necessárias.
-5. Use as [tasks direcionadas de adequação e reativação](docs/planejamento/tasks-adequacao-reativacao-mvp-v1.md) para planejar mudanças no código existente.
-6. Consulte as [tasks de desenvolvimento do MVP V1](docs/planejamento/tasks-desenvolvimento-mvp-v1.md) para as histórias e os critérios funcionais originais vinculados ao roteiro.
-
-A V6 distingue decisões confirmadas, conteúdo herdado e propostas para validação. Os status de entrega presentes nos arquivos históricos não comprovam o funcionamento do MVP.
-
-## Organização
-
-```text
-residuum-documentacao/
-├── README.md
-├── .gitignore
-├── .gitattributes
-└── docs/
-    ├── visao/
-    │   ├── visao-do-projeto.md
-    │   └── referencias.md
-    ├── requisitos/
-    │   └── requisitos-mvp-v6.md
-    ├── planejamento/
-    │   ├── tasks-desenvolvimento-mvp-v1.md
-    │   └── tasks-adequacao-reativacao-mvp-v1.md
-    ├── diagnostico/
-    │   └── comparativo-mvp-estagio-v1.md
-    └── historico/
-        ├── levantamento-requisitos-v4.md
-        ├── levantamento-requisitos-v5.md
-        ├── backlog-v2.md
-        └── plano-tarefas-okr-mvp-v1.md
-```
-
-| Pasta | Conteúdo |
+| Preciso consultar | Documento |
 |---|---|
-| `docs/visao` | Contexto, proposta e referências do projeto |
-| `docs/requisitos` | Especificação consolidada que orienta a revisão do MVP |
-| `docs/planejamento` | Tasks por perfil, entregas, dependências e decisões para refinamento |
-| `docs/diagnostico` | Comparação do código existente com o escopo atual, evidências e verificações |
-| `docs/historico` | Versões anteriores e planejamento original, preservados para rastreabilidade |
+| Navegação das mesmas atividades por módulo | [Guia dos módulos](docs/planejamento/modulos/README.md) |
+| Impacto na entrega × urgente/não urgente | [Matriz de importância](docs/planejamento/modulos/matriz-importancia.md) |
+| Acompanhamento do time | [Uso do Kanban](docs/planejamento/kanban-miro.md) |
+| Comportamento e decisões do produto | [Requisitos V6](docs/requisitos/requisitos-mvp-v6.md) e [regras de negócio](docs/requisitos/regras-de-negocio.md) |
+| Contexto e solução | [Visão do projeto](docs/visao/visao-do-projeto.md) |
+| Base examinada e resultados anteriores | [Estudos](docs/estudos/estudos-do-projeto.md) e [diagnóstico](docs/diagnostico/comparativo-mvp-estagio-v1.md) |
+| Testes com moradores e limites das evidências | [Roteiro](docs/ux/morador-v6-teste-usuarios.md) e [validação registrada](docs/ux/morador-v6-validacao.md) |
+| Tecnologias e reuniões | [Stacks](docs/tecnologia/stacks-e-integracoes.md) e [rotina de reuniões](docs/planejamento/rotina-de-reunioes.md) |
 
-## Documentos
+[Abrir o guia completo dos documentos](docs/README.md).
 
-| Documento | Finalidade |
-|---|---|
-| [Visão do projeto](docs/visao/visao-do-projeto.md) | Problema de negócio e solução proposta |
-| [Referências](docs/visao/referencias.md) | Fontes e inspirações reunidas pelo projeto |
-| [Requisitos MVP V6](docs/requisitos/requisitos-mvp-v6.md) | 53 RF, 12 RNF, regras, critérios BDD, diagramas, comparativo e pendências |
-| [Tasks de desenvolvimento MVP V1](docs/planejamento/tasks-desenvolvimento-mvp-v1.md) | 93 tarefas por perfil: diagnóstico, funcionalidades, qualidade e decisões; cobertura dos 53 RF e 12 RNF |
-| [Tasks de adequação e reativação MVP V1](docs/planejamento/tasks-adequacao-reativacao-mvp-v1.md) | 27 pacotes direcionados ao código existente: retrabalho, ajustes, construção e validação; rastreabilidade com diagnóstico, requisitos e tasks originais |
-| [Diagnóstico comparativo do MVP do estágio V1](docs/diagnostico/comparativo-mvp-estagio-v1.md) | Comparativo dos 53 RF e 12 RNF; 16 achados, build do frontend, testes e reproduções locais do backend |
-| [Levantamento V4](docs/historico/levantamento-requisitos-v4.md) | Catálogo anterior e priorização |
-| [Levantamento V5](docs/historico/levantamento-requisitos-v5.md) | Revisão anterior da presença por GPS |
-| [Backlog V2](docs/historico/backlog-v2.md) | Prioridades e entregas declaradas no planejamento anterior |
-| [Plano de tarefas e OKR V1](docs/historico/plano-tarefas-okr-mvp-v1.md) | Decomposição anterior de tarefas, metas e prazos |
+## Documentos anteriores
 
-## Ler no GitHub e no VS Code
+**[Abrir o histórico](docs/historico/README.md).** Tasks V1, pacotes de adequação, guias anteriores e versões antigas ficam separados para rastreabilidade. Para o trabalho atual, use o documento geral destacado acima.
 
-No GitHub, abra os arquivos Markdown para consultar os documentos e os diagramas Mermaid. No VS Code, use a prévia Markdown (`Ctrl+Shift+V`); os diagramas precisam de uma prévia com suporte a Mermaid.
-
-Não é necessário gerar PDF para trabalhar com este repositório.
-
-## Continuar o trabalho em casa e no trabalho
-
-Na primeira utilização em outro computador, com Git instalado e acesso autorizado à conta:
-
-```bash
-git clone https://github.com/Vinny1313/residuum-documentacao.git
-cd residuum-documentacao
-```
-
-Antes de começar a editar, salve ou faça commit de alterações locais e atualize a cópia:
-
-```bash
-git pull --ff-only
-```
-
-Depois de editar, revise as diferenças e publique:
-
-```bash
-git diff
-git add docs README.md
-git commit -m "docs: atualizar requisitos do MVP"
-git push
-```
-
-Em caso de divergência entre computadores, revise os commits e resolva a divergência antes de enviar. Evite sobrescrever o histórico com `push --force`.
-
-## Convenções de documentação
-
-- Nomes em minúsculas, sem espaços ou acentos, separados por hífen.
-- Arquivos Markdown em UTF-8.
-- Preservar o conteúdo histórico; decisões atuais pertencem à especificação consolidada.
-- Manter identificadores dos requisitos estáveis e atualizar sua rastreabilidade.
-- Ao resolver uma pendência, atualizar também regra, critério de aceite e diagrama afetados.
-- Diferenciar requisito confirmado de proposta e de questão ainda aberta.
-- Usar commits com mensagens claras; exemplos: `docs: esclarecer fluxo de coleta` e `docs: definir regras dos planos`.
-- Guardar credenciais, tokens, arquivos de ambiente e configurações pessoais fora do repositório.
-
-## Correspondência dos nomes anteriores
-
-| Nome anterior | Caminho atual |
-|---|---|
-| `projeto_residuum.md` | `docs/visao/visao-do-projeto.md` |
-| `referencias.md` | `docs/visao/referencias.md` |
-| `Residuum_Levantamento_Requisitos_MVP_V6.md` | `docs/requisitos/requisitos-mvp-v6.md` |
-| `Residuum_Levantamento de Requisitos_V4(1).md` | `docs/historico/levantamento-requisitos-v4.md` |
-| `Residuum_DLR_V5.md` | `docs/historico/levantamento-requisitos-v5.md` |
-| `Residuum_Backlog_v2.md` | `docs/historico/backlog-v2.md` |
-| `Residuum_Plano_Tasks_OKR_MVP.md` | `docs/historico/plano-tarefas-okr-mvp-v1.md` |
+Os documentos distinguem requisitos, propostas, testes planejados e evidências executadas. Uma demonstração ou uma marcação histórica de conclusão não comprova homologação do sistema integrado.

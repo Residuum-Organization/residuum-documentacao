@@ -1,0 +1,98 @@
+{
+  "reports": [
+    {
+      "name": "acesso",
+      "violations": []
+    },
+    {
+      "name": "home-mobile",
+      "violations": []
+    },
+    {
+      "name": "home-tablet",
+      "violations": []
+    },
+    {
+      "name": "home-desktop",
+      "violations": []
+    },
+    {
+      "name": "home-reflow-320",
+      "violations": []
+    },
+    {
+      "name": "estoque",
+      "violations": []
+    },
+    {
+      "name": "pontos",
+      "violations": []
+    },
+    {
+      "name": "presenca",
+      "violations": []
+    },
+    {
+      "name": "sucesso",
+      "violations": []
+    },
+    {
+      "name": "loja",
+      "violations": []
+    },
+    {
+      "name": "modal-recompensa",
+      "violations": []
+    },
+    {
+      "name": "recompensas",
+      "violations": []
+    },
+    {
+      "name": "identificacao-revisao",
+      "violations": []
+    },
+    {
+      "name": "sem-ponto",
+      "violations": []
+    },
+    {
+      "name": "convite-invalido",
+      "violations": []
+    },
+    {
+      "name": "integracao-pendente",
+      "violations": []
+    },
+    {
+      "name": "cadastrar-responsive",
+      "violations": []
+    },
+    {
+      "name": "estoque-responsive",
+      "violations": []
+    },
+    {
+      "name": "mapa-responsive",
+      "violations": []
+    },
+    {
+      "name": "mapa-interativo",
+      "violations": []
+    },
+    {
+      "name": "detalhes-ponto",
+      "violations": []
+    },
+    {
+      "name": "loja-responsive",
+      "violations": []
+    },
+    {
+      "name": "perfil-responsive",
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "status": "passed"
+}

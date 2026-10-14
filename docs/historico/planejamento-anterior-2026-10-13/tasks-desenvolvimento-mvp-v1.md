@@ -1,8 +1,14 @@
 # Residuum — Tasks de desenvolvimento do MVP
 
+**Documento anterior, preservado para rastreabilidade.** Para executar o trabalho atual, consulte o [documento geral das tasks](../../planejamento/modulos/tasks-gerais.md). Este arquivo não é uma segunda lista vigente de atividades.
+
+
+**[Documento geral das atividades por módulo e perfil](../../planejamento/modulos/README.md)** — modelo padronizado, testes, proposta de Scrum e matriz de importância; responsáveis e datas a preencher pela equipe.
+
+
 **Versão:** 1.0 — proposta de backlog para refinamento da equipe
 **Data:** 09/10/2026
-**Base:** [Visão do projeto](../visao/visao-do-projeto.md) e [Requisitos MVP V6](../requisitos/requisitos-mvp-v6.md).
+**Base:** [Visão do projeto](../../visao/visao-do-projeto.md) e [Requisitos MVP V6](../../requisitos/requisitos-mvp-v6.md).
 **Equipe:** seis pessoas; responsáveis nominais, esforço, sprint e datas a definir pela equipe.
 
 ## Navegação
@@ -289,6 +295,8 @@ As etapas organizam dependências, não fixam calendário nem impedem paralelism
 
 ### TSK-MOR-005 — Disponibilizar Registrar e Descarte rápido
 
+**Atualização aplicada — 10/10/2026:** rascunho rápido em memória; abandono elimina sem incluir no estoque; rota externa em outra aba preserva o fluxo; retorno exige GPS novo. Falhas recuperáveis preservam itens no fluxo. Ajuste/remoção não concede pontos. Contratos reais, concorrência e confirmação permanecem pendentes; consultar o handoff e PD-006.
+
 **Perfil principal:** morador. **Prioridade:** P0. **Etapa:** E2.
 **Justificativa:** protege integridade/permissões ou desbloqueia a jornada correspondente.
 **Referências:** RF-MVP-009; RNF-MVP-001, RNF-MVP-002; RN-004.
@@ -492,10 +500,12 @@ As etapas organizam dependências, não fixam calendário nem impedem paralelism
 
 ### TSK-MOR-010 — Manter estoque e selecionar quantidades
 
+**Atualização aplicada — 10/10/2026:** rascunho rápido em memória; abandono elimina sem incluir no estoque; rota externa em outra aba preserva o fluxo; retorno exige GPS novo. Falhas recuperáveis preservam itens no fluxo. Ajuste/remoção não concede pontos. Contratos reais, concorrência e confirmação permanecem pendentes; consultar o handoff e PD-006.
+
 **Perfil principal:** morador. **Prioridade:** P0. **Etapa:** E2.
 **Justificativa:** protege integridade/permissões ou desbloqueia a jornada correspondente.
 **Referências:** RF-MVP-014; RNF-MVP-001, RNF-MVP-002; RN-004, RN-007.
-**Estado da especificação V6:** confirmado com proposta de persistência.
+**Estado da especificação V6:** confirmado; persistência do caminho rápido definida na decisão de UX de 10/10/2026, com contratos reais ainda pendentes.
 **Estado de implementação:** a diagnosticar; esforço, responsável nominal, sprint e data a definir pela equipe.
 **Responsabilidade sugerida:** produto/design, frontend, backend e QA; integração/operação quando aplicável.
 
@@ -507,7 +517,7 @@ As etapas organizam dependências, não fixam calendário nem impedem paralelism
 
 **Pré-condições:** itens confirmados. **Fluxo:** salvar entradas; listar nome, material e quantidade; selecionar itens e quantidades disponíveis; iniciar escolha de ponto. Identificação e quantidade não equivalem a peso medido.
 
-**Proposta para validação:** o caminho rápido também salva os itens revisados no estoque e os seleciona automaticamente. Se o usuário abandonar o trajeto, permanecem disponíveis. Confirmar esta persistência em PD-006; alternativa possível é manter rascunho até a conclusão.
+**Decisão posterior — 10/10/2026:** o caminho rápido mantém itens somente na memória do fluxo, sem inclusão automática no estoque. Cancelar, sair para outra área, recarregar ou fechar a aba elimina o rascunho. Abrir a rota em outra aba preserva o fluxo; retornar exige GPS novo. Falhas recuperáveis preservam os itens enquanto a pessoa continua no fluxo. Contratos reais de ajuste/exclusão, concorrência e confirmação continuam pendentes em PD-006; ver [handoff](../../ux/morador-v6-handoff.md#jornada-e-regras-aprovadas).
 
 **Exceções:** impedir seleção superior à quantidade disponível; evitar gravação duplicada por repetição de confirmação. Exclusão e ajustes manuais do estoque são PD-006.
 
@@ -525,7 +535,7 @@ As etapas organizam dependências, não fixam calendário nem impedem paralelism
 
 **Decisões e recorte executável:** PD-006. Vincular às fichas TSK-DEC correspondentes. Avançar diagnóstico, interface e regras já confirmadas; manter bloqueados efeitos/parâmetros dependentes até aprovação.
 
-**Atenção:** persistir no estoque ao abandonar Descarte rápido é proposta; rascunho é alternativa. Não impor nenhuma delas antes de PD-006.
+**Atenção:** a proposta antiga de persistir itens rápidos no estoque após abandono foi superada pela decisão de 10/10/2026. Aplicar rascunho em memória; não considerar os contratos reais de PD-006 concluídos por essa decisão.
 
 **Critérios de aceite:**
 
@@ -618,6 +628,8 @@ As etapas organizam dependências, não fixam calendário nem impedem paralelism
 
 ### TSK-MOR-013 — Encaminhar morador à navegação externa
 
+**Atualização aplicada — 10/10/2026:** rascunho rápido em memória; abandono elimina sem incluir no estoque; rota externa em outra aba preserva o fluxo; retorno exige GPS novo. Falhas recuperáveis preservam itens no fluxo. Ajuste/remoção não concede pontos. Contratos reais, concorrência e confirmação permanecem pendentes; consultar o handoff e PD-006.
+
 **Perfil principal:** morador. **Prioridade:** P0. **Etapa:** E2.
 **Justificativa:** protege integridade/permissões ou desbloqueia a jornada correspondente.
 **Referências:** RF-MVP-017; RNF-MVP-001, RNF-MVP-002.
@@ -633,7 +645,7 @@ As etapas organizam dependências, não fixam calendário nem impedem paralelism
 
 **Pré-condições:** ponto selecionado com coordenadas válidas. **Fluxo:** oferecer navegação; abrir aplicativo/serviço externo com o ponto como destino; permitir retorno ao fluxo para confirmar a entrega.
 
-**Exceções:** indisponibilidade do navegador de mapas deve preservar ponto e itens. Não marcar chegada ou descarte com base apenas na abertura da rota. Persistência da seleção após encerrar o navegador é PD-006.
+**Exceções:** indisponibilidade do navegador de mapas deve preservar ponto e itens. Não marcar chegada ou descarte com base apenas na abertura da rota. A rota abre em outra aba e conserva o fluxo; no retorno, exigir GPS novo. Fechar a aba do fluxo elimina o rascunho rápido conforme decisão de 10/10/2026; contratos reais continuam sujeitos a PD-006.
 
 **Entrega demonstrável:** Abrir navegação externa com destino correto e retornar ao fluxo sem registrar descarte pela abertura da rota.
 
@@ -697,6 +709,8 @@ As etapas organizam dependências, não fixam calendário nem impedem paralelism
 **Conclusão:** aplicar a definição da seção 1.2; entregar evidências dos critérios e registrar qualquer recorte ainda bloqueado.
 
 ### TSK-MOR-015 — Confirmar entrega e movimentar estoques
+
+**Atualização aplicada — 10/10/2026:** rascunho rápido em memória; abandono elimina sem incluir no estoque; rota externa em outra aba preserva o fluxo; retorno exige GPS novo. Falhas recuperáveis preservam itens no fluxo. Ajuste/remoção não concede pontos. Contratos reais, concorrência e confirmação permanecem pendentes; consultar o handoff e PD-006.
 
 **Perfil principal:** morador. **Prioridade:** P0. **Etapa:** E2.
 **Justificativa:** protege integridade/permissões ou desbloqueia a jornada correspondente.
@@ -2878,13 +2892,15 @@ Estas tarefas produzem especificação aprovada ou resultado de investigação, 
 
 ### TSK-DEC-006 — Definir PD-006
 
+**Atualização aplicada — 10/10/2026:** rascunho rápido em memória; abandono elimina sem incluir no estoque; rota externa em outra aba preserva o fluxo; retorno exige GPS novo. Falhas recuperáveis preservam itens no fluxo. Ajuste/remoção não concede pontos. Contratos reais, concorrência e confirmação permanecem pendentes; consultar o handoff e PD-006.
+
 **Prioridade:** P0 — desbloquear fundamentos ou parâmetros da jornada.
 **Referências:** PD-006; RF-MVP-014, RF-MVP-017, RF-MVP-019.
-**Responsabilidade sugerida:** Produto. **Estado:** decisão pendente; esforço, responsável nominal, sprint e data a definir.
+**Responsabilidade sugerida:** Produto e backend. **Estado:** parcialmente definida em 10/10/2026; contratos reais pendentes; esforço, responsável nominal, sprint e data a definir.
 
 **História:** como equipe de produto e desenvolvimento, queremos resolver esta pendência para implementar e validar uma regra comum, evitando interpretações divergentes.
 
-**Questão a resolver:** Persistência dos itens no caminho rápido, retorno após abandono, validade da seleção, edição/exclusão do estoque e descarte parcial do morador.
+**Questão a resolver:** incorporar a decisão de UX de 10/10/2026 (rascunho em memória, abandono elimina, rota em outra aba preserva, GPS novo no retorno, seleção parcial e ajuste/remoção sem pontos). Definir os contratos reais de ajuste/exclusão, concorrência e confirmação ainda pendentes, sem reabrir a decisão de rascunho nem declarar o backend pronto.
 
 **Valor e relevância:** estabelecer resultados esperados e limites para as capacidades relacionadas, sem presumir uma escolha do idealizador.
 
@@ -3740,7 +3756,7 @@ Uma linha por requisito define sua tarefa principal. Tarefas de qualidade podem 
 - **Registro e entrega:** cadastrar embalagem, importar nota ou abrir rota não concede pontos nem comprova descarte.
 - **Crédito provisório:** 10 pontos por operação concluída, uma vez; idempotência de reenvio não resolve sozinha fracionamento fraudulento em novas operações (PD-010).
 - **Bônus:** pode ser apurado depois. Não interpretar diagramas como obrigação de aguardar bônus para confirmar o básico; mostrar somente valores efetivamente confirmados.
-- **Persistência do caminho rápido:** estoque permanente após abandono ou rascunho continuam alternativas em PD-006. Não escolher silenciosamente.
+- **Persistência do caminho rápido:** decisão de 10/10/2026 define rascunho em memória, abandono sem inclusão no estoque, rota em outra aba e GPS novo no retorno. PD-006 permanece parcial para contratos reais de ajuste/exclusão, concorrência e confirmação.
 - **Coleta:** “em execução” é proposta sem gatilho aprovado. Não contrariar a pré-condição de aceite para registro de pesos.
 - **Unidades:** quantidade de embalagens, ocupação estimada e peso medido não são equivalentes. Conciliação e coleta parcial dependem de PD-009/PD-018.
 - **Planos:** o critério editorial do RF-MVP-050 sobre utilização da documentação foi separado do aceite de produto neste backlog. A ficha verifica o que a interface anuncia conforme catálogo aprovado.
@@ -3759,8 +3775,12 @@ O conteúdo foi verificado documentalmente quanto a identificadores, referência
 
 ## 13. Diagnóstico do código disponível
 
-O [comparativo do MVP do estágio V1](../diagnostico/comparativo-mvp-estagio-v1.md) registra a análise dos commits indicados de frontend e backend, a estratégia por requisito e as verificações locais. Use essa evidência para refinar as fichas, sem importar regras antigas como decisões atuais.
+O [comparativo do MVP do estágio V1](../../diagnostico/comparativo-mvp-estagio-v1.md) registra a análise dos commits indicados de frontend e backend, a estratégia por requisito e as verificações locais. Use essa evidência para refinar as fichas, sem importar regras antigas como decisões atuais.
 
 TSK-TRA-000 avançou com a inspeção do código, build e testes locais, mas permanece parcial: faltam ambiente implantado, banco de avaliação com migrations, jornadas HTTP/navegador e validação da equipe. As demais tarefas não foram implementadas por esta análise.
 
 Priorizar os achados de integridade e acesso do comparativo: dupla baixa/crédito, regra de 10 pontos por operação, autorização por vínculo e retirada que preserve material remanescente. Responsáveis nominais, esforço, sprint e datas continuam a definir.
+
+## Atualização de experiência do morador — 10/10/2026
+
+O [handoff do morador V6](../../ux/morador-v6-handoff.md) registra a implementação de demonstração, o Figma, os contratos pendentes e a decisão de rascunho de PD-006. Os [testes com moradores](../../ux/morador-v6-teste-usuarios.md) estão preparados, não realizados. Esta entrega não declara as tasks funcionais prontas em produção nem resolve as pendências transacionais do backend. O diagnóstico técnico do frontend usado neste ciclo foi feito sobre o commit 4f41b139ba9871c92a5c5a72ca2f9d98ba6af164; os comportamentos incompatíveis e as evidências estão no handoff.

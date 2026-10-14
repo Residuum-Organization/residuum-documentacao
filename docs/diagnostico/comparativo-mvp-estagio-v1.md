@@ -2,7 +2,7 @@
 
 **Versão:** 1.0
 **Data:** 09/10/2026
-**Referência de negócio:** [Visão do projeto](../visao/visao-do-projeto.md), [requisitos V6](../requisitos/requisitos-mvp-v6.md) e [tasks V1](../planejamento/tasks-desenvolvimento-mvp-v1.md).
+**Referência de negócio:** [Visão do projeto](../visao/visao-do-projeto.md), [requisitos V6](../requisitos/requisitos-mvp-v6.md) e [tasks V1](../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md).
 **Objetivo:** identificar bases reaproveitáveis, adequações e capacidades a construir, com evidência do código e verificações locais.
 
 **Público:** equipe de produto, desenvolvimento e qualidade do Residuum.

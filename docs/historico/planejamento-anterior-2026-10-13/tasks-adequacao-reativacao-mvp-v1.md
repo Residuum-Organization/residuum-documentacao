@@ -1,12 +1,18 @@
 # Residuum — Tasks direcionadas de adequação e reativação do MVP
 
+**Documento anterior, preservado para rastreabilidade.** Para executar o trabalho atual, consulte o [documento geral das tasks](../../planejamento/modulos/tasks-gerais.md). Este arquivo não é uma segunda lista vigente de atividades.
+
+
+**[Documento geral das atividades por módulo e perfil](../../planejamento/modulos/README.md)** — modelo padronizado, testes, proposta de Scrum e matriz de importância; responsáveis e datas a preencher pela equipe.
+
+
 **Versão:** 1.0 — roteiro de execução para refinamento da equipe
 
 **Data:** 09/10/2026
 
 **Público:** equipe de seis pessoas: produto, design, frontend, backend e QA.
 
-**Base:** [visão do projeto](../visao/visao-do-projeto.md), [requisitos V6](../requisitos/requisitos-mvp-v6.md), [diagnóstico do código](../diagnostico/comparativo-mvp-estagio-v1.md) e [tasks V1](tasks-desenvolvimento-mvp-v1.md).
+**Base:** [visão do projeto](../../visao/visao-do-projeto.md), [requisitos V6](../../requisitos/requisitos-mvp-v6.md), [diagnóstico do código](../../diagnostico/comparativo-mvp-estagio-v1.md) e [tasks V1](tasks-desenvolvimento-mvp-v1.md).
 
 **Objetivo:** orientar a adequação do MVP do estágio à proposta consolidada com o idealizador, explicando o comportamento atual, a mudança necessária e a evidência que permitirá aceitar cada entrega.
 
@@ -383,7 +389,7 @@ Esta sequência não é calendário nem autorização de implantação. Contrato
 
 **Dependências:** [ADE-003](#ade-003), [ADE-004](#ade-004). Referem-se ao trecho integrado; preparação e contratos independentes podem avançar em paralelo.
 
-**Pendências / recorte executável:** PD-005, PD-006. Políticas de reimportação e edição/exclusão/abandono dependem de PD-005/PD-006; cadastro manual e registro sem pontos podem avançar. Vincular às TSK-DEC correspondentes; pendência não é regra a implementar.
+**Pendências / recorte executável:** PD-005, PD-006. Reimportação e contratos reais de edição/exclusão dependem de PD-005/PD-006. Abandono do caminho rápido elimina o rascunho, sem inclusão automática no estoque, conforme decisão de 10/10/2026; cadastro manual e registro sem pontos podem avançar. Vincular às TSK-DEC correspondentes; pendência não é regra a implementar.
 
 **Critérios de aceite BDD:**
 
@@ -424,19 +430,19 @@ Esta sequência não é calendário nem autorização de implantação. Contrato
 1. Diferenciar a intenção Registrar da intenção Descarte rápido na entrada e conduzir a ação rápida diretamente à leitura.
 2. Preservar a opção manual quando leitura falha ou câmera não está disponível.
 3. Usar a mesma confirmação e integridade do estoque para ambas as entradas; não criar endpoint com regra distinta de pontos.
-4. Aplicar política aprovada de persistência, abandono e retomada dos itens do caminho rápido.
+4. Aplicar a decisão de 10/10/2026: rascunho na memória do fluxo; abandono, reload ou fechamento elimina os itens sem gravar no estoque; rota externa em outra aba conserva o fluxo e exige GPS novo no retorno; falhas recuperáveis preservam itens enquanto a pessoa continua no fluxo.
 
 **Dados e entrega esperada:** Intenção da jornada, itens revisados e seleção de destino conservados conforme PD-006. Demonstrar comportamento e efeitos persistidos, incluindo ausência de efeitos nos casos negados.
 
 **Dependências:** [ADE-005](#ade-005), [ADE-007](#ade-007), [ADE-009](#ade-009), [ADE-011](#ade-011). Referem-se ao trecho integrado; preparação e contratos independentes podem avançar em paralelo.
 
-**Pendências / recorte executável:** PD-006. Comportamento de persistência e abandono bloqueado por PD-006; fluxo visual e contrato com confirmação comum podem ser preparados. Vincular às TSK-DEC correspondentes; pendência não é regra a implementar.
+**Pendências / recorte executável:** PD-006. Persistência e abandono estão definidos na decisão de UX de 10/10/2026; contratos reais de ajuste/exclusão, concorrência e confirmação continuam pendentes em PD-006. Não liberar escrita real sem contrato validado. Vincular às TSK-DEC correspondentes; pendência não é regra a implementar.
 
 **Critérios de aceite BDD:**
 
 - **Dado** a ação Descarte rápido, **quando** ela é acionada, **então** abre a leitura e oferece alternativa manual.
 - **Dado** um item revisado, **quando** o morador escolhe um ponto, **então** o item segue para a confirmação comum sem crédito antecipado.
-- **Dado** abandono do caminho rápido, **quando** retorna à plataforma, **então** estoque e seleção seguem a política aprovada e não recebem pontos.
+- **Dado** abandono do caminho rápido, **quando** retorna à plataforma, **então** o rascunho anterior não é recuperado, os itens não foram incluídos automaticamente no estoque e não houve crédito de pontos.
 
 **Conclusão:** seção 1.1, com interface/API/dados, falhas verificadas e recortes bloqueados. Estes critérios complementam os da V6 e das TSK relacionadas.
 
@@ -666,7 +672,7 @@ Esta sequência não é calendário nem autorização de implantação. Contrato
 
 **Dependências:** [ADE-001](#ade-001), [ADE-004](#ade-004), [ADE-005](#ade-005), [ADE-009](#ade-009), [ADE-010](#ade-010). Referem-se ao trecho integrado; preparação e contratos independentes podem avançar em paralelo.
 
-**Pendências / recorte executável:** PD-006, PD-010. Persistência rápida e prevenção de fracionamento/ajustes históricos dependem de PD-006/PD-010; regra básica de 10 e correção de duplo efeito estão definidas. Vincular às TSK-DEC correspondentes; pendência não é regra a implementar.
+**Pendências / recorte executável:** PD-006, PD-010. Rascunho rápido está definido pela decisão de 10/10/2026; contratos reais de ajuste/exclusão e concorrência continuam em PD-006. Prevenção de fracionamento/ajustes históricos depende de PD-010; regra básica de 10 e correção de duplo efeito estão definidas. Vincular às TSK-DEC correspondentes; pendência não é regra a implementar.
 
 **Critérios de aceite BDD:**
 
@@ -1497,7 +1503,7 @@ As TSK-DEC-001 a TSK-DEC-027 permanecem na V1. Para cada PD abaixo, entregar **r
 | PD-003 | Campos obrigatórios por perfil, CPF/documentos do ponto, verificação de e-mail, recuperação e habilitação | [ADE-001](#ade-001), [ADE-002](#ade-002), [ADE-003](#ade-003), [ADE-013](#ade-013), [ADE-015](#ade-015) | TSK-DEC-003 |
 | PD-004 | Tipos de notas e identificadores, fonte de consulta, catálogo de produtos, cobertura, autorização, limites | [ADE-007](#ade-007), [ADE-008](#ade-008) | TSK-DEC-004 |
 | PD-005 | Pode importar a mesma nota novamente? Como evitar inclusão involuntária repetida e selecionar apenas | [ADE-005](#ade-005), [ADE-008](#ade-008) | TSK-DEC-005 |
-| PD-006 | Persistência dos itens no caminho rápido, retorno após abandono, validade da seleção, edição/exclusão do | [ADE-005](#ade-005), [ADE-006](#ade-006), [ADE-011](#ade-011) | TSK-DEC-006 |
+| PD-006 | Rascunho em memória e abandono definidos em 10/10/2026; contratos reais de ajuste/exclusão, concorrência e confirmação pendentes | [ADE-005](#ade-005), [ADE-006](#ade-006), [ADE-011](#ade-011) | TSK-DEC-006 |
 | PD-007 | Busca sem GPS, materiais mistos em pontos diferentes, recebimento fora do horário ou com ponto cheio e | [ADE-009](#ade-009) | TSK-DEC-007 |
 | PD-008 | Raio, precisão, idade da posição, tentativas e timeout do GPS; critério de campo para autorizar presença | [ADE-010](#ade-010) | TSK-DEC-008 |
 | PD-009 | Unidade/cálculo da capacidade e lotação, parâmetros de alertas, regras de funcionamento, tags, edição de | [ADE-004](#ade-004), [ADE-009](#ade-009), [ADE-013](#ade-013), [ADE-014](#ade-014), [ADE-017](#ade-017) | TSK-DEC-009 |

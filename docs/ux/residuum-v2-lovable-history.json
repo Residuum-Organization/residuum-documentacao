@@ -1,0 +1,28 @@
+{
+  "projectId": "d0d6096b-3659-438f-bbc6-6c3cba741263",
+  "editorUrl": "https://lovable.dev/projects/d0d6096b-3659-438f-bbc6-6c3cba741263",
+  "previewUrl": "https://id-preview--d0d6096b-3659-438f-bbc6-6c3cba741263.lovable.app",
+  "v1Figma": "https://www.figma.com/design/baSbCELQOjRlof8fZvWZCe/Residuum?node-id=3-5",
+  "published": false,
+  "stages": [
+    {"stage": 1, "name": "Jornada demonstrativa", "messageId": "umsg_01m4prkgcees2v9m8a550gg5hg", "status": "partial_build_errors_reported", "commitSha": "dd069c3915ea34635918f3330cdf92f4c46b85fa", "editId": "edt-4b5f1788-f2cc-4dc1-a347-99bf3303c565", "costCreditsReported": 9.97},
+    {"stage": 2, "name": "Aprenda e publicidade", "status": "pending"},
+    {"stage": 3, "name": "Motion e histórico", "status": "pending"},
+    {"stage": 4, "name": "Validação e handoff", "status": "pending"}
+  ],
+  "blocker": "Lovable workspace out of credits: correction message rejected before execution.",
+  "previewObserved": "Home and registration/partial stock delivery render after browser login, despite reported type-check errors.",
+  "smokeChecks": [
+    "Register 2 PET: inventory 6 to 8, balance remains 30",
+    "Deliver 2 PET from stock: inventory 8 to 6, cans remain 4, balance 30 to 40",
+    "Confirmation button disabled while simulated request pending"
+  ],
+  "pending": [
+    "Fix type-check errors, run build and unit tests",
+    "Apply original logo and SVG; initial build uses generated assets",
+    "Add accepted-material compatibility and fresh GPS revalidation",
+    "Verify reward operation idempotency and all 35 states",
+    "Implement Aprenda, AdSlot states, motion laboratory, evolution comparisons and final handoff",
+    "Review four responsive widths, keyboard accessibility and reduced motion"
+  ]
+}

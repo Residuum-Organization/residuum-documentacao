@@ -158,3 +158,7 @@ O projeto possui um MVP existente e está padronizando sua documentação para a
 | Evolução a avaliar | Cashback em dinheiro, pontuação definitiva, ranking, confirmação pelo ponto/QR, certificados, exportações, rotas otimizadas e acompanhamento contínuo |
 
 O detalhamento e as perguntas para validação estão na [seção de pendências da V6](../requisitos/requisitos-mvp-v6.md#12-pendências-de-decisão). Ao resolver uma decisão, a equipe deverá manter esta visão e o levantamento coerentes entre si.
+
+## Decisão de experiência do morador — 10/10/2026
+
+No descarte rápido, os itens ficam somente na memória do fluxo até a confirmação. Cancelar, mudar de área, recarregar ou fechar a aba elimina o rascunho; o morador deve usar Registrar se quiser guardar para depois. A rota abre em outra aba e conserva o fluxo, mas a presença precisa de GPS novo ao retornar. Essa decisão, aprovada pelo solicitante, substitui a proposta anterior de gravar automaticamente no estoque. O [handoff](../ux/morador-v6-handoff.md) distingue demonstração, integração real pendente e validação com moradores ainda não realizada.
