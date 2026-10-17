@@ -1,0 +1,25 @@
+name: Proposta de alteração documental
+description: Proponha uma melhoria ou atualização da documentação.
+title: "[Proposta] "
+body:
+  - type: textarea
+    id: motivo
+    attributes:
+      label: Problema ou necessidade
+      description: Explique o motivo e os documentos ou IDs envolvidos.
+    validations:
+      required: true
+  - type: textarea
+    id: proposta
+    attributes:
+      label: Alteração proposta
+      description: Descreva o resultado e como verificar se atende à necessidade.
+    validations:
+      required: true
+  - type: textarea
+    id: impacto
+    attributes:
+      label: Impacto e decisões
+      description: Informe links, critérios e decisões afetados. Indique aprovações necessárias ou escreva não se aplica.
+    validations:
+      required: true

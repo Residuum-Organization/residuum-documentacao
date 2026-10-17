@@ -1,4 +1,10 @@
 * text=auto
 *.md text eol=lf
+*.mjs text eol=lf
+*.yml text eol=lf
+*.patch -text
+*.json -text
+*.png binary
 .gitignore text eol=lf
 .gitattributes text eol=lf
+.editorconfig text eol=lf

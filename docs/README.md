@@ -1,34 +1,33 @@
-# Residuum — guia dos documentos atuais
+# Residuum — guia dos documentos
 
-## Referências principais de trabalho
+[Página inicial](../README.md) · [Como contribuir](../CONTRIBUTING.md)
 
-1. **[Documento geral das tasks](planejamento/modulos/tasks-gerais.md):** atividades no modelo combinado, critérios, dependências, bloqueios, importância e testes vinculados.
-2. **[Proposta de Scrum e sprints](planejamento/modulos/scrum-e-sequencia.md):** morador → ponto de coleta → cooperativa → administrador, com fundamentos e QA durante as entregas.
+## Escolha o que precisa fazer
 
-Responsáveis, datas, estimativas e compromissos finais de sprint são preenchidos pela equipe. O guia por módulos contém as mesmas atividades para consulta, não outro backlog.
-
-## Apoio por assunto
-
-| Assunto | Documento |
+| Necessidade | Referência |
 |---|---|
-| Visão do projeto | [Problema, participantes, solução e limites](visao/visao-do-projeto.md) |
-| Requisitos | [Especificação V6](requisitos/requisitos-mvp-v6.md) |
-| Regras | [Regras de negócio](requisitos/regras-de-negocio.md) |
-| Módulos | [Fichas e navegação por módulo](planejamento/modulos/README.md) |
-| Importância | [Impacto × urgência](planejamento/modulos/matriz-importancia.md) |
-| Arquitetura e banco | [Recortes técnicos](planejamento/modulos/arquitetura-refatoracao-banco.md) |
-| Testes integrados | [Casos de validação](planejamento/modulos/testes-integrados.md) |
-| Quadro do time | [Uso do Kanban](planejamento/kanban-miro.md) |
-| Reuniões | [Rotina](planejamento/rotina-de-reunioes.md) |
-| Estudos e implementação examinada | [Estudos](estudos/estudos-do-projeto.md) e [diagnóstico](diagnostico/comparativo-mvp-estagio-v1.md) |
-| Pesquisa de negócio e mercado | [Índice de pesquisas](pesquisa/README.md) |
-| Tecnologia | [Stacks e integrações](tecnologia/stacks-e-integracoes.md) |
-| Experiência do morador | [Handoff](ux/morador-v6-handoff.md), [validação registrada](ux/morador-v6-validacao.md) e [teste com moradores](ux/morador-v6-teste-usuarios.md) |
-| Demonstração independente V2 | [Estado e limites](ux/residuum-v2-lovable-status.md) |
-| Documentos anteriores | [Histórico](historico/README.md) |
+| Vou implementar | [Fichas editáveis por perfil](01-planejamento/02-perfis/README.md), [atividades gerais](01-planejamento/01-atividades-gerais.md) e [índices por módulo](01-planejamento/03-modulos/README.md) |
+| Preciso decidir | [Decisões relacionadas](01-planejamento/04-decisoes.md) e [pendências gerais](01-planejamento/08-pendencias-gerais.md) |
+| Vou testar | [Fluxo de qualidade](05-qualidade/01-fluxo-e-qualidade.md), [casos integrados](05-qualidade/02-testes-integrados.md) e casos individuais nas fichas |
+| Preciso entender o produto | [Visão](02-produto/01-visao.md), [requisitos V6](02-produto/02-requisitos-mvp-v6.md) e [regras de negócio](02-produto/03-regras-de-negocio.md) |
+| Vou planejar uma entrega | [Prioridades](01-planejamento/05-matriz-prioridades.md), [entregas por perfil](01-planejamento/06-entregas-por-perfil.md) e [sprints](01-planejamento/07-sprints.md) |
+| Preciso consultar a base examinada | [Tecnologia e diagnóstico](03-tecnologia/README.md) |
 
-## Qual referência utilizar
+## Assuntos
 
-O documento geral orienta a execução atual. A V6 e as decisões posteriores do handoff orientam comportamento e regras; a proposta de Scrum organiza objetivos e responsabilidades; o diagnóstico e os registros de UX descrevem evidências com versões e limites próprios. As pesquisas de negócio registram hipóteses e referências externas e não substituem requisitos aprovados. O estado atual do trabalho é acompanhado no quadro da equipe, não inferido dos documentos históricos.
+1. [Planejamento](01-planejamento/README.md)
+2. [Produto](02-produto/README.md)
+3. [Tecnologia](03-tecnologia/README.md)
+4. [Experiência e demonstrações](04-ux/README.md)
+5. [Qualidade](05-qualidade/README.md)
+6. [Pesquisa](06-pesquisa/README.md)
+7. [Histórico](07-historico/README.md)
+8. [Manutenção da documentação](08-manutencao/README.md)
 
-Os arquivos de tasks V1 e de adequação foram preservados no histórico como fontes. Seus identificadores continuam vinculados ao documento atual para rastreabilidade, sem duplicar entregas. Testes preparados permanecem diferentes de testes executados e aprovados.
+## Fontes de edição e autoridade
+
+Edite as fichas nos documentos por perfil. O documento geral das atividades é um compilado automático dessas fontes e dos documentos de apoio. Os índices M01–M11 apontam para as mesmas fichas, sem criar outro backlog.
+
+Os requisitos V6, as regras e as decisões posteriores explicitamente aprovadas no handoff orientam o comportamento. A proposta de sprints organiza as entregas; o quadro da equipe acompanha status e responsáveis. Pesquisas registram hipóteses e referências, e o histórico explica a evolução documental.
+
+O conjunto preserva 93 IDs, 66 fichas de execução, 228 casos individuais e 45 casos integrados. Casos planejados, testes executados e homologação são situações distintas; evidências e demonstrações mantêm suas versões e limites.

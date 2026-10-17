@@ -1,0 +1,25 @@
+name: Problema na documentação
+description: Informe um erro, ambiguidade ou link inválido.
+title: "[Docs] "
+body:
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Documento e contexto
+      description: Informe o caminho ou link e os IDs relacionados, quando houver.
+    validations:
+      required: true
+  - type: textarea
+    id: problema
+    attributes:
+      label: Problema observado
+      description: Descreva o erro e os passos para encontrá-lo.
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Resultado esperado
+      description: Explique a correção esperada e inclua evidências disponíveis.
+    validations:
+      required: true
