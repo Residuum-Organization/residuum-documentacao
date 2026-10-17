@@ -63,9 +63,7 @@ A stack da aplicação examinada inclui React/Vite, FastAPI e PostgreSQL; consul
 
 [Handoff do morador V6](docs/04-ux/01-morador-v6/01-handoff.md) · [Validação registrada](docs/04-ux/01-morador-v6/02-validacao.md) · [Demonstração independente V2](docs/04-ux/02-demonstracao-v2/01-status.md)
 
-![Captura registrada da Home móvel do morador V6](docs/04-ux/01-morador-v6/evidencias/morador-v6-home-mobile.png)
-
-A imagem é uma evidência da demonstração V6. Consulte o registro de validação para seu contexto: capturas, testes planejados e demonstrações não comprovam homologação integrada. O prazo informado no planejamento é 20/11/2026, condicionado ao recorte e à capacidade da equipe.
+Consulte o registro de validação para conhecer o contexto das evidências: capturas, testes planejados e demonstrações não comprovam homologação integrada. O prazo informado no planejamento é 20/11/2026, condicionado ao recorte e à capacidade da equipe.
 
 ## Equipe e contribuição
 
