@@ -13,7 +13,7 @@ Responsáveis, datas, estimativas e compromissos finais de sprint são preenchid
 |---|---|
 | Visão do projeto | [Problema, participantes, solução e limites](visao/visao-do-projeto.md) |
 | Requisitos | [Especificação V6](requisitos/requisitos-mvp-v6.md) |
-| Regras | [Regras de negócio](requisitos/regras-de-negocio.md) |
+| Regras | [Regras de negócio](requisitos/regras-de-negocio.md) · [Regras de campanhas](requisitos/regras-de-campanhas.md) |
 | Módulos | [Fichas e navegação por módulo](planejamento/modulos/README.md) |
 | Importância | [Impacto × urgência](planejamento/modulos/matriz-importancia.md) |
 | Arquitetura e banco | [Recortes técnicos](planejamento/modulos/arquitetura-refatoracao-banco.md) |
