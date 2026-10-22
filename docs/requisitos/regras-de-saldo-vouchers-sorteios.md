@@ -117,7 +117,7 @@ Todo débito passa por um único serviço (`app/services/saldo_service.py`, `deb
 | Mesma chave em outro voucher/sorteio | 409 |
 | Sem chave | cada pedido é um resgate; no sorteio, o segundo bilhete do mesmo usuário continua recusado |
 
-A chave é conferida antes das validações de estoque e vale por usuário. **A interface ainda não envia a chave:** ela precisa ser criada uma vez por intenção do morador (por exemplo, ao abrir o modal de confirmação) e repetida nas novas tentativas.
+A chave é conferida antes das validações de estoque e vale por usuário. **A interface envia a chave:** uma por confirmação de resgate aberta (repetida se o morador tentar de novo) e uma por visita à página do sorteio, de modo que reenviar depois de uma falha de rede não debita em duplicidade.
 
 ## Extrato com origem
 
@@ -138,7 +138,6 @@ Ambas partem da migration de campanhas (`a41c7e92d5b3`); a branch é empilhada s
 - **Pendência legal do sorteio com prêmio real** (ver acima): parecer jurídico ou consulta à Secap. Bloqueia qualquer prêmio real.
 - **Propostas do sorteio** (algoritmo de apuração, cancelamento, prêmio) e **canal de notificação** além do aviso dentro do app.
 - **Saldos antigos** não foram recalculados para a regra de 5 pontos, e o estorno de descarte antigo devolve o valor novo.
-- **Frontend sem Idempotency-Key.**
 - **Créditos sem trava:** as rotas que somam pontos (descarte, inventário, campanhas) ainda não travam o usuário. Um crédito e um débito simultâneos podem, em teoria, perder um dos dois. Um serviço de crédito igual ao de débito é o próximo passo (parte de TSK-MOR-021).
 - **TSK-ADM-004 e TSK-ADM-017:** perfil de admin e mídia da loja.
 
