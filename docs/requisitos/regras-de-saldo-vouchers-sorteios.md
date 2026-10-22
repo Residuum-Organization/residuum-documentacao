@@ -33,9 +33,19 @@ Quando há prazo, entra a linha "O código vale por N dias a partir do resgate" 
 
 ## Regra inicial de pontos e faixas de recompensa
 
-Regra informada pelo time em 2026-10-22, **inicial e sujeita a mudança**. Nenhum valor foi cadastrado no sistema: o admin define o custo de cada oferta e usa as faixas como referência.
+Regra informada pelo time em 2026-10-22, **inicial e sujeita a mudança**. Nenhum valor de recompensa foi cadastrado no sistema: o admin define o custo de cada oferta e usa as faixas como referência.
 
 > Regra: 1 descarte = 5 pontos.
+
+**Decisão do time (2026-10-22): a regra acima é a que vale.** O sistema passou a pagar **5 pontos por unidade descartada confirmada** (constante `PONTOS_POR_UNIDADE` em `app/services/pontuacao_service.py`), no lugar dos 10 da V6 e do código anterior. Isso resolve a divergência AUD-002 no valor; o texto da V6 ("10 pontos básicos") fica como histórico e este documento prevalece.
+
+Efeitos da mudança:
+
+- O **dobro de pontos** das campanhas paga os pontos básicos das unidades da meta, agora a 5 por unidade (meta de 4 unidades = 20 pontos). Ver [Regras de campanhas](regras-de-campanhas.md).
+- O **estorno** de um descarte confirmado usa a mesma função do crédito.
+- As estimativas de pontos nas telas do morador, do ponto de coleta e do admin usam 5.
+- **Pontos já creditados não foram recalculados.** Saldos antigos continuam como estavam. O estorno de um descarte confirmado **antes** da mudança devolve o valor novo (5 por unidade), menor que o creditado (10); a diferença fica com o morador.
+- Interpretação adotada: "descarte" = **unidade** descartada, como o código já contava (1 lata = 1 descarte). Se o time quiser 5 pontos por operação de descarte, independentemente da quantidade, a fórmula muda; avise.
 
 | Pontos | Descartes | Resgate | Objetivo |
 |---|---|---|---|
@@ -47,19 +57,20 @@ Regra informada pelo time em 2026-10-22, **inicial e sujeita a mudança**. Nenhu
 | 500 | 100 | 40% de desconto, voucher de R$ 450,00 ou produto premium | "Embaixadores" da marca |
 | 1.000 | 200 | 50% de desconto (ou o teto da loja), voucher de R$ 1.000,00 ou kit VIP / produto estrela | Nível máximo de fidelidade |
 
-**Conflito a decidir (não alterado no código):** a V6 define **10 pontos básicos por descarte** e o código hoje paga 10 pontos por unidade confirmada (AUD-002). A regra acima diz **5 pontos por descarte**. Trocar o valor muda o saldo de todos os moradores, a mecânica de dobro de pontos das campanhas e todas as faixas acima. Até a decisão, o sistema continua com 10.
+Com 5 pontos por unidade, a coluna "Descartes" da tabela fecha com a pontuação do sistema (10 pontos = 2 descartes, 1.000 pontos = 200 descartes).
 
-Interpretação: as faixas valem como referência de **custo em pontos** das ofertas (vouchers e, se o time quiser, o custo do bilhete de sorteio). O texto fala em "cliente" e "loja"; tratei como a loja do parceiro.
+Interpretação: as faixas valem como referência de **custo em pontos** das ofertas (vouchers e o custo do bilhete de sorteio). O texto fala em "cliente" e "loja"; tratei como a loja do parceiro.
 
 ## Sorteios e bilhetes
 
 ### Como está hoje
 
 - Participar exige sorteio ativo e na vigência, **descarte confirmado com GPS** e saldo suficiente. O custo (`custo_pontos` do sorteio) é debitado do saldo.
-- **1 bilhete por usuário por sorteio.** Numeração sequencial no sorteio.
+- **1 bilhete por usuário por sorteio** (decisão do time em 2026-10-22: continua assim). Numeração sequencial no sorteio.
 - Apuração só pelo admin, depois do fim da vigência: sorteia um bilhete ao acaso, encerra o sorteio e registra o resultado. Não apura duas vezes. O resultado é público.
 - Custo: o admin escolhe o `custo_pontos` de cada sorteio; as faixas da seção anterior são a referência inicial.
-- "1 bilhete" e "exige descarte com GPS" são regras herdadas da V5. **Continuam até o time decidir outra coisa.**
+- "Exige descarte com GPS" é regra herdada da V5. **Continua até o time decidir outra coisa.**
+- **Só sorteios de teste** (decisão do time em 2026-10-22). Nenhum sorteio com prêmio real deve ser publicado enquanto a pendência legal abaixo estiver aberta.
 
 ### Notificação (decidido: simples)
 
@@ -86,8 +97,10 @@ Nada abaixo está implementado. São sugestões para a reunião de decisão (PD-
 4. **Condições legais**
    - A [Lei 5.768/1971](https://legis.senado.leg.br/norma/547644/publicacao/15714470) exige **autorização prévia** para distribuir prêmios por sorteio, vale-brinde ou concurso com fim de propaganda; fora dos casos previstos, ninguém pode distribuir ou prometer prêmios dessa forma. A competência hoje é da Secap (Ministério da Fazenda), por meio do sistema de promoção comercial, com taxa de fiscalização. É proibido converter o prêmio em dinheiro, e a realização sem autorização gera multa e proibição de novas operações. Fontes: [Migalhas, sorteios e autorização prévia](https://www.migalhas.com.br/depeso/337965/os-sorteios-e-a-necessidade-de-autorizacao-previa), [nota informativa da Secap](https://www.gov.br/economia/pt-br/centrais-de-conteudo/publicacoes/notas-informativas/2020/nota-informativa_secap.pdf).
    - **Não confirmei** se um sorteio em que a participação custa pontos ganhos com reciclagem se enquadra nessa exigência. Isso precisa de parecer de advogado especializado ou consulta à Secap antes de qualquer sorteio com prêmio real.
-   - Enquanto isso, a recomendação é não publicar sorteio com prêmio real; usar sorteios de teste, sem prêmio, nos ambientes de demonstração.
-5. **Chances e limites** (decisão do time pendente): hoje 1 bilhete por usuário. Proposta: o admin define no sorteio o máximo de bilhetes por usuário (padrão 1) e o custo por bilhete sai das faixas. A chave de idempotência já impede bilhete duplicado por reenvio.
+   - **Decisão do time (2026-10-22): só sorteios de teste**, sem prêmio real, nos ambientes de demonstração.
+
+> **PENDÊNCIA LEGAL (aberta):** antes de qualquer sorteio com prêmio real, obter parecer jurídico especializado ou consultar a Secap sobre o enquadramento na Lei 5.768/1971 e, se exigido, a autorização prévia. Responsável e prazo: a definir pela equipe. Enquanto estiver aberta, não publicar sorteio com prêmio real.
+5. **Chances e limites:** decidido em 2026-10-22: **1 bilhete por usuário**. Um limite configurável por sorteio fica como possibilidade futura. A chave de idempotência já impede bilhete duplicado por reenvio.
 
 ## Saldo e débito de pontos
 
@@ -122,12 +135,13 @@ Ambas partem da migration de campanhas (`a41c7e92d5b3`); a branch é empilhada s
 - **Cancelamento e devolução de pontos do voucher** (decisão do time: em aberto).
 - **Validação do código no parceiro:** o sistema entrega e controla o código, mas não confirma que o parceiro o aceitou; o voucher resgatado continua não provando uso (V6). Não há status "usado".
 - **Validade por código:** hoje o prazo é um só por voucher, em dias após o resgate. Se o parceiro mandar códigos com data própria, será preciso guardar a data por código.
-- **Valor da pontuação por descarte:** 5 (regra inicial informada) contra 10 (V6 e código). Ver conflito acima.
-- **Propostas do sorteio** (algoritmo, cancelamento, prêmio, legal, chances) e **canal de notificação** além do aviso dentro do app.
+- **Pendência legal do sorteio com prêmio real** (ver acima): parecer jurídico ou consulta à Secap. Bloqueia qualquer prêmio real.
+- **Propostas do sorteio** (algoritmo de apuração, cancelamento, prêmio) e **canal de notificação** além do aviso dentro do app.
+- **Saldos antigos** não foram recalculados para a regra de 5 pontos, e o estorno de descarte antigo devolve o valor novo.
 - **Frontend sem Idempotency-Key.**
 - **Créditos sem trava:** as rotas que somam pontos (descarte, inventário, campanhas) ainda não travam o usuário. Um crédito e um débito simultâneos podem, em teoria, perder um dos dois. Um serviço de crédito igual ao de débito é o próximo passo (parte de TSK-MOR-021).
 - **TSK-ADM-004 e TSK-ADM-017:** perfil de admin e mídia da loja.
 
 ## Testes
 
-`tests/test_vouchers_sorteios.py` (31 casos) no backend cobre: saldo lido do banco, recusa sem saldo sem alterar nada, resgate com baixa de estoque e origem, idempotência (inclusive no último do estoque), códigos do parceiro (soma ao estoque, repetidos, conflito, limite de tamanho, entrega na ordem, esgotamento, remoção), validade e expiração, instruções padrão e do admin, detalhe de voucher inativo, avisos do sorteio (ganhador e demais), leitura só dos próprios avisos e separação do painel operacional. Não cobre concorrência real entre conexões: o SQLite dos testes ignora `FOR UPDATE`, então o bloqueio precisa ser conferido em PostgreSQL. A interface compila, mas **não foi validada visualmente**.
+`tests/test_vouchers_sorteios.py` (31 casos) no backend cobre: saldo lido do banco, recusa sem saldo sem alterar nada, resgate com baixa de estoque e origem, idempotência (inclusive no último do estoque), códigos do parceiro (soma ao estoque, repetidos, conflito, limite de tamanho, entrega na ordem, esgotamento, remoção), validade e expiração, instruções padrão e do admin, detalhe de voucher inativo, avisos do sorteio (ganhador e demais), leitura só dos próprios avisos e separação do painel operacional. Não cobre concorrência real entre conexões: o SQLite dos testes ignora `FOR UPDATE`, então o bloqueio precisa ser conferido em PostgreSQL. `tests/test_pontuacao.py` (4 casos) confere os 5 pontos por unidade e as faixas da tabela. A interface compila, mas **não foi validada visualmente**.
