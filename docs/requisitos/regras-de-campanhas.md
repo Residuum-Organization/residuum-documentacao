@@ -56,7 +56,7 @@ O admin liga e desliga cada mecânica no editor. Uma campanha tem no máximo uma
 
 O admin define o **resíduo** (material e/ou código de barras) e a **quantidade** necessária para ganhar o bônus.
 
-O morador que participa e recicla essa quantidade, depois de aderir, recebe de bônus **os pontos básicos dessas unidades** (ou seja, dobra o que elas valem). Hoje o ponto básico é 10 por unidade, então uma meta de 4 unidades paga 40 pontos. O valor usa a mesma função da pontuação do descarte e acompanha a regra base se ela mudar (ver AUD-002 no [comparativo do MVP](../diagnostico/comparativo-mvp-estagio-v1.md)).
+O morador que participa e recicla essa quantidade, depois de aderir, recebe de bônus **os pontos básicos dessas unidades** (ou seja, dobra o que elas valem). O ponto básico é **5 por unidade** (decisão do time em 2026-10-22; ver [Regras de saldo, vouchers e sorteios](regras-de-saldo-vouchers-sorteios.md)), então uma meta de 4 unidades paga 20 pontos. O valor usa a mesma função da pontuação do descarte e acompanha a regra base se ela mudar.
 
 ## Pagamento
 
