@@ -28,7 +28,7 @@ Mudanças pequenas, em branch própria, entram na `main` **só por Pull Request*
 | Correção urgente em produção | `hotfix/<tema>` | `hotfix/login-expirado` |
 | Documentação | `docs/<tema>` | `docs/parte-3-api-contributing` |
 
-`[DECISÃO]` padronizar **`feature/`** e deixar de criar `feat/`. É a forma usada nas branches mais recentes.
+**Decidido em 11/11/2026:** padronizar **`feature/`** e deixar de criar `feat/` (é a forma das branches mais recentes).
 
 ## Commits
 

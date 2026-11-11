@@ -26,7 +26,7 @@ A API é **REST em JSON**, feita em FastAPI, com **113 rotas** (111 nos 15 arqui
 | Método | Rota | Perfil | Muda |
 |---|---|---|---|
 | GET | `/` | pública | — |
-| GET | `/painel-testes` | pública | 🔴 painel de testes exposto em produção `[DECISÃO: remover ou proteger]` |
+| GET | `/painel-testes` | pública | 🔴 **remover da produção** (decidido em 11/11/2026); fica só no ambiente local |
 
 ### Autenticação e conta
 
