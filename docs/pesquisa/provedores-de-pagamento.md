@@ -39,17 +39,26 @@ O Banco Central **permite que instituições cobrem pessoas jurídicas** no envi
 | Quantas coletas por mês no piloto? | Produto (define se a tarifa importa) |
 | Há exigência de nota fiscal ou recibo para repassar? | Contábil / jurídico `[LACUNA]` |
 
+## Decisão (11/11/2026)
+
+| Pergunta | Resposta |
+|---|---|
+| Como começa o piloto | **Pagamento manual** com comprovante registrado no sistema; **API depois** |
+| Quem paga | **A empresa Residuum** ([PD-016](../01-planejamento/decisoes/pd-016.md)) |
+| Como calcular | **Por kg e material** ([PD-015](../01-planejamento/decisoes/pd-015.md)); valores a definir |
+
 ## Recomendação para o piloto
 
 1. **Pagamento manual com registro no sistema** nas primeiras coletas: o administrador paga pelo banco e marca "pago" com o comprovante. Zero integração, zero risco financeiro.
 2. Enquanto isso, **testar a API do Asaas e do Mercado Pago em ambiente de teste**, que ambos possuem, e pedir tabela de tarifas por escrito às três.
 3. Só integrar quando o pagador e o valor por coleta estiverem decididos.
 
-> Esta recomendação **contraria** o que a Visão original coloca como "dentro do MVP" (pagamento por API). Se o produto mantiver a API no MVP, o passo 3 vira bloqueio.
+> Aceita em 11/11/2026: a Visão foi ajustada (manual no piloto, API depois).
 
 ## O que falta para fechar
 
-- [ ] Responder as 5 perguntas acima
+- [x] Pagador (Residuum), forma de cálculo (por kg e material) e início manual decididos em 11/11/2026
+- [ ] Valor por kg de PET e de lata; chave Pix da cooperativa; coletas por mês; exigência de nota ou recibo
 - [ ] Pedir tabela de tarifas de envio de Pix ao Asaas, à Efí e ao Mercado Pago
 - [ ] Testar a API em ambiente de teste
 - [ ] `[LACUNA]` conferir exigência legal para uma plataforma pagar terceiros (instituição de pagamento ou conta digital de parceiro)
