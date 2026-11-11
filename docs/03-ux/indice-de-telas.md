@@ -1,6 +1,6 @@
 # Índice de telas e protótipos
 
-> **Estado:** revisão · **Dono:** UX · **Atualizado em:** 10/11/2026
+> **Estado:** revisão · **Dono:** UX · **Atualizado em:** 11/11/2026
 > **Fontes:** rotas de `frontend/src/App.jsx` (branch local do frontend), `docs/ux/` (handoff, validação, Figma ledger), fichas dos achados.
 > **Lacunas:** link do Figma por perfil, capturas atuais, wireframes dos perfis operacionais.
 
@@ -79,6 +79,30 @@ A V6 separa **responsável pelo ponto** e **cooperativa**; o front junta os dois
 | `docs/ux/morador-v6-figma-ledger.json` | Registro do Figma em JSON `[LACUNA]` converter para tabela `.md` |
 
 Nenhum teste de usabilidade executado foi encontrado.
+
+## Telas que mudam pelas decisões de 11/11/2026
+
+| Tela | O que muda | Decisão |
+|---|---|---|
+| `/cadastro` | Pedir o **código individual**; sem vaga, mostrar aviso e **lista de espera** | PD-001, PD-002 |
+| `/cadastro-ponto-coleta`, `/empresa`, `/confirmacao` | **Remover**: só o admin cria ponto | RN-011 |
+| Barra de navegação | Botão **+** no centro abre: código de barras, QR da nota, manual | Visão |
+| `/cadastrar-residuo` | Aviso **vermelho** a cada falha de leitura; a partir da **2ª**, recomendar o manual; **confirmar o material** (PET ou lata) sempre | PD-004 |
+| `/mapa` | Ponto **cheio** fica **bloqueado** e o app **sugere outro** compatível | PD-009 |
+| `/validacao-presenca` | Raio de **100 m** do ponto | PD-008 |
+| `/transferencia-concluida`, `/extrato` | Mostrar **10 pontos** só **depois da confirmação** do operador | PD-010 |
+| `/loja/campanhas/:id` | Meta do dobro em **descartes**; botão **"Receber pontos"**; avisar quando houver bônus esperando | PD-011 |
+| `/admin-sorteios` | Botão **cancelar** (devolve os pontos); sem "Encerrar" antecipado | PD-013 |
+| `/admin-pontos` | Campo de **raio do GPS** por ponto; **vínculo de responsáveis** (vários por ponto) | PD-008, PD-023 |
+| `/usuarios` | Gerar **códigos de acesso**, ver **vagas** e a **lista de espera**; ajuste manual de pontos com motivo | PD-001, PD-010 |
+
+**Telas novas (não existem):**
+
+| Tela | Perfil | Decisão |
+|---|---|---|
+| Pedir coleta | Responsável | PD-014 |
+| Aceitar, **"a caminho"**, concluir (**parcial**, por material), recusar e cancelar coleta | Cooperativa | PD-014 |
+| Registrar **pagamento manual** com comprovante | Admin | PD-016 |
 
 ## Identidade visual
 
