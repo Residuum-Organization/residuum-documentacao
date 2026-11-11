@@ -1,12 +1,12 @@
 # PRD / Especificação de Requisitos
 
-> **Estado:** revisão · **Dono:** Produto · **Atualizado em:** 10/11/2026
+> **Estado:** revisão · **Dono:** Produto · **Atualizado em:** 11/11/2026
 > **Fontes:** V6 ([por módulo](requisitos/README.md)), [regras de saldo, vouchers e sorteios](../requisitos/regras-de-saldo-vouchers-sorteios.md) (22/10), [regras de campanhas](../requisitos/regras-de-campanhas.md) (21/10), [regras de negócio](../requisitos/regras-de-negocio.md), análises dos 4 módulos.
 > **Lacunas:** 6 · **Decisões abertas:** ver [decisões](decisoes/README.md)
 
 ## Resumo
 
-Este é o **índice mestre dos requisitos**. Ele não repete a V6: diz **qual documento vale para cada assunto** e **onde as fontes se contradizem**. Regra de precedência: **o documento mais recente decidido pelo time vence a V6**, até o produto validar formalmente. Nenhuma das decisões do time de 21 e 22/10 foi validada pelo produto.
+Este é o **índice mestre dos requisitos**. Ele não repete a V6: diz **qual documento vale para cada assunto** e **onde as fontes se contradizem**. Regra de precedência: **o documento mais recente decidido pelo time vence a V6**, até o produto validar formalmente. Nenhuma das decisões do time de 21 e 22/10 foi validada pelo produto. As respostas de Vinicius em 11/11/2026 (pontos, confirmação, acesso, vínculo, sorteio) já estão aplicadas aqui.
 
 ## Quem vale para quê
 
@@ -23,9 +23,9 @@ Este é o **índice mestre dos requisitos**. Ele não repete a V6: diz **qual do
 | # | Tema | Fonte A | Fonte B | Resolução proposta |
 |---|---|---|---|---|
 | 1 | Valor do ponto | V6 RF-021, handoff, regras de negócio: 10 por descarte, **não** por embalagem | Saldo: 5 por unidade (decidido 22/10) | **Resolvido em 11/11: vale 10 por descarte.** Corrigir regras de saldo, campanhas e o código ([PD-010](decisoes/pd-010.md)) |
-| 2 | Materiais | V6 RN-003: só PET e lata | Campanhas aceita plástico, metal, papel, vidro, orgânico, eletrônico | Campanha usa só `pet` e `lata` ([PD-011](decisoes/pd-011.md)) |
+| 2 | Materiais | V6 RN-003: só PET e lata | Campanhas aceita plástico, metal, papel, vidro, orgânico, eletrônico | **Resolvido em 11/11:** no início, campanhas usam **só `pet` e `lata`**. Outros materiais ficam para o futuro, junto com a expansão dos pontos ([PD-011](decisoes/pd-011.md)) |
 | 3 | Quem confirma o descarte | V6 RF-019: o **usuário** confirma | Código e saldo: o **operador** confirma | **Resolvido em 11/11: o operador confirma**; o GPS só libera o envio |
-| 4 | Crédito da campanha | Campanha: só pelo botão "Receber pontos" | V6 RF-022: "apurar e registrar bônus", sem dizer se é automático | `[DECISÃO: PD-011]` |
+| 4 | Crédito da campanha | Campanha: só pelo botão "Receber pontos" | V6 RF-022: "apurar e registrar bônus", sem dizer se é automático | **Resolvido em 11/11: pelo botão "Receber pontos"**, como nas regras de campanhas |
 | 5 | Idempotência | V6 RF-021: toda repetição recupera o resultado | Saldo: só voucher e bilhete usam `Idempotency-Key` | Estender ao descarte (achado F05) |
 | 6 | Crédito do descarte | V6/saldo: uma vez, na confirmação | Código atual credita no envio **e** na confirmação (F01) | Corrigir no código (PR-1) |
 
@@ -36,20 +36,21 @@ Legenda: ✅ conforme · ❌ violada pelo código · ⏳ não implementada · �
 ### Usuário
 | ID | Regra | Código hoje |
 |---|---|---|
-| RN-001 | Cadastro só por convite | ❌ aberto |
+| RN-001 | Cadastro com **código** da equipe e **teto de 500 contas** (trava de vagas no banco), decidido em 11/11 | ❌ aberto |
 | RN-003 | Só PET e lata, unidades inteiras | ❌ aceita outros materiais e decimais |
 | RN-004 | Registrar item não dá pontos | ✅ |
 | RN-006 | Presença por GPS recente, sem QR | ❌ raio de 1000 m, sem idade da posição |
 | RN-007 | Baixa de estoque só na confirmação | ❌ baixa dupla no lote |
-| RN-008 | Pontos uma única vez, na confirmação, **5 por unidade** | ❌ crédito em dobro ❓ |
+| RN-008 | Pontos uma única vez, na confirmação do operador, **10 por descarte**; descartes no mesmo ponto em 60 min contam como um | ❌ crédito em dobro; ❌ paga 5 por unidade |
 | RF-005/008 | Acesso desabilitado é negado | ❌ sem campo `ativo` |
 | RF-006 | Recuperar acesso por token de uso único | ⏳ |
 | RF-021 | Repetir operação não repete efeito | ❌ no descarte; ✅ em voucher e bilhete |
+| PD-010 | Descarte confirmado é final: sem estorno; erro vira ajuste do admin | ❌ ainda há estorno |
 | RF-023 | Extrato com origem de cada lançamento | ❌ só débitos têm origem |
 | RN-019a | Voucher: código do parceiro, validade em dias, estoque pelo admin | ✅ |
 | RN-019b | Sorteio: 1 bilhete, descarte com GPS, só teste | ✅ no usuário; ❌ admin apura antes do fim |
 
-### Responsável pelo ponto `[DECISÃO: PD-023]`
+### Responsável pelo ponto (vínculo N:N, gerido pelo admin: [PD-023](decisoes/pd-023.md))
 | ID | Regra | Código hoje |
 |---|---|---|
 | RN-011 | Pontos cadastrados só pelo admin | ❌ há cadastro público |
@@ -63,7 +64,7 @@ Legenda: ✅ conforme · ❌ violada pelo código · ⏳ não implementada · �
 |---|---|---|
 | RN-011 | Só o admin cria cooperativa | ❌ **cadastro público** (crítico) |
 | RN-013 | Só a cooperativa atribuída aceita | ✅ |
-| RN-015 | Coleta parcial não zera o ponto | ❌ |
+| RN-015 | Coleta parcial não zera o ponto | ❌ (o [estudo de PD-014](../pesquisa/capacidade-e-execucao-da-coleta.md) propõe não ter coleta parcial no piloto) `[DECISÃO]` |
 | RN-016 | Pesagem não gera pontos | ✅ |
 | RN-014 | Rota e horário previstos | ⏳ |
 
@@ -95,8 +96,12 @@ Requisito → atividade (`TSK-…`) → achado (F, F-, PON, ADM) → caso de tes
 ## O que falta para fechar
 
 - [x] Valor do ponto: 10 por descarte concluído (decidido em 11/11/2026)
-- [ ] Produto validar as regras de campanhas (21/10) e fechar as contradições 3 e 4
-- [ ] Alterar o código do backend de 5 por unidade para 10 por descarte
+- [x] Contradição 3 (quem confirma): o operador (11/11/2026)
+- [x] Contradição 2 (materiais): só PET e lata no início; outros no futuro (11/11/2026)
+- [x] Contradição 4 (crédito da campanha): pelo botão "Receber pontos" (11/11/2026)
+- [ ] Produto validar formalmente as regras de campanhas (21/10)
+- [ ] `[DECISÃO]` o bônus não recebido até o fim da campanha se perde? (sugestão: avisar o usuário quando houver bônus esperando)
+- [ ] Alterar o código do backend: 10 por descarte, janela de 60 min, dobro em descartes, sem estorno de confirmado, vínculo N:N, teto de 500
 - [ ] `[LACUNA]` metas de desempenho e disponibilidade (PD-025, PD-026)
 - [ ] Arquivar `backend/docs/requisitos.md` e `frontend/docs/requisitos.md` (duplicatas, fora deste repositório)
 - [ ] Marcar a V6 original como histórico após a validação

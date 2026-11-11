@@ -28,6 +28,7 @@ Cada item mede uma quantidade de unidades de **descartes confirmados**:
 
 - **Papel:** `entrada` (só em campanha privada) ou `missao`.
 - **Material:** `plastico`, `metal`, `papel`, `vidro`, `organico` ou `eletronico`. Em branco significa qualquer material.
+  > ⚠️ **Decidido em 11/11/2026 ([PD-011](../01-planejamento/decisoes/pd-011.md)):** no início, só **PET e lata**. Os outros materiais ficam para o futuro. O código ainda aceita a lista acima.
 - **Códigos de barras:** lista opcional. O produto é identificado pelo código de barras do descarte ou, se não houver, do item do inventário. Não existe catálogo de produtos (PD-004).
 - **Quantidade:** número inteiro de 1 ou mais.
 
