@@ -1,42 +1,65 @@
 # PRD / Especificação de Requisitos
 
-> **Estado:** esboço · **Dono:** Produto · **Atualizado em:** 10/11/2026
-> **Fontes:** V6 (`docs/requisitos/requisitos-mvp-v6.md`), regras de saldo/vouchers/sorteios, 4 análises por módulo.
-> **Lacunas:** 8 · **Decisões pendentes:** D1, D2, D3, PD-023
+> **Estado:** revisão · **Dono:** Produto · **Atualizado em:** 10/11/2026
+> **Fontes:** V6 ([por módulo](requisitos/README.md)), [regras de saldo, vouchers e sorteios](../requisitos/regras-de-saldo-vouchers-sorteios.md) (22/10), [regras de campanhas](../requisitos/regras-de-campanhas.md) (21/10), [regras de negócio](../requisitos/regras-de-negocio.md), análises dos 4 módulos.
+> **Lacunas:** 6 · **Decisões abertas:** ver [decisões](decisoes/README.md)
 
 ## Resumo
 
-Este documento será a **única fonte** de requisitos. Hoje a V6 e o código divergem em pontos centrais. A tabela abaixo mostra cada regra, de onde vem e se o código a cumpre. A V6 completa (1703 linhas) será fatiada por perfil e ficará como anexo.
+Este é o **índice mestre dos requisitos**. Ele não repete a V6: diz **qual documento vale para cada assunto** e **onde as fontes se contradizem**. Regra de precedência: **o documento mais recente decidido pelo time vence a V6**, até o produto validar formalmente. Nenhuma das decisões do time de 21 e 22/10 foi validada pelo produto.
 
-Legenda: ✅ conforme · ❌ violada · ⏳ não implementada · ❓ depende de decisão
+## Quem vale para quê
 
-## Requisitos funcionais por perfil
+| Assunto | Documento que vale | Observação |
+|---|---|---|
+| Pontos por descarte | [Saldo, vouchers e sorteios](../requisitos/regras-de-saldo-vouchers-sorteios.md) | **5 pontos por unidade confirmada**; a V6 (RN-008, "10 por operação") é histórico |
+| Campanhas | [Regras de campanhas](../requisitos/regras-de-campanhas.md) | Participar é grátis; bônus separado; pagamento pelo botão "Receber pontos" |
+| Vouchers e sorteios | Saldo, vouchers e sorteios | Sorteio **só de teste**, 1 bilhete por usuário |
+| Todo o resto | [V6 por módulo](requisitos/README.md) | M01 a M11 e RNF |
+| Resumo das regras | [Regras de negócio](../requisitos/regras-de-negocio.md) | Guia de leitura, **ainda diz 10 pontos** `[LACUNA: atualizar]` |
+
+## Contradições entre as fontes (a resolver)
+
+| # | Tema | Fonte A | Fonte B | Resolução proposta |
+|---|---|---|---|---|
+| 1 | Valor do ponto | V6 RF-021, handoff, regras de negócio: 10 por descarte, **não** por embalagem | Saldo: 5 por unidade (decidido 22/10) | Vale 5 por unidade; corrigir V6 e guia ([PD-010](decisoes/pd-010.md)) |
+| 2 | Materiais | V6 RN-003: só PET e lata | Campanhas aceita plástico, metal, papel, vidro, orgânico, eletrônico | Campanha usa só `pet` e `lata` ([PD-011](decisoes/pd-011.md)) |
+| 3 | Quem confirma o descarte | V6 RF-019: o **morador** confirma | Código e saldo: o **operador** confirma | `[DECISÃO: PD-006 / PD-027]` |
+| 4 | Crédito da campanha | Campanha: só pelo botão "Receber pontos" | V6 RF-022: "apurar e registrar bônus", sem dizer se é automático | `[DECISÃO: PD-011]` |
+| 5 | Idempotência | V6 RF-021: toda repetição recupera o resultado | Saldo: só voucher e bilhete usam `Idempotency-Key` | Estender ao descarte (achado F05) |
+| 6 | Crédito do descarte | V6/saldo: uma vez, na confirmação | Código atual credita no envio **e** na confirmação (F01) | Corrigir no código (PR-1) |
+
+## Requisitos por perfil (visão resumida)
+
+Legenda: ✅ conforme · ❌ violada pelo código · ⏳ não implementada · ❓ depende de decisão
 
 ### Morador
-| ID | Regra | Fonte | Código |
-|---|---|---|---|
-| RN-001 | Cadastro só por convite | V6 | ❌ cadastro aberto |
-| RN-003 | Só PET e lata, unidades inteiras | V6 | ❌ aceita papel, vidro; decimais |
-| RN-004 | Registrar item não dá pontos | V6 | ✅ |
-| RN-006 | Presença por GPS recente, sem QR | V6 | ❌ raio 1000 m, sem idade |
-| RN-007 | Selecionar não baixa estoque; baixa só ao confirmar | V6 | ❌ baixa dupla no lote |
-| RN-008 | Pontos uma única vez, na confirmação | V6 / saldo | ❌ crédito em dobro `[DECISÃO: D1]` |
-| RF-005/008 | Acesso desabilitado é negado | V6 | ❌ sem campo `ativo` |
-| RF-006 | Recuperar senha por token de uso único | V6 | ⏳ |
-| RF-021 | Repetir operação não repete efeito | V6 | ❌ falta idempotência no descarte |
-| RF-023 | Extrato com origem de cada lançamento | V6 | ❌ |
+| ID | Regra | Código hoje |
+|---|---|---|
+| RN-001 | Cadastro só por convite | ❌ aberto |
+| RN-003 | Só PET e lata, unidades inteiras | ❌ aceita outros materiais e decimais |
+| RN-004 | Registrar item não dá pontos | ✅ |
+| RN-006 | Presença por GPS recente, sem QR | ❌ raio de 1000 m, sem idade da posição |
+| RN-007 | Baixa de estoque só na confirmação | ❌ baixa dupla no lote |
+| RN-008 | Pontos uma única vez, na confirmação, **5 por unidade** | ❌ crédito em dobro ❓ |
+| RF-005/008 | Acesso desabilitado é negado | ❌ sem campo `ativo` |
+| RF-006 | Recuperar acesso por token de uso único | ⏳ |
+| RF-021 | Repetir operação não repete efeito | ❌ no descarte; ✅ em voucher e bilhete |
+| RF-023 | Extrato com origem de cada lançamento | ❌ só débitos têm origem |
+| RN-019a | Voucher: código do parceiro, validade em dias, estoque pelo admin | ✅ |
+| RN-019b | Sorteio: 1 bilhete, descarte com GPS, só teste | ✅ no morador; ❌ admin apura antes do fim |
 
 ### Responsável pelo ponto `[DECISÃO: PD-023]`
-| ID | Regra | Código |
+| ID | Regra | Código hoje |
 |---|---|---|
-| RN-011 | Pontos cadastrados só pelo admin | ❌ cadastro público existe |
-| RF-034 | Responsável edita materiais, com auditoria | ❌ |
+| RN-011 | Pontos cadastrados só pelo admin | ❌ há cadastro público |
+| RF-034 | Responsável edita materiais, com autoria | ❌ |
 | RN-012 | Responsável pede coleta ao admin | ⏳ |
 | RF-032 | Temporário tem início e fim | ❌ só fim |
 | RN-007 | Ponto incompatível não conclui entrega | ❌ lista vazia aceita tudo |
 
 ### Cooperativa
-| ID | Regra | Código |
+| ID | Regra | Código hoje |
 |---|---|---|
 | RN-011 | Só o admin cria cooperativa | ❌ **cadastro público** (crítico) |
 | RN-013 | Só a cooperativa atribuída aceita | ✅ |
@@ -45,31 +68,34 @@ Legenda: ✅ conforme · ❌ violada · ⏳ não implementada · ❓ depende de 
 | RN-014 | Rota e horário previstos | ⏳ |
 
 ### Administrador
-| ID | Regra | Código |
+| ID | Regra | Código hoje |
 |---|---|---|
 | RF-004 | Admin cadastra morador | ⏳ |
-| RN-019b | 1 bilhete por pessoa, só admin apura, após o fim | ❌ apura antes |
+| RN-019b | Só o admin apura, depois do fim | ❌ apura antes |
 | RN-017/018 | Pagamento por API | ⏳ |
 | RN-020 | Relatórios por plano | ⏳ |
 
 ## Requisitos não funcionais
 
-| Tema | Requisito | Situação |
+| Tema | Requisito (V6) | Situação |
 |---|---|---|
-| Integridade | Saldo = soma dos lançamentos | ❌ |
-| Concorrência | Trava de linha em créditos e débitos | ❌ créditos sem trava |
-| Segurança | Sessão revogável; token fora de `localStorage` | ❌ |
-| Privacidade | Cooperativa não vê dados pessoais de outros | ❌ |
-| Desempenho, disponibilidade, escala | `[LACUNA]` sem metas nas fontes |
-| LGPD | Anonimizar em vez de apagar | ❌ `[DECISÃO: D4]` |
+| Integridade | Saldo = soma dos lançamentos (RNF-003) | ❌ |
+| Concorrência | Trava de linha em créditos e débitos | ❌ créditos sem trava; ✅ débitos |
+| Segurança | Sessão revogável (RNF-002) | ❌ |
+| Privacidade | Dados mínimos por perfil (RNF-005) | ❌ cooperativa vê dados de todos |
+| Disponibilidade e backup | RNF-007 a 011 | `[LACUNA]` depende de [PD-026](decisoes/pd-026.md) |
+| Desempenho e dispositivos | RNF-001 e 006 | `[LACUNA]` depende de [PD-025](decisoes/pd-025.md) |
+
+Texto completo: [requisitos não funcionais](requisitos/08-requisitos-nao-funcionais.md).
 
 ## Rastreabilidade
 
-Cada requisito aponta para: ficha de achado (F01–F23, F-01–F-14, PON-01–16, ADM-01–18) → solução (S/C/P/A) → PR proposto → teste. A planilha completa fica em [backlog](backlog-e-historias.md).
+Requisito → atividade (`TSK-…`) → achado (F, F-, PON, ADM) → caso de teste. Atividades em [backlog](backlog/README.md); decisões em [decisões](decisoes/README.md).
 
 ## O que falta para fechar
 
-- [ ] Decisões 1–6 de [decisoes-pendentes](../00-diagnostico/decisoes-pendentes.md)
-- [ ] Reescrever RN-008 e RF-019 com o valor e o ator definidos
-- [ ] `[LACUNA]` metas de desempenho e disponibilidade
-- [ ] Fatiar a V6 em anexos por perfil e arquivar duplicatas (`backend/docs/requisitos.md`, `frontend/docs/requisitos.md`)
+- [ ] Produto validar as regras de 21 e 22/10 (5 por unidade, campanhas) e fechar as contradições 3 e 4
+- [ ] Corrigir a V6 (RN-008), o guia de regras de negócio e o handoff para 5 pontos por unidade
+- [ ] `[LACUNA]` metas de desempenho e disponibilidade (PD-025, PD-026)
+- [ ] Arquivar `backend/docs/requisitos.md` e `frontend/docs/requisitos.md` (duplicatas, fora deste repositório)
+- [ ] Marcar a V6 original como histórico após a validação

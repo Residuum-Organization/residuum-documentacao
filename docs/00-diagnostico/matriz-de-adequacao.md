@@ -15,8 +15,8 @@ Legenda: ✅ pronto · 🟡 parcial · 🔴 conflitante/desatualizado · ⚪ aus
 | # | Documento | Situação | O que já temos | O que falta para o definitivo | Esboço |
 |---|---|---|---|---|---|
 | 1 | Visão e Escopo | 🟡 | `docs/visao/visao-do-projeto.md` | Lista do que **não** será feito; métricas do piloto | [visao-e-escopo](../01-planejamento/visao-e-escopo.md) |
-| 2 | PRD / SRS | 🔴 | V6 (1703 linhas) + regras de negócio | Decisões D1–D12 fechadas; uma versão só | [prd-srs](../01-planejamento/prd-srs.md) |
-| 3 | Backlog e histórias | 🟡 | 93 atividades em `tasks-gerais.md` | Formato "Como… quero… para…"; ondas | [backlog](../01-planejamento/backlog-e-historias.md) |
+| 2 | PRD / SRS | 🟡 | PRD como índice mestre; V6 fatiada em [20 arquivos](../01-planejamento/requisitos/README.md); regras de saldo e campanhas mescladas | Produto validar as regras de 21 e 22/10; fechar 6 contradições | [prd-srs](../01-planejamento/prd-srs.md) |
+| 3 | Backlog e histórias | 🟡 | 93 atividades em [um arquivo cada](../01-planejamento/backlog/README.md) + [27 decisões](../01-planejamento/decisoes/README.md) | Converter para histórias; ligar os 71 achados às atividades | [backlog](../01-planejamento/backlog-e-historias.md) |
 | 4 | Arquitetura (SAD) | 🟡 | `stacks-e-integracoes.md`, `arquitetura-refatoracao-banco.md` | Camadas, ledger, auth, ambientes | [sad](../02-arquitetura/sad.md) |
 | 5 | Diagramas | ⚪ | Só descrições em texto nas propostas | ER do banco; estados de descarte, sorteio, coleta | [diagramas](../02-arquitetura/diagramas.md) · [dados](../02-arquitetura/modelo-de-dados.md) |
 | 6 | Wireframes / UX | 🟡 | `docs/ux/` (só morador V6) | Telas do responsável, cooperativa e admin | [indice-de-telas](../03-ux/indice-de-telas.md) |

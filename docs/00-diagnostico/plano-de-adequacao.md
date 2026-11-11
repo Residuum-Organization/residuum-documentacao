@@ -35,6 +35,8 @@ Esta etapa só planeja. Nada é alterado até a aprovação.
 
 **Pronto quando:** PRD sem `[DECISÃO]` aberta das 6 bloqueantes; backlog cobre as 93 atividades e os 71 achados (F, F-, PON, ADM); só existe um PRD.
 
+**Progresso (10/11/2026):** 1.2 decisões fatiadas em 27 arquivos (PD-001 a PD-027) · 1.5 V6 fatiada em 20 arquivos por módulo (duplicatas do backend e frontend continuam por arquivar) · 1.6 backlog fatiado em 66 arquivos de atividade · 1.7 PRs #1 a #3 mescladas · 1.4 PRD reescrito como índice mestre com 6 contradições · **faltam** 1.1 (reunião com o produto), 1.3 (metas do piloto) e converter as 66 atividades em histórias. Os arquivos grandes originais continuam em `docs/planejamento/modulos/` e `docs/requisitos/`; serão movidos para o histórico na parte 6, junto com a correção dos links que apontam para eles.
+
 ## Parte 2 — Arquitetura e design
 **Documentos:** SAD · Diagramas · Modelo de dados · Wireframes/UX.
 **Esboços:** `docs/02-arquitetura/{sad,diagramas,modelo-de-dados}.md`, `docs/03-ux/indice-de-telas.md`.
