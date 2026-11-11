@@ -17,7 +17,7 @@ Numeração: **PD-xxx** é o identificador oficial da V6. A coluna "Análise" li
 | 2 | [PD-006](../01-planejamento/decisoes/pd-006.md) / [PD-027](../01-planejamento/decisoes/pd-027.md) | Quem confirma o descarte? | **Decidido em 11/11: o operador do ponto confirma**; o GPS só libera o envio | Corrigir a V6 (RF-019) | PRD, API, manual |
 | 3 | [PD-010](../01-planejamento/decisoes/pd-010.md) | Estorno maior que o saldo | **Decidido em 11/11: a confirmação do operador é final.** Rejeita-se antes de confirmar; depois, só ajuste manual do admin. Sem estorno, o caso não existe | Tirar o estorno de descarte confirmado do código | PRD, API |
 | 4 | [PD-023](../01-planejamento/decisoes/pd-023.md) | Perfil "responsável pelo ponto" e vínculo | **Decidido em 11/11: vínculo N:N** (vários pontos por pessoa, vários responsáveis por ponto) | Criar a tabela de vínculo no código | PRD, arquitetura, API |
-| 5 | [PD-013](../01-planejamento/decisoes/pd-013.md) | Sorteio: cancelar devolve? Algoritmo? | **Time decidiu 22/10: só sorteios de teste, 1 bilhete por usuário.** Cancelar e algoritmo abertos | Cancelar devolve; sha256 com semente nos testes | PRD, manual |
+| 5 | [PD-013](../01-planejamento/decisoes/pd-013.md) | Sorteio: cancelar devolve? Algoritmo? | **Time decidiu 22/10: só sorteios de teste, 1 bilhete por usuário. 11/11: cancelar devolve os pontos.** Algoritmo aberto | Deixar o algoritmo com a equipe técnica (sha256 com semente nos testes) | PRD, manual |
 | 6 | [PD-013](../01-planejamento/decisoes/pd-013.md) | Dono do parecer jurídico (Lei 5.768/71) | **Pendência legal aberta**, sem responsável | Nomear pessoa e prazo | Qualquer sorteio real |
 
 ## Podem seguir provisórios
