@@ -6,7 +6,7 @@
 
 | Assunto | Regras | Síntese para a reunião |
 |---|---|---|
-| Entrada e convites | RN-001 e RN-002 | Cadastro do morador exige convite; individual permite um cadastro e compartilhado respeita expiração e limite. Exceções precisam de política. |
+| Entrada e convites | RN-001 e RN-002 | Cadastro do usuário exige convite; individual permite um cadastro e compartilhado respeita expiração e limite. Exceções precisam de política. |
 | Materiais e registro | RN-003 a RN-005 | MVP recebe PET e latas de alumínio; informações importadas são revisadas; registrar ou importar nota não comprova entrega nem concede pontos. |
 | Presença e entrega | RN-006 e RN-007 | Presença validada por GPS; material precisa ser aceito pelo ponto; selecionar não baixa estoque antes da confirmação. |
 | Recompensas | RN-008 a RN-010 | Cada descarte concluído concede 10 pontos básicos uma vez; bônus depende da campanha; pontos são não monetários e cashback fica fora do MVP. |
@@ -17,7 +17,7 @@
 | Relatórios | RN-020 | Plano, perfil e vínculo são verificados em conjunto; contratar plano não libera dados de outra organização. |
 | Ponto temporário | RN-021 | Encerramento preserva histórico e materiais remanescentes. |
 
-## Decisões posteriores da jornada do morador
+## Decisões posteriores da jornada do usuário
 
 Consulte a [decisão de 10/10/2026 na visão](../visao/visao-do-projeto.md#decisão-de-experiência-do-morador--10102026) e o [handoff](../ux/morador-v6-handoff.md#jornada-e-regras-aprovadas): o rascunho do descarte rápido fica na memória do fluxo, a navegação externa abre em outra aba e o retorno exige GPS novo. O handoff também registra quantidades inteiras positivas e condições de escolha do ponto. Essas decisões devem ser lidas com a V6; não significam integração real concluída.
 

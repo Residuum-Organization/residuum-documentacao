@@ -6,7 +6,7 @@
 
 ## Resumo
 
-O Residuum é uma plataforma web que **conecta moradores, responsáveis por pontos de coleta, cooperativas e a administração**. O morador registra embalagens de **PET e latas de alumínio**, entrega num ponto de coleta, comprova a presença por GPS e ganha pontos. A cooperativa retira e pesa o material. O administrador coordena tudo, inclusive o pagamento à cooperativa. O MVP existe e está sendo documentado para a equipe atual de **seis pessoas**.
+O Residuum é uma plataforma web que **conecta usuários, responsáveis por pontos de coleta, cooperativas e a administração**. O usuário registra embalagens de **PET e latas de alumínio**, entrega num ponto de coleta, comprova a presença por GPS e ganha pontos. A cooperativa retira e pesa o material. O administrador coordena tudo, inclusive o pagamento à cooperativa. O MVP existe e está sendo documentado para a equipe atual de **seis pessoas**.
 
 Este documento diz **o que o produto é, para quem e até onde vai**. O texto longo e completo continua em [visao-do-projeto.md](../visao/visao-do-projeto.md).
 
@@ -14,7 +14,7 @@ Este documento diz **o que o produto é, para quem e até onde vai**. O texto lo
 
 | Problema | Consequência |
 |---|---|
-| **Falta de rastreabilidade.** O resíduo "some" no descarte; o morador não sabe o destino e as empresas não comprovam a logística reversa (PNRS) | Risco legal e de imagem (ESG) |
+| **Falta de rastreabilidade.** O resíduo "some" no descarte; o usuário não sabe o destino e as empresas não comprovam a logística reversa (PNRS) | Risco legal e de imagem (ESG) |
 | **Coleta "no escuro".** Cooperativas não sabem o volume nem o nível de enchimento dos pontos | Viagens inúteis e pontos lotados |
 | **Pouco incentivo.** O cidadão não vê valor no resíduo | Baixa adesão à separação correta |
 | **Dados ruins na base da cadeia.** O descarte cidadão não chega aos sistemas oficiais (SINIR, MTR) | Dificuldade de gestão e comprovação |
@@ -40,7 +40,7 @@ Este documento diz **o que o produto é, para quem e até onde vai**. O texto lo
 
 ```mermaid
 flowchart LR
-  M[Morador<br/>registra e entrega] --> P[Ponto de coleta<br/>confirma e acumula]
+  M[Usuário<br/>registra e entrega] --> P[Ponto de coleta<br/>confirma e acumula]
   P --> A[Administrador<br/>encaminha a coleta]
   A --> C[Cooperativa<br/>aceita, retira e pesa]
   C --> A2[Administrador<br/>paga por API]
@@ -51,7 +51,7 @@ O fluxo completo, passo a passo, está na [seção 4 da visão original](../visa
 
 ## 3. Quem usa
 
-O perfil que antes se chamava "morador" passa a se chamar **usuário** nesta seção (é também o nome usado no código, `role = usuario`).
+O perfil que antes se chamava "morador" passa a se chamar **usuário** em todos os documentos, por decisão de 11/11/2026 (é também o nome usado no código, `role = usuario`).
 
 | Perfil | O que faz | Valor |
 |---|---|---|
@@ -85,7 +85,7 @@ O perfil que antes se chamava "morador" passa a se chamar **usuário** nesta se�
 | No MVP os pontos **não são dinheiro** e **não há cashback** (a ideia existe, ver "Evolução") | V6 RN-010 |
 | Registrar item ou ler nota **não é descarte** e não dá pontos | V6 RN-004 |
 | Rascunho do descarte rápido fica **só na memória** do fluxo | Decisão de UX de 10/10 |
-| A pesagem da cooperativa **não** concede pontos de novo ao morador | V6 RN-016 |
+| A pesagem da cooperativa **não** concede pontos de novo ao usuário | V6 RN-016 |
 
 ### Decisões já tomadas
 
@@ -120,7 +120,7 @@ As regras de **campanhas, vouchers e sorteios** foram decididas (ver [campanhas]
 | Item | Valor |
 |---|---|
 | Prazo informado | **20/11/2026** (não garante todo o backlog) |
-| Ordem das entregas | morador → ponto de coleta → cooperativa → administrador |
+| Ordem das entregas | usuário → ponto de coleta → cooperativa → administrador |
 | Região e pontos do piloto | `[LACUNA]` ver [piloto inicial](../pesquisa/piloto-inicial.md) |
 
 ### Como medir o sucesso do piloto
@@ -143,7 +143,7 @@ As regras de **campanhas, vouchers e sorteios** foram decididas (ver [campanhas]
 
 ## 7. Glossário
 
-**Usuário** quem usa o app para registrar e entregar (antes chamado de morador) · **Descarte** entrega do material num ponto · **Lote** vários itens enviados juntos · **Registrar** guardar item no estoque do morador · **Descarte rápido** uso do leitor de código de barras ou do QR Code da nota para entregar sem passar pelo estoque · **Ponto de coleta** local físico de entrega · **Responsável** pessoa que cuida do ponto · **Voucher** cupom de parceiro trocado por pontos · **PD-xxx** pendência de decisão da V6 ([lista](decisoes/README.md)).
+**Usuário** quem usa o app para registrar e entregar (antes chamado de morador) · **Descarte** entrega do material num ponto · **Lote** vários itens enviados juntos · **Registrar** guardar item no estoque do usuário · **Descarte rápido** uso do leitor de código de barras ou do QR Code da nota para entregar sem passar pelo estoque · **Ponto de coleta** local físico de entrega · **Responsável** pessoa que cuida do ponto · **Voucher** cupom de parceiro trocado por pontos · **PD-xxx** pendência de decisão da V6 ([lista](decisoes/README.md)).
 
 ## O que falta para fechar
 

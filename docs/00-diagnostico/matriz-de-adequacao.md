@@ -19,7 +19,7 @@ Legenda: ✅ pronto · 🟡 parcial · 🔴 conflitante/desatualizado · ⚪ aus
 | 3 | Backlog e histórias | 🟡 | 93 atividades em [um arquivo cada](../01-planejamento/backlog/README.md) + [27 decisões](../01-planejamento/decisoes/README.md) | Converter para histórias; ligar os 71 achados às atividades | [backlog](../01-planejamento/backlog-e-historias.md) |
 | 4 | Arquitetura (SAD) | 🟡 | `stacks-e-integracoes.md`, `arquitetura-refatoracao-banco.md` | Camadas, ledger, auth, ambientes | [sad](../02-arquitetura/sad.md) |
 | 5 | Diagramas | ⚪ | Só descrições em texto nas propostas | ER do banco; estados de descarte, sorteio, coleta | [diagramas](../02-arquitetura/diagramas.md) · [dados](../02-arquitetura/modelo-de-dados.md) |
-| 6 | Wireframes / UX | 🟡 | `docs/ux/` (só morador V6) | Telas do responsável, cooperativa e admin | [indice-de-telas](../03-ux/indice-de-telas.md) |
+| 6 | Wireframes / UX | 🟡 | `docs/ux/` (só usuário V6) | Telas do responsável, cooperativa e admin | [indice-de-telas](../03-ux/indice-de-telas.md) |
 | 7 | Documentação de API | ⚪ | Só OpenAPI automático; README do backend defasado | Tabela por rota, com rotas a remover | [api](../04-desenvolvimento/api.md) |
 | 8 | README | 🔴 | 3 READMEs (raiz, back, front) | Remover QR/papéis antigos; setup testado | ver `README.md` |
 | 9 | CONTRIBUTING | ⚪ | Rascunho em `tmp/` | Branches, commits, PR, Definição de Pronto | [CONTRIBUTING](../../CONTRIBUTING.md) |
@@ -40,7 +40,7 @@ Legenda: ✅ pronto · 🟡 parcial · 🔴 conflitante/desatualizado · ⚪ aus
 
 ## Detalhes: inventário por repositório
 
-- **Documentação** (`docs/`, 65 arquivos): visão, requisitos, planejamento por módulo (m01–m11), UX do morador, pesquisa de mercado, histórico.
+- **Documentação** (`docs/`, 65 arquivos): visão, requisitos, planejamento por módulo (m01–m11), UX do usuário, pesquisa de mercado, histórico.
 - **Backend:** README de 746 linhas, `CHANGES.md`, `docs/` (admin-features, requisitos), 32 migrações Alembic, 3 arquivos de teste, um workflow (migração + deploy Vercel, sem CI de testes).
 - **Frontend:** README, `docs/` (requisitos, ata, falas de reunião, manual, PDFs), CI e templates de issue.
 

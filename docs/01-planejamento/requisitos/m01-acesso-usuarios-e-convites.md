@@ -43,10 +43,10 @@
 - **Dado** um link expirado ou esgotado, **quando** houver tentativa de cadastro, **então** a inscrição não é concluída.
 - **Dado** apenas uma vaga restante e duas confirmações concorrentes, **quando** forem processadas, **então** no máximo uma nova conta será criada por esse link.
 
-#### RF-MVP-003 — Cadastrar morador por convite
+#### RF-MVP-003 — Cadastrar usuário por convite
 
 **Situação:** confirmado com pendências. **Fontes:** S4/RF001 e S7. **Ator:** pessoa convidada.  
-**Objetivo:** criar acesso do morador sem permitir cadastro público irrestrito.
+**Objetivo:** criar acesso do usuário sem permitir cadastro público irrestrito.
 
 **Pré-condições:** convite individual ou compartilhado válido. **Dados herdados:** nome, e-mail, telefone e endereço; obrigatoriedade, CPF e senha aguardam PD-003.
 
@@ -58,26 +58,26 @@
 
 **Critérios de aceite:**
 
-- **Dado** um convite válido e dados aceitos, **quando** o morador conclui o formulário, **então** a conta é criada vinculada ao consumo do convite.
+- **Dado** um convite válido e dados aceitos, **quando** o usuário conclui o formulário, **então** a conta é criada vinculada ao consumo do convite.
 - **Dado** uma tentativa sem convite autorizado, **quando** o formulário é enviado, **então** o sistema impede a criação da conta.
 - **Dado** uma falha de validação, **quando** o cadastro não termina, **então** o convite mantém sua disponibilidade anterior.
 
-#### RF-MVP-004 — Cadastrar morador pela administração
+#### RF-MVP-004 — Cadastrar usuário pela administração
 
 **Situação:** confirmado com pendências. **Fonte:** S7. **Ator:** administrador.  
-**Objetivo:** permitir criação administrativa de moradores com rastreabilidade.
+**Objetivo:** permitir criação administrativa de usuários com rastreabilidade.
 
-**Pré-condições:** administrador autorizado. **Entrada:** dados do morador conforme RF-MVP-003.
+**Pré-condições:** administrador autorizado. **Entrada:** dados do usuário conforme RF-MVP-003.
 
 **Fluxo:** abrir cadastro administrativo; informar dados; validar duplicidade; criar o registro; registrar quem realizou a operação. Forma de ativação, entrega de acesso e eventual uso de convites nesse caminho são PD-002 e PD-003.
 
-**Resultado:** morador cadastrado; sua criação não equivale a consentimento do titular, entrega de credenciais ou login realizado. Não se presume atuação do administrador em descartes do morador.
+**Resultado:** usuário cadastrado; sua criação não equivale a consentimento do titular, entrega de credenciais ou login realizado. Não se presume atuação do administrador em descartes do usuário.
 
 **Dependências:** RF-MVP-003 e RNF-MVP-002. **Pendências:** PD-002, PD-003 e PD-022.
 
 **Critérios de aceite:**
 
-- **Dado** um administrador autorizado, **quando** cria um morador com dados válidos, **então** o cadastro fica disponível e a autoria é registrada.
+- **Dado** um administrador autorizado, **quando** cria um usuário com dados válidos, **então** o cadastro fica disponível e a autoria é registrada.
 - **Dado** um perfil sem essa permissão, **quando** tenta a operação, **então** a criação é negada.
 - **Dado** um e-mail já utilizado, **quando** o cadastro é enviado, **então** o sistema informa o conflito sem criar conta duplicada.
 
@@ -97,7 +97,7 @@
 
 - **Dado** credenciais válidas e conta habilitada, **quando** o usuário faz login, **então** acessa sua área autorizada.
 - **Dado** uma sessão encerrada, **quando** se tenta executar uma ação protegida, **então** nova autenticação é exigida.
-- **Dado** um morador autenticado, **quando** tenta funções administrativas, **então** o acesso é negado também no serviço que processa a operação.
+- **Dado** um usuário autenticado, **quando** tenta funções administrativas, **então** o acesso é negado também no serviço que processa a operação.
 
 #### RF-MVP-006 — Recuperar acesso
 
@@ -118,19 +118,19 @@
 
 #### RF-MVP-007 — Consultar e editar perfil
 
-**Situação:** herdado para validação. **Fonte:** S4/RF006. **Ator:** morador.
+**Situação:** herdado para validação. **Fonte:** S4/RF006. **Ator:** usuário.
 
 **Objetivo:** reunir dados pessoais, histórico de descartes, saldo e recompensas adquiridas.
 
-**Pré-condições:** morador autenticado. **Fluxo:** consultar seus dados; editar campos permitidos; visualizar descartes concluídos, pontuação e recompensas; acessar extrato e estoque. Alterar e-mail ou identificadores exige política ainda a validar.
+**Pré-condições:** usuário autenticado. **Fluxo:** consultar seus dados; editar campos permitidos; visualizar descartes concluídos, pontuação e recompensas; acessar extrato e estoque. Alterar e-mail ou identificadores exige política ainda a validar.
 
-**Exceções e resultado:** usuário não pode editar registros de descarte ou saldo por esse formulário. Alteração falha não deve substituir os dados válidos anteriores. Não é permitido consultar o perfil privado de outro morador.
+**Exceções e resultado:** usuário não pode editar registros de descarte ou saldo por esse formulário. Alteração falha não deve substituir os dados válidos anteriores. Não é permitido consultar o perfil privado de outro usuário.
 
 **Dependências:** RF-MVP-005, RF-MVP-020, RF-MVP-023 e RF-MVP-029. **Pendência:** PD-003.
 
 **Critérios de aceite:**
 
-- **Dado** um morador autenticado, **quando** consulta o perfil, **então** vê seus dados, saldo e históricos disponíveis.
+- **Dado** um usuário autenticado, **quando** consulta o perfil, **então** vê seus dados, saldo e históricos disponíveis.
 - **Dado** uma alteração válida em campo permitido, **quando** a salva, **então** o perfil apresenta o novo valor sem alterar pontos ou descartes.
 
 #### RF-MVP-008 — Administrar acessos e vínculos

@@ -12,7 +12,7 @@
 - **Impacto alto:** segurança/integridade, bloqueio da jornada ou fundamento marcado P0 na origem. A importância independe de estar na primeira sprint.
 - **Impacto moderado:** capacidade necessária ao recorte de negócio/qualidade, sem bloqueio imediato identificado na origem. Não significa dispensável.
 - **Impacto baixo no MVP atual:** avaliação de funcionalidade futura sem implementação confirmada, como PD-027. Se o escopo mudar, reavaliar.
-- **Urgente:** proposta de resolver agora porque apoia o primeiro recorte do morador, sua segurança/integridade ou uma decisão preparatória necessária. Revisar após confirmar versão, escopo e disponibilidade.
+- **Urgente:** proposta de resolver agora porque apoia o primeiro recorte do usuário, sua segurança/integridade ou uma decisão preparatória necessária. Revisar após confirmar versão, escopo e disponibilidade.
 - **Não urgente nesta etapa:** planejar para o perfil/recorte subsequente ou avaliar futuro; não significa que cabe adiar além da deadline.
 
 Se aparecer defeito atual de segurança ou integridade, reclassificar imediatamente conforme evidência, independentemente da etapa de perfil. Uma prioridade P0 comercial não torna toda a Loja urgente antes da jornada principal. Esforço não foi estimado.
@@ -29,13 +29,13 @@ Vínculos levam à ficha padronizada. Atividades de decisão são trabalho de an
 
 | Atividade | Módulo | Impacto proposto | Urgência proposta | Justificativa |
 |---|---|---|---|---|
-| [TSK-MOR-001 — Cadastrar morador por convite](#tsk-mor-001) | M01 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-001, PD-002, PD-003, PD-022. |
+| [TSK-MOR-001 — Cadastrar usuário por convite](#tsk-mor-001) | M01 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-001, PD-002, PD-003, PD-022. |
 | [TSK-MOR-002 — Autenticar e encerrar sessão](#tsk-mor-002) | M01 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-002, PD-003, PD-023. |
 | [TSK-MOR-003 — Recuperar acesso](#tsk-mor-003) | M01 | Moderado | Não urgente nesta etapa | Relacionada à etapa posterior ou recorte a confirmar; antecipar risco ativo. Pendências: PD-003. |
 | [TSK-MOR-004 — Consultar e editar perfil](#tsk-mor-004) | M01 | Moderado | Não urgente nesta etapa | Relacionada à etapa posterior ou recorte a confirmar; antecipar risco ativo. Pendências: PD-003. |
 | [TSK-ADM-001 — Gerenciar convites individuais](#tsk-adm-001) | M01 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-001, PD-002. |
 | [TSK-ADM-002 — Gerenciar convites compartilhados](#tsk-adm-002) | M01 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-001, PD-002. |
-| [TSK-ADM-003 — Cadastrar morador pela administração](#tsk-adm-003) | M01 | Moderado | Não urgente nesta etapa | Relacionada à etapa posterior ou recorte a confirmar; antecipar risco ativo. Pendências: PD-002, PD-003, PD-022. |
+| [TSK-ADM-003 — Cadastrar usuário pela administração](#tsk-adm-003) | M01 | Moderado | Não urgente nesta etapa | Relacionada à etapa posterior ou recorte a confirmar; antecipar risco ativo. Pendências: PD-002, PD-003, PD-022. |
 | [TSK-ADM-004 — Administrar acessos e vínculos](#tsk-adm-004) | M01 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-002, PD-003, PD-023. |
 | [TSK-MOR-005 — Disponibilizar Registrar e Descarte rápido](#tsk-mor-005) | M02 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-006. |
 | [TSK-MOR-006 — Identificar produto por código de barras](#tsk-mor-006) | M02 | Moderado | Não urgente nesta etapa | Relacionada à etapa posterior ou recorte a confirmar; antecipar risco ativo. Pendências: PD-004. |
@@ -45,7 +45,7 @@ Vínculos levam à ficha padronizada. Atividades de decisão são trabalho de an
 | [TSK-MOR-010 — Manter estoque e selecionar quantidades](#tsk-mor-010) | M02 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-006. |
 | [TSK-MOR-011 — Consultar pontos próximos compatíveis](#tsk-mor-011) | M03 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-007. |
 | [TSK-MOR-012 — Consultar detalhes do ponto](#tsk-mor-012) | M03 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-007, PD-009, PD-019. |
-| [TSK-MOR-013 — Encaminhar morador à navegação externa](#tsk-mor-013) | M03 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-006, PD-007. |
+| [TSK-MOR-013 — Encaminhar usuário à navegação externa](#tsk-mor-013) | M03 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-006, PD-007. |
 | [TSK-MOR-014 — Validar presença por GPS](#tsk-mor-014) | M03 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-008, PD-027. |
 | [TSK-MOR-015 — Confirmar entrega e movimentar estoques](#tsk-mor-015) | M03 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-006, PD-009. |
 | [TSK-MOR-016 — Exibir confirmação e histórico de descartes](#tsk-mor-016) | M03 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. |

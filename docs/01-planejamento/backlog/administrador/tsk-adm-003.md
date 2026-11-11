@@ -1,15 +1,15 @@
-# TSK-ADM-003 — Cadastrar morador pela administração
+# TSK-ADM-003 — Cadastrar usuário pela administração
 
 [Voltar ao módulo](../../../planejamento/modulos/README.md)
 
 > **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 2288 a 2346) em 10/11/2026. Corrija aqui, não na origem.
 
 
-**Nome da atividade:** Cadastrar morador pela administração.
+**Nome da atividade:** Cadastrar usuário pela administração.
 
 **Módulo:** M01 — Acesso, usuários e convites. **Módulos afetados:** M01.
 
-**Objetivo:** permitir criação administrativa de moradores com rastreabilidade.
+**Objetivo:** permitir criação administrativa de usuários com rastreabilidade.
 
 **Responsável:** A definir pelo analista/equipe.
 
@@ -19,11 +19,11 @@
 
 **Descrição:**
 
-**Pré-condições:** administrador autorizado. **Entrada:** dados do morador conforme RF-MVP-003.
+**Pré-condições:** administrador autorizado. **Entrada:** dados do usuário conforme RF-MVP-003.
 
 **Fluxo:** abrir cadastro administrativo; informar dados; validar duplicidade; criar o registro; registrar quem realizou a operação. Forma de ativação, entrega de acesso e eventual uso de convites nesse caminho são PD-002 e PD-003.
 
-**Resultado:** morador cadastrado; sua criação não equivale a consentimento do titular, entrega de credenciais ou login realizado. Não se presume atuação do administrador em descartes do morador.
+**Resultado:** usuário cadastrado; sua criação não equivale a consentimento do titular, entrega de credenciais ou login realizado. Não se presume atuação do administrador em descartes do usuário.
 
 **Regras:**
 
@@ -31,7 +31,7 @@ Regras de origem: RN-001. Conferir texto e situação na V6.
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado um administrador autorizado, quando cria um morador com dados válidos, então o cadastro fica disponível e a autoria é registrada.
+- **CA-01:** Dado um administrador autorizado, quando cria um usuário com dados válidos, então o cadastro fica disponível e a autoria é registrada.
 - **CA-02:** Dado um perfil sem essa permissão, quando tenta a operação, então a criação é negada.
 - **CA-03:** Dado um e-mail já utilizado, quando o cadastro é enviado, então o sistema informa o conflito sem criar conta duplicada.
 

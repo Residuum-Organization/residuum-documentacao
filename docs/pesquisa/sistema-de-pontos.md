@@ -20,7 +20,7 @@ EcoPontos precisam de regras de emissão, expiração, estorno e lastro econômi
 
 ## 3. Fluxo recomendado
 
-1. Morador registra ou identifica o resíduo.
+1. Usuário registra ou identifica o resíduo.
 2. Escolhe um ponto compatível.
 3. Realiza o descarte.
 4. O descarte é validado.

@@ -21,7 +21,7 @@
 
 **Pré-condições:** voucher cadastrado e publicado pelo administrador; custo e regras de uso aprovados. **Entrada:** título, descrição, benefício, custo em pontos, instruções e parâmetros de validade/disponibilidade conforme definição.
 
-**Fluxo:** administrador cadastra oferta; morador consulta detalhes e confirma a compra; sistema debita pontos com consistência; disponibiliza voucher adquirido em sua área de recompensas. Forma de emissão do código e validação no parceiro ainda são PD-012.
+**Fluxo:** administrador cadastra oferta; usuário consulta detalhes e confirma a compra; sistema debita pontos com consistência; disponibiliza voucher adquirido em sua área de recompensas. Forma de emissão do código e validação no parceiro ainda são PD-012.
 
 **Exceções:** não emitir voucher sem aquisição confirmada nem cobrar por oferta indisponível. Limite de unidades, cancelamento e devolução de pontos precisam de validação.
 
@@ -33,7 +33,7 @@ Regras de origem: RN-019. Conferir texto e situação na V6.
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado voucher disponível e saldo suficiente, quando o morador confirma, então uma aquisição é registrada e o débito corresponde ao custo exibido.
+- **CA-01:** Dado voucher disponível e saldo suficiente, quando o usuário confirma, então uma aquisição é registrada e o débito corresponde ao custo exibido.
 - **CA-02:** Dado voucher adquirido, quando consulta suas recompensas, então encontra o benefício e as instruções de uso aprovadas.
 
 **Dependências:**

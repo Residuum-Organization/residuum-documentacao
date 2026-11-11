@@ -1,16 +1,16 @@
-# Residuum — roteiro de teste com moradores
+# Residuum — roteiro de teste com usuários
 
 **Estado:** preparado; nenhuma sessão com usuários foi realizada. Recrutamento e consentimento ainda pendentes.
 
 ## Atividade de validação no modelo da equipe
 
-**Nome da atividade:** Executar e analisar o teste de usabilidade com moradores.
+**Nome da atividade:** Executar e analisar o teste de usabilidade com usuários.
 
-**Objetivo:** verificar se moradores conseguem realizar e compreender a jornada proposta, identificando dificuldades e ações de melhoria.
+**Objetivo:** verificar se usuários conseguem realizar e compreender a jornada proposta, identificando dificuldades e ações de melhoria.
 
 **Responsável:** A definir pelo analista/equipe. **Data de início:** A definir. **Data de entrega:** A definir (sessões, análise e conclusão após validação).
 
-**Descrição:** preparar ambiente e participantes, conduzir as tarefas abaixo sem orientar o primeiro percurso, registrar resultados reais, analisar dificuldades e repetir tarefas afetadas após correções. Esta atividade é validação transversal do recorte do morador, não uma funcionalidade nova.
+**Descrição:** preparar ambiente e participantes, conduzir as tarefas abaixo sem orientar o primeiro percurso, registrar resultados reais, analisar dificuldades e repetir tarefas afetadas após correções. Esta atividade é validação transversal do recorte do usuário, não uma funcionalidade nova.
 
 **Regras:** usar dados fictícios; consentimento separado para gravação; não incluir deslocamento físico no tempo de interação digital; distinguir conclusão sem ajuda de conclusão assistida; não preencher sessões com simulações.
 
@@ -20,11 +20,11 @@
 
 **Evidências de entrega:** registros reais por participante, medidas, atritos, análise e resultados de reteste quando necessário. **Evidências produzidas até este registro:** nenhuma sessão humana executada. Executor, data, versão da interface, dispositivo, resultado observado e links de evidência serão preenchidos após execução.
 
-**Referências:** [documento geral das atividades](../planejamento/modulos/README.md), [módulo do morador por perfil](../planejamento/modulos/entregas-por-perfil.md), [evidências e limites anteriores](morador-v6-validacao.md).
+**Referências:** [documento geral das atividades](../planejamento/modulos/README.md), [módulo do usuário por perfil](../planejamento/modulos/entregas-por-perfil.md), [evidências e limites anteriores](morador-v6-validacao.md).
 
 ## Amostra e preparação
 
-Recrutar cinco moradores dos condomínios piloto, incluindo familiaridade digital baixa, média e alta. Sempre que possível, incluir pessoa que usa ampliação/leitor de tela. Usar dispositivos próprios em ambiente acessível. Oferecer alternativa presencial e pausa; não coletar senhas reais, dados fiscais reais ou localização pessoal desnecessária.
+Recrutar cinco usuários dos condomínios piloto, incluindo familiaridade digital baixa, média e alta. Sempre que possível, incluir pessoa que usa ampliação/leitor de tela. Usar dispositivos próprios em ambiente acessível. Oferecer alternativa presencial e pausa; não coletar senhas reais, dados fiscais reais ou localização pessoal desnecessária.
 
 Explicar que se testa a interface, não a pessoa. Pedir consentimento separado para gravação; permitir teste sem gravação. Anotar por códigos P01–P05. Definir com a equipe retenção e acesso às observações antes de coletar dados pessoais.
 

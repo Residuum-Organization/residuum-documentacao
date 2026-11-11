@@ -29,7 +29,7 @@ Esta etapa só planeja. Nada é alterado até a aprovação.
 | 1.2 | Registrar as decisões em `docs/planejamento/modulos/decisoes.md` (TSK-DEC-010–013) e fatiar esse arquivo (3768 linhas) em índice + um arquivo por assunto | `decisoes.md` | 1.1 |
 | 1.3 | Visão: fechar "fora de escopo", metas numéricas do piloto, 3 números do problema (de `docs/pesquisa/`) | `visao-do-projeto.md`, pesquisa | metas = Produto |
 | 1.4 | PRD: reconciliar V6 × regras de saldo × código; reescrever RN-008 e RF-019; uma tabela regra→fonte→status por perfil; metas de RNF (desempenho, disponibilidade) | V6 (1703 linhas), `regras-de-negocio.md`, `regras-de-campanhas.md` | 1.1 |
-| 1.5 | Fatiar a V6 em anexos por perfil (morador, ponto, cooperativa, admin) e arquivar `backend/docs/requisitos.md` e `frontend/docs/requisitos.md` | V6, duplicatas | 1.4 |
+| 1.5 | Fatiar a V6 em anexos por perfil (usuário, ponto, cooperativa, admin) e arquivar `backend/docs/requisitos.md` e `frontend/docs/requisitos.md` | V6, duplicatas | 1.4 |
 | 1.6 | Backlog: converter as 93 atividades de `tasks-gerais.md` (6591 linhas) em histórias "Como… quero… para…" com aceite, agrupadas nas ondas 0–6; um arquivo por módulo | `tasks-gerais.md`, ondas do README das análises | 1.4 |
 | 1.7 | Mesclar a branch `docs/regras-de-campanhas` e atualizar V6/handoff/critério da Sprint 1 com o valor do ponto | git, `scrum-e-sequencia.md` | 1.1 |
 
@@ -90,12 +90,12 @@ Esta etapa só planeja. Nada é alterado até a aprovação.
 |---|---|---|---|
 | 5.1 | Deploy: documentar homologação e produção (URLs, quem publica), deploy do front (`vercel.json`), variáveis e flags, e procedimento de reversão; conferir `alembic upgrade heads` | `deploy.yaml`, `.env.example` | 2.2 |
 | 5.2 | Release notes: definir versionamento (tags), migrar `backend/CHANGES.md`, escrever o retroativo | `CHANGES.md` | — |
-| 5.3 | Manual do morador: reescrever a partir da V5 para a V6, com capturas atuais | `manual_funcionalidades.md` | 1.1 (valor do ponto e ator) |
+| 5.3 | Manual do usuário: reescrever a partir da V5 para a V6, com capturas atuais | `manual_funcionalidades.md` | 1.1 (valor do ponto e ator) |
 | 5.4 | Manuais de responsável, cooperativa e admin: escrever **depois** que as telas existirem | partes 2 e 3 | telas |
 | 5.5 | FAQ e correção da landing (caridade, ingressos, kg) | `LandingPage.jsx` | Produto |
 | 5.6 | Remover os PDFs após conversão (`manual_funcionalidades.pdf`, DLR V4/V5) para `historico/` como `.md` | `frontend/docs/` | — |
 
-**Pronto quando:** deploy reproduzido por quem não o escreveu; manual revisado com ao menos 3 moradores.
+**Pronto quando:** deploy reproduzido por quem não o escreveu; manual revisado com ao menos 3 usuários.
 
 ## Parte 6 — Manutenção (GitHub Flow no repositório central)
 **Documento:** `docs/08-manutencao/governanca-da-documentacao.md` + arquivos de configuração do repositório.

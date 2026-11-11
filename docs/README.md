@@ -3,7 +3,7 @@
 ## Referências principais de trabalho
 
 1. **[Documento geral das tasks](planejamento/modulos/tasks-gerais.md):** atividades no modelo combinado, critérios, dependências, bloqueios, importância e testes vinculados.
-2. **[Proposta de Scrum e sprints](planejamento/modulos/scrum-e-sequencia.md):** morador → ponto de coleta → cooperativa → administrador, com fundamentos e QA durante as entregas.
+2. **[Proposta de Scrum e sprints](planejamento/modulos/scrum-e-sequencia.md):** usuário → ponto de coleta → cooperativa → administrador, com fundamentos e QA durante as entregas.
 
 Responsáveis, datas, estimativas e compromissos finais de sprint são preenchidos pela equipe. O guia por módulos contém as mesmas atividades para consulta, não outro backlog.
 
@@ -23,7 +23,7 @@ Responsáveis, datas, estimativas e compromissos finais de sprint são preenchid
 | Estudos e implementação examinada | [Estudos](estudos/estudos-do-projeto.md) e [diagnóstico](diagnostico/comparativo-mvp-estagio-v1.md) |
 | Pesquisa de negócio e mercado | [Índice de pesquisas](pesquisa/README.md) |
 | Tecnologia | [Stacks e integrações](tecnologia/stacks-e-integracoes.md) |
-| Experiência do morador | [Handoff](ux/morador-v6-handoff.md), [validação registrada](ux/morador-v6-validacao.md) e [teste com moradores](ux/morador-v6-teste-usuarios.md) |
+| Experiência do usuário | [Handoff](ux/morador-v6-handoff.md), [validação registrada](ux/morador-v6-validacao.md) e [teste com usuários](ux/morador-v6-teste-usuarios.md) |
 | Demonstração independente V2 | [Estado e limites](ux/residuum-v2-lovable-status.md) |
 | Documentos anteriores | [Histórico](historico/README.md) |
 

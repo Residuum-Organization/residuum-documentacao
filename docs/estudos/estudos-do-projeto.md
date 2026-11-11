@@ -34,9 +34,9 @@ Entre os principais problemas registrados estão dupla movimentação de estoque
 
 O estudo não examinou produção, banco real ou alterações posteriores aos commits indicados. Testes locais não comprovam concorrência em PostgreSQL, câmera/GPS em dispositivos reais ou funcionamento de integrações externas.
 
-## 4. Experiência do morador
+## 4. Experiência do usuário
 
-O [handoff V6](../ux/morador-v6-handoff.md) registra a jornada, decisões de interface e entrega demonstrativa. A [validação técnica](../ux/morador-v6-validacao.md) documenta as verificações; o [plano de teste com moradores](../ux/morador-v6-teste-usuarios.md) orienta a pesquisa ainda pendente. A persona é uma hipótese ilustrativa, não resultado de entrevistas.
+O [handoff V6](../ux/morador-v6-handoff.md) registra a jornada, decisões de interface e entrega demonstrativa. A [validação técnica](../ux/morador-v6-validacao.md) documenta as verificações; o [plano de teste com usuários](../ux/morador-v6-teste-usuarios.md) orienta a pesquisa ainda pendente. A persona é uma hipótese ilustrativa, não resultado de entrevistas.
 
 A [V2 no Lovable](../ux/residuum-v2-lovable-status.md) tem testes exploratórios limitados e construção parcial. Esses registros não substituem homologação do produto.
 

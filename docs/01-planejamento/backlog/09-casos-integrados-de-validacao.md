@@ -135,7 +135,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 #### CT-004-01 — registro
 
-**Pré-condições e dados:** Morador autorizado; estoque e pontos iniciais registrados.
+**Pré-condições e dados:** Usuário autorizado; estoque e pontos iniciais registrados.
 
 **Passos:**
 
@@ -179,7 +179,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 #### CT-006-01 — scanner
 
-**Pré-condições e dados:** Morador autorizado; simular falha controlada no ambiente de avaliação.
+**Pré-condições e dados:** Usuário autorizado; simular falha controlada no ambiente de avaliação.
 
 **Passos:**
 
@@ -197,7 +197,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 #### CT-006-02 — produto
 
-**Pré-condições e dados:** Morador autorizado; simular falha controlada no ambiente de avaliação.
+**Pré-condições e dados:** Usuário autorizado; simular falha controlada no ambiente de avaliação.
 
 **Passos:**
 
@@ -215,7 +215,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 #### CT-006-03 — nota
 
-**Pré-condições e dados:** Morador autorizado; simular falha controlada no ambiente de avaliação.
+**Pré-condições e dados:** Usuário autorizado; simular falha controlada no ambiente de avaliação.
 
 **Passos:**
 
@@ -617,7 +617,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 2. Registrar 12 kg de PET e 3 kg de alumínio.
 3. Consultar resultado, registros e estados pertinentes; comparar com os valores iniciais e o resultado esperado.
 
-**Resultado esperado:** Pesos por material vinculados à coleta; nenhum novo ponto básico ao morador.
+**Resultado esperado:** Pesos por material vinculados à coleta; nenhum novo ponto básico ao usuário.
 
 **Evidência exigida:** registro das ações e respostas, versão/ambiente e comparação antes/depois; registros do serviço e dados quando houver efeitos persistidos.
 

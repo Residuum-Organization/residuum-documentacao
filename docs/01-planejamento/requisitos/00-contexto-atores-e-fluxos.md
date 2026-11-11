@@ -34,7 +34,7 @@
 
 ### 1.1 Contexto
 
-O Residuum conecta moradores, pontos de coleta, cooperativas e administração para facilitar o descarte de resíduos, controlar sua movimentação e incentivar a participação por recompensas.
+O Residuum conecta usuários, pontos de coleta, cooperativas e administração para facilitar o descarte de resíduos, controlar sua movimentação e incentivar a participação por recompensas.
 
 Já existe um MVP, desenvolvido inicialmente por aproximadamente 40 pessoas com abordagens diferentes. A equipe atual possui seis pessoas e está reorganizando a produção. Esta versão cria uma referência comum para ajustar o produto, identificar divergências e orientar a validação do comportamento existente.
 
@@ -44,7 +44,7 @@ As datas de maio e junho de 2026 e os status de entrega dos documentos anteriore
 
 - Facilitar o cadastro de resíduos por código de barras, nota fiscal ou entrada manual.
 - Permitir registro em estoque e descarte rápido, com escolha de ponto compatível e confirmação por GPS.
-- Recompensar o morador no descarte e permitir uso de pontos na loja.
+- Recompensar o usuário no descarte e permitir uso de pontos na loja.
 - Dar aos responsáveis e à administração visibilidade dos pontos de coleta.
 - Controlar solicitação, aceite, agendamento, registro e pagamento de coletas.
 - Permitir relatórios e acesso a dados conforme planos, sem definir benefícios ainda não acordados.
@@ -93,11 +93,11 @@ Os critérios BDD descrevem o comportamento testável. Quando dependem de config
 
 | Termo | Definição |
 |---|---|
-| Morador | Pessoa que registra resíduos, mantém estoque, descarta e usa recompensas |
+| Usuário | Pessoa que registra resíduos, mantém estoque, descarta e usa recompensas |
 | Resíduo cadastrado | Representação digital da embalagem; não comprova entrega física |
-| Estoque do morador | Itens e quantidades disponíveis para um descarte futuro |
+| Estoque do usuário | Itens e quantidades disponíveis para um descarte futuro |
 | Descarte | Operação confirmada de entrega dos itens selecionados a um ponto |
-| Coleta | Retirada de materiais do ponto pela cooperativa; diferente do descarte do morador |
+| Coleta | Retirada de materiais do ponto pela cooperativa; diferente do descarte do usuário |
 | Ponto de coleta | Local físico cadastrado pelo administrador que recebe materiais aceitos |
 | Responsável pelo ponto | Operador vinculado ao ponto, com painel próprio |
 | Cooperativa | Organização cadastrada pelo administrador, identificada por CNPJ, que aceita e executa coletas |
@@ -117,11 +117,11 @@ Os critérios BDD descrevem o comportamento testável. Quando dependem de config
 
 ### 4.1 Matriz de casos de uso
 
-| Caso de uso | Morador | Responsável pelo ponto | Cooperativa | Administrador |
+| Caso de uso | Usuário | Responsável pelo ponto | Cooperativa | Administrador |
 |---|---|---|---|---|
 | Cadastrar-se por convite | Sim | Aplicação a decidir | Aplicação a decidir | Cadastro inicial a decidir |
-| Gerenciar convites e cadastrar moradores | Não | Não | Não | Sim |
-| Registrar itens e descartar | Sim | Somente se também tiver perfil de morador | Somente se também tiver perfil de morador | Atuação em nome do morador a decidir |
+| Gerenciar convites e cadastrar usuários | Não | Não | Não | Sim |
+| Registrar itens e descartar | Sim | Somente se também tiver perfil de usuário | Somente se também tiver perfil de usuário | Atuação em nome do usuário a decidir |
 | Consultar saldo e loja pessoal | Sim | Acúmulo de perfis a decidir | Acúmulo de perfis a decidir | Gestão da loja |
 | Cadastrar ponto/cooperativa | Não | Não | Não | Sim |
 | Editar materiais aceitos pelo ponto | Não | Nos pontos vinculados | Não | Sim |
@@ -139,9 +139,9 @@ Mermaid não possui uma sintaxe nativa específica para diagrama UML de casos de
 
 ```mermaid
 flowchart LR
-    morador["Morador"] --> registro["Registrar resíduos e manter estoque"]
-    morador --> descarte["Escolher ponto e confirmar descarte"]
-    morador --> loja["Usar pontos na loja"]
+    usuário["Usuário"] --> registro["Registrar resíduos e manter estoque"]
+    usuário --> descarte["Escolher ponto e confirmar descarte"]
+    usuário --> loja["Usar pontos na loja"]
     responsavel["Responsável pelo ponto"] --> painelPonto["Gerir materiais e acompanhar ocupação"]
     responsavel --> pedido["Solicitar coleta ao administrador"]
     admin["Administrador"] --> cadastros["Gerir usuários, convites, pontos e cooperativas"]
@@ -156,15 +156,15 @@ flowchart LR
 
 ## 5. Visão dos fluxos
 
-### 5.1 Jornada do morador
+### 5.1 Jornada do usuário
 
-Exemplo: o morador comprou e consumiu uma Coca-Cola em lata. Faz login, abre Descarte rápido, escaneia a embalagem e revisa a identificação. Escolhe um ponto que aceite lata de alumínio, segue a navegação externa, retorna ao Residuum, confirma a entrega com GPS e recebe 10 pontos básicos. A confirmação oferece Home e Loja.
+Exemplo: o usuário comprou e consumiu uma Coca-Cola em lata. Faz login, abre Descarte rápido, escaneia a embalagem e revisa a identificação. Escolhe um ponto que aceite lata de alumínio, segue a navegação externa, retorna ao Residuum, confirma a entrega com GPS e recebe 10 pontos básicos. A confirmação oferece Home e Loja.
 
 O produto citado é um exemplo, não uma integração comercial confirmada. O scanner lê um identificador; o preenchimento depende de uma fonte de dados de produtos ainda a definir.
 
 ```mermaid
 flowchart TD
-    inicio["Morador autenticado"] --> entrada{"Como iniciar?"}
+    inicio["Usuário autenticado"] --> entrada{"Como iniciar?"}
     entrada -->|"Registrar"| cadastro["Scanner, nota fiscal ou entrada manual"]
     entrada -->|"Descarte rápido"| scanner["Abrir scanner e permitir outras formas de entrada"]
     cadastro --> revisao["Revisar produto, material e quantidade"]
@@ -178,7 +178,7 @@ flowchart TD
     retornar --> gps{"Presença por GPS validada?"}
     gps -->|"Não"| falha["Informar impedimento e preservar itens"]
     falha --> retornar
-    gps -->|"Sim"| confirmar["Morador confirma a entrega"]
+    gps -->|"Sim"| confirmar["Usuário confirma a entrega"]
     confirmar --> concluir["Atualizar estoques e conceder 10 pontos básicos"]
     concluir --> campanha["Aplicar bônus de campanha quando elegível"]
     campanha --> tela["Exibir confirmação, saldo e ações"]
@@ -186,7 +186,7 @@ flowchart TD
     tela --> loja["Ir para a Loja"]
 ```
 
-Decisão aprovada em 10/10/2026 para RF-MVP-014/PD-006: o caminho rápido mantém rascunho somente na memória do fluxo. Cancelar, sair do fluxo, recarregar ou fechar a aba elimina o rascunho. Abrir a rota em outra aba mantém os itens; ao retornar é obrigatório obter GPS novo. Registro não gera pontos e confirmação não duplica efeitos. Ver [handoff do morador](../../ux/morador-v6-handoff.md).
+Decisão aprovada em 10/10/2026 para RF-MVP-014/PD-006: o caminho rápido mantém rascunho somente na memória do fluxo. Cancelar, sair do fluxo, recarregar ou fechar a aba elimina o rascunho. Abrir a rota em outra aba mantém os itens; ao retornar é obrigatório obter GPS novo. Registro não gera pontos e confirmação não duplica efeitos. Ver [handoff do usuário](../../ux/morador-v6-handoff.md).
 
 ### 5.2 Jornada da coleta
 
@@ -211,4 +211,4 @@ flowchart TD
     resultado -->|"Não"| pendente["Manter situação pendente ou falha conforme retorno"]
 ```
 
-O desenho não aprova uma política de pagamento antes ou depois da conclusão; representa o fluxo relatado. A condição exata de autorização é PD-016. A pesagem não gera novamente pontos para o morador.
+O desenho não aprova uma política de pagamento antes ou depois da conclusão; representa o fluxo relatado. A condição exata de autorização é PD-016. A pesagem não gera novamente pontos para o usuário.

@@ -87,7 +87,7 @@ O valor principal está na conexão social e operacional com quem realiza a cole
 
 Fluxo pretendido:
 
-**morador → ponto → volume acumulado → solicitação → cooperativa → coleta → pesagem → dados**
+**usuário → ponto → volume acumulado → solicitação → cooperativa → coleta → pesagem → dados**
 
 O Residuum pretende ser mais estruturado em torno de:
 

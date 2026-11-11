@@ -7,11 +7,11 @@
 
 #### RF-MVP-021 — Creditar recompensa básica provisória
 
-**Situação:** confirmado. **Fonte:** S7. **Ator:** plataforma, em benefício do morador.
+**Situação:** confirmado. **Fonte:** S7. **Ator:** plataforma, em benefício do usuário.
 
 **Objetivo:** conceder 10 pontos por operação de descarte concluída enquanto o modelo definitivo não é elaborado.
 
-**Pré-condições:** RF-MVP-019 concluído de forma consistente. **Fluxo:** registrar crédito de 10 pontos vinculado ao descarte e ao morador; atualizar saldo; tornar o lançamento consultável. Dez pontos são por descarte, não por embalagem, produto, kg, scanner ou nota fiscal.
+**Pré-condições:** RF-MVP-019 concluído de forma consistente. **Fluxo:** registrar crédito de 10 pontos vinculado ao descarte e ao usuário; atualizar saldo; tornar o lançamento consultável. Dez pontos são por descarte, não por embalagem, produto, kg, scanner ou nota fiscal.
 
 **Exceções e resultado:** não creditar no cadastro, início de rota, chegada sem confirmação ou pesagem da cooperativa. Repetições devem recuperar o resultado anterior. Quantidades e materiais não alteram os 10 pontos básicos da regra provisória.
 
@@ -20,7 +20,7 @@
 **Critérios de aceite:**
 
 - **Dado** um descarte válido contendo vários itens, **quando** é concluído, **então** recebe um crédito básico de 10 pontos.
-- **Dado** uma pesagem da cooperativa sobre materiais já entregues, **quando** é registrada, **então** nenhum novo crédito básico é gerado para os moradores.
+- **Dado** uma pesagem da cooperativa sobre materiais já entregues, **quando** é registrada, **então** nenhum novo crédito básico é gerado para os usuários.
 - **Dado** confirmação repetida, **quando** é processada, **então** o saldo não aumenta novamente.
 
 #### RF-MVP-022 — Aplicar bônus de campanha
@@ -43,11 +43,11 @@
 
 #### RF-MVP-023 — Consultar saldo e extrato de pontos
 
-**Situação:** confirmado por consolidação. **Fontes:** S4/RF006, RF016 e S7. **Ator:** morador.
+**Situação:** confirmado por consolidação. **Fontes:** S4/RF006, RF016 e S7. **Ator:** usuário.
 
 **Objetivo:** explicar como o saldo foi formado e utilizado.
 
-**Pré-condições:** morador autenticado. **Fluxo:** mostrar saldo disponível e lançamentos, com data, natureza crédito/débito, quantidade, descrição e origem; distinguir crédito básico, bônus, voucher e participação paga, quando aplicável; permitir consultar o vínculo da operação.
+**Pré-condições:** usuário autenticado. **Fluxo:** mostrar saldo disponível e lançamentos, com data, natureza crédito/débito, quantidade, descrição e origem; distinguir crédito básico, bônus, voucher e participação paga, quando aplicável; permitir consultar o vínculo da operação.
 
 **Exceções e resultado:** extrato de outra pessoa não é acessível. Consulta falha não deve ser confundida com saldo zero. Expiração, ajustes administrativos e estornos ainda exigem regras aprovadas em PD-010 e PD-012.
 
@@ -60,7 +60,7 @@
 
 #### RF-MVP-024 — Apurar metas de descarte das campanhas
 
-**Situação:** confirmado com pendências. **Fonte:** S7. **Ator:** morador e plataforma.
+**Situação:** confirmado com pendências. **Fonte:** S7. **Ator:** usuário e plataforma.
 
 **Objetivo:** indicar o progresso em campanhas que exigem descarte de determinada quantidade ou produto.
 
@@ -77,7 +77,7 @@
 
 #### RF-MVP-025 — Debitar pontos com consistência
 
-**Situação:** confirmado por dependência das recompensas. **Fonte:** S7. **Ator:** plataforma, após ação do morador.
+**Situação:** confirmado por dependência das recompensas. **Fonte:** S7. **Ator:** plataforma, após ação do usuário.
 
 **Objetivo:** cobrar os pontos definidos sem permitir saldo negativo ou compra duplicada.
 
@@ -89,6 +89,6 @@
 
 **Critérios de aceite:**
 
-- **Dado** saldo insuficiente, **quando** o morador confirma a compra, **então** não há débito nem aquisição.
+- **Dado** saldo insuficiente, **quando** o usuário confirma a compra, **então** não há débito nem aquisição.
 - **Dado** confirmação reenviada da mesma operação, **quando** é processada, **então** não duplica débito ou benefício.
 - **Dado** duas aquisições concorrentes sem saldo para ambas, **quando** são processadas, **então** o saldo permanece não negativo.

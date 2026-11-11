@@ -33,7 +33,7 @@ As verificações seguem a especificação de origem; não há RN específica ci
 
 - **CA-01:** Dado credenciais válidas e conta habilitada, quando o usuário faz login, então acessa sua área autorizada.
 - **CA-02:** Dado uma sessão encerrada, quando se tenta executar uma ação protegida, então nova autenticação é exigida.
-- **CA-03:** Dado um morador autenticado, quando tenta funções administrativas, então o acesso é negado também no serviço que processa a operação.
+- **CA-03:** Dado um usuário autenticado, quando tenta funções administrativas, então o acesso é negado também no serviço que processa a operação.
 
 **Dependências:**
 

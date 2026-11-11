@@ -7,11 +7,11 @@
 
 #### RF-MVP-053 — Armazenar e apresentar imagens e vídeos da loja
 
-**Situação:** confirmado com parâmetros pendentes. **Fontes:** S4/RF028 e S7. **Ator:** administrador; morador visualiza.
+**Situação:** confirmado com parâmetros pendentes. **Fontes:** S4/RF028 e S7. **Ator:** administrador; usuário visualiza.
 
 **Objetivo:** permitir mídia nas campanhas e demais ofertas que suportem a configuração.
 
-**Pré-condições:** permissão administrativa e armazenamento disponível. **Fluxo:** selecionar imagem/vídeo; validar formato e tamanho aprovados; enviar e vincular à oferta; apresentar mídia aos moradores com descrição textual independente.
+**Pré-condições:** permissão administrativa e armazenamento disponível. **Fluxo:** selecionar imagem/vídeo; validar formato e tamanho aprovados; enviar e vincular à oferta; apresentar mídia aos usuários com descrição textual independente.
 
 **Exceções:** upload falho não deve ser exibido como concluído; arquivo incompatível é rejeitado. O limite anterior de 5 MB não será imposto indistintamente a vídeo. Upload de arquivo versus link externo, formatos, tamanhos, duração e tratamento aguardam PD-024.
 

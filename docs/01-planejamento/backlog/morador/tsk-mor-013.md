@@ -1,11 +1,11 @@
-# TSK-MOR-013 — Encaminhar morador à navegação externa
+# TSK-MOR-013 — Encaminhar usuário à navegação externa
 
 [Voltar ao módulo](../../../planejamento/modulos/README.md)
 
 > **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 807 a 866) em 10/11/2026. Corrija aqui, não na origem.
 
 
-**Nome da atividade:** Encaminhar morador à navegação externa.
+**Nome da atividade:** Encaminhar usuário à navegação externa.
 
 **Módulo:** M03 — Mapa, presença e descarte. **Módulos afetados:** M03.
 
@@ -34,7 +34,7 @@ As verificações seguem a especificação de origem; não há RN específica ci
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado um ponto escolhido, quando o morador inicia navegação, então o destino enviado corresponde ao ponto selecionado.
+- **CA-01:** Dado um ponto escolhido, quando o usuário inicia navegação, então o destino enviado corresponde ao ponto selecionado.
 - **CA-02:** Dado apenas a abertura da navegação, quando retorna, então a entrega ainda exige validação de presença e confirmação.
 
 **Dependências:**
@@ -51,7 +51,7 @@ TSK-MOR-012; TSK-TRA-000 e controles transversais aplicáveis.
 Decisão de rascunho e abandono aplicada em 10/10/2026. PD-006 permanece parcial para contratos reais, concorrência e confirmação; demais PD listadas abaixo continuam sujeitas ao recorte e à aprovação.
 
 - **PD-006:** Decisão de UX aprovada em 10/10/2026: rascunho rápido em memória do fluxo, abandono elimina, rota em outra aba preserva, GPS novo no retorno; seleção parcial e ajuste/remoção sem pontos. Contratos reais de ajuste/exclusão, concorrência e confirmação continuam pendentes; ver handoff.
-- **PD-007:** Busca sem GPS, materiais mistos em pontos diferentes, recebimento fora do horário ou com ponto cheio e escolha do serviço de mapa do morador
+- **PD-007:** Busca sem GPS, materiais mistos em pontos diferentes, recebimento fora do horário ou com ponto cheio e escolha do serviço de mapa do usuário
 
 **Prioridade de origem:** P0.
 

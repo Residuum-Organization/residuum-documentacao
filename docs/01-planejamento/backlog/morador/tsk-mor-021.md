@@ -31,7 +31,7 @@ Regras de origem: RN-010. Conferir texto e situação na V6.
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado saldo insuficiente, quando o morador confirma a compra, então não há débito nem aquisição.
+- **CA-01:** Dado saldo insuficiente, quando o usuário confirma a compra, então não há débito nem aquisição.
 - **CA-02:** Dado confirmação reenviada da mesma operação, quando é processada, então não duplica débito ou benefício.
 - **CA-03:** Dado duas aquisições concorrentes sem saldo para ambas, quando são processadas, então o saldo permanece não negativo.
 

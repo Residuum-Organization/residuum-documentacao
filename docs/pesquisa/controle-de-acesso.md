@@ -15,7 +15,7 @@ A equipe quer deixar entrar um número **X** de pessoas e, por ora, libera o ace
 |---|---|
 | Regra da V6 | RN-001: cadastro **só por convite**. Individual vale 1 uso; compartilhado tem expiração e limite |
 | Decisão de 11/11 | O usuário se cadastra normalmente; o controle está em estudo; por ora, código fornecido |
-| Código do backend | **Não há convite**: qualquer pessoa cria conta (achado F06 do módulo morador) |
+| Código do backend | **Não há convite**: qualquer pessoa cria conta (achado F06 do módulo usuário) |
 
 ## Opções
 

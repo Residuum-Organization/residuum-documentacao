@@ -59,7 +59,7 @@ A hipótese atual é o Residuum funcionar como uma **infraestrutura operacional 
 
 Fluxo de eventos:
 
-**morador → descarte → ponto → volume acumulado → solicitação → cooperativa → coleta → peso → destino/resultado disponível**
+**usuário → descarte → ponto → volume acumulado → solicitação → cooperativa → coleta → peso → destino/resultado disponível**
 
 A hipótese ainda precisa ser validada com clientes e instituições.
 
