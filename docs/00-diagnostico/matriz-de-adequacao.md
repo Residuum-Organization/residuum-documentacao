@@ -20,9 +20,9 @@ Legenda: ✅ pronto · 🟡 parcial · 🔴 conflitante/desatualizado · ⚪ aus
 | 4 | Arquitetura (SAD) | 🟡 | [SAD](../02-arquitetura/sad.md) com versões e camadas do código; [5 ADRs](../02-arquitetura/adr/README.md) propostas | Topologia real, homologação, aceite das ADRs | [sad](../02-arquitetura/sad.md) |
 | 5 | Diagramas | 🟡 | [ER real](../02-arquitetura/modelo-de-dados.md) com 27 tabelas e [dicionário](../02-arquitetura/dados/README.md); estados hoje × proposto | Conferir contra banco PostgreSQL; diagramas de pagamento | [diagramas](../02-arquitetura/diagramas.md) · [dados](../02-arquitetura/modelo-de-dados.md) |
 | 6 | Wireframes / UX | 🟡 | [Índice de 42 telas](../03-ux/indice-de-telas.md) com rota e achado; `docs/ux/` (usuário V6) | Link do Figma, capturas e wireframes dos perfis operacionais | [indice-de-telas](../03-ux/indice-de-telas.md) |
-| 7 | Documentação de API | ⚪ | Só OpenAPI automático; README do backend defasado | Tabela por rota, com rotas a remover | [api](../04-desenvolvimento/api.md) |
+| 7 | Documentação de API | 🟡 | **11/11:** tabela das 113 rotas lida do código, com o que muda por decisão e as rotas que faltam | Corpos e erros por rota (exportar `/openapi.json`) | [api](../04-desenvolvimento/api.md) |
 | 8 | README | 🔴 | 3 READMEs (raiz, back, front) | Remover QR/papéis antigos; setup testado | ver `README.md` |
-| 9 | CONTRIBUTING | ⚪ | Rascunho em `tmp/` | Branches, commits, PR, Definição de Pronto | [CONTRIBUTING](../../CONTRIBUTING.md) |
+| 9 | CONTRIBUTING | 🟡 | **11/11:** práticas reais da equipe (só `main`, PR, prefixos), regras de negócio e Definição de Pronto | Revisores obrigatórios; proteger a `main` (`feature/` padronizado em 11/11) | [CONTRIBUTING](../../CONTRIBUTING.md) |
 | 10 | Plano de testes | 🟡 | `testes-integrados.md` (planejado) | Evidências; testes em PostgreSQL | [plano](../05-qualidade/plano-de-testes.md) |
 | 11 | Casos de teste | 🟡 | Critérios "Aceite + teste" nas fichas | Formato pré-condição/passos/esperado | [casos](../05-qualidade/casos-de-teste.md) |
 | 12 | Guia de deploy | 🟡 | `deploy.yaml`, Dockerfiles | Ambientes, variáveis, flags, rollback | [deploy](../06-operacao/guia-de-deploy.md) |
