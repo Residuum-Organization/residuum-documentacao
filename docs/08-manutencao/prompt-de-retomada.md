@@ -77,7 +77,7 @@ Depois **pare e espere** a resposta dele.
 
 ## Decisões que o Vinicius já tomou (não repergunte)
 
-- Pagamento por API e planos de dados ficam **dentro** do MVP.
+- Planos de dados ficam **dentro** do MVP. **Pagamento à cooperativa:** a Residuum paga, por kg e material; **manual com comprovante no piloto, API depois** (11/11).
 - Código de barras e QR Code da nota fiscal ficam **dentro** do MVP, com cadastro manual como alternativa após X tentativas.
 - Descarte rápido **não** é função à parte: é o uso do leitor de código de barras e do leitor de QR Code da nota.
 - Sorteios **somente de teste** até haver parecer jurídico.
@@ -107,6 +107,6 @@ Depois **pare e espere** a resposta dele.
 - Contas excluídas devolvem a vaga? O que mostrar quando as vagas acabam?
 - Decidir PD-009 e PD-014 a partir do estudo `docs/pesquisa/capacidade-e-execucao-da-coleta.md`.
 - Campos do formulário manual.
-- API de pagamento no MVP, ou pagamento manual primeiro? Quem paga (PD-016) e quanto (PD-015).
+- Valor por kg de PET e de lata (PD-015).
 
 **Comece agora pela Fase 1.**
