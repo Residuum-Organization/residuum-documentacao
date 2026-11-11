@@ -58,6 +58,8 @@ O admin define o **resíduo** (material e/ou código de barras) e a **quantidade
 
 O usuário que participa e recicla essa quantidade, depois de aderir, recebe de bônus **os pontos básicos dessas unidades** (ou seja, dobra o que elas valem). O ponto básico é **5 por unidade** (decisão do time em 2026-10-22; ver [Regras de saldo, vouchers e sorteios](regras-de-saldo-vouchers-sorteios.md)), então uma meta de 4 unidades paga 20 pontos. O valor usa a mesma função da pontuação do descarte e acompanha a regra base se ela mudar.
 
+> ⚠️ **A partir de 11/11/2026 o ponto básico é 10 por descarte (operação), não por unidade** ([PD-010](../01-planejamento/decisoes/pd-010.md)). "Os pontos básicos dessas unidades" deixa de ter um valor direto. `[DECISÃO: como calcular o dobro — 10 por descarte que contou para a meta, ou um bônus fixo definido pelo admin]`
+
 ## Pagamento
 
 - O usuário recebe pelo botão **Receber pontos**. O sistema não credita sozinho na confirmação do descarte.
