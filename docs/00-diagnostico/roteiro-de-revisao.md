@@ -42,7 +42,7 @@ Os tempos são **leitura atenta mais anotação** (cerca de 200 palavras por min
 
 | # | Documento | Min | O que avaliar | Feito | Meu parecer |
 |---|---|---|---|---|---|
-| 10 | [Arquitetura (SAD)](../02-arquitetura/sad.md) | 7 | Stack, camadas e o fluxo "como é hoje" | [ ] | |
+| 10 | [Arquitetura (SAD)](../02-arquitetura/sad.md) | 7 | Stack, camadas e o fluxo "como é hoje" | [x] | ✏️ 11/11: alinhado às decisões; produção = API na Vercel + PostgreSQL na Neon; backups e homologação a confirmar |
 | 11 | [Diagramas](../02-arquitetura/diagramas.md) | 5 | Estados "hoje × proposto" | [ ] | |
 | 12 | [Modelo de dados](../02-arquitetura/modelo-de-dados.md) | 8 | A tabela de achados e a nota sobre a branch do backend | [ ] | |
 | 13 | [Dicionário de dados](../02-arquitetura/dados/README.md) | 10 | Leia o índice e **um** dos três arquivos; os outros por amostra | [ ] | |
