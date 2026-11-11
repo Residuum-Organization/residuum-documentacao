@@ -77,10 +77,10 @@ stateDiagram-v2
 | **Silêncio** (cooperativa não responde) | expirar sozinho; avisar o admin; nada | **Avisar o admin** depois de um prazo; o admin decide `[DECISÃO: prazo]` |
 | **Prazo de aceite** | horas fixas; sem prazo | Prazo único, a definir com a cooperativa. A meta 5 do piloto (**retirada em até 72 h**) dá o teto |
 | **Recusa** | já existe | Manter. Motivo obrigatório (já é) |
-| **Cancelamento** | só admin; admin e cooperativa; ninguém | **Só o admin**, antes da conclusão, com motivo. Novo estado `cancelada` |
+| **Cancelamento** | só admin; admin e cooperativa; ninguém | ✅ **Decidido em 11/11/2026: admin e cooperativa**, antes da conclusão, com motivo. Novo estado `cancelada` |
 | **Reagendamento** | estado próprio; campo de data; fora do sistema | **Campo "data prevista"** na solicitação, editável pela cooperativa; sem estado novo |
 | **Vários pedidos** | 1 por ponto; vários | **Manter 1 ativo por ponto** (já é assim) |
-| **Início da execução** ("a caminho") | estado novo; nada | **Não no piloto.** Basta `aceita` com data prevista |
+| **Início da execução** ("a caminho") | estado novo; nada | ✅ **Decidido em 11/11/2026: estado novo "a caminho"** (`em_execucao`), marcado pela cooperativa |
 | **Coleta parcial** | permitir; não permitir | ✅ **Decidido em 11/11/2026: permitida.** A cooperativa informa o que levou, **por material**, e o resto continua no estoque do ponto. Hoje o código **zera tudo** e precisa mudar |
 | Lançamento direto da cooperativa | manter; tirar; marcar como tal | **Manter, mas marcar a origem** ("lançamento direto"), sem usar a cooperativa como admin |
 
@@ -107,7 +107,7 @@ stateDiagram-v2
 | 4 | Ponto cheio bloqueia o descarte? | Produto | PD-009 |
 | 5 | Horários e tags | Produto | PD-009 |
 | 6 | Prazo de aceite e o que fazer no silêncio | Operação e cooperativa | PD-014 |
-| 7 | Quem pode cancelar | Produto | PD-014 |
+| 7 | ~~Quem pode cancelar~~ **decidido: admin e cooperativa** (11/11/2026) | Produto | PD-014 |
 | 8 | ~~Coleta parcial~~ **decidido: permitida** (11/11/2026) | Produto e cooperativa | PD-014 |
 
 ## Impacto no código (para quando decidir)
