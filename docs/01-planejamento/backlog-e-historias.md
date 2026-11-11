@@ -1,6 +1,6 @@
 # Backlog e histórias de usuário
 
-> **Estado:** revisão · **Dono:** Produto · **Atualizado em:** 10/11/2026
+> **Estado:** revisão · **Dono:** Produto · **Atualizado em:** 11/11/2026
 > **Fontes:** [atividades por módulo](backlog/README.md) (93 = 66 de execução + 27 decisões), [decisões](decisoes/README.md), roteiro de PRs das análises.
 > **Lacunas:** responsáveis, datas e sprints finais.
 
@@ -25,7 +25,7 @@ O backlog tem **93 atividades** (66 de execução, 27 decisões), agora **um arq
 |---|---|---|
 | 0 | Contenção: fechar cadastro público de cooperativa, travar acesso por ponto, sorteio (estados, remover Heineken, remover `/pontuacao/resgates`) | Riscos críticos, sem decisão |
 | 1 | Livro de pontos (ledger), fluxo único de confirmação, idempotência, reconciliação | Base de quase tudo |
-| 2 | Vínculo usuário↔ponto; contas (convite, desativar, senha) | Destrava os perfis |
+| 2 | Vínculo responsável↔ponto (N:N, pelo admin); contas (código de acesso, teto de 500, desativar, senha) | Destrava os perfis |
 | 3 | Materiais PET/lata; front do usuário; cancelar sorteio | Dependem de 1 e 2 |
 | 4 | Estados da coleta; edição do ponto; campanha/voucher; contas pelo admin | Fluxos operacionais |
 | 5 | Extrato, disponibilidade, lead, QR removido | Experiência |
@@ -37,7 +37,7 @@ Atividades `TSK-…` e ondas ainda **não estão ligadas**. `[LACUNA]` ligar cad
 
 | ID | História | Aceite | Onda | Atividade |
 |---|---|---|---|---|
-| H-MOR-01 | Como **usuário**, quero ganhar pontos só quando o ponto confirmar minha entrega, para que meu saldo seja confiável. | Criar descarte não muda saldo; confirmar credita 1 vez | 1 | [TSK-MOR-017](backlog/morador/tsk-mor-017.md) e [TSK-MOR-015](backlog/morador/tsk-mor-015.md) |
+| H-MOR-01 | Como **usuário**, quero ganhar pontos só quando o operador do ponto confirmar minha entrega, para que meu saldo seja confiável. | Criar descarte não muda saldo; confirmar credita **10 pontos** 1 vez | 1 | [TSK-MOR-017](backlog/morador/tsk-mor-017.md) e [TSK-MOR-015](backlog/morador/tsk-mor-015.md) |
 | H-MOR-02 | Como **usuário**, quero que uma rejeição devolva meus itens ao estoque. | Item volta inteiro; saldo inalterado | 1 | [TSK-MOR-015](backlog/morador/tsk-mor-015.md) |
 | H-MOR-03 | Como **usuário**, quero que "descartar agora" não grave nada se eu desistir. | Estoque inalterado ao voltar | 3 | [TSK-MOR-005](backlog/morador/tsk-mor-005.md) |
 | H-MOR-04 | Como **usuário**, quero ver se o ponto está lotado ou fechado antes de ir. | Ponto indisponível aparece desabilitado com motivo | 5 | [TSK-MOR-011](backlog/morador/tsk-mor-011.md) |
@@ -48,6 +48,16 @@ Atividades `TSK-…` e ondas ainda **não estão ligadas**. `[LACUNA]` ligar cad
 | H-PON-02 | Como **responsável**, quero pedir coleta quando o ponto encher. | Pedido aparece ao admin; duplicado → 409 | 4 | [TSK-PON-004](backlog/ponto-de-coleta/tsk-pon-004.md) |
 | H-ADM-01 | Como **admin**, quero cancelar um sorteio devolvendo os pontos. | Cada bilhete devolve 1 vez | 3 | [TSK-MOR-026](backlog/morador/tsk-mor-026.md) |
 | H-ADM-02 | Como **admin**, quero desativar uma conta sem apagar o histórico. | Próximo acesso responde 401 | 2 | [TSK-ADM-004](backlog/administrador/tsk-adm-004.md) |
+
+### Histórias novas das decisões de 11/11/2026
+
+| ID | História | Aceite | Onda | Atividade |
+|---|---|---|---|---|
+| H-MOR-05 | Como **plataforma**, quero que entregas no mesmo ponto em 60 minutos contem como uma, para que ninguém divida a entrega para ganhar mais. | 4 envios de 1 lata em 10 min no mesmo ponto = 1 descarte, 10 pontos | 1 | [TSK-MOR-017](backlog/morador/tsk-mor-017.md) |
+| H-MOR-06 | Como **usuário**, quero ganhar o dobro ao cumprir N descartes da campanha. | Meta de 4 descartes com lata = 40 pontos de bônus, pelo botão "Receber pontos" | 4 | `[LACUNA: atividade]` |
+| H-MOR-07 | Como **pessoa convidada**, quero me cadastrar com o código da equipe enquanto houver vaga. | 501ª conta é recusada com aviso claro; duas pessoas não pegam a mesma última vaga | 2 | [TSK-MOR-001](backlog/morador/tsk-mor-001.md) |
+| H-ADM-03 | Como **admin**, quero corrigir um descarte já confirmado por ajuste manual, com motivo, sem estorno. | Descarte confirmado não tem estorno; ajuste aparece no extrato com motivo | 1 | `[LACUNA: atividade]` |
+| H-ADM-04 | Como **admin**, quero ligar e desligar responsáveis de pontos. | Um ponto aceita vários responsáveis; uma pessoa, vários pontos | 2 | `[LACUNA: atividade]` |
 
 As atividades acima foram cruzadas pelo título. Os 71 achados das análises (F, F-, PON, ADM) **ainda não estão ligados** às atividades; alguns problemas (por exemplo `/pontuacao/resgates` e o cadastro público de cooperativa) podem não ter atividade própria. `[LACUNA]` fazer esse cruzamento.
 
