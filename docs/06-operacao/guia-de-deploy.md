@@ -67,4 +67,4 @@ Segredos usados: `DATABASE_URL`, `VERCEL_DEPLOY_HOOK_URL`.
 - [ ] Ambiente de homologação e URLs
 - [ ] Deploy do front (há `vercel.json`) `[VERIFICAR]`
 - [ ] CI de testes antes do deploy
-- [ ] Observação: o workflow roda `alembic upgrade heads` (plural) com 32 migrações; conferir se há mais de uma cabeça
+- [x] O workflow roda `alembic upgrade heads` (plural); na branch `feature/mor-025-026-vouchers-sorteios` há **uma só cabeça** (`d3f9b81a6e25`) em 34 migrações. `[VERIFICAR]` na `main` do backend
