@@ -47,7 +47,7 @@ Os tempos são **leitura atenta mais anotação** (cerca de 200 palavras por min
 | 12 | [Modelo de dados](../02-arquitetura/modelo-de-dados.md) | 8 | A tabela de achados e a nota sobre a branch do backend | [x] | ✏️ 11/11: modelo proposto alinhado; estrutura conferida com a Neon (= `main`, 22 tabelas); `senha_hash` no pedido público de ponto |
 | 13 | [Dicionário de dados](../02-arquitetura/dados/README.md) | 10 | Leia o índice e **um** dos três arquivos; os outros por amostra | [x] | ✅ 11/11: ok; acrescentadas as diferenças do banco da Neon |
 | 14 | [ADRs](../02-arquitetura/adr/README.md) | 10 | Aceitar, rejeitar ou ajustar cada uma das 5 propostas | [x] | ✅ 11/11: as 5 aceitas, ajustadas às decisões do dia (10 por descarte sem estorno, N:N, "a caminho", código individual e teto de 500) |
-| 15 | [Índice de telas](../03-ux/indice-de-telas.md) | 6 | Telas por perfil e o que está sem desenho | [ ] | |
+| 15 | [Índice de telas](../03-ux/indice-de-telas.md) | 6 | Telas por perfil e o que está sem desenho | [x] | ✏️ 11/11: 11 telas que mudam e 3 novas pelas decisões; ponto cheio bloqueia e sugere outro (PD-009) |
 
 ### Bloco 4: Rascunhos das partes 3 a 6 (≈ 28 min)
 
