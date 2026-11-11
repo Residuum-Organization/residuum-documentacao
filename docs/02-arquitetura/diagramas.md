@@ -59,7 +59,10 @@ stateDiagram-v2
   pedida --> solicitada: admin encaminha
   solicitada --> aceita: cooperativa aceita
   solicitada --> recusada: cooperativa recusa [PD-014]
-  aceita --> em_execucao: iniciar
+  aceita --> em_execucao: cooperativa marca "a caminho"
+  solicitada --> cancelada: admin ou cooperativa cancela, com motivo
+  aceita --> cancelada: admin ou cooperativa cancela, com motivo
+  em_execucao --> cancelada: admin ou cooperativa cancela, com motivo
   em_execucao --> registrada: concluir (baixa só o que levou, por material; o resto fica no ponto)
 ```
 
@@ -141,5 +144,6 @@ Descartes no mesmo ponto em 60 minutos contam como **um** na meta. Ver [regras d
 
 - [ ] `[VERIFICAR]` quais transições existem de fato em cada rota (ex.: quem pode `revertido`)
 - [x] Diagramas de pagamento (manual no piloto) e de campanha (dobro em descartes) (11/11/2026)
-- [ ] `[DECISÃO: PD-014]` estado `em_execucao` e cancelamento da coleta (o estudo propõe não ter `em_execucao` no piloto)
+- [x] Coleta: estado "a caminho" (`em_execucao`) mantido; cancelamento por admin e cooperativa, com motivo (11/11/2026)
+- [ ] `[DECISÃO: PD-014]` prazo de aceite, silêncio e reagendamento
 - [x] Ator da confirmação: **operador do ponto** (11/11/2026); confirmação final, sem `revertido`
