@@ -39,7 +39,7 @@ Legenda: ✅ conforme · ❌ violada pelo código · ⏳ não implementada · �
 | RN-001 | Cadastro com **código** da equipe e **teto de 500 contas** (trava de vagas no banco), decidido em 11/11 | ❌ aberto |
 | RN-003 | Só PET e lata, unidades inteiras | ❌ aceita outros materiais e decimais |
 | RN-004 | Registrar item não dá pontos | ✅ |
-| RN-006 | Presença por GPS recente, sem QR | ❌ raio de 1000 m, sem idade da posição |
+| RN-006 | Presença por GPS recente, sem QR; **raio de 100 m ajustável por ponto** (decidido em 11/11) | ❌ raio fixo de 1000 m, sem idade da posição |
 | RN-007 | Baixa de estoque só na confirmação | ❌ baixa dupla no lote |
 | RN-008 | Pontos uma única vez, na confirmação do operador, **10 por descarte**; descartes no mesmo ponto em 60 min contam como um | ❌ crédito em dobro; ❌ paga 5 por unidade |
 | RF-005/008 | Acesso desabilitado é negado | ❌ sem campo `ativo` |
@@ -53,7 +53,7 @@ Legenda: ✅ conforme · ❌ violada pelo código · ⏳ não implementada · �
 ### Responsável pelo ponto (vínculo N:N, gerido pelo admin: [PD-023](decisoes/pd-023.md))
 | ID | Regra | Código hoje |
 |---|---|---|
-| RN-011 | Pontos cadastrados só pelo admin | ❌ há cadastro público |
+| RN-011 | Pontos cadastrados **só pelo admin** (confirmado em 11/11, contra o pedido aberto do levantamento de abril) | ❌ há pedido público sem login (`/solicitacoes-pontos-coleta`) |
 | RF-034 | Responsável edita materiais, com autoria | ❌ |
 | RN-012 | Responsável pede coleta ao admin | ⏳ |
 | RF-032 | Temporário tem início e fim | ❌ só fim |

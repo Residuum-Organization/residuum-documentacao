@@ -72,7 +72,7 @@ O perfil que antes se chamava "morador" passa a se chamar **usuário** em todos 
 | Descarte rápido | **Não é uma função à parte.** É o uso do **leitor de código de barras** (agiliza um único produto) e do **leitor de QR Code da nota** (traz todos os materiais da nota) para seguir direto à escolha do ponto, sem passar pelo estoque |
 | Entrega | Escolha do ponto compatível, navegação externa, **validação de presença por GPS** (libera o envio) e **confirmação pelo operador do ponto** (decidido em 11/11/2026); os pontos saem só depois da confirmação |
 | Pontos e Loja | Pontos por descarte, campanhas com bônus, vouchers e **sorteios** (ver limite abaixo) |
-| Pontos de coleta | Fixos e temporários, responsável, materiais aceitos, ocupação |
+| Pontos de coleta | Fixos e temporários, **cadastrados só pelo admin**, com responsável, materiais aceitos, ocupação e **raio de GPS de 100 m ajustável** (decidido em 11/11/2026) |
 | Coleta | Pedido, encaminhamento, aceite, agenda e rota, registro de **material e peso** |
 | Pagamento | **Pagamento à cooperativa por API**, iniciado pelo administrador `[DECISÃO: PD-015, PD-016]` |
 | Dados | **Planos** (grátis, pré-pago, mensal) para relatórios e indicadores `[DECISÃO: PD-019]` |

@@ -24,7 +24,7 @@ Numeração: **PD-xxx** é o identificador oficial da V6. A coluna "Análise" li
 
 | # | PD | Tema | Valor provisório |
 |---|---|---|---|
-| 7 | [PD-008](../01-planejamento/decisoes/pd-008.md) | GPS | Raio 100 m, precisão 60 m, idade 30 s (a V6 diz que os 100 m da V5 são referência, não parâmetro) |
+| 7 | [PD-008](../01-planejamento/decisoes/pd-008.md) | GPS | **Decidido em 11/11: raio de 100 m, ajustável por ponto.** Provisórios: precisão 60 m, idade 30 s. QR Code fica fora do MVP |
 | 8 | [PD-010](../01-planejamento/decisoes/pd-010.md) | Limite diário | 200 unidades/dia, a medir no piloto |
 | 9 | [PD-001](../01-planejamento/decisoes/pd-001.md) / [PD-002](../01-planejamento/decisoes/pd-002.md) | Acesso | **Decidido em 11/11:** cadastro com **código** da equipe e **teto de 500 contas** (trava de vagas no banco). Ver [controle de acesso](../pesquisa/controle-de-acesso.md) |
 | 10 | [PD-003](../01-planejamento/decisoes/pd-003.md) | Recuperação de senha | E-mail |
