@@ -1,6 +1,6 @@
 # Arquitetura de Software (SAD)
 
-> **Estado:** revisão · **Dono:** Tecnologia · **Atualizado em:** 10/11/2026
+> **Estado:** revisão · **Dono:** Tecnologia · **Atualizado em:** 11/11/2026
 > **Fontes:** código do backend (branch `feature/mor-025-026-vouchers-sorteios`, `11f0d8e`) e do frontend (`package.json`, `App.jsx`, `ci.yml`), [stacks e integrações](../tecnologia/stacks-e-integracoes.md), [mapa de branches](../tecnologia/mapa-de-branches.md), propostas das análises.
 > **Lacunas:** 6 · Decisões de arquitetura propostas em [adr/](adr/README.md)
 
@@ -42,7 +42,7 @@ flowchart LR
 | Pasta | Papel |
 |---|---|
 | `routes/` | 15 arquivos de endpoints: `admin` (28), `campanha` (11), `voucher` (11), `sorteio` (10), `inventario_usuario` (8), `ponto_coleta` (8), `cooperativa` (8), `auth` (6), `descarte` (6), demais menores |
-| `services/` | Regras: `saldo_service` (débito com trava), `pontuacao_service` (5 pontos por unidade), `campanha_service`, `voucher_service`, `extrato_pontos_service`, `ponto_coleta_service`, `localizacao_service` (GPS), `transferencia_lote_service`, `audit_service`, outros |
+| `services/` | Regras: `saldo_service` (débito com trava), `pontuacao_service` (5 pontos por unidade **no código**; a regra decidida em 11/11 é 10 por descarte), `campanha_service`, `voucher_service`, `extrato_pontos_service`, `ponto_coleta_service`, `localizacao_service` (GPS), `transferencia_lote_service`, `audit_service`, outros |
 | `models/` | 21 arquivos, 27 tabelas — ver [modelo de dados](modelo-de-dados.md) |
 | `schemas/` | Contratos Pydantic de entrada e saída |
 | `dependencies/` | `get_current_user`, `require_role`, `validar_acesso_operacional_ao_ponto` |
@@ -83,7 +83,7 @@ Os dois créditos e as duas baixas são o defeito F01/F02. O desenho proposto es
 | [0004](adr/0004-estados-no-backend.md) | Estados com transições explícitas | `PUT` nunca muda estado |
 | [0005](adr/0005-conta-com-ciclo-de-vida.md) | Conta com ciclo de vida | Desativar e revogar sessão |
 
-Todas com estado **proposta**: dependem das decisões do produto.
+Todas com estado **proposta**. As decisões de 11/11/2026 **apoiam** quatro delas: confirmação final do operador e ajuste do admin (0001), vínculo N:N gerido pelo admin (0002), janela de 60 min e idempotência no descarte (0003) e conta excluída que devolve a vaga do teto de 500 (0005). O aceite formal é o item 14 do roteiro.
 
 ## Ambientes e entrega
 
