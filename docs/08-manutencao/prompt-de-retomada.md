@@ -95,6 +95,7 @@ Depois **pare e espere** a resposta dele.
 - **Cancelar sorteio devolve os pontos**; parecer jurídico **adiado** (sorteios só de teste).
 - **Campanhas:** só PET e lata no início (outros materiais no futuro); bônus pelo botão "Receber pontos".
 - **Coleta parcial permitida** (PD-014): o resto fica no ponto.
+- **GPS:** raio de 100 m ajustável por ponto; **só o admin** cria ponto de coleta; QR Code fora do MVP.
 - **Teto de 500 contas**, com **trava de vagas no banco** (*pessimistic locking*, `SELECT ... FOR UPDATE`).
 - Campanhas, vouchers e sorteios: regras decididas. Pendentes: **capacidade do ponto (PD-009)** e **execução da coleta (PD-014)**.
 
