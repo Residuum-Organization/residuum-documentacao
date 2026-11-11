@@ -57,7 +57,7 @@ stateDiagram-v2
   [*] --> solicitada: admin pede (1 ativa por ponto)
   solicitada --> aceita: cooperativa aceita
   solicitada --> recusada: cooperativa recusa (com motivo)
-  aceita --> concluida: cooperativa informa os pesos
+  aceita --> concluida: cooperativa informa o que levou e os pesos (o resto fica no ponto)
   concluida --> [*]
   recusada --> [*]
 ```
@@ -81,7 +81,7 @@ stateDiagram-v2
 | **Reagendamento** | estado próprio; campo de data; fora do sistema | **Campo "data prevista"** na solicitação, editável pela cooperativa; sem estado novo |
 | **Vários pedidos** | 1 por ponto; vários | **Manter 1 ativo por ponto** (já é assim) |
 | **Início da execução** ("a caminho") | estado novo; nada | **Não no piloto.** Basta `aceita` com data prevista |
-| **Coleta parcial** | permitir; não permitir | **Não no piloto.** Se sobrar material, a cooperativa conclui o que levou e o admin abre novo pedido. Hoje o código **zera tudo**, então o que sobrar precisa ser contado de novo `[DECISÃO]` |
+| **Coleta parcial** | permitir; não permitir | ✅ **Decidido em 11/11/2026: permitida.** A cooperativa informa o que levou, **por material**, e o resto continua no estoque do ponto. Hoje o código **zera tudo** e precisa mudar |
 | Lançamento direto da cooperativa | manter; tirar; marcar como tal | **Manter, mas marcar a origem** ("lançamento direto"), sem usar a cooperativa como admin |
 
 ### Como ficaria (proposta)
@@ -108,7 +108,7 @@ stateDiagram-v2
 | 5 | Horários e tags | Produto | PD-009 |
 | 6 | Prazo de aceite e o que fazer no silêncio | Operação e cooperativa | PD-014 |
 | 7 | Quem pode cancelar | Produto | PD-014 |
-| 8 | Coleta parcial: não permitir no piloto? | Produto e cooperativa | PD-014 |
+| 8 | ~~Coleta parcial~~ **decidido: permitida** (11/11/2026) | Produto e cooperativa | PD-014 |
 
 ## Impacto no código (para quando decidir)
 
