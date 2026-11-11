@@ -86,6 +86,7 @@ O perfil que antes se chamava "morador" passa a se chamar **usuário** em todos 
 | Registrar item ou ler nota **não é descarte** e não dá pontos | V6 RN-004 |
 | Rascunho do descarte rápido fica **só na memória** do fluxo | Decisão de UX de 10/10 |
 | A pesagem da cooperativa **não** concede pontos de novo ao usuário | V6 RN-016 |
+| A **confirmação do operador é final**: descarte confirmado não é estornado; erro posterior vira ajuste manual do admin | Decisão de 11/11/2026 ([PD-010](decisoes/pd-010.md)) |
 
 ### Decisões já tomadas
 
