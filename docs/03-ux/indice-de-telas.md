@@ -80,6 +80,20 @@ A V6 separa **responsável pelo ponto** e **cooperativa**; o front junta os dois
 
 Nenhum teste de usabilidade executado foi encontrado.
 
+## Identidade visual
+
+Do Levantamento de Requisitos de 16/04/2026 (RNF009), no Google Drive; ver o [comparativo](../00-diagnostico/comparativo-documentos-drive.md).
+
+| Item | Valor |
+|---|---|
+| Fundo | Branco |
+| Cor primária | Azul-marinho `#1F4E79` ("ou similar") |
+| Cores de apoio | Cinza e verde |
+| Tom | De tecnologia, não de empresa ambiental tradicional |
+| Logo | Arquivos oficiais (svg, png, pdf, ai, eps) na pasta de marca do Drive da equipe |
+
+`[VERIFICAR NO CÓDIGO]` se o frontend já usa essas cores como variáveis (design tokens, RNF009 do DLR V4).
+
 ## O que falta para fechar
 
 - [ ] Link do arquivo Figma por perfil

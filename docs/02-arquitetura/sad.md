@@ -101,6 +101,19 @@ Todas com estado **proposta**: dependem das decisões do produto.
 - `/painel-testes` público e CORS aberto (`allow_origins=["*"]`) `[VERIFICAR]`.
 - Branches de feature com tabelas novas **ainda não estão na `main`** do backend.
 - Código sem uso: tabelas `cooperativa`, `qrcode_token`, `estoque`.
+- Itens dados como feitos no Backlog v2 do Drive (Terraform, Secrets Manager, criptografia LGPD, backups) **não aparecem no código** `[VERIFICAR]`.
+
+### Riscos de produto e operação
+
+Levantados no DLR V4 e no Plano de Tasks (jun/2026, Google Drive; ver o [comparativo](../00-diagnostico/comparativo-documentos-drive.md)), revistos com as decisões de 11/11/2026.
+
+| Risco | Probabilidade (DLR) | Impacto (DLR) | Mitigação hoje |
+|---|---|---|---|
+| Scanner e GPS instáveis em Android de entrada | Alta | Crítico | Testar nos celulares do piloto; cadastro manual após 2 falhas de leitura; raio de 100 m ajustável por ponto |
+| Fraude nos pontos | Média | Alto | Operador confirma; confirmação final; janela de 60 min; idempotência no descarte (a fazer) |
+| LGPD antes do lançamento | Alta | Crítico | Excluir conta anonimiza (PD-022); criptografia de dados pessoais `[VERIFICAR]` |
+| Parceiros de voucher não confirmados | Alta | Médio | Sorteios só de teste; campanhas só PET e lata |
+| Excesso de engenharia antes de validar | Alta | Alto | Escopo do piloto fechado na Visão (100 usuários, 3 pontos, 8 semanas) |
 
 ## O que falta para fechar
 
