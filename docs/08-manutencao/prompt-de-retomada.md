@@ -88,13 +88,13 @@ Depois **pare e espere** a resposta dele.
 - Coleta seletiva de Manaus: usar o **último dado publicado** (SINISA 2024, 33,7%).
 - **Pontos: 10 por descarte concluído**, por operação (PD-010, 11/11). O código ainda paga 5 por unidade.
 - **Dobro de pontos:** meta em **descartes**, bônus de **10 × N**.
-- **Contra a divisão de entregas:** janela no mesmo ponto (descartes do mesmo usuário, no mesmo ponto, dentro da janela, contam como um só).
+- **Contra a divisão de entregas:** janela de **60 minutos** no mesmo ponto (descartes do mesmo usuário, no mesmo ponto, dentro dela, contam como um só).
 - **Teto de 500 contas**, com **trava de vagas no banco** (*pessimistic locking*, `SELECT ... FOR UPDATE`).
 - Campanhas, vouchers e sorteios: regras decididas. Pendentes: **capacidade do ponto (PD-009)** e **execução da coleta (PD-014)**.
 
 ## Pendências abertas que dependem do Vinicius
 
-- Se as **faixas de recompensa** mudam, agora que o ponto vale 10 por descarte; e o **tamanho da janela** contra a divisão de entregas (sugestão: 60 min).
+- Se as **faixas de recompensa** mudam, agora que o ponto vale 10 por descarte.
 - Ajustar a escala das metas do piloto (100 usuários) ao teto de 500?
 - Contas excluídas devolvem a vaga? O que mostrar quando as vagas acabam?
 - Decidir PD-009 e PD-014 a partir do estudo `docs/pesquisa/capacidade-e-execucao-da-coleta.md`.
