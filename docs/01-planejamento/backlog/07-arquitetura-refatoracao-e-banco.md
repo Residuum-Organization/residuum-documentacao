@@ -73,9 +73,9 @@ As seis fichas abaixo desdobram trabalho técnico já previsto nos pacotes ADE. 
 
 **Descrição:** revisar efeitos persistidos e responsabilidade da conclusão operacional; aplicar política aprovada de retirada parcial, contagem/peso e entradas posteriores; validar materiais e pesos no serviço.
 
-**Regras:** peso negativo não é aceito; zero, precisão e correção seguem decisão; peso não define quantidade retirada por inferência; pesagem não gera novo crédito básico ao morador.
+**Regras:** peso negativo não é aceito; zero, precisão e correção seguem decisão; peso não define quantidade retirada por inferência; pesagem não gera novo crédito básico ao usuário.
 
-**Critérios de aceite:** retirada preserva remanescentes e entradas posteriores conforme conciliação aprovada; valores inválidos não são persistidos; repetição não duplica retirada; crédito do morador não é repetido.
+**Critérios de aceite:** retirada preserva remanescentes e entradas posteriores conforme conciliação aprovada; valores inválidos não são persistidos; repetição não duplica retirada; crédito do usuário não é repetido.
 
 **Dependências:** TEC-01/02, coleta aceita e PD-009/014/018 aprovadas para o recorte. **Origem:** ADE-014/017; TSK-PON-002, TSK-COO-004, TSK-TRA-004; AUD-004/005.
 
@@ -85,7 +85,7 @@ As seis fichas abaixo desdobram trabalho técnico já previsto nos pacotes ADE. 
 
 **Nome da atividade:** Adequar autorização no serviço por perfil, vínculo e atribuição.
 
-**Objetivo:** impedir acesso indevido entre moradores, pontos, cooperativas e administração.
+**Objetivo:** impedir acesso indevido entre usuários, pontos, cooperativas e administração.
 
 **Responsável:** A definir. **Data de início:** A definir. **Data de entrega:** A definir.
 

@@ -31,7 +31,7 @@ Regras de origem: RN-021. Conferir texto e situação na V6.
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado ponto temporário fora do período, quando o morador busca local disponível, então o ponto não é oferecido como destino ativo.
+- **CA-01:** Dado ponto temporário fora do período, quando o usuário busca local disponível, então o ponto não é oferecido como destino ativo.
 - **CA-02:** Dado término de um evento com coletas anteriores, quando o ponto deixa de receber, então os registros permanecem consultáveis aos perfis autorizados.
 
 **Dependências:**

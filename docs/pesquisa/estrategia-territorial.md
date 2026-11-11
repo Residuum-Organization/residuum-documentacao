@@ -12,7 +12,7 @@ A estratégia territorial mencionada na conversa é começar no Amazonas, com fo
 
 Objetivos:
 
-- validar jornada do morador;
+- validar jornada do usuário;
 - testar pontos de coleta;
 - testar operação com cooperativas;
 - validar geração de dados;

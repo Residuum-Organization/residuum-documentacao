@@ -16,11 +16,11 @@ O material que o Residuum quer captar **tem mercado**: o Brasil recicla quase to
 |---|---|---|---|---|
 | 1 | **97,3%** | das latas de alumínio foram recicladas no Brasil | 2024 | [ABC do ABC](https://abcdoabc.com.br/latinhas-de-aluminio-recicladas/), [Bahia Notícias](https://www.bahianoticias.com.br/noticia/307485-brasil-mantem-indice-de-reciclagem-de-latas-de-aluminio-acima-de-96-por-16-anos-consecutivos) |
 | 2 | **~23%** | de capacidade ociosa nas recicladoras de PET (até 40%), por falta de coleta | 2024 | matérias sobre o 13º Censo da Abipet `[VERIFICAR fonte]` ([Monitor Mercantil](https://monitormercantil.com.br/pet-reciclagem-cresce-mesmo-com-desafios-da-coleta-seletiva/), [Movimento Econômico](https://movimentoeconomico.com.br/geral/redacao/2025/04/08/reciclagem-de-pet-cresce-14-no-brasil-e-impulsiona-economia-circular/)) |
-| 3 | **~18%** | da população de Manaus atendida pela coleta seletiva | 2020 | artigo acadêmico, `[VERIFICAR fonte]` (candidatos: [RSD Journal](https://rsdjournal.org/index.php/rsd/article/download/25902/22802), [Plano Municipal](https://planodesaneamento.manaus.am.gov.br/wp-content/uploads/2026/01/PMSB-MANAUS-RESIDUOS-SOLIDOS-Completo-6.pdf)) |
+| 3 | **33,7%** | da população urbana de Manaus com coleta seletiva porta a porta (coleta comum chega a 98,8%) | SINISA 2024 (último publicado) | [Instituto Água e Saneamento, a partir do SINISA 2024](https://www.aguaesaneamento.org.br/municipios-e-saneamento/am/manaus) |
 
-**Leitura em uma frase:** *o Brasil já recicla quase toda lata e mais da metade do PET, mas a coleta não chega: indústria parada por falta de material e uma capital com menos de um quinto da população atendida.*
+**Leitura em uma frase:** *o Brasil já recicla quase toda lata e mais da metade do PET, mas a coleta não chega: indústria parada por falta de material e uma capital onde só um terço da população urbana tem coleta seletiva, e só 1,6% do lixo coletado é recuperado.*
 
-> ⚠️ O número 3 é o mais frágil: é de 2020 e vem de um artigo. Há uma versão mais recente no [Plano Municipal de Saneamento de Manaus (2026)](https://planodesaneamento.manaus.am.gov.br/wp-content/uploads/2026/01/PMSB-MANAUS-RESIDUOS-SOLIDOS-Completo-6.pdf) e nos relatórios da Semulsp; a busca não conseguiu ler as tabelas. **Peça a alguém para abrir esse PDF e confirmar o número atual.**
+> ⚠️ **Número 3 revisto em 11/11/2026.** O antigo ~18% era de 2020 (o SNIS 2020 declarado pela prefeitura dá 380.724 pessoas atendidas, ver [Infosanbas](https://infosanbas.org.br/municipio/manaus-am/)). Usamos o **último dado publicado, SINISA 2024: 33,7%**. Cuidado: a mesma página diz que Manaus "não declarou se pratica coleta seletiva", então o número deve ser lido como **declaração do sistema federal**, não medição. O [Plano Municipal de Saneamento (2026)](https://planodesaneamento.manaus.am.gov.br/wp-content/uploads/2026/01/PMSB-MANAUS-RESIDUOS-SOLIDOS-Completo-6.pdf) não pôde ser lido (arquivo grande demais para a busca).
 
 ## Brasil: PET e latas
 
@@ -39,8 +39,8 @@ O material que o Residuum quer captar **tem mercado**: o Brasil recicla quase to
 | Lixo enviado ao depósito da AM-010 | ~3 mil t por dia | 2025 | Ativo desde 1986; **atingiu o limite em 2024** | [Band](https://www.band.com.br/noticias/manaus-prepara-primeiro-aterro-sanitario-da-historia-do-amazonas-202511181244) |
 | Primeiro aterro sanitário | previsto até 30/04/2028 | 2025 | Acordo com o MP-AM estende o atual até 2028 | [Rede Onda Digital](https://redeondadigital.com.br/amazonas/mpam-inspeciona-obras-de-ampliacao-do-aterro-de-manaus-apos-assinatura-do-tac) |
 | Resíduos coletados | ~2,3 mil t/dia (836.906 t no ano) | 2021 | Dados da prefeitura citados em estudos; conferir no [relatório Semulsp 2021](https://www.manaus.am.gov.br/semulsp/wp-content/uploads/sites/23/2024/11/Relatorio-Cincunstancial-de-Atividade_2021.pdf) `[VERIFICAR fonte]` |
-| População com coleta seletiva | 14,9% (2015); 18,3% (2020) | 2015, 2020 | Metodologias diferentes | 2015: provável [IHU](https://ihu.unisinos.br/noticias/547597-com-potencial-inexplorado-mercado-do-lixo-deixa-legado-de-danos-ambientais-e-sociais); 2020: `[VERIFICAR fonte]` |
-| Resíduos efetivamente reciclados | 2,2% dos gerados | 2020 | Citando a Semulsp, em trabalho acadêmico | `[VERIFICAR fonte]` |
+| População com coleta seletiva | 14,9% (2015); 18,3% (2020); **33,7% da população urbana (SINISA 2024)** | 2015, 2020, 2024 | Metodologias diferentes; usar o de 2024 | 2015: provável [IHU](https://ihu.unisinos.br/noticias/547597-com-potencial-inexplorado-mercado-do-lixo-deixa-legado-de-danos-ambientais-e-sociais); 2020: [Infosanbas (SNIS 2020)](https://infosanbas.org.br/municipio/manaus-am/), 380.724 pessoas; 2024: [Instituto Água e Saneamento](https://www.aguaesaneamento.org.br/municipios-e-saneamento/am/manaus) |
+| Resíduos efetivamente reciclados | 2,2% dos gerados (2020); **1,6% recuperado do total coletado (SINISA 2024)** | 2020, 2024 | Usar o de 2024 | 2020: `[VERIFICAR fonte]`; 2024: [Instituto Água e Saneamento](https://www.aguaesaneamento.org.br/municipios-e-saneamento/am/manaus) |
 | Pontos de entrega voluntária (PEVs) | 44, em supermercados | mar/2025 | Material vai a cooperativas e associações de catadores | notícia de março de 2025 `[VERIFICAR fonte]` (ver [Amazonas Virtual](https://amazonasvirtual.com.br/2025/novas-estrategias-para-intensificar-o-combate-as-lixeiras-irregulares)) |
 | Destinação inadequada nas capitais do Norte | ~70% | 2023 | Panorama da Abrema, via reportagem | `[VERIFICAR fonte]` |
 
@@ -53,7 +53,7 @@ A **Lei nº 3.358/2024** de Manaus instituiu o **Programa Moeda Verde**, de ince
 ## O que falta para fechar
 
 - [ ] Ligar cada `[VERIFICAR fonte]` ao link correto
-- [ ] Confirmar o número 3 no Plano Municipal de Saneamento (2026) ou no relatório Semulsp mais recente
+- [x] Confirmar o número 3: trocado pelo último dado publicado (SINISA 2024, 33,7%) em 11/11/2026
 - [ ] Buscar a geração anual do Amazonas no Panorama da Abrelpe (tabela por estado)
 - [ ] Conferir se a taxa de PET (56,4%) é do 13º Censo
 - [ ] Ler a Lei 3.358/2024 e avaliar o Moeda Verde

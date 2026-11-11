@@ -72,4 +72,4 @@ Débito de pontos (voucher, bilhete, resgate avulso).
 | lida | bool | |
 | criado_em | timestamp | |
 | ponto_coleta_id | FK→ponto_coleta N | alerta operacional |
-| usuario_id | FK→usuario N | aviso ao morador (sorteio apurado) |
+| usuario_id | FK→usuario N | aviso ao usuário (sorteio apurado) |

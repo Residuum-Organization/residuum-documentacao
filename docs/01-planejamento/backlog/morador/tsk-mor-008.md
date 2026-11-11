@@ -19,7 +19,7 @@
 
 **Descrição:**
 
-**Pré-condições:** morador autenticado na tela compartilhada. **Entrada:** nome do produto/resíduo, material PET ou lata de alumínio e quantidade de embalagens.
+**Pré-condições:** usuário autenticado na tela compartilhada. **Entrada:** nome do produto/resíduo, material PET ou lata de alumínio e quantidade de embalagens.
 
 **Fluxo:** preencher campos; validar material e quantidade; revisar; adicionar os itens conforme Registrar ou Descarte rápido. Quantidade deve ser inteira e positiva para contagem de embalagens; peso é informado pela cooperativa em operação distinta.
 
@@ -34,7 +34,7 @@ Regras de origem: RN-003, RN-004. Conferir texto e situação na V6.
 **Critérios de aceite:**
 
 - **CA-01:** Dado nome, material aceito e quantidade válida, quando o cadastro é confirmado, então os itens são adicionados conforme a intenção da ação.
-- **CA-02:** Dado quantidade inválida, quando o morador tenta confirmar, então o sistema solicita correção e não adiciona os itens.
+- **CA-02:** Dado quantidade inválida, quando o usuário tenta confirmar, então o sistema solicita correção e não adiciona os itens.
 
 **Dependências:**
 

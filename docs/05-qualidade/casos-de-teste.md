@@ -10,7 +10,7 @@ Molde único para todo caso: **ID · requisito · pré-condição · passos · r
 
 Status: ⬜ planejado · ✅ passou · ❌ falhou. Hoje **nenhum foi executado**.
 
-## Morador
+## Usuário
 
 | ID | Req. | Pré-condição | Passos | Esperado | St |
 |---|---|---|---|---|---|

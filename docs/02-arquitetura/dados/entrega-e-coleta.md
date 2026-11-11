@@ -2,14 +2,14 @@
 
 [Voltar ao índice](README.md) · Fonte: `app/models/` da branch `feature/mor-025-026-vouchers-sorteios`.
 
-## inventario_usuario (estoque do morador)
+## inventario_usuario (estoque do usuário)
 
 | Coluna | Tipo | Observação |
 |---|---|---|
 | id | int PK | |
 | usuario_id | FK→usuario | |
 | tipo_residuo | texto(50) | livre (achado F09) |
-| quantidade | **float** | disponível ao morador (achado F23) |
+| quantidade | **float** | disponível ao usuário (achado F23) |
 | quantidade_reservada | float | em descartes pendentes; hoje o lote não a usa (F02) |
 | descricao, observacao | texto N | |
 | codigo_barras | texto(64) N | |

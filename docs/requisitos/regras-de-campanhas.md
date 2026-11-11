@@ -9,14 +9,14 @@ Atividades relacionadas: TSK-MOR-022 (loja), TSK-MOR-023 (detalhe da campanha) e
 1. **Cada campanha é única.** O admin monta a campanha no editor: acesso, requisitos, missões e mecânicas de bônus. Cada campanha pode funcionar de um jeito, de acordo com as parcerias.
 2. **Participar é gratuito**, mas só quem aperta **Participar** recebe os bônus da campanha. Participar nunca paga pontos.
 3. **Nenhum descarte conta antes de participar.** Vale para requisitos de entrada, missões e mecânicas.
-4. **Ao cumprir os requisitos, o morador ganha pontos.** O morador recebe os pontos pelo botão **Receber pontos**, uma vez por recompensa.
+4. **Ao cumprir os requisitos, o usuário ganha pontos.** O usuário recebe os pontos pelo botão **Receber pontos**, uma vez por recompensa.
 5. **Pontos não são dinheiro** (RN-010). A campanha concede benefícios da plataforma.
 
 ## Acesso: pública e privada
 
 | | Pública | Privada |
 |---|---|---|
-| Quem pode apertar Participar | qualquer morador | qualquer morador |
+| Quem pode apertar Participar | qualquer usuário | qualquer usuário |
 | Quando os bônus valem | depois de participar | depois de participar **e** de cumprir os requisitos de entrada |
 | Requisitos de entrada | não tem | pelo menos um |
 
@@ -31,13 +31,13 @@ Cada item mede uma quantidade de unidades de **descartes confirmados**:
 - **Códigos de barras:** lista opcional. O produto é identificado pelo código de barras do descarte ou, se não houver, do item do inventário. Não existe catálogo de produtos (PD-004).
 - **Quantidade:** número inteiro de 1 ou mais.
 
-**Missões:** a campanha define os **pontos de recompensa** (valor fixo). Quando **todas** as missões chegam na quantidade, o morador pode receber a recompensa, uma única vez. O valor não depende de quanto o morador reciclou além da meta.
+**Missões:** a campanha define os **pontos de recompensa** (valor fixo). Quando **todas** as missões chegam na quantidade, o usuário pode receber a recompensa, uma única vez. O valor não depende de quanto o usuário reciclou além da meta.
 
 ## O que conta como progresso
 
 Um descarte conta para um requisito ou mecânica quando:
 
-1. o morador já participa da campanha;
+1. o usuário já participa da campanha;
 2. o descarte está com status `confirmado` (pendente ou rejeitado não conta);
 3. a data de registro do descarte é igual ou posterior ao momento da adesão e está dentro da vigência da campanha;
 4. o material e/ou o código de barras batem com o definido (material é comparado sem diferenciar maiúsculas de minúsculas);
@@ -50,20 +50,20 @@ Consequências:
 
 ## Mecânicas de bônus
 
-O admin liga e desliga cada mecânica no editor. Uma campanha tem no máximo uma mecânica de cada tipo, e as mecânicas são independentes entre si e das missões. Cada uma tem sua meta, seu botão **Receber pontos** e paga uma vez. Mecânica desligada não aparece para o morador e não paga. Novas mecânicas entrarão conforme as parcerias.
+O admin liga e desliga cada mecânica no editor. Uma campanha tem no máximo uma mecânica de cada tipo, e as mecânicas são independentes entre si e das missões. Cada uma tem sua meta, seu botão **Receber pontos** e paga uma vez. Mecânica desligada não aparece para o usuário e não paga. Novas mecânicas entrarão conforme as parcerias.
 
 ### Dobro de pontos (`dobro_pontos`)
 
 O admin define o **resíduo** (material e/ou código de barras) e a **quantidade** necessária para ganhar o bônus.
 
-O morador que participa e recicla essa quantidade, depois de aderir, recebe de bônus **os pontos básicos dessas unidades** (ou seja, dobra o que elas valem). O ponto básico é **5 por unidade** (decisão do time em 2026-10-22; ver [Regras de saldo, vouchers e sorteios](regras-de-saldo-vouchers-sorteios.md)), então uma meta de 4 unidades paga 20 pontos. O valor usa a mesma função da pontuação do descarte e acompanha a regra base se ela mudar.
+O usuário que participa e recicla essa quantidade, depois de aderir, recebe de bônus **os pontos básicos dessas unidades** (ou seja, dobra o que elas valem). O ponto básico é **5 por unidade** (decisão do time em 2026-10-22; ver [Regras de saldo, vouchers e sorteios](regras-de-saldo-vouchers-sorteios.md)), então uma meta de 4 unidades paga 20 pontos. O valor usa a mesma função da pontuação do descarte e acompanha a regra base se ela mudar.
 
 ## Pagamento
 
-- O morador recebe pelo botão **Receber pontos**. O sistema não credita sozinho na confirmação do descarte.
+- O usuário recebe pelo botão **Receber pontos**. O sistema não credita sozinho na confirmação do descarte.
 - O pagamento é protegido contra clique duplo: a adesão é travada e existe uma restrição de pagamento único por mecânica.
 - Missões: `recompensa_concedida_em` na adesão. Mecânicas: uma linha em `campanha_bonus` por adesão e mecânica.
-- Campanha com status diferente de `ativa` não paga. Campanha fora da vigência deixa de aparecer na lista e no detalhe, e o progresso só considera descartes até a data de fim; o endpoint de pagamento exige apenas o status `ativa`, então um morador que concluiu a meta dentro da vigência ainda consegue receber depois do fim.
+- Campanha com status diferente de `ativa` não paga. Campanha fora da vigência deixa de aparecer na lista e no detalhe, e o progresso só considera descartes até a data de fim; o endpoint de pagamento exige apenas o status `ativa`, então um usuário que concluiu a meta dentro da vigência ainda consegue receber depois do fim.
 
 ## Validações do cadastro (admin)
 
@@ -79,8 +79,8 @@ O morador que participa e recicla essa quantidade, depois de aderir, recebe de b
 | Perfil | Tela | O que faz |
 |---|---|---|
 | Admin | `/nova-campanha` e `/campanhas/:id` | cadastra e edita acesso, requisitos, missões, mecânicas, condições e vigência |
-| Morador | `/loja` (aba Campanhas) | lista campanhas; botão **Participar** e link de detalhes; selo PRIVADA |
-| Morador | `/loja/campanhas/:id` | acesso, recompensa, requisitos de entrada, missões e bônus com barras de progresso; **Participar** e **Receber pontos** |
+| Usuário | `/loja` (aba Campanhas) | lista campanhas; botão **Participar** e link de detalhes; selo PRIVADA |
+| Usuário | `/loja/campanhas/:id` | acesso, recompensa, requisitos de entrada, missões e bônus com barras de progresso; **Participar** e **Receber pontos** |
 
 ## API
 
@@ -90,11 +90,11 @@ O morador que participa e recicla essa quantidade, depois de aderir, recebe de b
 | `GET /campanhas/{id}` | público | detalhe de campanha consultável (404 se inativa, encerrada ou futura) |
 | `GET /campanhas/admin` | admin | todas as campanhas |
 | `POST /campanhas`, `PUT /campanhas/{id}`, `DELETE /campanhas/{id}` | admin | cadastro. `requisitos` e `mecanicas`, quando enviados no PUT, substituem a lista; ausentes mantêm |
-| `POST /campanhas/{id}/participar` | morador | adesão gratuita (400 se já participa) |
-| `GET /campanhas/{id}/progresso` | morador | progresso de entrada, missões e mecânicas, `acesso_liberado` e recompensas disponíveis |
-| `POST /campanhas/{id}/recompensa` | morador | paga a recompensa das missões (uma vez) |
-| `POST /campanhas/{id}/mecanicas/{tipo}/bonus` | morador | paga o bônus da mecânica (uma vez) |
-| `GET /campanhas/minhas-inscricoes` | morador | campanhas em que participa |
+| `POST /campanhas/{id}/participar` | usuário | adesão gratuita (400 se já participa) |
+| `GET /campanhas/{id}/progresso` | usuário | progresso de entrada, missões e mecânicas, `acesso_liberado` e recompensas disponíveis |
+| `POST /campanhas/{id}/recompensa` | usuário | paga a recompensa das missões (uma vez) |
+| `POST /campanhas/{id}/mecanicas/{tipo}/bonus` | usuário | paga o bônus da mecânica (uma vez) |
+| `GET /campanhas/minhas-inscricoes` | usuário | campanhas em que participa |
 
 Tabelas: `campanhas` (inclui `acesso` e `condicoes`), `campanha_requisito`, `campanha_mecanica`, `inscricao_campanha` (inclui `recompensa_concedida_em`) e `campanha_bonus`. Migrations `3b1f6d2a9c47`, `5d8e1a7b3c20` e `a41c7e92d5b3`. Regras em `app/services/campanha_service.py`.
 

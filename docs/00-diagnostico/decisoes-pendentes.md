@@ -14,7 +14,7 @@ Numeração: **PD-xxx** é o identificador oficial da V6. A coluna "Análise" li
 | # | PD | Pergunta | Situação | Recomendação | Trava |
 |---|---|---|---|---|---|
 | 1 | [PD-010](../01-planejamento/decisoes/pd-010.md) | Quanto vale o ponto? | **Time decidiu 22/10: 5 por unidade confirmada.** Falta validar com o produto e decidir estorno e limite | Validar; corrigir V6, guia e handoff | PRD, manual, testes |
-| 2 | [PD-006](../01-planejamento/decisoes/pd-006.md) / [PD-027](../01-planejamento/decisoes/pd-027.md) | Quem confirma o descarte? | Aberta. V6 diz morador; código usa operador | Operador confirma; GPS só habilita o envio | PRD, API, manual |
+| 2 | [PD-006](../01-planejamento/decisoes/pd-006.md) / [PD-027](../01-planejamento/decisoes/pd-027.md) | Quem confirma o descarte? | Aberta. V6 diz usuário; código usa operador | Operador confirma; GPS só habilita o envio | PRD, API, manual |
 | 3 | [PD-010](../01-planejamento/decisoes/pd-010.md) | Estorno maior que o saldo | Aberta | Bloquear (409) e mostrar o déficit | PRD, API |
 | 4 | [PD-023](../01-planejamento/decisoes/pd-023.md) | Perfil "responsável pelo ponto" e vínculo | Aberta | Vínculo N:N | PRD, arquitetura, API |
 | 5 | [PD-013](../01-planejamento/decisoes/pd-013.md) | Sorteio: cancelar devolve? Algoritmo? | **Time decidiu 22/10: só sorteios de teste, 1 bilhete por usuário.** Cancelar e algoritmo abertos | Cancelar devolve; sha256 com semente nos testes | PRD, manual |

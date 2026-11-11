@@ -2,7 +2,7 @@
 
 [Voltar ao índice](README.md)
 
-> **Estado:** proposta · **Origem:** solução S4 (morador) e A9/A10 (administrador) · **Depende de:** [PD-001](../../01-planejamento/decisoes/pd-001.md), [PD-002](../../01-planejamento/decisoes/pd-002.md), [PD-003](../../01-planejamento/decisoes/pd-003.md), [PD-022](../../01-planejamento/decisoes/pd-022.md), [PD-023](../../01-planejamento/decisoes/pd-023.md)
+> **Estado:** proposta · **Origem:** solução S4 (usuário) e A9/A10 (administrador) · **Depende de:** [PD-001](../../01-planejamento/decisoes/pd-001.md), [PD-002](../../01-planejamento/decisoes/pd-002.md), [PD-003](../../01-planejamento/decisoes/pd-003.md), [PD-022](../../01-planejamento/decisoes/pd-022.md), [PD-023](../../01-planejamento/decisoes/pd-023.md)
 
 ## Contexto
 

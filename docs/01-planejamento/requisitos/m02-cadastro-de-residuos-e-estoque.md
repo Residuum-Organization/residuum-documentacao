@@ -7,7 +7,7 @@
 
 #### RF-MVP-009 — Disponibilizar Registrar e Descarte rápido
 
-**Situação:** confirmado. **Fonte:** S7. **Ator:** morador.
+**Situação:** confirmado. **Fonte:** S7. **Ator:** usuário.
 
 **Objetivo:** usar a mesma experiência de entrada com intenções distintas.
 
@@ -24,7 +24,7 @@
 
 #### RF-MVP-010 — Identificar produto por código de barras
 
-**Situação:** confirmado com pendências. **Fontes:** S4/RF010 e S7. **Ator:** morador.
+**Situação:** confirmado com pendências. **Fontes:** S4/RF010 e S7. **Ator:** usuário.
 
 **Objetivo:** reduzir preenchimento manual a partir do identificador da embalagem.
 
@@ -37,11 +37,11 @@
 **Critérios de aceite:**
 
 - **Dado** um código conhecido, **quando** a consulta termina, **então** o formulário é preenchido com os dados disponíveis para revisão.
-- **Dado** um código desconhecido, **quando** não há identificação, **então** o morador pode informar nome, material e quantidade manualmente.
+- **Dado** um código desconhecido, **quando** não há identificação, **então** o usuário pode informar nome, material e quantidade manualmente.
 
 #### RF-MVP-011 — Importar itens de nota fiscal
 
-**Situação:** confirmado com pendências. **Fontes:** S1 e S7. **Ator:** morador.
+**Situação:** confirmado com pendências. **Fontes:** S1 e S7. **Ator:** usuário.
 
 **Objetivo:** preencher rapidamente o cadastro a partir dos produtos de uma compra, inspirado na facilidade de uso do Méliuz, sem cashback financeiro no MVP.
 
@@ -54,16 +54,16 @@
 **Critérios de aceite:**
 
 - **Dado** uma nota consultável com produtos identificados, **quando** a importação termina, **então** o formulário apresenta as informações recuperadas antes da confirmação.
-- **Dado** material não identificado, **quando** o morador revisa, **então** pode escolher PET ou lata manualmente.
+- **Dado** material não identificado, **quando** o usuário revisa, **então** pode escolher PET ou lata manualmente.
 - **Dado** uma falha de consulta, **quando** o sistema informa o erro, **então** nenhuma recompensa é gerada e o cadastro manual permanece disponível.
 
 #### RF-MVP-012 — Cadastrar resíduo manualmente
 
-**Situação:** confirmado. **Fonte:** S7. **Ator:** morador.
+**Situação:** confirmado. **Fonte:** S7. **Ator:** usuário.
 
 **Objetivo:** permitir entrada sem depender do scanner ou da nota.
 
-**Pré-condições:** morador autenticado na tela compartilhada. **Entrada:** nome do produto/resíduo, material PET ou lata de alumínio e quantidade de embalagens.
+**Pré-condições:** usuário autenticado na tela compartilhada. **Entrada:** nome do produto/resíduo, material PET ou lata de alumínio e quantidade de embalagens.
 
 **Fluxo:** preencher campos; validar material e quantidade; revisar; adicionar os itens conforme Registrar ou Descarte rápido. Quantidade deve ser inteira e positiva para contagem de embalagens; peso é informado pela cooperativa em operação distinta.
 
@@ -74,11 +74,11 @@
 **Critérios de aceite:**
 
 - **Dado** nome, material aceito e quantidade válida, **quando** o cadastro é confirmado, **então** os itens são adicionados conforme a intenção da ação.
-- **Dado** quantidade inválida, **quando** o morador tenta confirmar, **então** o sistema solicita correção e não adiciona os itens.
+- **Dado** quantidade inválida, **quando** o usuário tenta confirmar, **então** o sistema solicita correção e não adiciona os itens.
 
 #### RF-MVP-013 — Revisar itens antes da inclusão
 
-**Situação:** confirmado. **Fonte:** S7. **Ator:** morador.
+**Situação:** confirmado. **Fonte:** S7. **Ator:** usuário.
 
 **Objetivo:** evitar que informação incompleta da leitura seja tratada como confirmação do usuário.
 
@@ -95,7 +95,7 @@
 
 #### RF-MVP-014 — Manter estoque e selecionar quantidades
 
-**Situação:** confirmado com proposta de persistência. **Fontes:** S1, S5 e S7. **Ator:** morador.
+**Situação:** confirmado com proposta de persistência. **Fontes:** S1, S5 e S7. **Ator:** usuário.
 
 **Objetivo:** apresentar itens disponíveis e permitir seleção de parte ou de todo o estoque para descarte.
 
@@ -109,6 +109,6 @@
 
 **Critérios de aceite:**
 
-- **Dado** cinco latas disponíveis, **quando** o morador seleciona duas, **então** a sessão de descarte contém duas, sem baixar o estoque antes da entrega.
+- **Dado** cinco latas disponíveis, **quando** o usuário seleciona duas, **então** a sessão de descarte contém duas, sem baixar o estoque antes da entrega.
 - **Dado** uma seleção maior que o saldo, **quando** tenta prosseguir, **então** o sistema impede a operação e informa a quantidade disponível.
 - **Dado** apenas o registro de itens, **quando** o estoque é atualizado, **então** não há crédito de pontos.

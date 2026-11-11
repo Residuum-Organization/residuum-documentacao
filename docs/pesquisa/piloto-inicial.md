@@ -12,7 +12,7 @@ Testar a cadeia completa em escala pequena antes de ampliar funcionalidades ou c
 - poucos pontos de coleta;
 - uma ou duas cooperativas;
 - PET e alumínio;
-- número limitado de moradores;
+- número limitado de usuários;
 - período de teste fechado;
 - sistema de pontos simples;
 - pequeno catálogo de benefícios;
@@ -20,11 +20,11 @@ Testar a cadeia completa em escala pequena antes de ampliar funcionalidades ou c
 
 ## 3. Fluxo a validar
 
-**morador → registro → escolha do ponto → descarte → validação → pontos → armazenamento → solicitação de retirada → cooperativa → pesagem → registro → dashboard**
+**usuário → registro → escolha do ponto → descarte → validação → pontos → armazenamento → solicitação de retirada → cooperativa → pesagem → registro → dashboard**
 
 ## 4. O que medir
 
-### Morador
+### Usuário
 
 - taxa de cadastro;
 - taxa de primeiro descarte;

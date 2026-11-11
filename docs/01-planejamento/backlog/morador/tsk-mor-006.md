@@ -32,7 +32,7 @@ Regras de origem: RN-003, RN-004. Conferir texto e situação na V6.
 **Critérios de aceite:**
 
 - **CA-01:** Dado um código conhecido, quando a consulta termina, então o formulário é preenchido com os dados disponíveis para revisão.
-- **CA-02:** Dado um código desconhecido, quando não há identificação, então o morador pode informar nome, material e quantidade manualmente.
+- **CA-02:** Dado um código desconhecido, quando não há identificação, então o usuário pode informar nome, material e quantidade manualmente.
 
 **Dependências:**
 

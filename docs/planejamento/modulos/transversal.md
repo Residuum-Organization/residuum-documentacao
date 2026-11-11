@@ -276,7 +276,7 @@ O produto deve permitir uso em navegador móvel e desktop, com câmera e localiz
 
 Todas as operações protegidas devem validar sessão, perfil e vínculo no serviço responsável. Credenciais devem ser protegidas; segredos de integração não podem ser expostos no cliente ou nos documentos. Alterações administrativas devem ter autoria. Política de sessão, senha e papéis depende de PD-003 e PD-023.
 
-**Verificação:** testar acesso horizontal entre moradores/pontos/cooperativas e acesso vertical às funções administrativas. **BDD:** dado usuário sem vínculo, quando envia requisição direta a dados de outro ponto, então a operação é negada mesmo que tenha um plano pago.
+**Verificação:** testar acesso horizontal entre usuários/pontos/cooperativas e acesso vertical às funções administrativas. **BDD:** dado usuário sem vínculo, quando envia requisição direta a dados de outro ponto, então a operação é negada mesmo que tenha um plano pago.
 
 **Regras:**
 
@@ -343,14 +343,14 @@ Não há pendência específica citada; confirmar as condições comuns antes de
 
 Todas as operações protegidas devem validar sessão, perfil e vínculo no serviço responsável. Credenciais devem ser protegidas; segredos de integração não podem ser expostos no cliente ou nos documentos. Alterações administrativas devem ter autoria. Política de sessão, senha e papéis depende de PD-003 e PD-023.
 
-**Verificação:** testar acesso horizontal entre moradores/pontos/cooperativas e acesso vertical às funções administrativas. **BDD:** dado usuário sem vínculo, quando envia requisição direta a dados de outro ponto, então a operação é negada mesmo que tenha um plano pago.
+**Verificação:** testar acesso horizontal entre usuários/pontos/cooperativas e acesso vertical às funções administrativas. **BDD:** dado usuário sem vínculo, quando envia requisição direta a dados de outro ponto, então a operação é negada mesmo que tenha um plano pago.
 
 **Entrega demonstrável:** procedimento executável, ajustes identificados/implementados e relatório de evidências do comportamento descrito. Uma meta herdada só é usada como limiar de aprovação após validação.
 
 **Subtarefas:**
 
 1. Diagnosticar a condição atual e registrar componentes e jornadas afetados.
-2. Testar requisições diretas entre moradores, pontos e cooperativas; proteger sessões e revogações no serviço.
+2. Testar requisições diretas entre usuários, pontos e cooperativas; proteger sessões e revogações no serviço.
 3. Aplicar ajustes necessários e documentar configuração, limites e falhas conhecidas.
 4. Executar a verificação da V6 e vincular evidência ao requisito e às tarefas funcionais afetadas.
 
@@ -485,7 +485,7 @@ Operações de convite, descarte, crédito/débito, aquisição, coleta e pagame
 
 Falhas de GPS, mapas e consulta de produtos/notas devem ser apresentadas sem inventar resultados. Negação de GPS não pode ser convertida em presença válida. Entrada manual deve permanecer acessível para falhas de identificação. Timeout, tentativas, precisão e validade da posição dependem de PD-004 e PD-008.
 
-**Verificação:** simular permissão negada, baixa precisão, localização antiga, indisponibilidade e recuperação. **BDD:** dado GPS inválido, quando o morador tenta concluir, então os itens e pontos não são movimentados indevidamente.
+**Verificação:** simular permissão negada, baixa precisão, localização antiga, indisponibilidade e recuperação. **BDD:** dado GPS inválido, quando o usuário tenta concluir, então os itens e pontos não são movimentados indevidamente.
 
 **Regras:**
 
@@ -493,7 +493,7 @@ As verificações seguem a especificação de origem; não há RN específica ci
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado GPS inválido, quando o morador tenta concluir, então os itens e pontos não são movimentados indevidamente.
+- **CA-01:** Dado GPS inválido, quando o usuário tenta concluir, então os itens e pontos não são movimentados indevidamente.
 
 **Dependências:**
 
@@ -528,7 +528,7 @@ Não há pendência específica citada; confirmar as condições comuns antes de
 **Passos:**
 
 1. Preparar a condição e registrar a versão/ambiente de avaliação.
-2. Executar: o morador tenta concluir.
+2. Executar: o usuário tenta concluir.
 3. Comparar o resultado observado com o esperado e registrar evidências; verificar ausência de efeitos indevidos quando o resultado for impedimento.
 
 **Resultado esperado:** os itens e pontos não são movimentados indevidamente.
@@ -552,7 +552,7 @@ Não há pendência específica citada; confirmar as condições comuns antes de
 
 Falhas de GPS, mapas e consulta de produtos/notas devem ser apresentadas sem inventar resultados. Negação de GPS não pode ser convertida em presença válida. Entrada manual deve permanecer acessível para falhas de identificação. Timeout, tentativas, precisão e validade da posição dependem de PD-004 e PD-008.
 
-**Verificação:** simular permissão negada, baixa precisão, localização antiga, indisponibilidade e recuperação. **BDD:** dado GPS inválido, quando o morador tenta concluir, então os itens e pontos não são movimentados indevidamente.
+**Verificação:** simular permissão negada, baixa precisão, localização antiga, indisponibilidade e recuperação. **BDD:** dado GPS inválido, quando o usuário tenta concluir, então os itens e pontos não são movimentados indevidamente.
 
 **Entrega demonstrável:** procedimento executável, ajustes identificados/implementados e relatório de evidências do comportamento descrito. Uma meta herdada só é usada como limiar de aprovação após validação.
 
@@ -589,7 +589,7 @@ Falhas de GPS, mapas e consulta de produtos/notas devem ser apresentadas sem inv
 
 **Situação:** herdado para validação de produto/jurídico. **Origem:** RNF005 antigo.
 
-Definir finalidade e dados mínimos para moradores, localização e nota fiscal; proteger transmissão e armazenamento; restringir relatórios por autorização; registrar escolhas aplicáveis de compartilhamento. Não tratar consentimento como requisito universal ou comprovação automática de conformidade legal. A política de privacidade, base de tratamento, retenção e atendimento ao titular são PD-022.
+Definir finalidade e dados mínimos para usuários, localização e nota fiscal; proteger transmissão e armazenamento; restringir relatórios por autorização; registrar escolhas aplicáveis de compartilhamento. Não tratar consentimento como requisito universal ou comprovação automática de conformidade legal. A política de privacidade, base de tratamento, retenção e atendimento ao titular são PD-022.
 
 **Verificação:** revisar dados coletados, logs, exportações e acesso direto; comprovar que credenciais, tokens de notas e dados pessoais desnecessários não aparecem em logs comuns. **BDD:** dado relatório sem autorização para dados identificáveis, quando é solicitado, então não retorna identificadores pessoais.
 
@@ -655,7 +655,7 @@ Não há pendência específica citada; confirmar as condições comuns antes de
 
 **Situação:** herdado para validação de produto/jurídico. **Origem:** RNF005 antigo.
 
-Definir finalidade e dados mínimos para moradores, localização e nota fiscal; proteger transmissão e armazenamento; restringir relatórios por autorização; registrar escolhas aplicáveis de compartilhamento. Não tratar consentimento como requisito universal ou comprovação automática de conformidade legal. A política de privacidade, base de tratamento, retenção e atendimento ao titular são PD-022.
+Definir finalidade e dados mínimos para usuários, localização e nota fiscal; proteger transmissão e armazenamento; restringir relatórios por autorização; registrar escolhas aplicáveis de compartilhamento. Não tratar consentimento como requisito universal ou comprovação automática de conformidade legal. A política de privacidade, base de tratamento, retenção e atendimento ao titular são PD-022.
 
 **Verificação:** revisar dados coletados, logs, exportações e acesso direto; comprovar que credenciais, tokens de notas e dados pessoais desnecessários não aparecem em logs comuns. **BDD:** dado relatório sem autorização para dados identificáveis, quando é solicitado, então não retorna identificadores pessoais.
 

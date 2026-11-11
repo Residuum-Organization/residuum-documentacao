@@ -31,7 +31,7 @@ Regras de origem: RN-019. Conferir texto e situação na V6.
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado campanha baseada no descarte de um produto, quando abre seus detalhes, então o morador vê produto, meta e benefício configurados.
+- **CA-01:** Dado campanha baseada no descarte de um produto, quando abre seus detalhes, então o usuário vê produto, meta e benefício configurados.
 - **CA-02:** Dado campanha com vídeo, quando os detalhes são exibidos, então a mídia é acessível e as condições também estão disponíveis em texto.
 
 **Dependências:**

@@ -32,7 +32,7 @@ Regras de origem: RN-003, RN-004, RN-005. Conferir texto e situação na V6.
 **Critérios de aceite:**
 
 - **CA-01:** Dado uma nota consultável com produtos identificados, quando a importação termina, então o formulário apresenta as informações recuperadas antes da confirmação.
-- **CA-02:** Dado material não identificado, quando o morador revisa, então pode escolher PET ou lata manualmente.
+- **CA-02:** Dado material não identificado, quando o usuário revisa, então pode escolher PET ou lata manualmente.
 - **CA-03:** Dado uma falha de consulta, quando o sistema informa o erro, então nenhuma recompensa é gerada e o cadastro manual permanece disponível.
 
 **Dependências:**

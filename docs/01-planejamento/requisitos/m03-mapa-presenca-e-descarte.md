@@ -7,7 +7,7 @@
 
 #### RF-MVP-015 — Consultar pontos próximos compatíveis
 
-**Situação:** confirmado com pendências. **Fontes:** S4/RF007 e S7. **Ator:** morador.
+**Situação:** confirmado com pendências. **Fontes:** S4/RF007 e S7. **Ator:** usuário.
 
 **Objetivo:** encontrar locais que recebam os materiais selecionados.
 
@@ -19,13 +19,13 @@
 
 **Critérios de aceite:**
 
-- **Dado** seleção de latas, **quando** o morador consulta pontos, **então** identifica quais recebem alumínio.
+- **Dado** seleção de latas, **quando** o usuário consulta pontos, **então** identifica quais recebem alumínio.
 - **Dado** seleção de PET e lata, **quando** tenta concluir tudo em um ponto que só aceita PET, **então** o sistema não confirma a entrega incompatível.
 - **Dado** ausência de ponto compatível, **quando** a consulta termina, **então** informa a indisponibilidade sem alterar estoque ou saldo.
 
 #### RF-MVP-016 — Consultar detalhes do ponto
 
-**Situação:** herdado com ajustes confirmados. **Fontes:** S4/RF008 e S7. **Ator:** morador.
+**Situação:** herdado com ajustes confirmados. **Fontes:** S4/RF008 e S7. **Ator:** usuário.
 
 **Objetivo:** fornecer informações para decidir onde entregar os resíduos.
 
@@ -37,12 +37,12 @@
 
 **Critérios de aceite:**
 
-- **Dado** um ponto consultável, **quando** abre seus detalhes, **então** o morador vê localização, materiais e informações de funcionamento cadastradas.
+- **Dado** um ponto consultável, **quando** abre seus detalhes, **então** o usuário vê localização, materiais e informações de funcionamento cadastradas.
 - **Dado** um ponto temporário fora do período válido, **quando** é consultado, **então** não é apresentado como local atualmente disponível para descarte.
 
-#### RF-MVP-017 — Encaminhar morador à navegação externa
+#### RF-MVP-017 — Encaminhar usuário à navegação externa
 
-**Situação:** confirmado. **Fonte:** S7. **Ator:** morador.
+**Situação:** confirmado. **Fonte:** S7. **Ator:** usuário.
 
 **Objetivo:** orientar o trajeto sem exigir acompanhamento contínuo dentro do Residuum.
 
@@ -54,12 +54,12 @@
 
 **Critérios de aceite:**
 
-- **Dado** um ponto escolhido, **quando** o morador inicia navegação, **então** o destino enviado corresponde ao ponto selecionado.
+- **Dado** um ponto escolhido, **quando** o usuário inicia navegação, **então** o destino enviado corresponde ao ponto selecionado.
 - **Dado** apenas a abertura da navegação, **quando** retorna, **então** a entrega ainda exige validação de presença e confirmação.
 
 #### RF-MVP-018 — Validar presença por GPS
 
-**Situação:** confirmado com pendências. **Fontes:** S4/RF011 e S7. **Ator:** morador.
+**Situação:** confirmado com pendências. **Fontes:** S4/RF011 e S7. **Ator:** usuário.
 
 **Objetivo:** condicionar a confirmação à proximidade com o ponto escolhido.
 
@@ -76,11 +76,11 @@
 
 #### RF-MVP-019 — Confirmar entrega e movimentar estoques
 
-**Situação:** confirmado. **Fontes:** S4/RF012 e S7. **Ator:** morador.
+**Situação:** confirmado. **Fontes:** S4/RF012 e S7. **Ator:** usuário.
 
 **Objetivo:** registrar entrega única e consistente dos itens ao ponto.
 
-**Pré-condições:** presença válida, itens disponíveis e ponto apto a recebê-los conforme regras validadas. **Fluxo:** apresentar resumo; receber confirmação explícita; revalidar itens, material e ponto; registrar descarte; baixar somente as quantidades entregues do estoque do morador; registrar entrada correspondente no ponto; conceder 10 pontos básicos uma vez.
+**Pré-condições:** presença válida, itens disponíveis e ponto apto a recebê-los conforme regras validadas. **Fluxo:** apresentar resumo; receber confirmação explícita; revalidar itens, material e ponto; registrar descarte; baixar somente as quantidades entregues do estoque do usuário; registrar entrada correspondente no ponto; conceder 10 pontos básicos uma vez.
 
 **Exceções:** repetição, concorrência, incompatibilidade ou falha não devem gerar baixa parcial, saldo negativo ou crédito duplicado. Estimativas do ponto não se tornam peso medido. Bônus deve ter vínculo rastreável, sem reaplicar crédito básico se processado posteriormente.
 
@@ -88,13 +88,13 @@
 
 **Critérios de aceite:**
 
-- **Dado** três latas e entrega válida de uma, **quando** confirma, **então** restam duas no estoque, o ponto registra uma recebida e o morador ganha 10 pontos básicos.
+- **Dado** três latas e entrega válida de uma, **quando** confirma, **então** restam duas no estoque, o ponto registra uma recebida e o usuário ganha 10 pontos básicos.
 - **Dado** a mesma confirmação reenviada, **quando** é processada, **então** o descarte e seus efeitos ocorrem uma única vez.
 - **Dado** falha na conclusão, **quando** a operação não termina, **então** o sistema não apresenta sucesso com estoque ou crédito básico incompletos.
 
 #### RF-MVP-020 — Exibir confirmação e histórico de descartes
 
-**Situação:** confirmado. **Fontes:** S4/RF006 e S7. **Ator:** morador.
+**Situação:** confirmado. **Fontes:** S4/RF006 e S7. **Ator:** usuário.
 
 **Objetivo:** tornar compreensível o resultado da entrega e permitir consulta posterior.
 
@@ -107,5 +107,5 @@
 **Critérios de aceite:**
 
 - **Dado** descarte concluído, **quando** a confirmação aparece, **então** apresenta a recompensa e ambas as ações de navegação.
-- **Dado** “Ir para a Loja”, **quando** o morador seleciona a ação, **então** acessa a loja autenticado.
+- **Dado** “Ir para a Loja”, **quando** o usuário seleciona a ação, **então** acessa a loja autenticado.
 - **Dado** consulta ao histórico, **quando** localiza a entrega, **então** os dados correspondem ao descarte concluído.

@@ -32,7 +32,7 @@ As verificações seguem a especificação de origem; não há RN específica ci
 **Critérios de aceite:**
 
 - **CA-01:** Dado descarte concluído, quando a confirmação aparece, então apresenta a recompensa e ambas as ações de navegação.
-- **CA-02:** Dado “Ir para a Loja”, quando o morador seleciona a ação, então acessa a loja autenticado.
+- **CA-02:** Dado “Ir para a Loja”, quando o usuário seleciona a ação, então acessa a loja autenticado.
 - **CA-03:** Dado consulta ao histórico, quando localiza a entrega, então os dados correspondem ao descarte concluído.
 
 **Dependências:**

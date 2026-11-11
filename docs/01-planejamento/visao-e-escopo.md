@@ -2,11 +2,11 @@
 
 > **Estado:** revisão (aguardando aprovação do produto) · **Dono:** Produto · **Atualizado em:** 11/11/2026
 > **Fontes:** [visão original](../visao/visao-do-projeto.md) (mantida como referência), [V6](requisitos/README.md), [regras de saldo, vouchers e sorteios](../requisitos/regras-de-saldo-vouchers-sorteios.md), respostas e complementos da revisão de 11/11/2026 (Vinicius).
-> **Lacunas:** 4 · **Conflito aberto:** valor do ponto (ver [seção 5](#5-pontos-e-recompensas))
+> **Lacunas:** 2 · **Conflito aberto:** valor do ponto (ver [seção 5](#5-pontos-e-recompensas))
 
 ## Resumo
 
-O Residuum é uma plataforma web que **conecta moradores, responsáveis por pontos de coleta, cooperativas e a administração**. O morador registra embalagens de **PET e latas de alumínio**, entrega num ponto de coleta, comprova a presença por GPS e ganha pontos. A cooperativa retira e pesa o material. O administrador coordena tudo, inclusive o pagamento à cooperativa. O MVP existe e está sendo documentado para a equipe atual de **seis pessoas**.
+O Residuum é uma plataforma web que **conecta usuários, responsáveis por pontos de coleta, cooperativas e a administração**. O usuário registra embalagens de **PET e latas de alumínio**, entrega num ponto de coleta, comprova a presença por GPS e ganha pontos. A cooperativa retira e pesa o material. O administrador coordena tudo, inclusive o pagamento à cooperativa. O MVP existe e está sendo documentado para a equipe atual de **seis pessoas**.
 
 Este documento diz **o que o produto é, para quem e até onde vai**. O texto longo e completo continua em [visao-do-projeto.md](../visao/visao-do-projeto.md).
 
@@ -14,7 +14,7 @@ Este documento diz **o que o produto é, para quem e até onde vai**. O texto lo
 
 | Problema | Consequência |
 |---|---|
-| **Falta de rastreabilidade.** O resíduo "some" no descarte; o morador não sabe o destino e as empresas não comprovam a logística reversa (PNRS) | Risco legal e de imagem (ESG) |
+| **Falta de rastreabilidade.** O resíduo "some" no descarte; o usuário não sabe o destino e as empresas não comprovam a logística reversa (PNRS) | Risco legal e de imagem (ESG) |
 | **Coleta "no escuro".** Cooperativas não sabem o volume nem o nível de enchimento dos pontos | Viagens inúteis e pontos lotados |
 | **Pouco incentivo.** O cidadão não vê valor no resíduo | Baixa adesão à separação correta |
 | **Dados ruins na base da cadeia.** O descarte cidadão não chega aos sistemas oficiais (SINIR, MTR) | Dificuldade de gestão e comprovação |
@@ -25,9 +25,9 @@ Este documento diz **o que o produto é, para quem e até onde vai**. O texto lo
 |---|---|---|
 | **97,3%** | das latas de alumínio foram recicladas no Brasil em 2024. O material **tem mercado** | [ABC do ABC](https://abcdoabc.com.br/latinhas-de-aluminio-recicladas/) |
 | **~23%** | de capacidade parada nas recicladoras de PET, por **falta de coleta** (410 mil t recicladas em 2024) | [Dados do problema](../pesquisa/dados-do-problema.md) |
-| **~18%** | da população de Manaus atendida pela coleta seletiva (dado de 2020) | [Dados do problema](../pesquisa/dados-do-problema.md) `[VERIFICAR fonte]` |
+| **33,7%** | da população urbana de Manaus com coleta seletiva (SINISA 2024, último dado publicado) | [Instituto Água e Saneamento](https://www.aguaesaneamento.org.br/municipios-e-saneamento/am/manaus), ver [dados do problema](../pesquisa/dados-do-problema.md) |
 
-**Em uma frase:** o Brasil já recicla quase toda lata e mais da metade do PET, mas a coleta não chega: indústria parada por falta de material e uma capital com menos de um quinto da população atendida. Detalhes, ressalvas e o que falta confirmar estão em [dados do problema](../pesquisa/dados-do-problema.md).
+**Em uma frase:** o Brasil já recicla quase toda lata e mais da metade do PET, mas a coleta não chega: indústria parada por falta de material e uma capital onde só um terço da população urbana tem coleta seletiva. Detalhes, ressalvas e o que falta confirmar estão em [dados do problema](../pesquisa/dados-do-problema.md).
 
 ## 2. A solução
 
@@ -40,7 +40,7 @@ Este documento diz **o que o produto é, para quem e até onde vai**. O texto lo
 
 ```mermaid
 flowchart LR
-  M[Morador<br/>registra e entrega] --> P[Ponto de coleta<br/>confirma e acumula]
+  M[Usuário<br/>registra e entrega] --> P[Ponto de coleta<br/>confirma e acumula]
   P --> A[Administrador<br/>encaminha a coleta]
   A --> C[Cooperativa<br/>aceita, retira e pesa]
   C --> A2[Administrador<br/>paga por API]
@@ -51,7 +51,7 @@ O fluxo completo, passo a passo, está na [seção 4 da visão original](../visa
 
 ## 3. Quem usa
 
-O perfil que antes se chamava "morador" passa a se chamar **usuário** nesta seção (é também o nome usado no código, `role = usuario`).
+O perfil que antes se chamava "morador" passa a se chamar **usuário** em todos os documentos, por decisão de 11/11/2026 (é também o nome usado no código, `role = usuario`).
 
 | Perfil | O que faz | Valor |
 |---|---|---|
@@ -68,7 +68,7 @@ O perfil que antes se chamava "morador" passa a se chamar **usuário** nesta se�
 | Área | O que entra |
 |---|---|
 | Acesso | O usuário **se cadastra normalmente**. O controle de quantas pessoas entram (um número X) ainda está em estudo ([opções pesquisadas](../pesquisa/controle-de-acesso.md)); **por ora, o acesso é liberado por um código** fornecido pela equipe |
-| Cadastro de resíduos | **Três sistemas**, iniciados por um botão **+** centralizado na barra de navegação. **1) Código de barras:** lê o produto e já preenche o formulário. **2) QR Code da nota fiscal:** traz os itens da nota e os materiais. **3) Manual:** se o código de barras não for reconhecido depois de **X tentativas**, o sistema leva o usuário ao formulário manual (nome, material, quantidade `[LACUNA: formulário e valor de X]`). Materiais: **PET e lata de alumínio** |
+| Cadastro de resíduos | **Três sistemas**, iniciados por um botão **+** centralizado na barra de navegação. **1) Código de barras:** lê o produto e já preenche o formulário. **2) QR Code da nota fiscal:** traz os itens da nota e os materiais. **3) Manual:** o usuário pode tentar ler o código de barras **quantas vezes quiser**. Cada falha mostra um **aviso vermelho** de erro de leitura; a partir da **2ª falha**, o aviso **recomenda o cadastro manual** (nome, material, quantidade `[LACUNA: campos do formulário]`). Decidido em 11/11/2026. Materiais: **PET e lata de alumínio** |
 | Descarte rápido | **Não é uma função à parte.** É o uso do **leitor de código de barras** (agiliza um único produto) e do **leitor de QR Code da nota** (traz todos os materiais da nota) para seguir direto à escolha do ponto, sem passar pelo estoque |
 | Entrega | Escolha do ponto compatível, navegação externa, **validação de presença por GPS**, confirmação |
 | Pontos e Loja | Pontos por descarte, campanhas com bônus, vouchers e **sorteios** (ver limite abaixo) |
@@ -85,7 +85,7 @@ O perfil que antes se chamava "morador" passa a se chamar **usuário** nesta se�
 | No MVP os pontos **não são dinheiro** e **não há cashback** (a ideia existe, ver "Evolução") | V6 RN-010 |
 | Registrar item ou ler nota **não é descarte** e não dá pontos | V6 RN-004 |
 | Rascunho do descarte rápido fica **só na memória** do fluxo | Decisão de UX de 10/10 |
-| A pesagem da cooperativa **não** concede pontos de novo ao morador | V6 RN-016 |
+| A pesagem da cooperativa **não** concede pontos de novo ao usuário | V6 RN-016 |
 
 ### Decisões já tomadas
 
@@ -95,9 +95,9 @@ As regras de **campanhas, vouchers e sorteios** foram decididas (ver [campanhas]
 
 | O que está pendente | Decisão | Tipo | Situação |
 |---|---|---|---|
-| **Capacidade do ponto de coleta** e "ponto cheio" | [PD-009](decisoes/pd-009.md) | Estudo e decisão com a operação | **Falta fazer** |
-| **Execução da coleta** (recusa, prazo, coleta parcial) | [PD-014](decisoes/pd-014.md) | Estudo e decisão com a operação | **Falta fazer** |
-| Controle de quantas pessoas entram | — | Pesquisa | **Pesquisa feita:** [controle de acesso](../pesquisa/controle-de-acesso.md). Falta decidir X |
+| **Capacidade do ponto de coleta** e "ponto cheio" | [PD-009](decisoes/pd-009.md) | Estudo e decisão com a operação | **Estudo feito:** [capacidade e coleta](../pesquisa/capacidade-e-execucao-da-coleta.md). Falta decidir |
+| **Execução da coleta** (recusa, prazo, coleta parcial) | [PD-014](decisoes/pd-014.md) | Estudo e decisão com a operação | **Estudo feito:** [capacidade e coleta](../pesquisa/capacidade-e-execucao-da-coleta.md). Falta decidir |
+| Controle de quantas pessoas entram | — | Pesquisa | **Pesquisa feita:** [controle de acesso](../pesquisa/controle-de-acesso.md); trava de vagas no banco avaliada. Falta confirmar X (metas usam 100) |
 | Fonte para código de barras e nota fiscal | [PD-004](decisoes/pd-004.md) | Pesquisa | **Pesquisa feita:** [fontes](../pesquisa/fontes-de-produtos-e-notas.md). Falta **testar** |
 | Provedor de pagamento | [PD-015](decisoes/pd-015.md), [PD-016](decisoes/pd-016.md) | Pesquisa | **Pesquisa feita:** [provedores](../pesquisa/provedores-de-pagamento.md). Falta decidir pagador e valor |
 | Precisão do GPS | [PD-008](decisoes/pd-008.md) | Teste em campo | Medir no piloto |
@@ -120,14 +120,14 @@ As regras de **campanhas, vouchers e sorteios** foram decididas (ver [campanhas]
 | Item | Valor |
 |---|---|
 | Prazo informado | **20/11/2026** (não garante todo o backlog) |
-| Ordem das entregas | morador → ponto de coleta → cooperativa → administrador |
+| Ordem das entregas | usuário → ponto de coleta → cooperativa → administrador |
 | Região e pontos do piloto | `[LACUNA]` ver [piloto inicial](../pesquisa/piloto-inicial.md) |
 
-### Como medir o sucesso do piloto (proposta para avaliação)
+### Como medir o sucesso do piloto
 
-**Escala sugerida:** 100 usuários, 3 pontos de coleta, 1 cooperativa e 8 semanas. Segue o [piloto inicial](../pesquisa/piloto-inicial.md): poucos pontos, uma ou duas cooperativas, número limitado de usuários, período fechado.
+**Escala sugerida:** 100 usuários, 3 pontos de coleta, 1 cooperativa e 8 semanas. Segue o [piloto inicial](../pesquisa/piloto-inicial.md): poucos pontos, uma ou duas cooperativas, número limitado de usuários, período fechado. **Aprovadas por Vinicius em 11/11/2026**; falta a validação formal do produto.
 
-| # | Indicador | Como calcular | Meta proposta |
+| # | Indicador | Como calcular | Meta |
 |---|---|---|---|
 | 1 | Cadastro | cadastrados ÷ códigos entregues | **70% ou mais** |
 | 2 | Primeiro descarte | cadastrados com 1 descarte confirmado em até 14 dias ÷ cadastrados | **50% ou mais** |
@@ -137,22 +137,26 @@ As regras de **campanhas, vouchers e sorteios** foram decididas (ver [campanhas]
 | 6 | Completude dos dados | coletas com ponto, material e peso preenchidos ÷ coletas | **90% ou mais** |
 | 7 | Confiabilidade (técnico) | saldos que não batem com os lançamentos; acessos de uma cooperativa a pontos que não são dela | **zero** |
 
-**Critério de sucesso proposto:** o piloto deu certo se atingir **5 das 6 metas de uso (1 a 6) e zero falhas de confiabilidade (7)**.
+**Critério de sucesso:** o piloto deu certo se atingir **5 das 6 metas de uso (1 a 6) e zero falhas de confiabilidade (7)**.
 
-> ⚠️ **Estes números são uma proposta minha, sem base de dados:** o projeto ainda não tem histórico nem referência verificada. Servem de ponto de partida para você ajustar. A meta que mais merece sua atenção é a 2, que diz se as pessoas realmente entregam.
+> ⚠️ **As metas não vêm de dados:** o projeto ainda não tem histórico. Foram aprovadas como ponto de partida e devem ser revistas ao fim do piloto. A meta 2 é a mais importante: diz se as pessoas realmente entregam.
 
 ## 7. Glossário
 
-**Usuário** quem usa o app para registrar e entregar (antes chamado de morador) · **Descarte** entrega do material num ponto · **Lote** vários itens enviados juntos · **Registrar** guardar item no estoque do morador · **Descarte rápido** uso do leitor de código de barras ou do QR Code da nota para entregar sem passar pelo estoque · **Ponto de coleta** local físico de entrega · **Responsável** pessoa que cuida do ponto · **Voucher** cupom de parceiro trocado por pontos · **PD-xxx** pendência de decisão da V6 ([lista](decisoes/README.md)).
+**Usuário** quem usa o app para registrar e entregar (antes chamado de morador) · **Descarte** entrega do material num ponto · **Lote** vários itens enviados juntos · **Registrar** guardar item no estoque do usuário · **Descarte rápido** uso do leitor de código de barras ou do QR Code da nota para entregar sem passar pelo estoque · **Ponto de coleta** local físico de entrega · **Responsável** pessoa que cuida do ponto · **Voucher** cupom de parceiro trocado por pontos · **PD-xxx** pendência de decisão da V6 ([lista](decisoes/README.md)).
 
 ## O que falta para fechar
 
 - [ ] Produto validar formalmente esta visão (as respostas de 11/11 vieram da revisão de Vinicius)
 - [ ] Resolver o conflito dos pontos (10 × 5) em [PD-010](decisoes/pd-010.md)
-- [ ] Aprovar ou ajustar as **metas do piloto** (seção 6) e decidir **quantos usuários entram (X)**
-- [ ] Escolher a forma de controle de acesso entre as opções de [controle de acesso](../pesquisa/controle-de-acesso.md)
-- [ ] `[LACUNA]` definir o número X de tentativas do código de barras e o formulário manual
-- [ ] **Estudar a capacidade do ponto (PD-009) e a execução da coleta (PD-014)**
-- [ ] Decidir se "morador" vira "usuário" em todos os documentos (hoje só nesta Visão, seção 3)
-- [ ] Confirmar a fonte do número de coleta seletiva em Manaus (~18%) e ligar os `[VERIFICAR fonte]` de [dados do problema](../pesquisa/dados-do-problema.md)
+- [x] Aprovar as **metas do piloto** (seção 6): aprovadas em 11/11/2026, com **100 usuários**
+- [ ] Confirmar se **X = 100** (o mesmo número das metas) para o teto de cadastros
+- [ ] Escolher a forma de controle de acesso. **Em andamento:** proposta da trava de vagas no banco avaliada como adequada ao lançamento, ver [controle de acesso](../pesquisa/controle-de-acesso.md#proposta-para-o-lançamento-trava-de-vagas-no-banco-vinicius-11112026)
+- [x] Tentativas do código de barras: sem limite; aviso vermelho a cada falha; cadastro manual recomendado a partir da 2ª
+- [ ] `[LACUNA]` definir os campos do formulário manual
+- [x] Estudar a capacidade do ponto (PD-009) e a execução da coleta (PD-014): [estudo feito](../pesquisa/capacidade-e-execucao-da-coleta.md)
+- [ ] Decidir PD-009 e PD-014 com a operação (8 decisões listadas no estudo)
+- [x] "Morador" vira "usuário" em todos os documentos (decidido em 11/11/2026)
+- [x] Coleta seletiva em Manaus: trocado pelo último dado publicado (SINISA 2024, 33,7%)
+- [ ] Ligar os `[VERIFICAR fonte]` que restam em [dados do problema](../pesquisa/dados-do-problema.md)
 - [ ] Depois de aprovada, marcar a [visão original](../visao/visao-do-projeto.md) como histórico e trocar os "10 pontos" dela conforme a decisão

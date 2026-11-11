@@ -34,7 +34,7 @@ Regras de origem: RN-011. Conferir texto e situação na V6.
 **Critérios de aceite:**
 
 - **CA-01:** Dado cadastro válido realizado pelo administrador, quando o ponto é habilitado, então aparece nas consultas conforme sua disponibilidade e materiais.
-- **CA-02:** Dado um morador, quando tenta cadastrar um ponto diretamente, então a função administrativa não é autorizada.
+- **CA-02:** Dado um usuário, quando tenta cadastrar um ponto diretamente, então a função administrativa não é autorizada.
 - **CA-03:** Dado desativação, quando o histórico é consultado, então as entregas e coletas anteriores continuam identificando o ponto.
 
 **Dependências:**
