@@ -32,7 +32,7 @@ A API é **REST em JSON**, feita em FastAPI, com **113 rotas** (111 nos 15 arqui
 
 | Método | Rota | Perfil | Muda |
 |---|---|---|---|
-| POST | `/usuarios` | pública | 🟠 exigir o **código de acesso** e respeitar o **teto de 500 contas** (trava de vagas no banco) |
+| POST | `/usuarios` | pública | 🟠 exigir o **código individual** (uso único) e respeitar o **teto de 500 contas** (trava de vagas no banco) |
 | POST | `/login` | pública | — |
 | POST | `/refresh` | pública | 🟡 conferir se a conta está ativa |
 | GET, PUT | `/me` | logado | — |
@@ -158,7 +158,7 @@ A API é **REST em JSON**, feita em FastAPI, com **113 rotas** (111 nos 15 arqui
 | POST | `/admin/pontos-coleta/{ponto_id}/solicitacoes-coleta` | — |
 | DELETE | `/admin/pontos-coleta/{ponto_id}` | — (desativa) |
 | GET | `/admin/usuarios` | — |
-| GET, PATCH, DELETE | `/admin/usuarios/{usuario_id}` | 🟡 DELETE deve anonimizar (LGPD, PD-022) |
+| GET, PATCH, DELETE | `/admin/usuarios/{usuario_id}` | 🟡 DELETE deve anonimizar (LGPD, PD-022) e **devolver a vaga** do teto |
 | PATCH | `/admin/usuarios/{usuario_id}/role` | — |
 | POST | `/admin/usuarios/{usuario_id}/ajuste-pontuacao` | 🟠 passa a ser **o** caminho para corrigir descarte confirmado (com motivo) |
 | GET | `/admin/descartes` | — |
@@ -187,7 +187,8 @@ A API é **REST em JSON**, feita em FastAPI, com **113 rotas** (111 nos 15 arqui
 
 | Método | Rota sugerida | Para quê | Origem |
 |---|---|---|---|
-| POST | `/admin/codigos-acesso` | Criar códigos de acesso e ver vagas restantes | Teto de 500 |
+| POST | `/admin/codigos-acesso` | Gerar **códigos individuais de uso único** e ver vagas restantes | Teto de 500 |
+| POST | `/lista-espera` | Pública: deixar e-mail quando as vagas acabarem | Decisão de 11/11 |
 | POST, DELETE | `/admin/pontos-coleta/{id}/responsaveis/{usuario_id}` | Ligar e desligar responsáveis | [PD-023](../01-planejamento/decisoes/pd-023.md) |
 | POST | `/sorteios/{id}/cancelar` | Cancelar e devolver pontos | [PD-013](../01-planejamento/decisoes/pd-013.md) |
 | POST | `/admin/cooperativas` | Admin cria cooperativa | RN-011 |
