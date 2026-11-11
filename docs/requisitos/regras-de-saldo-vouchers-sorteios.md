@@ -35,6 +35,8 @@ Quando há prazo, entra a linha "O código vale por N dias a partir do resgate" 
 
 Regra informada pelo time em 2026-10-22, **inicial e sujeita a mudança**. Nenhum valor de recompensa foi cadastrado no sistema: o admin define o custo de cada oferta e usa as faixas como referência.
 
+> ⚠️ **Substituída em 11/11/2026:** o valor do ponto passou a ser **10 pontos por descarte concluído, por operação** ([PD-010](../01-planejamento/decisoes/pd-010.md)). O texto abaixo fica como histórico da regra de 22/10. **O código ainda paga 5 por unidade** e precisa ser alterado.
+
 > Regra: 1 descarte = 5 pontos.
 
 **Decisão do time (2026-10-22): a regra acima é a que vale.** O sistema passou a pagar **5 pontos por unidade descartada confirmada** (constante `PONTOS_POR_UNIDADE` em `app/services/pontuacao_service.py`), no lugar dos 10 da V6 e do código anterior. Isso resolve a divergência AUD-002 no valor; o texto da V6 ("10 pontos básicos") fica como histórico e este documento prevalece.
@@ -58,6 +60,8 @@ Efeitos da mudança:
 | 1.000 | 200 | 50% de desconto (ou o teto da loja), voucher de R$ 1.000,00 ou kit VIP / produto estrela | Nível máximo de fidelidade |
 
 Com 5 pontos por unidade, a coluna "Descartes" da tabela fecha com a pontuação do sistema (10 pontos = 2 descartes, 1.000 pontos = 200 descartes).
+
+> **Com a regra de 11/11 (10 por descarte), a coluna "Descartes" cai pela metade:** 10 pontos = 1 descarte, 1.000 pontos = 100 descartes. `[DECISÃO: manter as faixas de pontos ou ajustá-las]`
 
 Interpretação: as faixas valem como referência de **custo em pontos** das ofertas (vouchers e o custo do bilhete de sorteio). O texto fala em "cliente" e "loja"; tratei como a loja do parceiro.
 

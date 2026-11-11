@@ -2,7 +2,7 @@
 
 > **Estado:** revisão · **Dono:** Produto · **Atualizado em:** 10/11/2026
 > **Origem:** [requisitos-mvp-v6.md](../../requisitos/requisitos-mvp-v6.md), dividido em arquivos menores. O texto não foi alterado.
-> **Prevalecem sobre a V6:** [saldo, vouchers e sorteios](../../requisitos/regras-de-saldo-vouchers-sorteios.md) (5 pontos por unidade) e [campanhas](../../requisitos/regras-de-campanhas.md).
+> **Prevalecem sobre a V6:** [saldo, vouchers e sorteios](../../requisitos/regras-de-saldo-vouchers-sorteios.md) (menos o valor do ponto: desde 11/11/2026 vale **10 por descarte**, ver [PD-010](../decisoes/pd-010.md)) e [campanhas](../../requisitos/regras-de-campanhas.md).
 
 ## Resumo
 

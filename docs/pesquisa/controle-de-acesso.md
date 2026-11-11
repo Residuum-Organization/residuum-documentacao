@@ -36,6 +36,18 @@ A equipe quer deixar entrar um número **X** de pessoas e, por ora, libera o ace
 
 **Por quê:** combina o que a V6 já prevê com uma proteção simples, e deixa cada ponto do piloto com seu próprio grupo, o que ajuda a medir.
 
+## ✅ Decisão (11/11/2026)
+
+| Item | Decidido |
+|---|---|
+| Forma de controle | **Trava de vagas no banco** (*pessimistic locking*): `SELECT ... FOR UPDATE` na linha de vagas, dentro da mesma transação do cadastro |
+| Teto de contas (X) | **500** |
+| Quem pode entrar | Quem tem o **código** fornecido pela equipe |
+
+**Para o desenvolvimento:** manter a trava só durante a gravação (nada de e-mail ou API externa com a linha presa) e gravar a vaga na **mesma transação** da conta. Continua em aberto: contas excluídas devolvem a vaga? O que a tela mostra quando as vagas acabam (lista de espera)?
+
+> As metas do piloto usam **100 usuários**; o teto é **500**. Ajustar a escala das metas é uma decisão pendente.
+
 ## Proposta para o lançamento: trava de vagas no banco (Vinicius, 11/11/2026)
 
 **A proposta:** uma tabela de controle (por exemplo `configuracoes`) com a coluna `vagas_restantes`. No cadastro, abre-se uma transação, lê-se a linha com `SELECT ... FOR UPDATE` (o banco segura a linha para os outros), diminui-se 1 vaga e conclui-se o cadastro. É a forma de fazer a **opção 3 (teto geral)** sem ferramenta extra, como o Redis.
@@ -55,7 +67,7 @@ A equipe quer deixar entrar um número **X** de pessoas e, por ora, libera o ace
 
 **Conclusão técnica:** a proposta **serve para o lançamento**. Recomendo a forma com um único `UPDATE` e as vagas gravadas na mesma transação da conta. Redis só valeria a pena com volume muito maior.
 
-> O teto ainda depende do **valor de X**. As metas do piloto aprovadas em 11/11 usam **100 usuários**.
+> Decidido depois desta avaliação: **X = 500**, com `SELECT ... FOR UPDATE`. Com 500 contas, a fila no banco continua sem impacto perceptível.
 
 ## O que precisa ser decidido
 

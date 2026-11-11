@@ -12,17 +12,17 @@ Este é o **índice mestre dos requisitos**. Ele não repete a V6: diz **qual do
 
 | Assunto | Documento que vale | Observação |
 |---|---|---|
-| Pontos por descarte | [Saldo, vouchers e sorteios](../requisitos/regras-de-saldo-vouchers-sorteios.md) | **5 pontos por unidade confirmada**; a V6 (RN-008, "10 por operação") é histórico |
+| Pontos por descarte | [PD-010](decisoes/pd-010.md) e V6 (RN-008) | **10 pontos por descarte concluído**, por operação (decidido em 11/11/2026). Os 5 por unidade de 22/10 viraram histórico |
 | Campanhas | [Regras de campanhas](../requisitos/regras-de-campanhas.md) | Participar é grátis; bônus separado; pagamento pelo botão "Receber pontos" |
 | Vouchers e sorteios | Saldo, vouchers e sorteios | Sorteio **só de teste**, 1 bilhete por usuário |
 | Todo o resto | [V6 por módulo](requisitos/README.md) | M01 a M11 e RNF |
-| Resumo das regras | [Regras de negócio](../requisitos/regras-de-negocio.md) | Guia de leitura, **ainda diz 10 pontos** `[LACUNA: atualizar]` |
+| Resumo das regras | [Regras de negócio](../requisitos/regras-de-negocio.md) | Guia de leitura; diz 10 pontos, **de acordo** com a decisão de 11/11 |
 
 ## Contradições entre as fontes (a resolver)
 
 | # | Tema | Fonte A | Fonte B | Resolução proposta |
 |---|---|---|---|---|
-| 1 | Valor do ponto | V6 RF-021, handoff, regras de negócio: 10 por descarte, **não** por embalagem | Saldo: 5 por unidade (decidido 22/10) | Vale 5 por unidade; corrigir V6 e guia ([PD-010](decisoes/pd-010.md)) |
+| 1 | Valor do ponto | V6 RF-021, handoff, regras de negócio: 10 por descarte, **não** por embalagem | Saldo: 5 por unidade (decidido 22/10) | **Resolvido em 11/11: vale 10 por descarte.** Corrigir regras de saldo, campanhas e o código ([PD-010](decisoes/pd-010.md)) |
 | 2 | Materiais | V6 RN-003: só PET e lata | Campanhas aceita plástico, metal, papel, vidro, orgânico, eletrônico | Campanha usa só `pet` e `lata` ([PD-011](decisoes/pd-011.md)) |
 | 3 | Quem confirma o descarte | V6 RF-019: o **usuário** confirma | Código e saldo: o **operador** confirma | `[DECISÃO: PD-006 / PD-027]` |
 | 4 | Crédito da campanha | Campanha: só pelo botão "Receber pontos" | V6 RF-022: "apurar e registrar bônus", sem dizer se é automático | `[DECISÃO: PD-011]` |
@@ -94,8 +94,9 @@ Requisito → atividade (`TSK-…`) → achado (F, F-, PON, ADM) → caso de tes
 
 ## O que falta para fechar
 
-- [ ] Produto validar as regras de 21 e 22/10 (5 por unidade, campanhas) e fechar as contradições 3 e 4
-- [ ] Corrigir a V6 (RN-008), o guia de regras de negócio e o handoff para 5 pontos por unidade
+- [x] Valor do ponto: 10 por descarte concluído (decidido em 11/11/2026)
+- [ ] Produto validar as regras de campanhas (21/10) e fechar as contradições 3 e 4
+- [ ] Alterar o código do backend de 5 por unidade para 10 por descarte
 - [ ] `[LACUNA]` metas de desempenho e disponibilidade (PD-025, PD-026)
 - [ ] Arquivar `backend/docs/requisitos.md` e `frontend/docs/requisitos.md` (duplicatas, fora deste repositório)
 - [ ] Marcar a V6 original como histórico após a validação
