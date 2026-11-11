@@ -54,7 +54,7 @@ A API é **REST em JSON**, feita em FastAPI, com **113 rotas** (111 nos 15 arqui
 
 | Método | Rota | Perfil | Muda |
 |---|---|---|---|
-| POST | `/descarte/` | logado | 🟠 cria **pendente, sem pontos**; aplicar a **janela de 60 min no mesmo ponto** |
+| POST | `/descarte/` | logado | 🟠 cria **pendente, sem pontos**; aplicar a **janela de 60 min no mesmo ponto**; raio do GPS passa de 1.000 m fixo para **100 m ajustável por ponto** |
 | GET | `/descarte/historico` | logado | — |
 | GET | `/descarte/historico/geral` | admin | — |
 | GET | `/descarte/pendentes` | admin, cooperativa, ponto_coleta | 🟠 filtrar pelos pontos **vinculados** ao responsável (N:N) |
@@ -73,8 +73,8 @@ A API é **REST em JSON**, feita em FastAPI, com **113 rotas** (111 nos 15 arqui
 | PUT | `/pontos-coleta/{ponto_id}/horarios` | admin, cooperativa | — |
 | GET | `/meu-ponto-coleta` | ponto_coleta, cooperativa, admin | 🟠 com N:N, devolver **a lista** de pontos do responsável |
 | GET | `/pontos` | logado | `[VERIFICAR NO CÓDIGO]` duplicata de `/pontos-coleta`? |
-| POST | `/solicitacoes-pontos-coleta` | pública | 🔴 qualquer pessoa pede ponto sem login; a V6 diz que só o admin cadastra (RN-011) |
-| GET | `/solicitacoes-pontos-coleta/minha` | logado | — |
+| POST | `/solicitacoes-pontos-coleta` | pública | 🔴 **remover**: só o admin cadastra pontos (RN-011, confirmado em 11/11) |
+| GET | `/solicitacoes-pontos-coleta/minha` | logado | 🔴 remover junto com o pedido público |
 
 ### Cooperativa
 
@@ -167,7 +167,7 @@ A API é **REST em JSON**, feita em FastAPI, com **113 rotas** (111 nos 15 arqui
 | POST | `/admin/descartes/{id_descarte}/reverter` | 🔴 **remover**: descarte confirmado não é estornado ([PD-010](../01-planejamento/decisoes/pd-010.md)) |
 | GET | `/admin/solicitacoes-pontos-coleta` | — |
 | GET | `/admin/solicitacoes-pontos-coleta/{solicitacao_id}` | — |
-| POST | `/admin/solicitacoes-pontos-coleta/{solicitacao_id}/aprovar` | — |
+| POST | `/admin/solicitacoes-pontos-coleta/{solicitacao_id}/aprovar` | 🔴 sem pedido público, o fluxo de aprovação perde uso |
 | POST | `/admin/solicitacoes-pontos-coleta/{solicitacao_id}/rejeitar` | — |
 | GET | `/admin/estoque` | — |
 | GET | `/admin/estoque/por-ponto` | 🟡 ocupação mistura kg e unidades |
