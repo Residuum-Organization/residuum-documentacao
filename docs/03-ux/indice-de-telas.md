@@ -88,7 +88,7 @@ Nenhum teste de usabilidade executado foi encontrado.
 | `/cadastro-ponto-coleta`, `/empresa`, `/confirmacao` | **Remover**: só o admin cria ponto | RN-011 |
 | Barra de navegação | Botão **+** no centro abre: código de barras, QR da nota, manual | Visão |
 | `/cadastrar-residuo` | Aviso **vermelho** a cada falha de leitura; a partir da **2ª**, recomendar o manual; **confirmar o material** (PET ou lata) sempre | PD-004 |
-| `/mapa` | Ponto **cheio** fica bloqueado e sugere outro (proposta do estudo) | PD-009 `[DECISÃO]` |
+| `/mapa` | Ponto **cheio** fica **bloqueado** e o app **sugere outro** compatível | PD-009 |
 | `/validacao-presenca` | Raio de **100 m** do ponto | PD-008 |
 | `/transferencia-concluida`, `/extrato` | Mostrar **10 pontos** só **depois da confirmação** do operador | PD-010 |
 | `/loja/campanhas/:id` | Meta do dobro em **descartes**; botão **"Receber pontos"**; avisar quando houver bônus esperando | PD-011 |
