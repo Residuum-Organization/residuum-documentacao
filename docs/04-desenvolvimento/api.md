@@ -191,6 +191,9 @@ A API é **REST em JSON**, feita em FastAPI, com **113 rotas** (111 nos 15 arqui
 | POST | `/lista-espera` | Pública: deixar e-mail quando as vagas acabarem | Decisão de 11/11 |
 | POST, DELETE | `/admin/pontos-coleta/{id}/responsaveis/{usuario_id}` | Ligar e desligar responsáveis | [PD-023](../01-planejamento/decisoes/pd-023.md) |
 | POST | `/sorteios/{id}/cancelar` | Cancelar e devolver pontos | [PD-013](../01-planejamento/decisoes/pd-013.md) |
+| POST | `/cooperativa/solicitacoes-coleta/{id}/iniciar` | Cooperativa marca "a caminho" | [PD-014](../01-planejamento/decisoes/pd-014.md) |
+| POST | `/cooperativa/solicitacoes-coleta/{id}/cancelar` e `/admin/solicitacoes-coleta/{id}/cancelar` | Cancelar com motivo, antes da conclusão | PD-014 |
+| POST | `/admin/solicitacoes-coleta/{id}/pagamento` | Marcar "pago" e anexar comprovante (pagamento manual no piloto) | [PD-016](../01-planejamento/decisoes/pd-016.md) |
 | POST | `/admin/cooperativas` | Admin cria cooperativa | RN-011 |
 | POST | `/senha/recuperar`, `/senha/redefinir` | Recuperar acesso | RF-006, [PD-003](../01-planejamento/decisoes/pd-003.md) |
 
