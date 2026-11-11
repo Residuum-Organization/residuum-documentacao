@@ -16,12 +16,12 @@ Hoje há **71 testes**, todos em SQLite, em 3 arquivos (`test_campanhas`, `test_
 | Integração | Rotas + regras + banco | pytest + httpx | **PostgreSQL** |
 | Concorrência | 2 threads no mesmo saldo/descarte | pytest | **PostgreSQL** |
 | Migração | subir e descer cada migração | Alembic | PostgreSQL |
-| Front | Componentes e `roles.js` | Vitest + RTL `[DECISÃO: adotar?]` | — |
+| Front | Perfis (`roles.js`: quem vê qual tela) e valores mostrados ao usuário | **Vitest** + RTL (decidido em 11/11/2026) | — |
 | Ponta a ponta | Roteiro manual por perfil | manual | ambiente de teste |
 
 ## Infraestrutura necessária
 
-- Serviço `postgres-test` no `docker-compose.yml` (com tmpfs) e variável `TEST_DATABASE_URL`. Alternativa: uma **branch de teste na Neon**, criada e apagada a cada execução (o banco já está lá).
+- Serviço `postgres-test` no `docker-compose.yml` (com tmpfs) e variável `TEST_DATABASE_URL`. **Decidido em 11/11/2026:** PostgreSQL de teste em **Docker local e no CI** (GitHub Actions); os testes **não tocam** no banco da Neon.
 - Cada teste dentro de transação com rollback.
 - `pytest` e `httpx` em `requirements-dev.txt` (hoje fora do `requirements`).
 - CI que rode a suíte a cada PR `[LACUNA]` hoje só existe deploy no backend.
@@ -53,4 +53,4 @@ Suíte verde em PostgreSQL no CI; invariantes ativas; roteiro manual de ponta a 
 
 - [ ] `[LACUNA]` datas, responsáveis, ambiente de homologação
 - [ ] Registrar evidências executadas (hoje tudo é "planejado")
-- [ ] `[DECISÃO]` adotar Vitest no front
+- [x] Vitest adotado no front; testes de banco em Docker local + CI (11/11/2026)
