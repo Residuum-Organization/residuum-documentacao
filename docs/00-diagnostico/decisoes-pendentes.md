@@ -5,7 +5,7 @@
 
 ## Resumo
 
-Seis decisões travam a versão definitiva do PRD, do manual e dos casos de teste. Duas já têm resposta do **time** (21 e 22/10), mas **o produto ainda não validou**. As outras quatro estão abertas. Sugestão: **30 minutos** de reunião para validar as respostas do time e decidir as quatro abertas.
+**Atualização de 11/11/2026:** as seis decisões que travavam foram respondidas por Vinicius. Restam detalhes menores (algoritmo do sorteio, ajuste manual com saldo negativo) e a **validação formal do produto**.
 
 Numeração: **PD-xxx** é o identificador oficial da V6. A coluna "Análise" liga ao nome usado nos documentos de análise (D1, D2…).
 
@@ -16,9 +16,9 @@ Numeração: **PD-xxx** é o identificador oficial da V6. A coluna "Análise" li
 | 1 | [PD-010](../01-planejamento/decisoes/pd-010.md) | Quanto vale o ponto? | **Decidido em 11/11: 10 por descarte concluído** (por operação), como na V6. Contra a divisão: **janela de 60 min no mesmo ponto**. Faltam estorno e limite | Corrigir o código | PRD, manual, testes |
 | 2 | [PD-006](../01-planejamento/decisoes/pd-006.md) / [PD-027](../01-planejamento/decisoes/pd-027.md) | Quem confirma o descarte? | **Decidido em 11/11: o operador do ponto confirma**; o GPS só libera o envio | Corrigir a V6 (RF-019) | PRD, API, manual |
 | 3 | [PD-010](../01-planejamento/decisoes/pd-010.md) | Estorno maior que o saldo | **Decidido em 11/11: a confirmação do operador é final.** Rejeita-se antes de confirmar; depois, só ajuste manual do admin. Sem estorno, o caso não existe | Tirar o estorno de descarte confirmado do código | PRD, API |
-| 4 | [PD-023](../01-planejamento/decisoes/pd-023.md) | Perfil "responsável pelo ponto" e vínculo | **Decidido em 11/11: vínculo N:N** (vários pontos por pessoa, vários responsáveis por ponto) | Criar a tabela de vínculo no código | PRD, arquitetura, API |
+| 4 | [PD-023](../01-planejamento/decisoes/pd-023.md) | Perfil "responsável pelo ponto" e vínculo | **Decidido em 11/11: vínculo N:N** (vários pontos por pessoa, vários responsáveis por ponto); **o admin cria e desfaz o vínculo** | Criar a tabela de vínculo no código | PRD, arquitetura, API |
 | 5 | [PD-013](../01-planejamento/decisoes/pd-013.md) | Sorteio: cancelar devolve? Algoritmo? | **Time decidiu 22/10: só sorteios de teste, 1 bilhete por usuário. 11/11: cancelar devolve os pontos.** Algoritmo aberto | Deixar o algoritmo com a equipe técnica (sha256 com semente nos testes) | PRD, manual |
-| 6 | [PD-013](../01-planejamento/decisoes/pd-013.md) | Dono do parecer jurídico (Lei 5.768/71) | **Pendência legal aberta**, sem responsável | Nomear pessoa e prazo | Qualquer sorteio real |
+| 6 | [PD-013](../01-planejamento/decisoes/pd-013.md) | Dono do parecer jurídico (Lei 5.768/71) | **11/11: adiado.** Sorteios só de teste por enquanto, sem responsável nomeado | Nomear alguém antes de qualquer sorteio com prêmio real | Qualquer sorteio real |
 
 ## Podem seguir provisórios
 
