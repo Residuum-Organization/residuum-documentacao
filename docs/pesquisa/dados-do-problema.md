@@ -15,7 +15,7 @@ O material que o Residuum quer captar **tem mercado**: o Brasil recicla quase to
 | # | Número | O que significa | Ano | Fonte |
 |---|---|---|---|---|
 | 1 | **97,3%** | das latas de alumínio foram recicladas no Brasil | 2024 | [ABC do ABC](https://abcdoabc.com.br/latinhas-de-aluminio-recicladas/), [Bahia Notícias](https://www.bahianoticias.com.br/noticia/307485-brasil-mantem-indice-de-reciclagem-de-latas-de-aluminio-acima-de-96-por-16-anos-consecutivos) |
-| 2 | **~23%** | de capacidade ociosa nas recicladoras de PET (até 40%), por falta de coleta | 2024 | matérias sobre o 13º Censo da Abipet `[VERIFICAR fonte]` ([Monitor Mercantil](https://monitormercantil.com.br/pet-reciclagem-cresce-mesmo-com-desafios-da-coleta-seletiva/), [Movimento Econômico](https://movimentoeconomico.com.br/geral/redacao/2025/04/08/reciclagem-de-pet-cresce-14-no-brasil-e-impulsiona-economia-circular/)) |
+| 2 | **~23%** | de capacidade ociosa nas recicladoras de PET (picos de até 40%), por falta de coleta; 410 mil t recicladas em 2024 | 2024 | 13º Censo da Abipet, **via reportagens** que citam a entidade ([Diário do Comércio](https://diariodocomercio.com.br/sustentabilidade/em-dois-anos-pais-aumenta-reciclagem-de-embalagens-pet-em-14/), [Compre Rural](https://comprerural.com/em-dois-anos-pais-aumenta-14-reciclagem-de-embalagens-pet/), [Movimento Econômico](https://movimentoeconomico.com.br/geral/redacao/2025/04/08/reciclagem-de-pet-cresce-14-no-brasil-e-impulsiona-economia-circular/)). Conferido em 11/11/2026; o relatório original da Abipet não foi lido |
 | 3 | **33,7%** | da população urbana de Manaus com coleta seletiva porta a porta (coleta comum chega a 98,8%) | SINISA 2024 (último publicado) | [Instituto Água e Saneamento, a partir do SINISA 2024](https://www.aguaesaneamento.org.br/municipios-e-saneamento/am/manaus) |
 
 **Leitura em uma frase:** *o Brasil já recicla quase toda lata e mais da metade do PET, mas a coleta não chega: indústria parada por falta de material e uma capital onde só um terço da população urbana tem coleta seletiva, e só 1,6% do lixo coletado é recuperado.*
@@ -53,7 +53,8 @@ A **Lei nº 3.358/2024** de Manaus instituiu o **Programa Moeda Verde**, de ince
 
 ## O que falta para fechar
 
-- [ ] Ligar cada `[VERIFICAR fonte]` ao link correto
+- [x] Número 2 (~23%) ligado a reportagens que citam o 13º Censo da Abipet (11/11/2026); o link antigo (Monitor Mercantil) não falava de ociosidade
+- [ ] Ligar os `[VERIFICAR fonte]` que restam (4, todos fora da Visão)
 - [x] Confirmar o número 3: trocado pelo último dado publicado (SINISA 2024, 33,7%) em 11/11/2026
 - [ ] Buscar a geração anual do Amazonas no Panorama da Abrelpe (tabela por estado)
 - [ ] Conferir se a taxa de PET (56,4%) é do 13º Censo
