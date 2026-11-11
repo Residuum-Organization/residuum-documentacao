@@ -43,7 +43,7 @@
 |---|---|---|
 | Percentual do alerta | fixo para todos ou por ponto | **Fixo no piloto** (o código usa 80%); revisar com os dados do piloto |
 | Quem recebe o alerta | administrador, responsável, cooperativa | **Administrador e responsável** (é o admin quem encaminha a coleta) |
-| Ponto cheio aceita descarte? | bloquear, avisar, aceitar | **Bloquear a escolha do ponto e sugerir outro compatível**, para o usuário não chegar a um ponto lotado |
+| Ponto cheio aceita descarte? | bloquear, avisar, aceitar | ✅ **Decidido em 11/11/2026: bloquear a escolha do ponto e sugerir outro compatível** |
 | Horário de funcionamento | livre ou com horários por dia | **Horários por dia**, editáveis pelo responsável e pelo admin `[DECISÃO]` |
 | Tags (etiquetas) do ponto | lista livre ou fixa | **Lista fixa curta** definida pelo admin `[DECISÃO: quais]` |
 | Ponto temporário (evento) ao encerrar com material dentro | pedir coleta antes; transferir para outro ponto; descartar | **Exigir coleta antes de encerrar**; o ponto fica `inativo` só depois |
@@ -104,7 +104,7 @@ stateDiagram-v2
 | 1 | Unidade da capacidade (unidades, kg, litros ou manual) | Produto e operação | PD-009 |
 | 2 | Capacidade de cada ponto do piloto | Operação (medir o coletor) | PD-009 |
 | 3 | Percentual do alerta e quem recebe | Produto | PD-009 |
-| 4 | Ponto cheio bloqueia o descarte? | Produto | PD-009 |
+| 4 | ~~Ponto cheio bloqueia o descarte?~~ **decidido: bloqueia e sugere outro** (11/11/2026) | Produto | PD-009 |
 | 5 | Horários e tags | Produto | PD-009 |
 | 6 | Prazo de aceite e o que fazer no silêncio | Operação e cooperativa | PD-014 |
 | 7 | ~~Quem pode cancelar~~ **decidido: admin e cooperativa** (11/11/2026) | Produto | PD-014 |
