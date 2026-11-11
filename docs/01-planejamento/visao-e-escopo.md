@@ -113,7 +113,7 @@ As regras de **campanhas, vouchers e sorteios** foram decididas (ver [campanhas]
 
 **Regra decidida em 11/11/2026 ([PD-010](decisoes/pd-010.md)): 10 pontos básicos por descarte concluído**, por operação, **independentemente da quantidade** de embalagens. Campanhas podem dar pontos extras.
 
-> ✅ **Conflito resolvido em 11/11/2026.** Vale **10 por descarte**; a regra do time de 22/10 (5 por unidade) virou histórico. O **dobro de pontos** das campanhas passa a contar **descartes** (bônus de 10 × N). **Ainda falta:** alterar o código do backend (hoje paga 5 por unidade e conta unidades no dobro), decidir se as **faixas de recompensa** mudam, e prevenir o **fracionamento** (dividir uma entrega para ganhar mais vezes).
+> ✅ **Conflito resolvido em 11/11/2026.** Vale **10 por descarte**; a regra do time de 22/10 (5 por unidade) virou histórico. O **dobro de pontos** das campanhas passa a contar **descartes** (bônus de 10 × N). **Ainda falta:** alterar o código do backend (hoje paga 5 por unidade e conta unidades no dobro), decidir se as **faixas de recompensa** mudam, e definir o **tamanho da janela** contra a divisão de entregas (decidido: descartes do mesmo usuário no mesmo ponto, dentro da janela, contam como um só).
 
 ## 6. Metas e prazo
 
@@ -150,7 +150,9 @@ As regras de **campanhas, vouchers e sorteios** foram decididas (ver [campanhas]
 - [ ] Produto validar formalmente esta visão (as respostas de 11/11 vieram da revisão de Vinicius)
 - [x] Conflito dos pontos resolvido: **10 por descarte** ([PD-010](decisoes/pd-010.md))
 - [x] Dobro de pontos: meta em **descartes**, bônus de **10 × N** ([regras de campanhas](../requisitos/regras-de-campanhas.md))
-- [ ] Alterar o código para 10 por descarte e para a meta do dobro em descartes; decidir as faixas de recompensa
+- [x] Contra a divisão de entregas: **janela no mesmo ponto** ([PD-010](decisoes/pd-010.md))
+- [ ] Definir o tamanho da janela (sugestão: 60 minutos)
+- [ ] Alterar o código para 10 por descarte, meta do dobro em descartes e janela; decidir as faixas de recompensa
 - [x] Aprovar as **metas do piloto** (seção 6): aprovadas em 11/11/2026, com **100 usuários**
 - [x] Teto de cadastros: **500 contas** (decidido em 11/11/2026)
 - [ ] Ajustar a escala das metas do piloto? Hoje elas usam **100 usuários**; o teto é **500**
