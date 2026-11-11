@@ -36,7 +36,7 @@ Legenda: ✅ conforme · ❌ violada pelo código · ⏳ não implementada · �
 ### Usuário
 | ID | Regra | Código hoje |
 |---|---|---|
-| RN-001 | Cadastro com **código** da equipe e **teto de 500 contas** (trava de vagas no banco), decidido em 11/11 | ❌ aberto |
+| RN-001 | Cadastro com **código individual de uso único** e **teto de 500 contas** (trava de vagas no banco); conta excluída devolve a vaga; sem vagas, lista de espera (11/11) | ❌ aberto |
 | RN-003 | Só PET e lata, unidades inteiras | ❌ aceita outros materiais e decimais |
 | RN-004 | Registrar item não dá pontos | ✅ |
 | RN-006 | Presença por GPS recente, sem QR; **raio de 100 m ajustável por ponto** (decidido em 11/11) | ❌ raio fixo de 1000 m, sem idade da posição |
