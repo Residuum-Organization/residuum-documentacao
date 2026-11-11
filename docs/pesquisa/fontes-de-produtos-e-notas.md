@@ -20,7 +20,7 @@ flowchart TD
   P --> N[QR Code da nota]
   P --> M[Manual]
   B -->|reconhecido| F[Formulário preenchido]
-  B -->|falhou X vezes| M
+  B -->|aviso vermelho a cada falha; da 2ª em diante recomenda| M
   N -->|itens lidos| F
   F --> R[Usuário revisa e confirma]
 ```
@@ -58,7 +58,7 @@ Nenhuma fonte acima informa se a embalagem é PET ou lata. Opções, **ainda sem
 | Tabela do Residuum | Cadastro próprio de produtos conhecidos, que cresce com o uso | Começa vazia |
 | Sempre confirmar | O usuário revisa o material de cada item | Mais atrito; é o que a V6 já prevê (RF-013) |
 
-**Recomendação para o piloto:** usar as três em conjunto, com **confirmação do usuário sempre**.
+**Decidido em 11/11/2026:** usar as três em conjunto (tabela do Residuum e palavras da descrição para **sugerir**), com **confirmação do usuário sempre** antes de salvar.
 
 ## Decisões e testes necessários
 
@@ -66,12 +66,15 @@ Nenhuma fonte acima informa se a embalagem é PET ou lata. Opções, **ainda sem
 |---|---|
 | Qual fonte de GTIN usar (GS1, Cosmos, outra) | Teste com 50 produtos reais de Manaus + contato comercial |
 | Se é possível ler os itens da nota da SEFAZ-AM | Teste técnico e consulta à SEFAZ |
-| Como classificar o material | Decisão de produto |
-| Valor de X tentativas até o cadastro manual | Decisão de produto |
+| ~~Como classificar o material~~ | **Decidido em 11/11/2026:** sugestão automática + confirmação do usuário sempre |
+| ~~Valor de X tentativas~~ | **Decidido em 11/11/2026:** tentativas sem limite; aviso vermelho a cada falha; cadastro manual recomendado a partir da 2ª |
 
 ## O que falta para fechar
 
-- [ ] Testar a consulta de 50 códigos de barras comuns em Manaus em pelo menos duas fontes
+**Testes pedidos à equipe (11/11/2026):**
+
+- [ ] Testar a consulta de 50 códigos de barras comuns em Manaus (PET e lata) em pelo menos duas fontes
 - [ ] Testar a leitura de 10 notas reais da SEFAZ-AM
-- [ ] Contatar GS1 Brasil e Bluesoft sobre acesso e custo
+- [ ] Testar a leitura do código de barras nos celulares Android mais comuns entre os usuários do piloto
+- [ ] ~~Contatar GS1 Brasil e Bluesoft~~ não pedido por ora; só se os testes gratuitos falharem
 - [ ] Registrar o resultado em [PD-004](../01-planejamento/decisoes/pd-004.md)
