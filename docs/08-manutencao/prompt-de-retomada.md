@@ -92,6 +92,7 @@ Depois **pare e espere** a resposta dele.
 - **Operador do ponto confirma o descarte**; a confirmação é **final** (sem estorno; erro vira ajuste manual do admin).
 - **Responsável pelo ponto: vínculo N:N**, gerido pelo admin.
 - **Cancelar sorteio devolve os pontos**; parecer jurídico **adiado** (sorteios só de teste).
+- **Campanhas:** só PET e lata no início (outros materiais no futuro); bônus pelo botão "Receber pontos".
 - **Teto de 500 contas**, com **trava de vagas no banco** (*pessimistic locking*, `SELECT ... FOR UPDATE`).
 - Campanhas, vouchers e sorteios: regras decididas. Pendentes: **capacidade do ponto (PD-009)** e **execução da coleta (PD-014)**.
 

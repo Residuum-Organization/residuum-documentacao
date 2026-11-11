@@ -23,7 +23,7 @@ Os tempos são **leitura atenta mais anotação** (cerca de 200 palavras por min
 |---|---|---|---|---|---|
 | 1 | [Visão e escopo](../01-planejamento/visao-e-escopo.md) | 10 | Só o que mudou: números do problema (seção 1), pendências (seção 4), metas do piloto (seção 6) | [x] | ✏️ ajustado em 11/11: metas aprovadas; leitura do código de barras sem limite (manual recomendado após 2 falhas); Manaus com SINISA 2024; "usuário" em todos os documentos; estudo de PD-009 e PD-014 |
 | 2 | [Decisões pendentes](decisoes-pendentes.md) | 5 | Quais decisões você ou o produto precisam tomar | [x] | ✅ 11/11: as 6 decisões que travavam foram respondidas (pontos, operador confirma, confirmação final, N:N com admin, sorteio devolve, parecer adiado) |
-| 3 | [PRD](../01-planejamento/prd-srs.md) | 8 | Qual documento vale para cada assunto; as 6 contradições | [ ] | |
+| 3 | [PRD](../01-planejamento/prd-srs.md) | 8 | Qual documento vale para cada assunto; as 6 contradições | [x] | ✅ 11/11: contradições 1 a 4 resolvidas (pontos, materiais só PET e lata no início, operador confirma, bônus pelo botão); 5 e 6 são correções de código |
 | 4 | [Backlog e histórias](../01-planejamento/backlog-e-historias.md) | 6 | Ondas de entrega e as histórias-modelo | [ ] | |
 | 5 | [Matriz de adequação](matriz-de-adequacao.md) | 5 | O que existe × o que falta nos 14 documentos | [ ] | |
 
