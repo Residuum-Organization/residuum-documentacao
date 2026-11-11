@@ -42,9 +42,11 @@ A equipe quer deixar entrar um número **X** de pessoas e, por ora, libera o ace
 |---|---|
 | Forma de controle | **Trava de vagas no banco** (*pessimistic locking*): `SELECT ... FOR UPDATE` na linha de vagas, dentro da mesma transação do cadastro |
 | Teto de contas (X) | **500** |
-| Quem pode entrar | Quem tem o **código** fornecido pela equipe |
+| Quem pode entrar | Quem tem o **código individual** fornecido pela equipe: **um código por pessoa, uso único** |
+| Conta excluída | **A vaga volta** para o teto de 500 |
+| Vagas esgotadas | A tela avisa que as vagas do piloto acabaram e oferece uma **lista de espera** (e-mail); a equipe libera em lotes |
 
-**Para o desenvolvimento:** manter a trava só durante a gravação (nada de e-mail ou API externa com a linha presa) e gravar a vaga na **mesma transação** da conta. Continua em aberto: contas excluídas devolvem a vaga? O que a tela mostra quando as vagas acabam (lista de espera)?
+**Para o desenvolvimento:** manter a trava só durante a gravação (nada de e-mail ou API externa com a linha presa) e gravar a vaga na **mesma transação** da conta. Continua em aberto: **regra contra abuso** da vaga que volta (criar e apagar contas para liberar vagas; sugestão: a vaga volta só para um código novo gerado pela equipe), **validade** do código individual e se quem já tem conta precisa de código.
 
 > As metas do piloto usam **100 usuários**; o teto é **500**. Ajustar a escala das metas é uma decisão pendente.
 
@@ -73,10 +75,13 @@ A equipe quer deixar entrar um número **X** de pessoas e, por ora, libera o ace
 
 | Decisão | Quem |
 |---|---|
-| Valor de **X** (quantas pessoas no piloto) | Produto |
-| Código individual, compartilhado ou ambos | Produto ([PD-001](../01-planejamento/decisoes/pd-001.md), [PD-002](../01-planejamento/decisoes/pd-002.md)) |
-| Validade e limite de cada código | Produto |
-| Convidados já cadastrados precisam de código? | Produto |
+| ~~Valor de **X**~~ | **500** (11/11/2026) |
+| ~~Código individual, compartilhado ou ambos~~ | **Individual, uso único** (11/11/2026; [PD-001](../01-planejamento/decisoes/pd-001.md), [PD-002](../01-planejamento/decisoes/pd-002.md)) |
+| ~~Conta excluída devolve a vaga?~~ | **Sim** (11/11/2026) |
+| ~~Tela sem vagas~~ | **Aviso + lista de espera** (11/11/2026) |
+| Validade do código individual | Produto |
+| Regra contra abuso da vaga que volta | Produto |
+| Quem já tem conta precisa de código? | Produto |
 
 ## Ligação com o código
 
