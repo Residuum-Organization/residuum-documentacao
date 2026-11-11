@@ -31,7 +31,7 @@ São 27 decisões. Algumas já têm resposta do time (coluna **Situação**), ma
 | PD-020 | Definir ativo, conectado e aberto; janela temporal, abrangência, visitas versus pessoas únicas e material cole… | Produto/operação | Aberta | [pd-020.md](pd-020.md) |
 | PD-021 | Quais eventos exigem notificação externa? Canal, prazos, reenvio, destinatários e indicador de entrega | Produto/operação | Aberta | [pd-021.md](pd-021.md) |
 | PD-022 | Finalidades, dados mínimos, proteção, retenção, compartilhamento e atendimento ao titular; revisão dos relatór… | Produto/segurança e validação especializada | Aberta | [pd-022.md](pd-022.md) |
-| PD-023 | Múltiplos operadores/organizações, acúmulo de perfis, gestão de vínculos e duração/revogação de sessões | Produto/segurança | Aberta | [pd-023.md](pd-023.md) |
+| PD-023 | Múltiplos operadores/organizações, acúmulo de perfis, gestão de vínculos e duração/revogação de sessões | Produto/segurança | **11/11: vínculo N:N entre responsáveis e pontos.** Acúmulo de perfis e sessões em aberto. | [pd-023.md](pd-023.md) |
 | PD-024 | Formatos, tamanho/duração de vídeo, arquivo ou link, armazenamento e política de publicação de mídia | Produto/equipe técnica | Aberta | [pd-024.md](pd-024.md) |
 | PD-025 | Matriz de dispositivos, rede, volume, simultaneidade, metas atuais de tempo e critérios de usabilidade | Equipe técnica/produto/testes | Aberta | [pd-025.md](pd-025.md) |
 | PD-026 | Infraestrutura vigente, disponibilidade, janela comercial, backups, RPO/RTO, retenção e processo de entrega | Equipe técnica/operação | Aberta | [pd-026.md](pd-026.md) |

@@ -56,7 +56,7 @@ O perfil que antes se chamava "morador" passa a se chamar **usuário** em todos 
 | Perfil | O que faz | Valor |
 |---|---|---|
 | **Usuário** | Registra resíduos, escolhe ponto, entrega, usa pontos na Loja | Menos esforço e incentivo |
-| **Responsável pelo ponto** `[DECISÃO: PD-023]` | Acompanha materiais e ocupação, edita o que o ponto aceita, pede retirada | Visibilidade e comunicação com a administração |
+| **Responsável pelo ponto** (vínculo N:N, decidido em 11/11/2026: [PD-023](decisoes/pd-023.md)) | Acompanha materiais e ocupação, edita o que o ponto aceita, pede retirada | Visibilidade e comunicação com a administração |
 | **Cooperativa** | Aceita solicitações, vê agenda e rota, registra material e peso | Coletas organizadas e pagamento acompanhado |
 | **Administrador** | Gere convites, pontos, Loja, solicitações, pagamentos e indicadores | Controle da operação em um só lugar |
 | **Contratante de dados** | Consulta o que o plano autoriza | Informação para análise (pacotes a definir) |
