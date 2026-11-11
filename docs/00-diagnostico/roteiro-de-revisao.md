@@ -55,8 +55,8 @@ Estes documentos estão **em esboço**. Avalie a estrutura e o que falta; o cont
 
 | # | Documento | Min | Parte | Feito | Meu parecer |
 |---|---|---|---|---|---|
-| 16 | [API](../04-desenvolvimento/api.md) | 4 | 3 | [ ] | 🆕 reescrita em 11/11 (113 rotas), na PR #9 |
-| 17 | [Como contribuir](../../CONTRIBUTING.md) | 3 | 3 | [ ] | 🆕 reescrito em 11/11, na PR #9 |
+| 16 | [API](../04-desenvolvimento/api.md) | 4 | 3 | [x] | ✅ 11/11: reescrita (113 rotas, PR #9); `/painel-testes` sai da produção; `/pontos` é apelido |
+| 17 | [Como contribuir](../../CONTRIBUTING.md) | 3 | 3 | [x] | ✅ 11/11: reescrito (PR #9); branches padronizadas em `feature/` |
 | 18 | [Plano de testes](../05-qualidade/plano-de-testes.md) | 3 | 4 | [ ] | |
 | 19 | [Casos de teste](../05-qualidade/casos-de-teste.md) | 5 | 4 | [ ] | |
 | 20 | [Guia de deploy](../06-operacao/guia-de-deploy.md) | 4 | 5 | [ ] | |
