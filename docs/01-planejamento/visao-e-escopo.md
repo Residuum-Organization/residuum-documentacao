@@ -2,7 +2,7 @@
 
 > **Estado:** revisão (aguardando aprovação do produto) · **Dono:** Produto · **Atualizado em:** 11/11/2026
 > **Fontes:** [visão original](../visao/visao-do-projeto.md) (mantida como referência), [V6](requisitos/README.md), [regras de saldo, vouchers e sorteios](../requisitos/regras-de-saldo-vouchers-sorteios.md), respostas e complementos da revisão de 11/11/2026 (Vinicius).
-> **Lacunas:** 5 · **Conflito aberto:** valor do ponto (ver [seção 5](#5-pontos-e-recompensas))
+> **Lacunas:** 4 · **Conflito aberto:** valor do ponto (ver [seção 5](#5-pontos-e-recompensas))
 
 ## Resumo
 
@@ -18,6 +18,16 @@ Este documento diz **o que o produto é, para quem e até onde vai**. O texto lo
 | **Coleta "no escuro".** Cooperativas não sabem o volume nem o nível de enchimento dos pontos | Viagens inúteis e pontos lotados |
 | **Pouco incentivo.** O cidadão não vê valor no resíduo | Baixa adesão à separação correta |
 | **Dados ruins na base da cadeia.** O descarte cidadão não chega aos sistemas oficiais (SINIR, MTR) | Dificuldade de gestão e comprovação |
+
+### O problema em números
+
+| Número | O que mostra | Fonte |
+|---|---|---|
+| **97,3%** | das latas de alumínio foram recicladas no Brasil em 2024. O material **tem mercado** | [ABC do ABC](https://abcdoabc.com.br/latinhas-de-aluminio-recicladas/) |
+| **~23%** | de capacidade parada nas recicladoras de PET, por **falta de coleta** (410 mil t recicladas em 2024) | [Dados do problema](../pesquisa/dados-do-problema.md) |
+| **~18%** | da população de Manaus atendida pela coleta seletiva (dado de 2020) | [Dados do problema](../pesquisa/dados-do-problema.md) `[VERIFICAR fonte]` |
+
+**Em uma frase:** o Brasil já recicla quase toda lata e mais da metade do PET, mas a coleta não chega: indústria parada por falta de material e uma capital com menos de um quinto da população atendida. Detalhes, ressalvas e o que falta confirmar estão em [dados do problema](../pesquisa/dados-do-problema.md).
 
 ## 2. A solução
 
@@ -57,7 +67,7 @@ O perfil que antes se chamava "morador" passa a se chamar **usuário** nesta se�
 
 | Área | O que entra |
 |---|---|
-| Acesso | O usuário **se cadastra normalmente**. O controle de quantas pessoas entram (um número X) ainda está em estudo; **por ora, o acesso é liberado por um código** fornecido pela equipe `[LACUNA: pesquisa]` |
+| Acesso | O usuário **se cadastra normalmente**. O controle de quantas pessoas entram (um número X) ainda está em estudo ([opções pesquisadas](../pesquisa/controle-de-acesso.md)); **por ora, o acesso é liberado por um código** fornecido pela equipe |
 | Cadastro de resíduos | **Três sistemas**, iniciados por um botão **+** centralizado na barra de navegação. **1) Código de barras:** lê o produto e já preenche o formulário. **2) QR Code da nota fiscal:** traz os itens da nota e os materiais. **3) Manual:** se o código de barras não for reconhecido depois de **X tentativas**, o sistema leva o usuário ao formulário manual (nome, material, quantidade `[LACUNA: formulário e valor de X]`). Materiais: **PET e lata de alumínio** |
 | Descarte rápido | **Não é uma função à parte.** É o uso do **leitor de código de barras** (agiliza um único produto) e do **leitor de QR Code da nota** (traz todos os materiais da nota) para seguir direto à escolha do ponto, sem passar pelo estoque |
 | Entrega | Escolha do ponto compatível, navegação externa, **validação de presença por GPS**, confirmação |
@@ -77,20 +87,21 @@ O perfil que antes se chamava "morador" passa a se chamar **usuário** nesta se�
 | Rascunho do descarte rápido fica **só na memória** do fluxo | Decisão de UX de 10/10 |
 | A pesagem da cooperativa **não** concede pontos de novo ao morador | V6 RN-016 |
 
-### Detalhamento pendente
+### Decisões já tomadas
 
-São os pontos que ainda **não dá para fechar só com o que a equipe sabe hoje**. Uns pedem **pesquisa**, outros pedem **decisão** (ou os dois). A coluna "Tipo" diz qual.
+As regras de **campanhas, vouchers e sorteios** foram decididas (ver [campanhas](../requisitos/regras-de-campanhas.md) e [saldo, vouchers e sorteios](../requisitos/regras-de-saldo-vouchers-sorteios.md)). Restam só a validação do produto e dois detalhes: o algoritmo da apuração do sorteio e o dono do parecer jurídico.
 
-| O que está pendente | Decisão | Tipo | O que fazer |
+### Ainda pendente
+
+| O que está pendente | Decisão | Tipo | Situação |
 |---|---|---|---|
-| Controle de quantas pessoas entram no sistema (hoje: código fornecido) | — | 🔎 Pesquisa | Pesquisar formas de controle de acesso |
-| Fonte para consultar produtos e notas fiscais | PD-004 | 🔎 Pesquisa | Levantar fontes, cobertura, autorização e limites |
-| Precisão do GPS (raio, idade da posição) | PD-008 | 🔎 Teste em campo + decisão | Medir no piloto e fixar valores |
-| Capacidade e "ponto cheio" | PD-009 | ⚖️ Decisão | Definir unidade e cálculo com a operação |
-| Regras de campanhas, vouchers e sorteios | PD-011 a PD-013 | ⚖️ Decisão (+ parecer jurídico nos sorteios) | Validar as regras de 21 e 22/10 |
-| Exceções da coleta (recusa, prazo, coleta parcial) | PD-014 | ⚖️ Decisão | Definir com a operação |
-| Valor e provedor de pagamento | PD-015, PD-016 | 🔎 + ⚖️ | Pesquisar provedores; decidir valor e autorização |
-| Pacotes e preços dos planos | PD-019 | 🔎 + ⚖️ | Pesquisar preços; decidir pacotes |
+| **Capacidade do ponto de coleta** e "ponto cheio" | [PD-009](decisoes/pd-009.md) | Estudo e decisão com a operação | **Falta fazer** |
+| **Execução da coleta** (recusa, prazo, coleta parcial) | [PD-014](decisoes/pd-014.md) | Estudo e decisão com a operação | **Falta fazer** |
+| Controle de quantas pessoas entram | — | Pesquisa | **Pesquisa feita:** [controle de acesso](../pesquisa/controle-de-acesso.md). Falta decidir X |
+| Fonte para código de barras e nota fiscal | [PD-004](decisoes/pd-004.md) | Pesquisa | **Pesquisa feita:** [fontes](../pesquisa/fontes-de-produtos-e-notas.md). Falta **testar** |
+| Provedor de pagamento | [PD-015](decisoes/pd-015.md), [PD-016](decisoes/pd-016.md) | Pesquisa | **Pesquisa feita:** [provedores](../pesquisa/provedores-de-pagamento.md). Falta decidir pagador e valor |
+| Precisão do GPS | [PD-008](decisoes/pd-008.md) | Teste em campo | Medir no piloto |
+| Pacotes e preços dos planos | [PD-019](decisoes/pd-019.md) | Pesquisa e decisão | Falta fazer |
 
 ### Evolução a avaliar (fora do MVP)
 
@@ -112,18 +123,23 @@ São os pontos que ainda **não dá para fechar só com o que a equipe sabe hoje
 | Ordem das entregas | morador → ponto de coleta → cooperativa → administrador |
 | Região e pontos do piloto | `[LACUNA]` ver [piloto inicial](../pesquisa/piloto-inicial.md) |
 
-### Como medir o sucesso do piloto
+### Como medir o sucesso do piloto (proposta para avaliação)
 
-O que medir já está listado em [piloto inicial](../pesquisa/piloto-inicial.md). **Falta só a meta**, isto é, o número que diz "deu certo".
+**Escala sugerida:** 100 usuários, 3 pontos de coleta, 1 cooperativa e 8 semanas. Segue o [piloto inicial](../pesquisa/piloto-inicial.md): poucos pontos, uma ou duas cooperativas, número limitado de usuários, período fechado.
 
-| Indicador | Meta |
-|---|---|
-| Taxa de cadastro (convidados que se cadastram) | `[A DEFINIR]` |
-| Taxa de primeiro descarte | `[A DEFINIR]` |
-| Recorrência (voltam a descartar) | `[A DEFINIR]` |
-| Uso de recompensa | `[A DEFINIR]` |
-| Tempo até a retirada pela cooperativa | `[A DEFINIR]` |
-| Divergência entre o declarado e o pesado | `[A DEFINIR]` |
+| # | Indicador | Como calcular | Meta proposta |
+|---|---|---|---|
+| 1 | Cadastro | cadastrados ÷ códigos entregues | **70% ou mais** |
+| 2 | Primeiro descarte | cadastrados com 1 descarte confirmado em até 14 dias ÷ cadastrados | **50% ou mais** |
+| 3 | Recorrência | usuários com 3 ou mais descartes em 8 semanas ÷ usuários com 1 descarte | **30% ou mais** |
+| 4 | Uso de recompensa | usuários que resgataram voucher ou entraram em campanha ÷ usuários com 1 descarte | **25% ou mais** |
+| 5 | Tempo até a retirada | do pedido de coleta até a coleta registrada | **até 72 horas** em 80% dos pedidos |
+| 6 | Completude dos dados | coletas com ponto, material e peso preenchidos ÷ coletas | **90% ou mais** |
+| 7 | Confiabilidade (técnico) | saldos que não batem com os lançamentos; acessos de uma cooperativa a pontos que não são dela | **zero** |
+
+**Critério de sucesso proposto:** o piloto deu certo se atingir **5 das 6 metas de uso (1 a 6) e zero falhas de confiabilidade (7)**.
+
+> ⚠️ **Estes números são uma proposta minha, sem base de dados:** o projeto ainda não tem histórico nem referência verificada. Servem de ponto de partida para você ajustar. A meta que mais merece sua atenção é a 2, que diz se as pessoas realmente entregam.
 
 ## 7. Glossário
 
@@ -133,9 +149,10 @@ O que medir já está listado em [piloto inicial](../pesquisa/piloto-inicial.md)
 
 - [ ] Produto validar formalmente esta visão (as respostas de 11/11 vieram da revisão de Vinicius)
 - [ ] Resolver o conflito dos pontos (10 × 5) em [PD-010](decisoes/pd-010.md)
-- [ ] `[A DEFINIR]` meta de cada indicador do piloto (tabela da seção 6) e quantos usuários entram (X)
-- [ ] `[LACUNA]` pesquisar como controlar o acesso de X pessoas (hoje: código)
+- [ ] Aprovar ou ajustar as **metas do piloto** (seção 6) e decidir **quantos usuários entram (X)**
+- [ ] Escolher a forma de controle de acesso entre as opções de [controle de acesso](../pesquisa/controle-de-acesso.md)
 - [ ] `[LACUNA]` definir o número X de tentativas do código de barras e o formulário manual
+- [ ] **Estudar a capacidade do ponto (PD-009) e a execução da coleta (PD-014)**
 - [ ] Decidir se "morador" vira "usuário" em todos os documentos (hoje só nesta Visão, seção 3)
-- [ ] `[LACUNA]` 3 números do problema: **as pesquisas não têm dados de mercado**; buscar em fontes oficiais e citar
+- [ ] Confirmar a fonte do número de coleta seletiva em Manaus (~18%) e ligar os `[VERIFICAR fonte]` de [dados do problema](../pesquisa/dados-do-problema.md)
 - [ ] Depois de aprovada, marcar a [visão original](../visao/visao-do-projeto.md) como histórico e trocar os "10 pontos" dela conforme a decisão
