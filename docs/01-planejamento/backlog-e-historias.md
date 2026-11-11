@@ -55,7 +55,7 @@ Atividades `TSK-…` e ondas ainda **não estão ligadas**. `[LACUNA]` ligar cad
 |---|---|---|---|---|
 | H-MOR-05 | Como **plataforma**, quero que entregas no mesmo ponto em 60 minutos contem como uma, para que ninguém divida a entrega para ganhar mais. | 4 envios de 1 lata em 10 min no mesmo ponto = 1 descarte, 10 pontos | 1 | [TSK-MOR-017](backlog/morador/tsk-mor-017.md) |
 | H-MOR-06 | Como **usuário**, quero ganhar o dobro ao cumprir N descartes da campanha. | Meta de 4 descartes com lata = 40 pontos de bônus, pelo botão "Receber pontos" | 4 | `[LACUNA: atividade]` |
-| H-MOR-07 | Como **pessoa convidada**, quero me cadastrar com o código da equipe enquanto houver vaga. | 501ª conta é recusada com aviso claro; duas pessoas não pegam a mesma última vaga | 2 | [TSK-MOR-001](backlog/morador/tsk-mor-001.md) |
+| H-MOR-07 | Como **pessoa convidada**, quero me cadastrar com o meu código individual enquanto houver vaga. | Código vale uma vez; 501ª conta é recusada com aviso e lista de espera; duas pessoas não pegam a mesma última vaga; conta excluída devolve a vaga | 2 | [TSK-MOR-001](backlog/morador/tsk-mor-001.md) |
 | H-ADM-03 | Como **admin**, quero corrigir um descarte já confirmado por ajuste manual, com motivo, sem estorno. | Descarte confirmado não tem estorno; ajuste aparece no extrato com motivo | 1 | `[LACUNA: atividade]` |
 | H-ADM-04 | Como **admin**, quero ligar e desligar responsáveis de pontos. | Um ponto aceita vários responsáveis; uma pessoa, vários pontos | 2 | `[LACUNA: atividade]` |
 
