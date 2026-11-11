@@ -14,7 +14,23 @@ O banco tem **27 tabelas** em 5 grupos. Todas as regras de negócio importantes 
 |---|---|---|
 | `feature/mor-025-026-vouchers-sorteios` (esta) | 34 | `d3f9b81a6e25` |
 | `feature/mor-023-024-campanhas` (checkout local) | 32 | `a41c7e92d5b3` `[VERIFICAR]` |
-| `main` | `[LACUNA]` não contada | — |
+| `main` | 29 | `c8b2c451f28b` |
+| **Banco na Neon** (projeto `residuum-dev`) | — | `c8b2c451f28b`: **igual à `main`** (conferido em 11/11/2026) |
+
+### Conferência com o banco real (11/11/2026)
+
+Lida **só a estrutura** (tabelas e colunas, sem dados) do projeto `residuum-dev` na Neon, PostgreSQL 18:
+
+| Resultado | Detalhe |
+|---|---|
+| **22 tabelas** (mais `alembic_version`) | Este documento descreve 27, porque segue a branch de feature |
+| Faltam no banco | `campanha_requisito`, `campanha_mecanica`, `campanha_bonus`, `voucher_codigo` (só nas branches de feature) e `cooperativa` |
+| `descarte` | Ainda tem `ponto_lat` e `ponto_long` (achado 7) e `qrcode_token_id` |
+| `campanhas` | Versão antiga: só `pontos_recompensa`, sem requisitos nem mecânicas |
+| `ponto_coleta` | Tem `raio_operacao`, `capacidade_maxima` e `status`; ainda não tem vínculo N:N |
+| ⚠️ `solicitacao_ponto_coleta` | Tem coluna **`senha_hash`**: o pedido público de ponto guarda senha. Reforça a decisão de remover esse pedido (RN-011) `[VERIFICAR NO CÓDIGO]` |
+
+> O nome do projeto é **`residuum-dev`**. Confirmar se é o mesmo banco usado em produção pela Vercel `[VERIFICAR]`.
 
 ## Visão geral (ER)
 
@@ -138,7 +154,7 @@ Colunas e tabelas novas propostas nas análises: ledger em `pontuacao` (origem, 
 
 ## O que falta para fechar
 
-- [ ] `[VERIFICAR]` subir o banco, aplicar as 34 migrações e comparar o esquema físico com este documento
-- [ ] `[LACUNA]` contar migrações e conferir a cabeça da `main` do backend
+- [x] Estrutura conferida com o banco da Neon (11/11/2026): igual à `main` (29 migrações, cabeça `c8b2c451f28b`)
+- [ ] Conferir de novo quando a branch de feature (34 migrações) for aplicada
 - [ ] `[LACUNA]` decidir o que fazer com `cooperativa`, `qrcode_token` e `estoque` (remover ou usar)
 - [ ] Atualizar quando a branch for mesclada na `main`

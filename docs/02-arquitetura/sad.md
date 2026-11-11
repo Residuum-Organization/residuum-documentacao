@@ -94,7 +94,8 @@ Todas com estado **proposta**. As decisões de 11/11/2026 **apoiam** quatro dela
 | CI do frontend | `ci.yml`: instala, `build` e Prettier (`\|\| true`: falha de formato é ignorada) |
 | Testes | 3 arquivos no backend (SQLite em memória); nenhum no frontend |
 | Produção | **API na Vercel** (deploy hook do `deploy.yaml`); **banco PostgreSQL na Neon** (informado por Vinicius em 11/11/2026 como "neodb" `[VERIFICAR nome]`). `[LACUNA]` frontend também na Vercel? |
-| Backups | `[VERIFICAR]` a Neon oferece restauração conforme o plano contratado; confirmar plano, período de retenção e se um restore já foi testado |
+| Backups | Projeto Neon com **histórico de 6 horas** para restaurar (configuração lida em 11/11/2026). **Não há backup diário** conhecido; o DLR pedia RPO 24 h / RTO 4 h. `[VERIFICAR]` se um restore já foi testado |
+| Projeto do banco | `residuum-dev` (PostgreSQL 18, região São Paulo). Há um segundo projeto sem nome e sem uso `[VERIFICAR]` se é para produção |
 | Homologação | `[LACUNA]` não há ambiente de homologação conhecido |
 | Quem publica | Quem faz merge na `main` do backend dispara migração e deploy automaticamente `[LACUNA]` pessoas com essa permissão |
 
