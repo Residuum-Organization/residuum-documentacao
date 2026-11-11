@@ -26,7 +26,7 @@ Não existem `ativo`, `token_version`, `criado_por_id` nem `anonimizado_em`.
 
 ## pontuacao
 
-Crédito de pontos. **Sem origem, referência nem chave de idempotência.**
+Crédito de pontos. **Sem origem, referência nem chave de idempotência.** Regra decidida em 11/11/2026: **10 pontos por descarte**, sem estorno de descarte confirmado; correção por ajuste do admin ([PD-010](../../01-planejamento/decisoes/pd-010.md)).
 
 | Coluna | Tipo | Observação |
 |---|---|---|
