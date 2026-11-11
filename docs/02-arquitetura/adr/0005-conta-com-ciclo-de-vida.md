@@ -2,7 +2,7 @@
 
 [Voltar ao índice](README.md)
 
-> **Estado:** proposta · **Origem:** solução S4 (usuário) e A9/A10 (administrador) · **Depende de:** [PD-001](../../01-planejamento/decisoes/pd-001.md), [PD-002](../../01-planejamento/decisoes/pd-002.md), [PD-003](../../01-planejamento/decisoes/pd-003.md), [PD-022](../../01-planejamento/decisoes/pd-022.md), [PD-023](../../01-planejamento/decisoes/pd-023.md)
+> **Estado:** aceita em 11/11/2026 (Vinicius) · **Origem:** solução S4 (usuário) e A9/A10 (administrador) · **Depende de:** [PD-001](../../01-planejamento/decisoes/pd-001.md), [PD-002](../../01-planejamento/decisoes/pd-002.md), [PD-003](../../01-planejamento/decisoes/pd-003.md), [PD-022](../../01-planejamento/decisoes/pd-022.md), [PD-023](../../01-planejamento/decisoes/pd-023.md)
 
 ## Contexto
 
@@ -11,10 +11,10 @@ O cadastro é aberto; não há convite, desativação nem revogação de sessão
 ## Decisão
 
 1. `usuario.ativo` e `usuario.token_version`; o token leva a versão e `get_current_user` e `/refresh` recusam inativo ou versão antiga.
-2. Tabelas `convite` (guarda só o hash do código, com expiração e limite de usos) e `recuperacao_senha` (token de uso único, 30 minutos).
-3. Cadastro exige convite (atrás de flag para o piloto) e consome um uso na mesma transação.
+2. Tabelas `codigo_acesso` (**código individual, uso único**; guarda só o hash; validade a definir) e `recuperacao_senha` (token de uso único, 30 minutos).
+3. Cadastro exige o código e respeita o **teto de 500 contas** (`SELECT ... FOR UPDATE` na linha de vagas), tudo na mesma transação. Sem vaga: aviso e lista de espera.
 4. "Sair de todos os dispositivos" e redefinir senha incrementam a versão.
-5. Excluir conta vira **desativar + anonimizar**; histórico de pontos, descartes e bilhetes fica.
+5. Excluir conta vira **desativar + anonimizar**; histórico de pontos, descartes e bilhetes fica; **a vaga volta** para o teto.
 6. Token de acesso em memória; refresh em cookie `HttpOnly` numa segunda fase.
 
 ## Consequências

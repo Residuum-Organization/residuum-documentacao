@@ -73,7 +73,7 @@ sequenceDiagram
 
 Os dois créditos e as duas baixas são o defeito F01/F02. O desenho proposto está em [diagramas](diagramas.md) e na [ADR-0001](adr/0001-livro-unico-de-pontos.md).
 
-## Decisões de desenho propostas
+## Decisões de desenho (aceitas)
 
 | ADR | Decisão | Motivo |
 |---|---|---|
@@ -83,7 +83,7 @@ Os dois créditos e as duas baixas são o defeito F01/F02. O desenho proposto es
 | [0004](adr/0004-estados-no-backend.md) | Estados com transições explícitas | `PUT` nunca muda estado |
 | [0005](adr/0005-conta-com-ciclo-de-vida.md) | Conta com ciclo de vida | Desativar e revogar sessão |
 
-Todas com estado **proposta**. As decisões de 11/11/2026 **apoiam** quatro delas: confirmação final do operador e ajuste do admin (0001), vínculo N:N gerido pelo admin (0002), janela de 60 min e idempotência no descarte (0003) e conta excluída que devolve a vaga do teto de 500 (0005). O aceite formal é o item 14 do roteiro.
+As cinco foram **aceitas em 11/11/2026**, ajustadas às decisões do dia. Nenhuma está implementada.
 
 ## Ambientes e entrega
 

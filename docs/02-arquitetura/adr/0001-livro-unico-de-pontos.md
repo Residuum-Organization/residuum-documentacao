@@ -2,7 +2,7 @@
 
 [Voltar ao índice](README.md)
 
-> **Estado:** proposta · **Origem:** solução S1 do módulo usuário · **Depende de:** [PD-010](../../01-planejamento/decisoes/pd-010.md)
+> **Estado:** aceita em 11/11/2026 (Vinicius) · **Origem:** solução S1 do módulo usuário · **Depende de:** [PD-010](../../01-planejamento/decisoes/pd-010.md)
 
 ## Contexto
 
@@ -10,11 +10,12 @@ O saldo (`usuario.pontuacao_total`) é alterado em **6 lugares** do código e a 
 
 ## Decisão
 
-1. `pontuacao` vira o **livro-caixa**: cada lançamento tem **origem** (descarte, campanha, bônus, ajuste, estorno, resgate…), **referência** (qual descarte, qual sorteio), **descrição**, **chave de idempotência** e o **valor de regra vigente** (ex.: 5 pontos por unidade).
+1. `pontuacao` vira o **livro-caixa**: cada lançamento tem **origem** (descarte, campanha, bônus, ajuste, estorno, resgate…), **referência** (qual descarte, qual sorteio), **descrição**, **chave de idempotência** e o **valor de regra vigente** (desde 11/11/2026: **10 pontos por descarte**).
 2. `usuario.pontuacao_total` passa a ser um **cache**, alterado só por um serviço (`creditar_pontos`, `estornar_lancamento`, `debitar_pontos`) que trava a linha do usuário.
 3. O **banco garante**: no máximo 1 crédito por descarte, 1 estorno por lançamento, chave única por usuário e saldo ≥ 0.
 4. O descarte credita **uma vez**, na confirmação.
-5. O estorno devolve o **valor gravado** no lançamento, não recalcula.
+5. **Descarte confirmado não tem estorno** (decisão de 11/11/2026, [PD-010](../../01-planejamento/decisoes/pd-010.md)): correção é um **lançamento de ajuste** do admin, com motivo. Estornos que continuam existindo (ex.: cancelar sorteio devolve os bilhetes) devolvem o **valor gravado**, sem recalcular.
+6. Descartes do mesmo usuário no mesmo ponto em 60 minutos geram **um** lançamento.
 
 ## Consequências
 
