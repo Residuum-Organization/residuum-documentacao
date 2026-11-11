@@ -66,6 +66,6 @@ O Backlog v2 marca como **Done**, mas o backend atual não mostra:
 ## O que falta
 
 - [ ] Conferir com a equipe os itens `[VERIFICAR]` (Terraform, LGPD, backups)
-- [ ] Levar os "~13 pontos públicos" para os dados do problema
-- [ ] Levar a identidade visual para o índice de telas e o manual
-- [ ] Levar a tabela de riscos para o SAD
+- [x] "~13 pontos públicos" levados aos [dados do problema](../pesquisa/dados-do-problema.md) (11/11/2026)
+- [x] Identidade visual levada ao índice de telas (parte 2) e ao manual (11/11/2026)
+- [x] Tabela de riscos levada ao SAD (parte 2), revista com as decisões de 11/11
