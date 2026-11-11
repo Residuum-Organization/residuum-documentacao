@@ -1,6 +1,6 @@
 # Modelo de dados
 
-> **Estado:** revisão · **Dono:** Tecnologia · **Atualizado em:** 10/11/2026
+> **Estado:** revisão · **Dono:** Tecnologia · **Atualizado em:** 11/11/2026
 > **Fonte:** código do backend, branch `feature/mor-025-026-vouchers-sorteios` (commit `11f0d8e`, 22/10/2026), lido dos arquivos `app/models/*.py` e das 34 migrações Alembic. **Não foi executado contra um banco PostgreSQL.**
 > **Lacunas:** 3 · Dicionário de colunas em [dados/](dados/README.md).
 
@@ -14,7 +14,23 @@ O banco tem **27 tabelas** em 5 grupos. Todas as regras de negócio importantes 
 |---|---|---|
 | `feature/mor-025-026-vouchers-sorteios` (esta) | 34 | `d3f9b81a6e25` |
 | `feature/mor-023-024-campanhas` (checkout local) | 32 | `a41c7e92d5b3` `[VERIFICAR]` |
-| `main` | `[LACUNA]` não contada | — |
+| `main` | 29 | `c8b2c451f28b` |
+| **Banco na Neon** (projeto `residuum-dev`) | — | `c8b2c451f28b`: **igual à `main`** (conferido em 11/11/2026) |
+
+### Conferência com o banco real (11/11/2026)
+
+Lida **só a estrutura** (tabelas e colunas, sem dados) do projeto `residuum-dev` na Neon, PostgreSQL 18:
+
+| Resultado | Detalhe |
+|---|---|
+| **22 tabelas** (mais `alembic_version`) | Este documento descreve 27, porque segue a branch de feature |
+| Faltam no banco | `campanha_requisito`, `campanha_mecanica`, `campanha_bonus`, `voucher_codigo` (só nas branches de feature) e `cooperativa` |
+| `descarte` | Ainda tem `ponto_lat` e `ponto_long` (achado 7) e `qrcode_token_id` |
+| `campanhas` | Versão antiga: só `pontos_recompensa`, sem requisitos nem mecânicas |
+| `ponto_coleta` | Tem `raio_operacao`, `capacidade_maxima` e `status`; ainda não tem vínculo N:N |
+| ⚠️ `solicitacao_ponto_coleta` | Tem coluna **`senha_hash`**: o pedido público de ponto guarda senha. Reforça a decisão de remover esse pedido (RN-011) `[VERIFICAR NO CÓDIGO]` |
+
+> O nome do projeto é **`residuum-dev`**. Confirmar se é o mesmo banco usado em produção pela Vercel `[VERIFICAR]`.
 
 ## Visão geral (ER)
 
@@ -107,7 +123,7 @@ Todas as abaixo dependem só do código (e por isso falham em concorrência ou f
 |---|---|---|
 | 1 | Tabela `cooperativa` (model `Cooperativa`) **não é usada** por nenhuma rota; seu `relationship` aponta para um nome que `PontoColeta` não tem | Código morto que parece cadastro de cooperativa. Cooperativa de verdade é `usuario.role = 'cooperativa'` |
 | 2 | `ponto_coleta.cooperativa_id` aponta para `usuario` e serve a cooperativa **e** ao responsável do ponto | Não há vínculo N:N nem separação de papéis (PD-023) |
-| 3 | `qrcode_token` existe, mas a V6 proíbe QR (RN-006) | Dívida técnica; `descarte` e `ponto_coleta` ainda a referenciam |
+| 3 | `qrcode_token` existe, mas a V6 proíbe QR (RN-006) e, em 11/11/2026, o QR ficou **fora do MVP** (PD-027) | Dívida técnica; `descarte` e `ponto_coleta` ainda a referenciam |
 | 4 | `estoque` guarda total por tipo, sem FK | Sem uso claro nas fontes `[VERIFICAR]` |
 | 5 | `ponto_coleta.inventario` e `tipos_residuos_aceitos` são JSON | Sem integridade; estoque do ponto não é consultável por SQL |
 | 6 | `solicitacao_coleta.inventario_solicitado` guarda uma "foto" do estoque em JSON | Causa do achado F-04 (zerar pelo snapshot) |
@@ -116,11 +132,29 @@ Todas as abaixo dependem só do código (e por isso falham em concorrência ou f
 
 ## Modelo proposto (resumo)
 
-Colunas e tabelas novas propostas nas análises: ledger em `pontuacao` (origem, referência, chave), `usuario.ativo` e `token_version`, `convite`, `recuperacao_senha`, `vinculo_operacional`, `coleta_item`, `resultado_sorteio`, `lead_ponto_coleta`, `pagamento`, `plano`. Detalhes e justificativas em [ADRs](adr/README.md). Nada disso existe no código.
+Colunas e tabelas novas propostas nas análises: ledger em `pontuacao` (origem, referência, chave), `usuario.ativo` e `token_version`, `recuperacao_senha`, `vinculo_operacional`, `coleta_item`, `resultado_sorteio`, `pagamento`, `plano`. Detalhes e justificativas em [ADRs](adr/README.md). Nada disso existe no código.
+
+**Ajustes pelas decisões de 11/11/2026:**
+
+| Proposta | Como fica |
+|---|---|
+| `convite` | Vira **`codigo_acesso`**: código **individual, uso único** |
+| Teto de contas | Linha de controle com **`vagas_restantes`** (começa em 500), travada com `SELECT ... FOR UPDATE` no cadastro; volta 1 vaga quando a conta é excluída |
+| Lista de espera | Tabela nova **`lista_espera`** (e-mail, data) `[LGPD: consentimento]` |
+| `lead_ponto_coleta` | **Descartada**: só o admin cria ponto (RN-011) |
+| `vinculo_operacional` | Confirmada: **N:N**, gerida pelo admin (PD-023) |
+| `ponto_coleta` | Nova coluna **`raio_gps_m`** (padrão 100); capacidade numa unidade só (ver [estudo](../pesquisa/capacidade-e-execucao-da-coleta.md)) |
+| `pontuacao` (ledger) | **10 pontos por descarte**; sem estorno de descarte confirmado; correção por lançamento de ajuste com motivo |
+| `descarte` | Agrupar envios do mesmo usuário no mesmo ponto em 60 min (chave de agrupamento) |
+| `solicitacao_coleta` | Novos estados `em_execucao` e `cancelada` (com motivo e quem cancelou); `coleta_item` permite coleta parcial |
+| `pagamento` | No piloto: valor calculado, data, **comprovante** e quem registrou; sem integração |
+| `qrcode_token` | **Remover** (QR fora do MVP) `[DECISÃO da equipe técnica]` |
+
+**Histórico:** antes do Alembic, a equipe de banco de dados modelou o esquema no MySQL Workbench e o converteu para PostgreSQL (maio de 2026; ver o [comparativo do Drive](../00-diagnostico/comparativo-documentos-drive.md)). O banco atual é o das migrações Alembic.
 
 ## O que falta para fechar
 
-- [ ] `[VERIFICAR]` subir o banco, aplicar as 34 migrações e comparar o esquema físico com este documento
-- [ ] `[LACUNA]` contar migrações e conferir a cabeça da `main` do backend
+- [x] Estrutura conferida com o banco da Neon (11/11/2026): igual à `main` (29 migrações, cabeça `c8b2c451f28b`)
+- [ ] Conferir de novo quando a branch de feature (34 migrações) for aplicada
 - [ ] `[LACUNA]` decidir o que fazer com `cooperativa`, `qrcode_token` e `estoque` (remover ou usar)
 - [ ] Atualizar quando a branch for mesclada na `main`
