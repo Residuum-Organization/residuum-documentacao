@@ -60,7 +60,7 @@ stateDiagram-v2
   solicitada --> aceita: cooperativa aceita
   solicitada --> recusada: cooperativa recusa [PD-014]
   aceita --> em_execucao: iniciar
-  em_execucao --> registrada: concluir (baixa por material)
+  em_execucao --> registrada: concluir (baixa só o que levou, por material; o resto fica no ponto)
 ```
 
 ## 4. Conta
@@ -71,12 +71,11 @@ stateDiagram-v2
 
 ```mermaid
 stateDiagram-v2
-  [*] --> convidado: admin cria convite
-  convidado --> ativo: aceita o convite e define a senha
+  [*] --> ativo: cadastro com código individual (uso único), se houver vaga no teto de 500
   ativo --> desativado: admin desativa (sessões caem)
   desativado --> ativo: admin reativa
-  ativo --> anonimizado: exclusão (LGPD) [PD-022]
-  desativado --> anonimizado
+  ativo --> anonimizado: exclusão (LGPD) [PD-022], devolve a vaga
+  desativado --> anonimizado: devolve a vaga
 ```
 
 ## 5. Entrega do usuário (sequência proposta)
@@ -93,7 +92,7 @@ sequenceDiagram
   A-->>M: pontos creditados
 ```
 
-O fluxo atual está no [SAD](sad.md#fluxo-principal-entrega-do-morador-como-é-hoje).
+O fluxo atual está no [SAD](sad.md#fluxo-principal-entrega-do-usuário-como-é-hoje). Envios do mesmo usuário no mesmo ponto em 60 minutos viram **um** descarte e **10 pontos** ([PD-010](../01-planejamento/decisoes/pd-010.md)).
 
 ## 6. Pedido de coleta pelo responsável (sequência proposta)
 
@@ -110,8 +109,37 @@ sequenceDiagram
   A->>A: baixa o estoque do ponto só pelo coletado
 ```
 
+## 7. Pagamento à cooperativa no piloto (decidido em 11/11/2026)
+
+```mermaid
+sequenceDiagram
+  participant C as Cooperativa
+  participant A as API
+  participant D as Admin
+  participant B as Banco da Residuum
+  C->>A: registra a coleta (peso por material)
+  A-->>D: valor = kg × valor do material
+  D->>B: paga fora do sistema (Pix ou TED)
+  D->>A: marca "pago" e anexa o comprovante
+```
+
+Pagamento por API vem depois ([PD-016](../01-planejamento/decisoes/pd-016.md)). Valor por kg de cada material: `[LACUNA]` ([PD-015](../01-planejamento/decisoes/pd-015.md)).
+
+## 8. Campanha com dobro de pontos (decidido em 11/11/2026)
+
+```mermaid
+stateDiagram-v2
+  [*] --> aberta: admin publica (só PET e lata)
+  aberta --> participando: usuário aperta "Participar"
+  participando --> meta_cumprida: N descartes do material, contados depois da adesão
+  meta_cumprida --> recebido: usuário aperta "Receber pontos" (10 × N)
+```
+
+Descartes no mesmo ponto em 60 minutos contam como **um** na meta. Ver [regras de campanhas](../requisitos/regras-de-campanhas.md).
+
 ## O que falta para fechar
 
 - [ ] `[VERIFICAR]` quais transições existem de fato em cada rota (ex.: quem pode `revertido`)
-- [ ] `[LACUNA]` diagrama de pagamento (PD-016) e de campanha (adesão → missão → recompensa)
+- [x] Diagramas de pagamento (manual no piloto) e de campanha (dobro em descartes) (11/11/2026)
+- [ ] `[DECISÃO: PD-014]` estado `em_execucao` e cancelamento da coleta (o estudo propõe não ter `em_execucao` no piloto)
 - [x] Ator da confirmação: **operador do ponto** (11/11/2026); confirmação final, sem `revertido`
