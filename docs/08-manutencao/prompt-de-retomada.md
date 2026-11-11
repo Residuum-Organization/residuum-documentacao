@@ -86,12 +86,15 @@ Depois **pare e espere** a resposta dele.
 - **Metas do piloto aprovadas** (100 usuários, 3 pontos, 1 cooperativa, 8 semanas).
 - Leitura do código de barras **sem limite de tentativas**; aviso vermelho a cada falha; cadastro manual recomendado a partir da 2ª.
 - Coleta seletiva de Manaus: usar o **último dado publicado** (SINISA 2024, 33,7%).
+- **Pontos: 10 por descarte concluído**, por operação (PD-010, 11/11). O código ainda paga 5 por unidade.
+- **Teto de 500 contas**, com **trava de vagas no banco** (*pessimistic locking*, `SELECT ... FOR UPDATE`).
 - Campanhas, vouchers e sorteios: regras decididas. Pendentes: **capacidade do ponto (PD-009)** e **execução da coleta (PD-014)**.
 
 ## Pendências abertas que dependem do Vinicius
 
-- Conflito dos pontos: a Visão diz **10 por descarte**; o código e as regras de saldo dizem **5 por unidade** (PD-010).
-- Confirmar **X = 100** e aprovar a **trava de vagas no banco** (avaliada em `docs/pesquisa/controle-de-acesso.md`).
+- Como fica o **dobro de pontos** das campanhas e se as **faixas de recompensa** mudam, agora que o ponto vale 10 por descarte.
+- Ajustar a escala das metas do piloto (100 usuários) ao teto de 500?
+- Contas excluídas devolvem a vaga? O que mostrar quando as vagas acabam?
 - Decidir PD-009 e PD-014 a partir do estudo `docs/pesquisa/capacidade-e-execucao-da-coleta.md`.
 - Campos do formulário manual.
 - API de pagamento no MVP, ou pagamento manual primeiro? Quem paga (PD-016) e quanto (PD-015).
