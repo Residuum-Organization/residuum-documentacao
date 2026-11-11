@@ -22,6 +22,7 @@ Esta pasta reúne pesquisas, hipóteses, comparações e roteiros de validação
 | Como controlar quantas pessoas entram | [Controle de acesso](controle-de-acesso.md) |
 | Fontes para código de barras e nota fiscal | [Fontes de produtos e notas](fontes-de-produtos-e-notas.md) |
 | Provedores para pagar a cooperativa | [Provedores de pagamento](provedores-de-pagamento.md) |
+| Capacidade do ponto e execução da coleta (PD-009, PD-014) | [Capacidade e execução da coleta](capacidade-e-execucao-da-coleta.md) |
 
 ## Como usar
 
