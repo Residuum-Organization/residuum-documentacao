@@ -89,6 +89,9 @@ Depois **pare e espere** a resposta dele.
 - **Pontos: 10 por descarte concluído**, por operação (PD-010, 11/11). O código ainda paga 5 por unidade.
 - **Dobro de pontos:** meta em **descartes**, bônus de **10 × N**.
 - **Contra a divisão de entregas:** janela de **60 minutos** no mesmo ponto (descartes do mesmo usuário, no mesmo ponto, dentro dela, contam como um só).
+- **Operador do ponto confirma o descarte**; a confirmação é **final** (sem estorno; erro vira ajuste manual do admin).
+- **Responsável pelo ponto: vínculo N:N**, gerido pelo admin.
+- **Cancelar sorteio devolve os pontos**; parecer jurídico **adiado** (sorteios só de teste).
 - **Teto de 500 contas**, com **trava de vagas no banco** (*pessimistic locking*, `SELECT ... FOR UPDATE`).
 - Campanhas, vouchers e sorteios: regras decididas. Pendentes: **capacidade do ponto (PD-009)** e **execução da coleta (PD-014)**.
 
