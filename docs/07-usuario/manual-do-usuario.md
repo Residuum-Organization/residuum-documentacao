@@ -9,9 +9,11 @@
 
 Guia por perfil. Os trechos marcados com `[DECISÃO]` mudam conforme o produto decidir; não publicar antes.
 
+**Visual:** ao publicar, seguir a identidade da Residuum: fundo branco, azul-marinho `#1F4E79`, cinza e verde de apoio (ver o [índice de telas](../03-ux/indice-de-telas.md#identidade-visual), na parte 2).
+
 ---
 
-## Para o morador
+## Para o usuário
 
 ### Como ganhar pontos
 1. **Cadastre** suas embalagens: garrafas PET e latas de alumínio (só números inteiros).

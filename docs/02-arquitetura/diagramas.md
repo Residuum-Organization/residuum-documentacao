@@ -12,7 +12,7 @@ Quatro máquinas de estado explicam quase todas as regras do sistema. Cada trans
 
 ```mermaid
 stateDiagram-v2
-  [*] --> pendente: morador entrega (GPS válido) — reserva o item
+  [*] --> pendente: usuário entrega (GPS válido) — reserva o item
   pendente --> confirmado: operador confirma — credita pontos 1 vez
   pendente --> rejeitado: operador rejeita — item volta
   confirmado --> revertido: admin reverte — estorna o valor gravado
@@ -42,11 +42,11 @@ stateDiagram-v2
   em_execucao --> registrada: concluir (baixa por material)
 ```
 
-## 4. Entrega pelo morador (sequência)
+## 4. Entrega pelo usuário (sequência)
 
 ```mermaid
 sequenceDiagram
-  participant M as Morador
+  participant M as Usuário
   participant A as API
   participant O as Operador
   M->>A: POST entrega (GPS novo + Idempotency-Key)

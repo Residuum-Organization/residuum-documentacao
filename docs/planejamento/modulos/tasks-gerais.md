@@ -4,14 +4,14 @@
 
 Este documento reúne as 93 atividades existentes no modelo acordado: nome, objetivo, responsável, data de início, data de entrega, descrição, regras, critérios de aceite, dependências e evidências de entrega. Preserva os módulos, as referências e o detalhamento original, acrescenta testes planejados e aplica as decisões posteriores documentadas.
 
-**Sequência das entregas:** morador → ponto de coleta → cooperativa → administrador. Fundamentos de ambiente, banco, autorização, convites e configuração mínima acompanham a jornada que depende deles. Responsáveis, datas individuais, estimativas e escolha final de sprint ficam para o analista/equipe preencherem.
+**Sequência das entregas:** usuário → ponto de coleta → cooperativa → administrador. Fundamentos de ambiente, banco, autorização, convites e configuração mínima acompanham a jornada que depende deles. Responsáveis, datas individuais, estimativas e escolha final de sprint ficam para o analista/equipe preencherem.
 
 Os 27 pacotes ADE agrupam o mesmo trabalho TSK. Os seis recortes técnicos incluídos aqui desdobram esse trabalho; não devem ser contados como novas funcionalidades. Classificações de importância e urgência são propostas para revisão. Nenhum teste foi executado para esta adequação documental.
 
 ## Navegação
 
 - [Fluxo de atividades: desenvolvimento, QA e conclusão](#fluxo-de-atividades)
-- [1. Morador](#morador)
+- [1. Usuário](#morador)
 - [2. Ponto de coleta](#ponto)
 - [3. Cooperativa](#cooperativa)
 - [4. Administrador](#administrador)
@@ -68,15 +68,15 @@ Preservar a definição comum de conclusão: revisão, critérios verificados, p
 
 ## Evidências anteriores e decisões posteriores
 
-Os casos abaixo são planejados, inclusive verificações documentais de decisões. Evidência exigida está separada de resultado produzido. Os testes anteriores da [demonstração do morador](../../ux/morador-v6-validacao.md) não homologam o backend integrado; o [diagnóstico](../../diagnostico/comparativo-mvp-estagio-v1.md) tem versões e limites próprios; o [teste com moradores](../../ux/morador-v6-teste-usuarios.md) permanece sem sessões humanas executadas.
+Os casos abaixo são planejados, inclusive verificações documentais de decisões. Evidência exigida está separada de resultado produzido. Os testes anteriores da [demonstração do usuário](../../ux/morador-v6-validacao.md) não homologam o backend integrado; o [diagnóstico](../../diagnostico/comparativo-mvp-estagio-v1.md) tem versões e limites próprios; o [teste com usuários](../../ux/morador-v6-teste-usuarios.md) permanece sem sessões humanas executadas.
 
 A decisão de 10/10/2026 foi incorporada: descarte rápido usa rascunho em memória, abandono elimina os itens sem gravar no estoque, rota externa em outra aba preserva o fluxo e o retorno exige GPS novo. Falhas recuperáveis preservam itens enquanto a pessoa permanece no fluxo. PD-006 continua parcial para contratos reais, concorrência e confirmação. Parâmetros GPS demonstrativos e regras comerciais pendentes não foram transformados em políticas aprovadas.
 
 <a id="morador"></a>
 
-## 1. Morador
+## 1. Usuário
 
-- [TSK-MOR-001 — Cadastrar morador por convite](#tsk-mor-001)
+- [TSK-MOR-001 — Cadastrar usuário por convite](#tsk-mor-001)
 - [TSK-MOR-002 — Autenticar e encerrar sessão](#tsk-mor-002)
 - [TSK-MOR-003 — Recuperar acesso](#tsk-mor-003)
 - [TSK-MOR-004 — Consultar e editar perfil](#tsk-mor-004)
@@ -88,7 +88,7 @@ A decisão de 10/10/2026 foi incorporada: descarte rápido usa rascunho em memó
 - [TSK-MOR-010 — Manter estoque e selecionar quantidades](#tsk-mor-010)
 - [TSK-MOR-011 — Consultar pontos próximos compatíveis](#tsk-mor-011)
 - [TSK-MOR-012 — Consultar detalhes do ponto](#tsk-mor-012)
-- [TSK-MOR-013 — Encaminhar morador à navegação externa](#tsk-mor-013)
+- [TSK-MOR-013 — Encaminhar usuário à navegação externa](#tsk-mor-013)
 - [TSK-MOR-014 — Validar presença por GPS](#tsk-mor-014)
 - [TSK-MOR-015 — Confirmar entrega e movimentar estoques](#tsk-mor-015)
 - [TSK-MOR-016 — Exibir confirmação e histórico de descartes](#tsk-mor-016)
@@ -105,13 +105,13 @@ A decisão de 10/10/2026 foi incorporada: descarte rápido usa rascunho em memó
 
 <a id="tsk-mor-001"></a>
 
-### TSK-MOR-001 — Cadastrar morador por convite
+### TSK-MOR-001 — Cadastrar usuário por convite
 
-**Nome da atividade:** Cadastrar morador por convite.
+**Nome da atividade:** Cadastrar usuário por convite.
 
 **Módulo:** M01 — Acesso, usuários e convites. **Módulos afetados:** M01.
 
-**Objetivo:** criar acesso do morador sem permitir cadastro público irrestrito.
+**Objetivo:** criar acesso do usuário sem permitir cadastro público irrestrito.
 
 **Responsável:** A definir pelo analista/equipe.
 
@@ -135,7 +135,7 @@ Regras de origem: RN-001. Conferir texto e situação na V6.
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado um convite válido e dados aceitos, quando o morador conclui o formulário, então a conta é criada vinculada ao consumo do convite.
+- **CA-01:** Dado um convite válido e dados aceitos, quando o usuário conclui o formulário, então a conta é criada vinculada ao consumo do convite.
 - **CA-02:** Dado uma tentativa sem convite autorizado, quando o formulário é enviado, então o sistema impede a criação da conta.
 - **CA-03:** Dado uma falha de validação, quando o cadastro não termina, então o convite mantém sua disponibilidade anterior.
 
@@ -197,7 +197,7 @@ As verificações seguem a especificação de origem; não há RN específica ci
 
 - **CA-01:** Dado credenciais válidas e conta habilitada, quando o usuário faz login, então acessa sua área autorizada.
 - **CA-02:** Dado uma sessão encerrada, quando se tenta executar uma ação protegida, então nova autenticação é exigida.
-- **CA-03:** Dado um morador autenticado, quando tenta funções administrativas, então o acesso é negado também no serviço que processa a operação.
+- **CA-03:** Dado um usuário autenticado, quando tenta funções administrativas, então o acesso é negado também no serviço que processa a operação.
 
 **Dependências:**
 
@@ -298,19 +298,19 @@ PD-003. Vincular às fichas TSK-DEC correspondentes. Avançar diagnóstico, inte
 
 **Descrição:**
 
-**Pré-condições:** morador autenticado. **Fluxo:** consultar seus dados; editar campos permitidos; visualizar descartes concluídos, pontuação e recompensas; acessar extrato e estoque. Alterar e-mail ou identificadores exige política ainda a validar.
+**Pré-condições:** usuário autenticado. **Fluxo:** consultar seus dados; editar campos permitidos; visualizar descartes concluídos, pontuação e recompensas; acessar extrato e estoque. Alterar e-mail ou identificadores exige política ainda a validar.
 
-**Exceções e resultado:** usuário não pode editar registros de descarte ou saldo por esse formulário. Alteração falha não deve substituir os dados válidos anteriores. Não é permitido consultar o perfil privado de outro morador.
+**Exceções e resultado:** usuário não pode editar registros de descarte ou saldo por esse formulário. Alteração falha não deve substituir os dados válidos anteriores. Não é permitido consultar o perfil privado de outro usuário.
 
 **Regras:**
 
 As verificações seguem a especificação de origem; não há RN específica citada nesta ficha. Não inferir regras ou valores ausentes.
 
-**Exceções e resultado:** usuário não pode editar registros de descarte ou saldo por esse formulário. Alteração falha não deve substituir os dados válidos anteriores. Não é permitido consultar o perfil privado de outro morador.
+**Exceções e resultado:** usuário não pode editar registros de descarte ou saldo por esse formulário. Alteração falha não deve substituir os dados válidos anteriores. Não é permitido consultar o perfil privado de outro usuário.
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado um morador autenticado, quando consulta o perfil, então vê seus dados, saldo e históricos disponíveis.
+- **CA-01:** Dado um usuário autenticado, quando consulta o perfil, então vê seus dados, saldo e históricos disponíveis.
 - **CA-02:** Dado uma alteração válida em campo permitido, quando a salva, então o perfil apresenta o novo valor sem alterar pontos ou descartes.
 
 **Dependências:**
@@ -429,7 +429,7 @@ Regras de origem: RN-003, RN-004. Conferir texto e situação na V6.
 **Critérios de aceite:**
 
 - **CA-01:** Dado um código conhecido, quando a consulta termina, então o formulário é preenchido com os dados disponíveis para revisão.
-- **CA-02:** Dado um código desconhecido, quando não há identificação, então o morador pode informar nome, material e quantidade manualmente.
+- **CA-02:** Dado um código desconhecido, quando não há identificação, então o usuário pode informar nome, material e quantidade manualmente.
 
 **Dependências:**
 
@@ -485,7 +485,7 @@ Regras de origem: RN-003, RN-004, RN-005. Conferir texto e situação na V6.
 **Critérios de aceite:**
 
 - **CA-01:** Dado uma nota consultável com produtos identificados, quando a importação termina, então o formulário apresenta as informações recuperadas antes da confirmação.
-- **CA-02:** Dado material não identificado, quando o morador revisa, então pode escolher PET ou lata manualmente.
+- **CA-02:** Dado material não identificado, quando o usuário revisa, então pode escolher PET ou lata manualmente.
 - **CA-03:** Dado uma falha de consulta, quando o sistema informa o erro, então nenhuma recompensa é gerada e o cadastro manual permanece disponível.
 
 **Dependências:**
@@ -531,7 +531,7 @@ PD-005, PD-004, PD-022. Vincular às fichas TSK-DEC correspondentes. Avançar di
 
 **Descrição:**
 
-**Pré-condições:** morador autenticado na tela compartilhada. **Entrada:** nome do produto/resíduo, material PET ou lata de alumínio e quantidade de embalagens.
+**Pré-condições:** usuário autenticado na tela compartilhada. **Entrada:** nome do produto/resíduo, material PET ou lata de alumínio e quantidade de embalagens.
 
 **Fluxo:** preencher campos; validar material e quantidade; revisar; adicionar os itens conforme Registrar ou Descarte rápido. Quantidade deve ser inteira e positiva para contagem de embalagens; peso é informado pela cooperativa em operação distinta.
 
@@ -546,7 +546,7 @@ Regras de origem: RN-003, RN-004. Conferir texto e situação na V6.
 **Critérios de aceite:**
 
 - **CA-01:** Dado nome, material aceito e quantidade válida, quando o cadastro é confirmado, então os itens são adicionados conforme a intenção da ação.
-- **CA-02:** Dado quantidade inválida, quando o morador tenta confirmar, então o sistema solicita correção e não adiciona os itens.
+- **CA-02:** Dado quantidade inválida, quando o usuário tenta confirmar, então o sistema solicita correção e não adiciona os itens.
 
 **Dependências:**
 
@@ -660,7 +660,7 @@ Regras de origem: RN-004, RN-007. Conferir texto e situação na V6.
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado cinco latas disponíveis, quando o morador seleciona duas, então a sessão de descarte contém duas, sem baixar o estoque antes da entrega.
+- **CA-01:** Dado cinco latas disponíveis, quando o usuário seleciona duas, então a sessão de descarte contém duas, sem baixar o estoque antes da entrega.
 - **CA-02:** Dado uma seleção maior que o saldo, quando tenta prosseguir, então o sistema impede a operação e informa a quantidade disponível.
 - **CA-03:** Dado apenas o registro de itens, quando o estoque é atualizado, então não há crédito de pontos.
 
@@ -717,7 +717,7 @@ Regras de origem: RN-007. Conferir texto e situação na V6.
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado seleção de latas, quando o morador consulta pontos, então identifica quais recebem alumínio.
+- **CA-01:** Dado seleção de latas, quando o usuário consulta pontos, então identifica quais recebem alumínio.
 - **CA-02:** Dado seleção de PET e lata, quando tenta concluir tudo em um ponto que só aceita PET, então o sistema não confirma a entrega incompatível.
 - **CA-03:** Dado ausência de ponto compatível, quando a consulta termina, então informa a indisponibilidade sem alterar estoque ou saldo.
 
@@ -734,7 +734,7 @@ TSK-MOR-010, TSK-ADM-005, TSK-PON-001; TSK-TRA-000 e controles transversais apli
 
 PD-007. Vincular às fichas TSK-DEC correspondentes. Avançar diagnóstico, interface e regras já confirmadas; manter bloqueados efeitos/parâmetros dependentes até aprovação.
 
-- **PD-007:** Busca sem GPS, materiais mistos em pontos diferentes, recebimento fora do horário ou com ponto cheio e escolha do serviço de mapa do morador
+- **PD-007:** Busca sem GPS, materiais mistos em pontos diferentes, recebimento fora do horário ou com ponto cheio e escolha do serviço de mapa do usuário
 
 **Prioridade de origem:** P0.
 
@@ -774,7 +774,7 @@ As verificações seguem a especificação de origem; não há RN específica ci
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado um ponto consultável, quando abre seus detalhes, então o morador vê localização, materiais e informações de funcionamento cadastradas.
+- **CA-01:** Dado um ponto consultável, quando abre seus detalhes, então o usuário vê localização, materiais e informações de funcionamento cadastradas.
 - **CA-02:** Dado um ponto temporário fora do período válido, quando é consultado, então não é apresentado como local atualmente disponível para descarte.
 
 **Dependências:**
@@ -790,7 +790,7 @@ TSK-MOR-011; TSK-TRA-000 e controles transversais aplicáveis.
 
 PD-019, PD-007, PD-009. Vincular às fichas TSK-DEC correspondentes. Avançar diagnóstico, interface e regras já confirmadas; manter bloqueados efeitos/parâmetros dependentes até aprovação.
 
-- **PD-007:** Busca sem GPS, materiais mistos em pontos diferentes, recebimento fora do horário ou com ponto cheio e escolha do serviço de mapa do morador
+- **PD-007:** Busca sem GPS, materiais mistos em pontos diferentes, recebimento fora do horário ou com ponto cheio e escolha do serviço de mapa do usuário
 - **PD-009:** Unidade/cálculo da capacidade e lotação, parâmetros de alertas, regras de funcionamento, tags, edição de horários e saldo ao encerrar evento
 - **PD-019:** Titular do plano, pacotes, preço, vigência, pré-pago por tempo/uso, contratação, cobrança, renovação, dados autorizados, arquivos e acesso operacional mínimo
 
@@ -804,9 +804,9 @@ PD-019, PD-007, PD-009. Vincular às fichas TSK-DEC correspondentes. Avançar di
 
 <a id="tsk-mor-013"></a>
 
-### TSK-MOR-013 — Encaminhar morador à navegação externa
+### TSK-MOR-013 — Encaminhar usuário à navegação externa
 
-**Nome da atividade:** Encaminhar morador à navegação externa.
+**Nome da atividade:** Encaminhar usuário à navegação externa.
 
 **Módulo:** M03 — Mapa, presença e descarte. **Módulos afetados:** M03.
 
@@ -835,7 +835,7 @@ As verificações seguem a especificação de origem; não há RN específica ci
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado um ponto escolhido, quando o morador inicia navegação, então o destino enviado corresponde ao ponto selecionado.
+- **CA-01:** Dado um ponto escolhido, quando o usuário inicia navegação, então o destino enviado corresponde ao ponto selecionado.
 - **CA-02:** Dado apenas a abertura da navegação, quando retorna, então a entrega ainda exige validação de presença e confirmação.
 
 **Dependências:**
@@ -852,7 +852,7 @@ TSK-MOR-012; TSK-TRA-000 e controles transversais aplicáveis.
 Decisão de rascunho e abandono aplicada em 10/10/2026. PD-006 permanece parcial para contratos reais, concorrência e confirmação; demais PD listadas abaixo continuam sujeitas ao recorte e à aprovação.
 
 - **PD-006:** Decisão de UX aprovada em 10/10/2026: rascunho rápido em memória do fluxo, abandono elimina, rota em outra aba preserva, GPS novo no retorno; seleção parcial e ajuste/remoção sem pontos. Contratos reais de ajuste/exclusão, concorrência e confirmação continuam pendentes; ver handoff.
-- **PD-007:** Busca sem GPS, materiais mistos em pontos diferentes, recebimento fora do horário ou com ponto cheio e escolha do serviço de mapa do morador
+- **PD-007:** Busca sem GPS, materiais mistos em pontos diferentes, recebimento fora do horário ou com ponto cheio e escolha do serviço de mapa do usuário
 
 **Prioridade de origem:** P0.
 
@@ -937,7 +937,7 @@ PD-008, PD-027. Vincular às fichas TSK-DEC correspondentes. Avançar diagnósti
 
 **Descrição:**
 
-**Pré-condições:** presença válida, itens disponíveis e ponto apto a recebê-los conforme regras validadas. **Fluxo:** apresentar resumo; receber confirmação explícita; revalidar itens, material e ponto; registrar descarte; baixar somente as quantidades entregues do estoque do morador; registrar entrada correspondente no ponto; conceder 10 pontos básicos uma vez.
+**Pré-condições:** presença válida, itens disponíveis e ponto apto a recebê-los conforme regras validadas. **Fluxo:** apresentar resumo; receber confirmação explícita; revalidar itens, material e ponto; registrar descarte; baixar somente as quantidades entregues do estoque do usuário; registrar entrada correspondente no ponto; conceder 10 pontos básicos uma vez.
 
 **Exceções:** repetição, concorrência, incompatibilidade ou falha não devem gerar baixa parcial, saldo negativo ou crédito duplicado. Estimativas do ponto não se tornam peso medido. Bônus deve ter vínculo rastreável, sem reaplicar crédito básico se processado posteriormente.
 
@@ -954,7 +954,7 @@ Regras de origem: RN-007, RN-008. Conferir texto e situação na V6.
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado três latas e entrega válida de uma, quando confirma, então restam duas no estoque, o ponto registra uma recebida e o morador ganha 10 pontos básicos.
+- **CA-01:** Dado três latas e entrega válida de uma, quando confirma, então restam duas no estoque, o ponto registra uma recebida e o usuário ganha 10 pontos básicos.
 - **CA-02:** Dado a mesma confirmação reenviada, quando é processada, então o descarte e seus efeitos ocorrem uma única vez.
 - **CA-03:** Dado falha na conclusão, quando a operação não termina, então o sistema não apresenta sucesso com estoque ou crédito básico incompletos.
 
@@ -1013,7 +1013,7 @@ As verificações seguem a especificação de origem; não há RN específica ci
 **Critérios de aceite:**
 
 - **CA-01:** Dado descarte concluído, quando a confirmação aparece, então apresenta a recompensa e ambas as ações de navegação.
-- **CA-02:** Dado “Ir para a Loja”, quando o morador seleciona a ação, então acessa a loja autenticado.
+- **CA-02:** Dado “Ir para a Loja”, quando o usuário seleciona a ação, então acessa a loja autenticado.
 - **CA-03:** Dado consulta ao histórico, quando localiza a entrega, então os dados correspondem ao descarte concluído.
 
 **Dependências:**
@@ -1055,7 +1055,7 @@ Sem pendência específica citada na ficha V6; validar políticas comuns de aces
 
 **Descrição:**
 
-**Pré-condições:** RF-MVP-019 concluído de forma consistente. **Fluxo:** registrar crédito de 10 pontos vinculado ao descarte e ao morador; atualizar saldo; tornar o lançamento consultável. Dez pontos são por descarte, não por embalagem, produto, kg, scanner ou nota fiscal.
+**Pré-condições:** RF-MVP-019 concluído de forma consistente. **Fluxo:** registrar crédito de 10 pontos vinculado ao descarte e ao usuário; atualizar saldo; tornar o lançamento consultável. Dez pontos são por descarte, não por embalagem, produto, kg, scanner ou nota fiscal.
 
 **Exceções e resultado:** não creditar no cadastro, início de rota, chegada sem confirmação ou pesagem da cooperativa. Repetições devem recuperar o resultado anterior. Quantidades e materiais não alteram os 10 pontos básicos da regra provisória.
 
@@ -1068,7 +1068,7 @@ Regras de origem: RN-008, RN-010, RN-016. Conferir texto e situação na V6.
 **Critérios de aceite:**
 
 - **CA-01:** Dado um descarte válido contendo vários itens, quando é concluído, então recebe um crédito básico de 10 pontos.
-- **CA-02:** Dado uma pesagem da cooperativa sobre materiais já entregues, quando é registrada, então nenhum novo crédito básico é gerado para os moradores.
+- **CA-02:** Dado uma pesagem da cooperativa sobre materiais já entregues, quando é registrada, então nenhum novo crédito básico é gerado para os usuários.
 - **CA-03:** Dado confirmação repetida, quando é processada, então o saldo não aumenta novamente.
 
 **Dependências:**
@@ -1169,7 +1169,7 @@ PD-011. Vincular às fichas TSK-DEC correspondentes. Avançar diagnóstico, inte
 
 **Descrição:**
 
-**Pré-condições:** morador autenticado. **Fluxo:** mostrar saldo disponível e lançamentos, com data, natureza crédito/débito, quantidade, descrição e origem; distinguir crédito básico, bônus, voucher e participação paga, quando aplicável; permitir consultar o vínculo da operação.
+**Pré-condições:** usuário autenticado. **Fluxo:** mostrar saldo disponível e lançamentos, com data, natureza crédito/débito, quantidade, descrição e origem; distinguir crédito básico, bônus, voucher e participação paga, quando aplicável; permitir consultar o vínculo da operação.
 
 **Exceções e resultado:** extrato de outra pessoa não é acessível. Consulta falha não deve ser confundida com saldo zero. Expiração, ajustes administrativos e estornos ainda exigem regras aprovadas em PD-010 e PD-012.
 
@@ -1294,7 +1294,7 @@ Regras de origem: RN-010. Conferir texto e situação na V6.
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado saldo insuficiente, quando o morador confirma a compra, então não há débito nem aquisição.
+- **CA-01:** Dado saldo insuficiente, quando o usuário confirma a compra, então não há débito nem aquisição.
 - **CA-02:** Dado confirmação reenviada da mesma operação, quando é processada, então não duplica débito ou benefício.
 - **CA-03:** Dado duas aquisições concorrentes sem saldo para ambas, quando são processadas, então o saldo permanece não negativo.
 
@@ -1339,7 +1339,7 @@ PD-012. Vincular às fichas TSK-DEC correspondentes. Avançar diagnóstico, inte
 
 **Descrição:**
 
-**Pré-condições:** morador autenticado. **Fluxo:** acessar pela confirmação do descarte ou navegação da plataforma; consultar campanhas vigentes, sorteios e vouchers; visualizar título, representação visual, condições resumidas e custo quando aplicável; abrir detalhes antes de participar ou comprar.
+**Pré-condições:** usuário autenticado. **Fluxo:** acessar pela confirmação do descarte ou navegação da plataforma; consultar campanhas vigentes, sorteios e vouchers; visualizar título, representação visual, condições resumidas e custo quando aplicável; abrir detalhes antes de participar ou comprar.
 
 **Exceções:** catálogo vazio deve informar ausência de ofertas. Ofertas não publicadas não são apresentadas como compráveis. A loja comercializa benefícios com pontos; cashback financeiro está fora do MVP.
 
@@ -1351,7 +1351,7 @@ Regras de origem: RN-010. Conferir texto e situação na V6.
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado campanhas e vouchers publicados, quando o morador abre a loja, então encontra as ofertas disponíveis e pode consultar detalhes.
+- **CA-01:** Dado campanhas e vouchers publicados, quando o usuário abre a loja, então encontra as ofertas disponíveis e pode consultar detalhes.
 - **CA-02:** Dado catálogo sem ofertas vigentes, quando o abre, então vê uma mensagem adequada sem opções fictícias de compra.
 
 **Dependências:**
@@ -1405,7 +1405,7 @@ Regras de origem: RN-019. Conferir texto e situação na V6.
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado campanha baseada no descarte de um produto, quando abre seus detalhes, então o morador vê produto, meta e benefício configurados.
+- **CA-01:** Dado campanha baseada no descarte de um produto, quando abre seus detalhes, então o usuário vê produto, meta e benefício configurados.
 - **CA-02:** Dado campanha com vídeo, quando os detalhes são exibidos, então a mídia é acessível e as condições também estão disponíveis em texto.
 
 **Dependências:**
@@ -1461,9 +1461,9 @@ Regras de origem: RN-009, RN-019. Conferir texto e situação na V6.
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado administrador autorizado e campanha com dados e regra validados, quando a publica, então ela fica consultável pelos moradores elegíveis.
-- **CA-02:** Dado um morador, quando tenta alterar a regra da campanha, então a alteração é negada.
-- **CA-03:** Dado uma condição de participação publicada, quando o morador adere, então a participação obedece à condição exibida, sem cobranças ocultas.
+- **CA-01:** Dado administrador autorizado e campanha com dados e regra validados, quando a publica, então ela fica consultável pelos usuários elegíveis.
+- **CA-02:** Dado um usuário, quando tenta alterar a regra da campanha, então a alteração é negada.
+- **CA-03:** Dado uma condição de participação publicada, quando o usuário adere, então a participação obedece à condição exibida, sem cobranças ocultas.
 
 **Dependências:**
 
@@ -1508,7 +1508,7 @@ PD-011. Vincular às fichas TSK-DEC correspondentes. Avançar diagnóstico, inte
 
 **Pré-condições:** voucher cadastrado e publicado pelo administrador; custo e regras de uso aprovados. **Entrada:** título, descrição, benefício, custo em pontos, instruções e parâmetros de validade/disponibilidade conforme definição.
 
-**Fluxo:** administrador cadastra oferta; morador consulta detalhes e confirma a compra; sistema debita pontos com consistência; disponibiliza voucher adquirido em sua área de recompensas. Forma de emissão do código e validação no parceiro ainda são PD-012.
+**Fluxo:** administrador cadastra oferta; usuário consulta detalhes e confirma a compra; sistema debita pontos com consistência; disponibiliza voucher adquirido em sua área de recompensas. Forma de emissão do código e validação no parceiro ainda são PD-012.
 
 **Exceções:** não emitir voucher sem aquisição confirmada nem cobrar por oferta indisponível. Limite de unidades, cancelamento e devolução de pontos precisam de validação.
 
@@ -1520,7 +1520,7 @@ Regras de origem: RN-019. Conferir texto e situação na V6.
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado voucher disponível e saldo suficiente, quando o morador confirma, então uma aquisição é registrada e o débito corresponde ao custo exibido.
+- **CA-01:** Dado voucher disponível e saldo suficiente, quando o usuário confirma, então uma aquisição é registrada e o débito corresponde ao custo exibido.
 - **CA-02:** Dado voucher adquirido, quando consulta suas recompensas, então encontra o benefício e as instruções de uso aprovadas.
 
 **Dependências:**
@@ -1564,7 +1564,7 @@ PD-012. Vincular às fichas TSK-DEC correspondentes. Avançar diagnóstico, inte
 
 **Descrição:**
 
-**Pré-condições:** sorteio publicado com regras validadas. **Fluxo:** administrador cadastra descrição, prêmio, período e condições; morador consulta e confirma participação; registrar inscrição e custo se aplicável; apurar resultado conforme mecanismo aprovado; disponibilizar resultado e notificação prevista.
+**Pré-condições:** sorteio publicado com regras validadas. **Fluxo:** administrador cadastra descrição, prêmio, período e condições; usuário consulta e confirma participação; registrar inscrição e custo se aplicável; apurar resultado conforme mecanismo aprovado; disponibilizar resultado e notificação prevista.
 
 **Exceções:** custo em pontos, quantidade de chances, limites, algoritmo, cancelamento, prêmio e condições de realização aguardam PD-013. Seleção aleatória e e-mail da V5 são referências para validação, não autorização para realizar promoção sem regras acordadas.
 
@@ -1622,7 +1622,7 @@ PD-013, PD-021. Vincular às fichas TSK-DEC correspondentes. Avançar diagnósti
 
 **Módulo:** M06 — Pontos de coleta e painel do responsável. **Módulos afetados:** M06.
 
-**Objetivo:** Informar aos moradores quais embalagens o ponto recebe. Sem esta entrega, a jornada pode ficar bloqueada ou produzir acesso/efeitos incorretos.
+**Objetivo:** Informar aos usuários quais embalagens o ponto recebe. Sem esta entrega, a jornada pode ficar bloqueada ou produzir acesso/efeitos incorretos.
 
 **Responsável:** A definir pelo analista/equipe.
 
@@ -2119,7 +2119,7 @@ Regras de origem: RN-003, RN-014, RN-015, RN-016. Conferir texto e situação na
 
 - **CA-01:** Dado coleta aceita, quando registra 12 kg de PET e 3 kg de alumínio, então o administrador consulta os dois pesos vinculados ao ponto, à coleta e à cooperativa.
 - **CA-02:** Dado registro reenviado da mesma operação, quando processado, então não duplica retirada ou peso contabilizado.
-- **CA-03:** Dado pesagem registrada, quando o resultado é gravado, então não credita novamente os 10 pontos dos moradores.
+- **CA-03:** Dado pesagem registrada, quando o resultado é gravado, então não credita novamente os 10 pontos dos usuários.
 
 **Dependências:**
 
@@ -2151,7 +2151,7 @@ PD-014, PD-018. Vincular às fichas TSK-DEC correspondentes. Avançar diagnósti
 
 - [TSK-ADM-001 — Gerenciar convites individuais](#tsk-adm-001)
 - [TSK-ADM-002 — Gerenciar convites compartilhados](#tsk-adm-002)
-- [TSK-ADM-003 — Cadastrar morador pela administração](#tsk-adm-003)
+- [TSK-ADM-003 — Cadastrar usuário pela administração](#tsk-adm-003)
 - [TSK-ADM-004 — Administrar acessos e vínculos](#tsk-adm-004)
 - [TSK-ADM-005 — Cadastrar e administrar pontos de coleta](#tsk-adm-005)
 - [TSK-ADM-006 — Gerir pontos temporários](#tsk-adm-006)
@@ -2285,13 +2285,13 @@ PD-001, PD-002. Vincular às fichas TSK-DEC correspondentes. Avançar diagnósti
 
 <a id="tsk-adm-003"></a>
 
-### TSK-ADM-003 — Cadastrar morador pela administração
+### TSK-ADM-003 — Cadastrar usuário pela administração
 
-**Nome da atividade:** Cadastrar morador pela administração.
+**Nome da atividade:** Cadastrar usuário pela administração.
 
 **Módulo:** M01 — Acesso, usuários e convites. **Módulos afetados:** M01.
 
-**Objetivo:** permitir criação administrativa de moradores com rastreabilidade.
+**Objetivo:** permitir criação administrativa de usuários com rastreabilidade.
 
 **Responsável:** A definir pelo analista/equipe.
 
@@ -2301,11 +2301,11 @@ PD-001, PD-002. Vincular às fichas TSK-DEC correspondentes. Avançar diagnósti
 
 **Descrição:**
 
-**Pré-condições:** administrador autorizado. **Entrada:** dados do morador conforme RF-MVP-003.
+**Pré-condições:** administrador autorizado. **Entrada:** dados do usuário conforme RF-MVP-003.
 
 **Fluxo:** abrir cadastro administrativo; informar dados; validar duplicidade; criar o registro; registrar quem realizou a operação. Forma de ativação, entrega de acesso e eventual uso de convites nesse caminho são PD-002 e PD-003.
 
-**Resultado:** morador cadastrado; sua criação não equivale a consentimento do titular, entrega de credenciais ou login realizado. Não se presume atuação do administrador em descartes do morador.
+**Resultado:** usuário cadastrado; sua criação não equivale a consentimento do titular, entrega de credenciais ou login realizado. Não se presume atuação do administrador em descartes do usuário.
 
 **Regras:**
 
@@ -2313,7 +2313,7 @@ Regras de origem: RN-001. Conferir texto e situação na V6.
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado um administrador autorizado, quando cria um morador com dados válidos, então o cadastro fica disponível e a autoria é registrada.
+- **CA-01:** Dado um administrador autorizado, quando cria um usuário com dados válidos, então o cadastro fica disponível e a autoria é registrada.
 - **CA-02:** Dado um perfil sem essa permissão, quando tenta a operação, então a criação é negada.
 - **CA-03:** Dado um e-mail já utilizado, quando o cadastro é enviado, então o sistema informa o conflito sem criar conta duplicada.
 
@@ -2433,7 +2433,7 @@ Regras de origem: RN-011. Conferir texto e situação na V6.
 **Critérios de aceite:**
 
 - **CA-01:** Dado cadastro válido realizado pelo administrador, quando o ponto é habilitado, então aparece nas consultas conforme sua disponibilidade e materiais.
-- **CA-02:** Dado um morador, quando tenta cadastrar um ponto diretamente, então a função administrativa não é autorizada.
+- **CA-02:** Dado um usuário, quando tenta cadastrar um ponto diretamente, então a função administrativa não é autorizada.
 - **CA-03:** Dado desativação, quando o histórico é consultado, então as entregas e coletas anteriores continuam identificando o ponto.
 
 **Dependências:**
@@ -2490,7 +2490,7 @@ Regras de origem: RN-021. Conferir texto e situação na V6.
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado ponto temporário fora do período, quando o morador busca local disponível, então o ponto não é oferecido como destino ativo.
+- **CA-01:** Dado ponto temporário fora do período, quando o usuário busca local disponível, então o ponto não é oferecido como destino ativo.
 - **CA-02:** Dado término de um evento com coletas anteriores, quando o ponto deixa de receber, então os registros permanecem consultáveis aos perfis autorizados.
 
 **Dependências:**
@@ -2885,7 +2885,7 @@ PD-016. Vincular às fichas TSK-DEC correspondentes. Avançar diagnóstico, inte
 
 **Descrição:**
 
-**Fluxo:** acessar cadastros de moradores, pontos, cooperativas, convites e loja; acompanhar ocupação e pedidos; encaminhar solicitações; consultar andamento e pagamentos; acessar indicadores e relatórios conforme permissões e plano.
+**Fluxo:** acessar cadastros de usuários, pontos, cooperativas, convites e loja; acompanhar ocupação e pedidos; encaminhar solicitações; consultar andamento e pagamentos; acessar indicadores e relatórios conforme permissões e plano.
 
 **Exceções:** privilégio administrativo não contorna automaticamente limites comerciais de relatórios, pois o usuário confirmou restrição também para esse perfil. Definir informações operacionais mínimas em PD-019 para não bloquear agendamento e pagamento.
 
@@ -3109,7 +3109,7 @@ PD-019. Vincular às fichas TSK-DEC correspondentes. Avançar diagnóstico, inte
 
 **Descrição:**
 
-**Pré-condições:** permissão administrativa e armazenamento disponível. **Fluxo:** selecionar imagem/vídeo; validar formato e tamanho aprovados; enviar e vincular à oferta; apresentar mídia aos moradores com descrição textual independente.
+**Pré-condições:** permissão administrativa e armazenamento disponível. **Fluxo:** selecionar imagem/vídeo; validar formato e tamanho aprovados; enviar e vincular à oferta; apresentar mídia aos usuários com descrição textual independente.
 
 **Exceções:** upload falho não deve ser exibido como concluído; arquivo incompatível é rejeitado. O limite anterior de 5 MB não será imposto indistintamente a vídeo. Upload de arquivo versus link externo, formatos, tamanhos, duração e tratamento aguardam PD-024.
 
@@ -3353,7 +3353,7 @@ Não há pendência específica citada; confirmar as condições comuns antes de
 
 Todas as operações protegidas devem validar sessão, perfil e vínculo no serviço responsável. Credenciais devem ser protegidas; segredos de integração não podem ser expostos no cliente ou nos documentos. Alterações administrativas devem ter autoria. Política de sessão, senha e papéis depende de PD-003 e PD-023.
 
-**Verificação:** testar acesso horizontal entre moradores/pontos/cooperativas e acesso vertical às funções administrativas. **BDD:** dado usuário sem vínculo, quando envia requisição direta a dados de outro ponto, então a operação é negada mesmo que tenha um plano pago.
+**Verificação:** testar acesso horizontal entre usuários/pontos/cooperativas e acesso vertical às funções administrativas. **BDD:** dado usuário sem vínculo, quando envia requisição direta a dados de outro ponto, então a operação é negada mesmo que tenha um plano pago.
 
 **Regras:**
 
@@ -3462,7 +3462,7 @@ Não há pendência específica citada; confirmar as condições comuns antes de
 
 Falhas de GPS, mapas e consulta de produtos/notas devem ser apresentadas sem inventar resultados. Negação de GPS não pode ser convertida em presença válida. Entrada manual deve permanecer acessível para falhas de identificação. Timeout, tentativas, precisão e validade da posição dependem de PD-004 e PD-008.
 
-**Verificação:** simular permissão negada, baixa precisão, localização antiga, indisponibilidade e recuperação. **BDD:** dado GPS inválido, quando o morador tenta concluir, então os itens e pontos não são movimentados indevidamente.
+**Verificação:** simular permissão negada, baixa precisão, localização antiga, indisponibilidade e recuperação. **BDD:** dado GPS inválido, quando o usuário tenta concluir, então os itens e pontos não são movimentados indevidamente.
 
 **Regras:**
 
@@ -3470,7 +3470,7 @@ As verificações seguem a especificação de origem; não há RN específica ci
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado GPS inválido, quando o morador tenta concluir, então os itens e pontos não são movimentados indevidamente.
+- **CA-01:** Dado GPS inválido, quando o usuário tenta concluir, então os itens e pontos não são movimentados indevidamente.
 
 **Dependências:**
 
@@ -3516,7 +3516,7 @@ Não há pendência específica citada; confirmar as condições comuns antes de
 
 **Situação:** herdado para validação de produto/jurídico. **Origem:** RNF005 antigo.
 
-Definir finalidade e dados mínimos para moradores, localização e nota fiscal; proteger transmissão e armazenamento; restringir relatórios por autorização; registrar escolhas aplicáveis de compartilhamento. Não tratar consentimento como requisito universal ou comprovação automática de conformidade legal. A política de privacidade, base de tratamento, retenção e atendimento ao titular são PD-022.
+Definir finalidade e dados mínimos para usuários, localização e nota fiscal; proteger transmissão e armazenamento; restringir relatórios por autorização; registrar escolhas aplicáveis de compartilhamento. Não tratar consentimento como requisito universal ou comprovação automática de conformidade legal. A política de privacidade, base de tratamento, retenção e atendimento ao titular são PD-022.
 
 **Verificação:** revisar dados coletados, logs, exportações e acesso direto; comprovar que credenciais, tokens de notas e dados pessoais desnecessários não aparecem em logs comuns. **BDD:** dado relatório sem autorização para dados identificáveis, quando é solicitado, então não retorna identificadores pessoais.
 
@@ -4304,7 +4304,7 @@ Decisão de UX aprovada em 10/10/2026: rascunho rápido em memória do fluxo, ab
 
 **Descrição:**
 
-Busca sem GPS, materiais mistos em pontos diferentes, recebimento fora do horário ou com ponto cheio e escolha do serviço de mapa do morador.
+Busca sem GPS, materiais mistos em pontos diferentes, recebimento fora do horário ou com ponto cheio e escolha do serviço de mapa do usuário.
 
 **Regras:**
 
@@ -4327,9 +4327,9 @@ Reunir regra atual, restrições e evidências; consultar as atividades impactad
 
 **Dúvidas e bloqueios:**
 
-Busca sem GPS, materiais mistos em pontos diferentes, recebimento fora do horário ou com ponto cheio e escolha do serviço de mapa do morador
+Busca sem GPS, materiais mistos em pontos diferentes, recebimento fora do horário ou com ponto cheio e escolha do serviço de mapa do usuário
 
-- **PD-007:** Busca sem GPS, materiais mistos em pontos diferentes, recebimento fora do horário ou com ponto cheio e escolha do serviço de mapa do morador
+- **PD-007:** Busca sem GPS, materiais mistos em pontos diferentes, recebimento fora do horário ou com ponto cheio e escolha do serviço de mapa do usuário
 
 **Prioridade de origem:** P0 — desbloquear fundamentos ou parâmetros da jornada.
 
@@ -5471,9 +5471,9 @@ As seis fichas abaixo desdobram trabalho técnico já previsto nos pacotes ADE. 
 
 **Descrição:** revisar efeitos persistidos e responsabilidade da conclusão operacional; aplicar política aprovada de retirada parcial, contagem/peso e entradas posteriores; validar materiais e pesos no serviço.
 
-**Regras:** peso negativo não é aceito; zero, precisão e correção seguem decisão; peso não define quantidade retirada por inferência; pesagem não gera novo crédito básico ao morador.
+**Regras:** peso negativo não é aceito; zero, precisão e correção seguem decisão; peso não define quantidade retirada por inferência; pesagem não gera novo crédito básico ao usuário.
 
-**Critérios de aceite:** retirada preserva remanescentes e entradas posteriores conforme conciliação aprovada; valores inválidos não são persistidos; repetição não duplica retirada; crédito do morador não é repetido.
+**Critérios de aceite:** retirada preserva remanescentes e entradas posteriores conforme conciliação aprovada; valores inválidos não são persistidos; repetição não duplica retirada; crédito do usuário não é repetido.
 
 **Dependências:** TEC-01/02, coleta aceita e PD-009/014/018 aprovadas para o recorte. **Origem:** ADE-014/017; TSK-PON-002, TSK-COO-004, TSK-TRA-004; AUD-004/005.
 
@@ -5483,7 +5483,7 @@ As seis fichas abaixo desdobram trabalho técnico já previsto nos pacotes ADE. 
 
 **Nome da atividade:** Adequar autorização no serviço por perfil, vínculo e atribuição.
 
-**Objetivo:** impedir acesso indevido entre moradores, pontos, cooperativas e administração.
+**Objetivo:** impedir acesso indevido entre usuários, pontos, cooperativas e administração.
 
 **Responsável:** A definir. **Data de início:** A definir. **Data de entrega:** A definir.
 
@@ -5526,7 +5526,7 @@ As seis fichas abaixo desdobram trabalho técnico já previsto nos pacotes ADE. 
 - **Impacto alto:** segurança/integridade, bloqueio da jornada ou fundamento marcado P0 na origem. A importância independe de estar na primeira sprint.
 - **Impacto moderado:** capacidade necessária ao recorte de negócio/qualidade, sem bloqueio imediato identificado na origem. Não significa dispensável.
 - **Impacto baixo no MVP atual:** avaliação de funcionalidade futura sem implementação confirmada, como PD-027. Se o escopo mudar, reavaliar.
-- **Urgente:** proposta de resolver agora porque apoia o primeiro recorte do morador, sua segurança/integridade ou uma decisão preparatória necessária. Revisar após confirmar versão, escopo e disponibilidade.
+- **Urgente:** proposta de resolver agora porque apoia o primeiro recorte do usuário, sua segurança/integridade ou uma decisão preparatória necessária. Revisar após confirmar versão, escopo e disponibilidade.
 - **Não urgente nesta etapa:** planejar para o perfil/recorte subsequente ou avaliar futuro; não significa que cabe adiar além da deadline.
 
 Se aparecer defeito atual de segurança ou integridade, reclassificar imediatamente conforme evidência, independentemente da etapa de perfil. Uma prioridade P0 comercial não torna toda a Loja urgente antes da jornada principal. Esforço não foi estimado.
@@ -5543,13 +5543,13 @@ Vínculos levam à ficha padronizada. Atividades de decisão são trabalho de an
 
 | Atividade | Módulo | Impacto proposto | Urgência proposta | Justificativa |
 |---|---|---|---|---|
-| [TSK-MOR-001 — Cadastrar morador por convite](#tsk-mor-001) | M01 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-001, PD-002, PD-003, PD-022. |
+| [TSK-MOR-001 — Cadastrar usuário por convite](#tsk-mor-001) | M01 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-001, PD-002, PD-003, PD-022. |
 | [TSK-MOR-002 — Autenticar e encerrar sessão](#tsk-mor-002) | M01 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-002, PD-003, PD-023. |
 | [TSK-MOR-003 — Recuperar acesso](#tsk-mor-003) | M01 | Moderado | Não urgente nesta etapa | Relacionada à etapa posterior ou recorte a confirmar; antecipar risco ativo. Pendências: PD-003. |
 | [TSK-MOR-004 — Consultar e editar perfil](#tsk-mor-004) | M01 | Moderado | Não urgente nesta etapa | Relacionada à etapa posterior ou recorte a confirmar; antecipar risco ativo. Pendências: PD-003. |
 | [TSK-ADM-001 — Gerenciar convites individuais](#tsk-adm-001) | M01 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-001, PD-002. |
 | [TSK-ADM-002 — Gerenciar convites compartilhados](#tsk-adm-002) | M01 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-001, PD-002. |
-| [TSK-ADM-003 — Cadastrar morador pela administração](#tsk-adm-003) | M01 | Moderado | Não urgente nesta etapa | Relacionada à etapa posterior ou recorte a confirmar; antecipar risco ativo. Pendências: PD-002, PD-003, PD-022. |
+| [TSK-ADM-003 — Cadastrar usuário pela administração](#tsk-adm-003) | M01 | Moderado | Não urgente nesta etapa | Relacionada à etapa posterior ou recorte a confirmar; antecipar risco ativo. Pendências: PD-002, PD-003, PD-022. |
 | [TSK-ADM-004 — Administrar acessos e vínculos](#tsk-adm-004) | M01 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-002, PD-003, PD-023. |
 | [TSK-MOR-005 — Disponibilizar Registrar e Descarte rápido](#tsk-mor-005) | M02 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-006. |
 | [TSK-MOR-006 — Identificar produto por código de barras](#tsk-mor-006) | M02 | Moderado | Não urgente nesta etapa | Relacionada à etapa posterior ou recorte a confirmar; antecipar risco ativo. Pendências: PD-004. |
@@ -5559,7 +5559,7 @@ Vínculos levam à ficha padronizada. Atividades de decisão são trabalho de an
 | [TSK-MOR-010 — Manter estoque e selecionar quantidades](#tsk-mor-010) | M02 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-006. |
 | [TSK-MOR-011 — Consultar pontos próximos compatíveis](#tsk-mor-011) | M03 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-007. |
 | [TSK-MOR-012 — Consultar detalhes do ponto](#tsk-mor-012) | M03 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-007, PD-009, PD-019. |
-| [TSK-MOR-013 — Encaminhar morador à navegação externa](#tsk-mor-013) | M03 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-006, PD-007. |
+| [TSK-MOR-013 — Encaminhar usuário à navegação externa](#tsk-mor-013) | M03 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-006, PD-007. |
 | [TSK-MOR-014 — Validar presença por GPS](#tsk-mor-014) | M03 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-008, PD-027. |
 | [TSK-MOR-015 — Confirmar entrega e movimentar estoques](#tsk-mor-015) | M03 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. Pendências: PD-006, PD-009. |
 | [TSK-MOR-016 — Exibir confirmação e histórico de descartes](#tsk-mor-016) | M03 | Alto | Urgente | Fundamento/decisão do primeiro recorte; confirmar bloqueio atual. |
@@ -5790,7 +5790,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 #### CT-004-01 — registro
 
-**Pré-condições e dados:** Morador autorizado; estoque e pontos iniciais registrados.
+**Pré-condições e dados:** Usuário autorizado; estoque e pontos iniciais registrados.
 
 **Passos:**
 
@@ -5834,7 +5834,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 #### CT-006-01 — scanner
 
-**Pré-condições e dados:** Morador autorizado; simular falha controlada no ambiente de avaliação.
+**Pré-condições e dados:** Usuário autorizado; simular falha controlada no ambiente de avaliação.
 
 **Passos:**
 
@@ -5852,7 +5852,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 #### CT-006-02 — produto
 
-**Pré-condições e dados:** Morador autorizado; simular falha controlada no ambiente de avaliação.
+**Pré-condições e dados:** Usuário autorizado; simular falha controlada no ambiente de avaliação.
 
 **Passos:**
 
@@ -5870,7 +5870,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 #### CT-006-03 — nota
 
-**Pré-condições e dados:** Morador autorizado; simular falha controlada no ambiente de avaliação.
+**Pré-condições e dados:** Usuário autorizado; simular falha controlada no ambiente de avaliação.
 
 **Passos:**
 
@@ -6272,7 +6272,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 2. Registrar 12 kg de PET e 3 kg de alumínio.
 3. Consultar resultado, registros e estados pertinentes; comparar com os valores iniciais e o resultado esperado.
 
-**Resultado esperado:** Pesos por material vinculados à coleta; nenhum novo ponto básico ao morador.
+**Resultado esperado:** Pesos por material vinculados à coleta; nenhum novo ponto básico ao usuário.
 
 **Evidência exigida:** registro das ações e respostas, versão/ambiente e comparação antes/depois; registros do serviço e dados quando houver efeitos persistidos.
 

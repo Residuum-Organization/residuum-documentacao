@@ -6,9 +6,9 @@
 
 ## Resumo
 
-Só o **morador** tem protótipo documentado (V6). Os outros perfis têm telas implementadas, mas sem wireframe. Como o formato é `.md`, este índice liga cada tela a **link do Figma, captura e rota**, em vez de embutir desenhos.
+Só o **usuário** tem protótipo documentado (V6). Os outros perfis têm telas implementadas, mas sem wireframe. Como o formato é `.md`, este índice liga cada tela a **link do Figma, captura e rota**, em vez de embutir desenhos.
 
-## Morador
+## Usuário
 
 | Tela | Rota | Wireframe / captura | Problema conhecido |
 |---|---|---|---|

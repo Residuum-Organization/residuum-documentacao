@@ -9,7 +9,7 @@ Esta edição organiza as 93 atividades existentes no modelo combinado com a equ
 
 ## Navegação principal
 
-- [Entregas na ordem morador → ponto de coleta → cooperativa → administrador](entregas-por-perfil.md).
+- [Entregas na ordem usuário → ponto de coleta → cooperativa → administrador](entregas-por-perfil.md).
 - [Scrum e proposta de sprints](scrum-e-sequencia.md).
 - [Matriz de importância: impacto na entrega × urgência](matriz-importancia.md).
 - [Arquitetura, refatoração e banco de dados](arquitetura-refatoracao-banco.md).
@@ -81,8 +81,8 @@ Acompanhamento continua no quadro existente; estes documentos não criam outro c
 
 - Cada atividade possui critérios e casos planejados, com pré-condições, ação, resultado esperado e registro de execução.
 - [Roteiros integrados desdobrados](testes-integrados.md): complementam os casos individuais e as verificações de qualidade. Não constituem cobertura integral automática.
-- [Testes com moradores](../../ux/morador-v6-teste-usuarios.md): roteiro preparado; execução humana permanece pendente.
-- [Validação anterior do morador](../../ux/morador-v6-validacao.md): resultados da demonstração e seus limites. Não aprova backend real.
+- [Testes com usuários](../../ux/morador-v6-teste-usuarios.md): roteiro preparado; execução humana permanece pendente.
+- [Validação anterior do usuário](../../ux/morador-v6-validacao.md): resultados da demonstração e seus limites. Não aprova backend real.
 - [Diagnóstico anterior](../../diagnostico/comparativo-mvp-estagio-v1.md): resultados em snapshots e ambiente local; não foram repetidos nesta adequação.
 - [Demonstração V2 independente](../../ux/residuum-v2-lovable-status.md): resultados exploratórios e pendências próprios.
 

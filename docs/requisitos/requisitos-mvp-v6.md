@@ -28,7 +28,7 @@
 
 ### 1.1 Contexto
 
-O Residuum conecta moradores, pontos de coleta, cooperativas e administração para facilitar o descarte de resíduos, controlar sua movimentação e incentivar a participação por recompensas.
+O Residuum conecta usuários, pontos de coleta, cooperativas e administração para facilitar o descarte de resíduos, controlar sua movimentação e incentivar a participação por recompensas.
 
 Já existe um MVP, desenvolvido inicialmente por aproximadamente 40 pessoas com abordagens diferentes. A equipe atual possui seis pessoas e está reorganizando a produção. Esta versão cria uma referência comum para ajustar o produto, identificar divergências e orientar a validação do comportamento existente.
 
@@ -38,7 +38,7 @@ As datas de maio e junho de 2026 e os status de entrega dos documentos anteriore
 
 - Facilitar o cadastro de resíduos por código de barras, nota fiscal ou entrada manual.
 - Permitir registro em estoque e descarte rápido, com escolha de ponto compatível e confirmação por GPS.
-- Recompensar o morador no descarte e permitir uso de pontos na loja.
+- Recompensar o usuário no descarte e permitir uso de pontos na loja.
 - Dar aos responsáveis e à administração visibilidade dos pontos de coleta.
 - Controlar solicitação, aceite, agendamento, registro e pagamento de coletas.
 - Permitir relatórios e acesso a dados conforme planos, sem definir benefícios ainda não acordados.
@@ -87,11 +87,11 @@ Os critérios BDD descrevem o comportamento testável. Quando dependem de config
 
 | Termo | Definição |
 |---|---|
-| Morador | Pessoa que registra resíduos, mantém estoque, descarta e usa recompensas |
+| Usuário | Pessoa que registra resíduos, mantém estoque, descarta e usa recompensas |
 | Resíduo cadastrado | Representação digital da embalagem; não comprova entrega física |
-| Estoque do morador | Itens e quantidades disponíveis para um descarte futuro |
+| Estoque do usuário | Itens e quantidades disponíveis para um descarte futuro |
 | Descarte | Operação confirmada de entrega dos itens selecionados a um ponto |
-| Coleta | Retirada de materiais do ponto pela cooperativa; diferente do descarte do morador |
+| Coleta | Retirada de materiais do ponto pela cooperativa; diferente do descarte do usuário |
 | Ponto de coleta | Local físico cadastrado pelo administrador que recebe materiais aceitos |
 | Responsável pelo ponto | Operador vinculado ao ponto, com painel próprio |
 | Cooperativa | Organização cadastrada pelo administrador, identificada por CNPJ, que aceita e executa coletas |
@@ -111,11 +111,11 @@ Os critérios BDD descrevem o comportamento testável. Quando dependem de config
 
 ### 4.1 Matriz de casos de uso
 
-| Caso de uso | Morador | Responsável pelo ponto | Cooperativa | Administrador |
+| Caso de uso | Usuário | Responsável pelo ponto | Cooperativa | Administrador |
 |---|---|---|---|---|
 | Cadastrar-se por convite | Sim | Aplicação a decidir | Aplicação a decidir | Cadastro inicial a decidir |
-| Gerenciar convites e cadastrar moradores | Não | Não | Não | Sim |
-| Registrar itens e descartar | Sim | Somente se também tiver perfil de morador | Somente se também tiver perfil de morador | Atuação em nome do morador a decidir |
+| Gerenciar convites e cadastrar usuários | Não | Não | Não | Sim |
+| Registrar itens e descartar | Sim | Somente se também tiver perfil de usuário | Somente se também tiver perfil de usuário | Atuação em nome do usuário a decidir |
 | Consultar saldo e loja pessoal | Sim | Acúmulo de perfis a decidir | Acúmulo de perfis a decidir | Gestão da loja |
 | Cadastrar ponto/cooperativa | Não | Não | Não | Sim |
 | Editar materiais aceitos pelo ponto | Não | Nos pontos vinculados | Não | Sim |
@@ -133,9 +133,9 @@ Mermaid não possui uma sintaxe nativa específica para diagrama UML de casos de
 
 ```mermaid
 flowchart LR
-    morador["Morador"] --> registro["Registrar resíduos e manter estoque"]
-    morador --> descarte["Escolher ponto e confirmar descarte"]
-    morador --> loja["Usar pontos na loja"]
+    usuário["Usuário"] --> registro["Registrar resíduos e manter estoque"]
+    usuário --> descarte["Escolher ponto e confirmar descarte"]
+    usuário --> loja["Usar pontos na loja"]
     responsavel["Responsável pelo ponto"] --> painelPonto["Gerir materiais e acompanhar ocupação"]
     responsavel --> pedido["Solicitar coleta ao administrador"]
     admin["Administrador"] --> cadastros["Gerir usuários, convites, pontos e cooperativas"]
@@ -150,15 +150,15 @@ flowchart LR
 
 ## 5. Visão dos fluxos
 
-### 5.1 Jornada do morador
+### 5.1 Jornada do usuário
 
-Exemplo: o morador comprou e consumiu uma Coca-Cola em lata. Faz login, abre Descarte rápido, escaneia a embalagem e revisa a identificação. Escolhe um ponto que aceite lata de alumínio, segue a navegação externa, retorna ao Residuum, confirma a entrega com GPS e recebe 10 pontos básicos. A confirmação oferece Home e Loja.
+Exemplo: o usuário comprou e consumiu uma Coca-Cola em lata. Faz login, abre Descarte rápido, escaneia a embalagem e revisa a identificação. Escolhe um ponto que aceite lata de alumínio, segue a navegação externa, retorna ao Residuum, confirma a entrega com GPS e recebe 10 pontos básicos. A confirmação oferece Home e Loja.
 
 O produto citado é um exemplo, não uma integração comercial confirmada. O scanner lê um identificador; o preenchimento depende de uma fonte de dados de produtos ainda a definir.
 
 ```mermaid
 flowchart TD
-    inicio["Morador autenticado"] --> entrada{"Como iniciar?"}
+    inicio["Usuário autenticado"] --> entrada{"Como iniciar?"}
     entrada -->|"Registrar"| cadastro["Scanner, nota fiscal ou entrada manual"]
     entrada -->|"Descarte rápido"| scanner["Abrir scanner e permitir outras formas de entrada"]
     cadastro --> revisao["Revisar produto, material e quantidade"]
@@ -172,7 +172,7 @@ flowchart TD
     retornar --> gps{"Presença por GPS validada?"}
     gps -->|"Não"| falha["Informar impedimento e preservar itens"]
     falha --> retornar
-    gps -->|"Sim"| confirmar["Morador confirma a entrega"]
+    gps -->|"Sim"| confirmar["Usuário confirma a entrega"]
     confirmar --> concluir["Atualizar estoques e conceder 10 pontos básicos"]
     concluir --> campanha["Aplicar bônus de campanha quando elegível"]
     campanha --> tela["Exibir confirmação, saldo e ações"]
@@ -180,7 +180,7 @@ flowchart TD
     tela --> loja["Ir para a Loja"]
 ```
 
-Decisão aprovada em 10/10/2026 para RF-MVP-014/PD-006: o caminho rápido mantém rascunho somente na memória do fluxo. Cancelar, sair do fluxo, recarregar ou fechar a aba elimina o rascunho. Abrir a rota em outra aba mantém os itens; ao retornar é obrigatório obter GPS novo. Registro não gera pontos e confirmação não duplica efeitos. Ver [handoff do morador](../ux/morador-v6-handoff.md).
+Decisão aprovada em 10/10/2026 para RF-MVP-014/PD-006: o caminho rápido mantém rascunho somente na memória do fluxo. Cancelar, sair do fluxo, recarregar ou fechar a aba elimina o rascunho. Abrir a rota em outra aba mantém os itens; ao retornar é obrigatório obter GPS novo. Registro não gera pontos e confirmação não duplica efeitos. Ver [handoff do usuário](../ux/morador-v6-handoff.md).
 
 ### 5.2 Jornada da coleta
 
@@ -205,7 +205,7 @@ flowchart TD
     resultado -->|"Não"| pendente["Manter situação pendente ou falha conforme retorno"]
 ```
 
-O desenho não aprova uma política de pagamento antes ou depois da conclusão; representa o fluxo relatado. A condição exata de autorização é PD-016. A pesagem não gera novamente pontos para o morador.
+O desenho não aprova uma política de pagamento antes ou depois da conclusão; representa o fluxo relatado. A condição exata de autorização é PD-016. A pesagem não gera novamente pontos para o usuário.
 
 ## 6. Requisitos funcionais por módulo
 
@@ -249,10 +249,10 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 - **Dado** um link expirado ou esgotado, **quando** houver tentativa de cadastro, **então** a inscrição não é concluída.
 - **Dado** apenas uma vaga restante e duas confirmações concorrentes, **quando** forem processadas, **então** no máximo uma nova conta será criada por esse link.
 
-#### RF-MVP-003 — Cadastrar morador por convite
+#### RF-MVP-003 — Cadastrar usuário por convite
 
 **Situação:** confirmado com pendências. **Fontes:** S4/RF001 e S7. **Ator:** pessoa convidada.  
-**Objetivo:** criar acesso do morador sem permitir cadastro público irrestrito.
+**Objetivo:** criar acesso do usuário sem permitir cadastro público irrestrito.
 
 **Pré-condições:** convite individual ou compartilhado válido. **Dados herdados:** nome, e-mail, telefone e endereço; obrigatoriedade, CPF e senha aguardam PD-003.
 
@@ -264,26 +264,26 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 **Critérios de aceite:**
 
-- **Dado** um convite válido e dados aceitos, **quando** o morador conclui o formulário, **então** a conta é criada vinculada ao consumo do convite.
+- **Dado** um convite válido e dados aceitos, **quando** o usuário conclui o formulário, **então** a conta é criada vinculada ao consumo do convite.
 - **Dado** uma tentativa sem convite autorizado, **quando** o formulário é enviado, **então** o sistema impede a criação da conta.
 - **Dado** uma falha de validação, **quando** o cadastro não termina, **então** o convite mantém sua disponibilidade anterior.
 
-#### RF-MVP-004 — Cadastrar morador pela administração
+#### RF-MVP-004 — Cadastrar usuário pela administração
 
 **Situação:** confirmado com pendências. **Fonte:** S7. **Ator:** administrador.  
-**Objetivo:** permitir criação administrativa de moradores com rastreabilidade.
+**Objetivo:** permitir criação administrativa de usuários com rastreabilidade.
 
-**Pré-condições:** administrador autorizado. **Entrada:** dados do morador conforme RF-MVP-003.
+**Pré-condições:** administrador autorizado. **Entrada:** dados do usuário conforme RF-MVP-003.
 
 **Fluxo:** abrir cadastro administrativo; informar dados; validar duplicidade; criar o registro; registrar quem realizou a operação. Forma de ativação, entrega de acesso e eventual uso de convites nesse caminho são PD-002 e PD-003.
 
-**Resultado:** morador cadastrado; sua criação não equivale a consentimento do titular, entrega de credenciais ou login realizado. Não se presume atuação do administrador em descartes do morador.
+**Resultado:** usuário cadastrado; sua criação não equivale a consentimento do titular, entrega de credenciais ou login realizado. Não se presume atuação do administrador em descartes do usuário.
 
 **Dependências:** RF-MVP-003 e RNF-MVP-002. **Pendências:** PD-002, PD-003 e PD-022.
 
 **Critérios de aceite:**
 
-- **Dado** um administrador autorizado, **quando** cria um morador com dados válidos, **então** o cadastro fica disponível e a autoria é registrada.
+- **Dado** um administrador autorizado, **quando** cria um usuário com dados válidos, **então** o cadastro fica disponível e a autoria é registrada.
 - **Dado** um perfil sem essa permissão, **quando** tenta a operação, **então** a criação é negada.
 - **Dado** um e-mail já utilizado, **quando** o cadastro é enviado, **então** o sistema informa o conflito sem criar conta duplicada.
 
@@ -303,7 +303,7 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 - **Dado** credenciais válidas e conta habilitada, **quando** o usuário faz login, **então** acessa sua área autorizada.
 - **Dado** uma sessão encerrada, **quando** se tenta executar uma ação protegida, **então** nova autenticação é exigida.
-- **Dado** um morador autenticado, **quando** tenta funções administrativas, **então** o acesso é negado também no serviço que processa a operação.
+- **Dado** um usuário autenticado, **quando** tenta funções administrativas, **então** o acesso é negado também no serviço que processa a operação.
 
 #### RF-MVP-006 — Recuperar acesso
 
@@ -324,19 +324,19 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 #### RF-MVP-007 — Consultar e editar perfil
 
-**Situação:** herdado para validação. **Fonte:** S4/RF006. **Ator:** morador.
+**Situação:** herdado para validação. **Fonte:** S4/RF006. **Ator:** usuário.
 
 **Objetivo:** reunir dados pessoais, histórico de descartes, saldo e recompensas adquiridas.
 
-**Pré-condições:** morador autenticado. **Fluxo:** consultar seus dados; editar campos permitidos; visualizar descartes concluídos, pontuação e recompensas; acessar extrato e estoque. Alterar e-mail ou identificadores exige política ainda a validar.
+**Pré-condições:** usuário autenticado. **Fluxo:** consultar seus dados; editar campos permitidos; visualizar descartes concluídos, pontuação e recompensas; acessar extrato e estoque. Alterar e-mail ou identificadores exige política ainda a validar.
 
-**Exceções e resultado:** usuário não pode editar registros de descarte ou saldo por esse formulário. Alteração falha não deve substituir os dados válidos anteriores. Não é permitido consultar o perfil privado de outro morador.
+**Exceções e resultado:** usuário não pode editar registros de descarte ou saldo por esse formulário. Alteração falha não deve substituir os dados válidos anteriores. Não é permitido consultar o perfil privado de outro usuário.
 
 **Dependências:** RF-MVP-005, RF-MVP-020, RF-MVP-023 e RF-MVP-029. **Pendência:** PD-003.
 
 **Critérios de aceite:**
 
-- **Dado** um morador autenticado, **quando** consulta o perfil, **então** vê seus dados, saldo e históricos disponíveis.
+- **Dado** um usuário autenticado, **quando** consulta o perfil, **então** vê seus dados, saldo e históricos disponíveis.
 - **Dado** uma alteração válida em campo permitido, **quando** a salva, **então** o perfil apresenta o novo valor sem alterar pontos ou descartes.
 
 #### RF-MVP-008 — Administrar acessos e vínculos
@@ -360,7 +360,7 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 #### RF-MVP-009 — Disponibilizar Registrar e Descarte rápido
 
-**Situação:** confirmado. **Fonte:** S7. **Ator:** morador.
+**Situação:** confirmado. **Fonte:** S7. **Ator:** usuário.
 
 **Objetivo:** usar a mesma experiência de entrada com intenções distintas.
 
@@ -377,7 +377,7 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 #### RF-MVP-010 — Identificar produto por código de barras
 
-**Situação:** confirmado com pendências. **Fontes:** S4/RF010 e S7. **Ator:** morador.
+**Situação:** confirmado com pendências. **Fontes:** S4/RF010 e S7. **Ator:** usuário.
 
 **Objetivo:** reduzir preenchimento manual a partir do identificador da embalagem.
 
@@ -390,11 +390,11 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 **Critérios de aceite:**
 
 - **Dado** um código conhecido, **quando** a consulta termina, **então** o formulário é preenchido com os dados disponíveis para revisão.
-- **Dado** um código desconhecido, **quando** não há identificação, **então** o morador pode informar nome, material e quantidade manualmente.
+- **Dado** um código desconhecido, **quando** não há identificação, **então** o usuário pode informar nome, material e quantidade manualmente.
 
 #### RF-MVP-011 — Importar itens de nota fiscal
 
-**Situação:** confirmado com pendências. **Fontes:** S1 e S7. **Ator:** morador.
+**Situação:** confirmado com pendências. **Fontes:** S1 e S7. **Ator:** usuário.
 
 **Objetivo:** preencher rapidamente o cadastro a partir dos produtos de uma compra, inspirado na facilidade de uso do Méliuz, sem cashback financeiro no MVP.
 
@@ -407,16 +407,16 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 **Critérios de aceite:**
 
 - **Dado** uma nota consultável com produtos identificados, **quando** a importação termina, **então** o formulário apresenta as informações recuperadas antes da confirmação.
-- **Dado** material não identificado, **quando** o morador revisa, **então** pode escolher PET ou lata manualmente.
+- **Dado** material não identificado, **quando** o usuário revisa, **então** pode escolher PET ou lata manualmente.
 - **Dado** uma falha de consulta, **quando** o sistema informa o erro, **então** nenhuma recompensa é gerada e o cadastro manual permanece disponível.
 
 #### RF-MVP-012 — Cadastrar resíduo manualmente
 
-**Situação:** confirmado. **Fonte:** S7. **Ator:** morador.
+**Situação:** confirmado. **Fonte:** S7. **Ator:** usuário.
 
 **Objetivo:** permitir entrada sem depender do scanner ou da nota.
 
-**Pré-condições:** morador autenticado na tela compartilhada. **Entrada:** nome do produto/resíduo, material PET ou lata de alumínio e quantidade de embalagens.
+**Pré-condições:** usuário autenticado na tela compartilhada. **Entrada:** nome do produto/resíduo, material PET ou lata de alumínio e quantidade de embalagens.
 
 **Fluxo:** preencher campos; validar material e quantidade; revisar; adicionar os itens conforme Registrar ou Descarte rápido. Quantidade deve ser inteira e positiva para contagem de embalagens; peso é informado pela cooperativa em operação distinta.
 
@@ -427,11 +427,11 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 **Critérios de aceite:**
 
 - **Dado** nome, material aceito e quantidade válida, **quando** o cadastro é confirmado, **então** os itens são adicionados conforme a intenção da ação.
-- **Dado** quantidade inválida, **quando** o morador tenta confirmar, **então** o sistema solicita correção e não adiciona os itens.
+- **Dado** quantidade inválida, **quando** o usuário tenta confirmar, **então** o sistema solicita correção e não adiciona os itens.
 
 #### RF-MVP-013 — Revisar itens antes da inclusão
 
-**Situação:** confirmado. **Fonte:** S7. **Ator:** morador.
+**Situação:** confirmado. **Fonte:** S7. **Ator:** usuário.
 
 **Objetivo:** evitar que informação incompleta da leitura seja tratada como confirmação do usuário.
 
@@ -448,7 +448,7 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 #### RF-MVP-014 — Manter estoque e selecionar quantidades
 
-**Situação:** confirmado com proposta de persistência. **Fontes:** S1, S5 e S7. **Ator:** morador.
+**Situação:** confirmado com proposta de persistência. **Fontes:** S1, S5 e S7. **Ator:** usuário.
 
 **Objetivo:** apresentar itens disponíveis e permitir seleção de parte ou de todo o estoque para descarte.
 
@@ -462,7 +462,7 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 **Critérios de aceite:**
 
-- **Dado** cinco latas disponíveis, **quando** o morador seleciona duas, **então** a sessão de descarte contém duas, sem baixar o estoque antes da entrega.
+- **Dado** cinco latas disponíveis, **quando** o usuário seleciona duas, **então** a sessão de descarte contém duas, sem baixar o estoque antes da entrega.
 - **Dado** uma seleção maior que o saldo, **quando** tenta prosseguir, **então** o sistema impede a operação e informa a quantidade disponível.
 - **Dado** apenas o registro de itens, **quando** o estoque é atualizado, **então** não há crédito de pontos.
 
@@ -470,7 +470,7 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 #### RF-MVP-015 — Consultar pontos próximos compatíveis
 
-**Situação:** confirmado com pendências. **Fontes:** S4/RF007 e S7. **Ator:** morador.
+**Situação:** confirmado com pendências. **Fontes:** S4/RF007 e S7. **Ator:** usuário.
 
 **Objetivo:** encontrar locais que recebam os materiais selecionados.
 
@@ -482,13 +482,13 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 **Critérios de aceite:**
 
-- **Dado** seleção de latas, **quando** o morador consulta pontos, **então** identifica quais recebem alumínio.
+- **Dado** seleção de latas, **quando** o usuário consulta pontos, **então** identifica quais recebem alumínio.
 - **Dado** seleção de PET e lata, **quando** tenta concluir tudo em um ponto que só aceita PET, **então** o sistema não confirma a entrega incompatível.
 - **Dado** ausência de ponto compatível, **quando** a consulta termina, **então** informa a indisponibilidade sem alterar estoque ou saldo.
 
 #### RF-MVP-016 — Consultar detalhes do ponto
 
-**Situação:** herdado com ajustes confirmados. **Fontes:** S4/RF008 e S7. **Ator:** morador.
+**Situação:** herdado com ajustes confirmados. **Fontes:** S4/RF008 e S7. **Ator:** usuário.
 
 **Objetivo:** fornecer informações para decidir onde entregar os resíduos.
 
@@ -500,12 +500,12 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 **Critérios de aceite:**
 
-- **Dado** um ponto consultável, **quando** abre seus detalhes, **então** o morador vê localização, materiais e informações de funcionamento cadastradas.
+- **Dado** um ponto consultável, **quando** abre seus detalhes, **então** o usuário vê localização, materiais e informações de funcionamento cadastradas.
 - **Dado** um ponto temporário fora do período válido, **quando** é consultado, **então** não é apresentado como local atualmente disponível para descarte.
 
-#### RF-MVP-017 — Encaminhar morador à navegação externa
+#### RF-MVP-017 — Encaminhar usuário à navegação externa
 
-**Situação:** confirmado. **Fonte:** S7. **Ator:** morador.
+**Situação:** confirmado. **Fonte:** S7. **Ator:** usuário.
 
 **Objetivo:** orientar o trajeto sem exigir acompanhamento contínuo dentro do Residuum.
 
@@ -517,12 +517,12 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 **Critérios de aceite:**
 
-- **Dado** um ponto escolhido, **quando** o morador inicia navegação, **então** o destino enviado corresponde ao ponto selecionado.
+- **Dado** um ponto escolhido, **quando** o usuário inicia navegação, **então** o destino enviado corresponde ao ponto selecionado.
 - **Dado** apenas a abertura da navegação, **quando** retorna, **então** a entrega ainda exige validação de presença e confirmação.
 
 #### RF-MVP-018 — Validar presença por GPS
 
-**Situação:** confirmado com pendências. **Fontes:** S4/RF011 e S7. **Ator:** morador.
+**Situação:** confirmado com pendências. **Fontes:** S4/RF011 e S7. **Ator:** usuário.
 
 **Objetivo:** condicionar a confirmação à proximidade com o ponto escolhido.
 
@@ -539,11 +539,11 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 #### RF-MVP-019 — Confirmar entrega e movimentar estoques
 
-**Situação:** confirmado. **Fontes:** S4/RF012 e S7. **Ator:** morador.
+**Situação:** confirmado. **Fontes:** S4/RF012 e S7. **Ator:** usuário.
 
 **Objetivo:** registrar entrega única e consistente dos itens ao ponto.
 
-**Pré-condições:** presença válida, itens disponíveis e ponto apto a recebê-los conforme regras validadas. **Fluxo:** apresentar resumo; receber confirmação explícita; revalidar itens, material e ponto; registrar descarte; baixar somente as quantidades entregues do estoque do morador; registrar entrada correspondente no ponto; conceder 10 pontos básicos uma vez.
+**Pré-condições:** presença válida, itens disponíveis e ponto apto a recebê-los conforme regras validadas. **Fluxo:** apresentar resumo; receber confirmação explícita; revalidar itens, material e ponto; registrar descarte; baixar somente as quantidades entregues do estoque do usuário; registrar entrada correspondente no ponto; conceder 10 pontos básicos uma vez.
 
 **Exceções:** repetição, concorrência, incompatibilidade ou falha não devem gerar baixa parcial, saldo negativo ou crédito duplicado. Estimativas do ponto não se tornam peso medido. Bônus deve ter vínculo rastreável, sem reaplicar crédito básico se processado posteriormente.
 
@@ -551,13 +551,13 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 **Critérios de aceite:**
 
-- **Dado** três latas e entrega válida de uma, **quando** confirma, **então** restam duas no estoque, o ponto registra uma recebida e o morador ganha 10 pontos básicos.
+- **Dado** três latas e entrega válida de uma, **quando** confirma, **então** restam duas no estoque, o ponto registra uma recebida e o usuário ganha 10 pontos básicos.
 - **Dado** a mesma confirmação reenviada, **quando** é processada, **então** o descarte e seus efeitos ocorrem uma única vez.
 - **Dado** falha na conclusão, **quando** a operação não termina, **então** o sistema não apresenta sucesso com estoque ou crédito básico incompletos.
 
 #### RF-MVP-020 — Exibir confirmação e histórico de descartes
 
-**Situação:** confirmado. **Fontes:** S4/RF006 e S7. **Ator:** morador.
+**Situação:** confirmado. **Fontes:** S4/RF006 e S7. **Ator:** usuário.
 
 **Objetivo:** tornar compreensível o resultado da entrega e permitir consulta posterior.
 
@@ -570,18 +570,18 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 **Critérios de aceite:**
 
 - **Dado** descarte concluído, **quando** a confirmação aparece, **então** apresenta a recompensa e ambas as ações de navegação.
-- **Dado** “Ir para a Loja”, **quando** o morador seleciona a ação, **então** acessa a loja autenticado.
+- **Dado** “Ir para a Loja”, **quando** o usuário seleciona a ação, **então** acessa a loja autenticado.
 - **Dado** consulta ao histórico, **quando** localiza a entrega, **então** os dados correspondem ao descarte concluído.
 
 ### M04 — Pontuação, saldo e extrato
 
 #### RF-MVP-021 — Creditar recompensa básica provisória
 
-**Situação:** confirmado. **Fonte:** S7. **Ator:** plataforma, em benefício do morador.
+**Situação:** confirmado. **Fonte:** S7. **Ator:** plataforma, em benefício do usuário.
 
 **Objetivo:** conceder 10 pontos por operação de descarte concluída enquanto o modelo definitivo não é elaborado.
 
-**Pré-condições:** RF-MVP-019 concluído de forma consistente. **Fluxo:** registrar crédito de 10 pontos vinculado ao descarte e ao morador; atualizar saldo; tornar o lançamento consultável. Dez pontos são por descarte, não por embalagem, produto, kg, scanner ou nota fiscal.
+**Pré-condições:** RF-MVP-019 concluído de forma consistente. **Fluxo:** registrar crédito de 10 pontos vinculado ao descarte e ao usuário; atualizar saldo; tornar o lançamento consultável. Dez pontos são por descarte, não por embalagem, produto, kg, scanner ou nota fiscal.
 
 **Exceções e resultado:** não creditar no cadastro, início de rota, chegada sem confirmação ou pesagem da cooperativa. Repetições devem recuperar o resultado anterior. Quantidades e materiais não alteram os 10 pontos básicos da regra provisória.
 
@@ -590,7 +590,7 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 **Critérios de aceite:**
 
 - **Dado** um descarte válido contendo vários itens, **quando** é concluído, **então** recebe um crédito básico de 10 pontos.
-- **Dado** uma pesagem da cooperativa sobre materiais já entregues, **quando** é registrada, **então** nenhum novo crédito básico é gerado para os moradores.
+- **Dado** uma pesagem da cooperativa sobre materiais já entregues, **quando** é registrada, **então** nenhum novo crédito básico é gerado para os usuários.
 - **Dado** confirmação repetida, **quando** é processada, **então** o saldo não aumenta novamente.
 
 #### RF-MVP-022 — Aplicar bônus de campanha
@@ -613,11 +613,11 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 #### RF-MVP-023 — Consultar saldo e extrato de pontos
 
-**Situação:** confirmado por consolidação. **Fontes:** S4/RF006, RF016 e S7. **Ator:** morador.
+**Situação:** confirmado por consolidação. **Fontes:** S4/RF006, RF016 e S7. **Ator:** usuário.
 
 **Objetivo:** explicar como o saldo foi formado e utilizado.
 
-**Pré-condições:** morador autenticado. **Fluxo:** mostrar saldo disponível e lançamentos, com data, natureza crédito/débito, quantidade, descrição e origem; distinguir crédito básico, bônus, voucher e participação paga, quando aplicável; permitir consultar o vínculo da operação.
+**Pré-condições:** usuário autenticado. **Fluxo:** mostrar saldo disponível e lançamentos, com data, natureza crédito/débito, quantidade, descrição e origem; distinguir crédito básico, bônus, voucher e participação paga, quando aplicável; permitir consultar o vínculo da operação.
 
 **Exceções e resultado:** extrato de outra pessoa não é acessível. Consulta falha não deve ser confundida com saldo zero. Expiração, ajustes administrativos e estornos ainda exigem regras aprovadas em PD-010 e PD-012.
 
@@ -630,7 +630,7 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 #### RF-MVP-024 — Apurar metas de descarte das campanhas
 
-**Situação:** confirmado com pendências. **Fonte:** S7. **Ator:** morador e plataforma.
+**Situação:** confirmado com pendências. **Fonte:** S7. **Ator:** usuário e plataforma.
 
 **Objetivo:** indicar o progresso em campanhas que exigem descarte de determinada quantidade ou produto.
 
@@ -647,7 +647,7 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 #### RF-MVP-025 — Debitar pontos com consistência
 
-**Situação:** confirmado por dependência das recompensas. **Fonte:** S7. **Ator:** plataforma, após ação do morador.
+**Situação:** confirmado por dependência das recompensas. **Fonte:** S7. **Ator:** plataforma, após ação do usuário.
 
 **Objetivo:** cobrar os pontos definidos sem permitir saldo negativo ou compra duplicada.
 
@@ -659,7 +659,7 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 **Critérios de aceite:**
 
-- **Dado** saldo insuficiente, **quando** o morador confirma a compra, **então** não há débito nem aquisição.
+- **Dado** saldo insuficiente, **quando** o usuário confirma a compra, **então** não há débito nem aquisição.
 - **Dado** confirmação reenviada da mesma operação, **quando** é processada, **então** não duplica débito ou benefício.
 - **Dado** duas aquisições concorrentes sem saldo para ambas, **quando** são processadas, **então** o saldo permanece não negativo.
 
@@ -667,11 +667,11 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 #### RF-MVP-026 — Consultar a loja de recompensas
 
-**Situação:** confirmado. **Fonte:** S7. **Ator:** morador.
+**Situação:** confirmado. **Fonte:** S7. **Ator:** usuário.
 
 **Objetivo:** descobrir campanhas, sorteios e vouchers disponíveis.
 
-**Pré-condições:** morador autenticado. **Fluxo:** acessar pela confirmação do descarte ou navegação da plataforma; consultar campanhas vigentes, sorteios e vouchers; visualizar título, representação visual, condições resumidas e custo quando aplicável; abrir detalhes antes de participar ou comprar.
+**Pré-condições:** usuário autenticado. **Fluxo:** acessar pela confirmação do descarte ou navegação da plataforma; consultar campanhas vigentes, sorteios e vouchers; visualizar título, representação visual, condições resumidas e custo quando aplicável; abrir detalhes antes de participar ou comprar.
 
 **Exceções:** catálogo vazio deve informar ausência de ofertas. Ofertas não publicadas não são apresentadas como compráveis. A loja comercializa benefícios com pontos; cashback financeiro está fora do MVP.
 
@@ -679,12 +679,12 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 **Critérios de aceite:**
 
-- **Dado** campanhas e vouchers publicados, **quando** o morador abre a loja, **então** encontra as ofertas disponíveis e pode consultar detalhes.
+- **Dado** campanhas e vouchers publicados, **quando** o usuário abre a loja, **então** encontra as ofertas disponíveis e pode consultar detalhes.
 - **Dado** catálogo sem ofertas vigentes, **quando** o abre, **então** vê uma mensagem adequada sem opções fictícias de compra.
 
 #### RF-MVP-027 — Consultar detalhes e condições da campanha
 
-**Situação:** confirmado com pendências. **Fonte:** S7. **Ator:** morador.
+**Situação:** confirmado com pendências. **Fonte:** S7. **Ator:** usuário.
 
 **Objetivo:** explicar o que fazer e o que poderá ganhar antes da adesão.
 
@@ -696,14 +696,14 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 **Critérios de aceite:**
 
-- **Dado** campanha baseada no descarte de um produto, **quando** abre seus detalhes, **então** o morador vê produto, meta e benefício configurados.
+- **Dado** campanha baseada no descarte de um produto, **quando** abre seus detalhes, **então** o usuário vê produto, meta e benefício configurados.
 - **Dado** campanha com vídeo, **quando** os detalhes são exibidos, **então** a mídia é acessível e as condições também estão disponíveis em texto.
 
 #### RF-MVP-028 — Administrar e participar de campanhas
 
-**Situação:** confirmado com pendências. **Fonte:** S7. **Atores:** administrador e morador.
+**Situação:** confirmado com pendências. **Fonte:** S7. **Atores:** administrador e usuário.
 
-**Objetivo:** permitir campanhas internas geridas pelo administrador e participação pelos moradores.
+**Objetivo:** permitir campanhas internas geridas pelo administrador e participação pelos usuários.
 
 **Pré-condições:** permissão administrativa para gestão; campanha publicada para participação. **Entrada administrativa:** título, descrição, mídia, período e regra de meta, elegibilidade e recompensa. **Fluxo:** preparar cadastro; validar informações; publicar conforme regra aprovada; permitir adesão quando exigida; acompanhar progresso.
 
@@ -713,19 +713,19 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 **Critérios de aceite:**
 
-- **Dado** administrador autorizado e campanha com dados e regra validados, **quando** a publica, **então** ela fica consultável pelos moradores elegíveis.
-- **Dado** um morador, **quando** tenta alterar a regra da campanha, **então** a alteração é negada.
-- **Dado** uma condição de participação publicada, **quando** o morador adere, **então** a participação obedece à condição exibida, sem cobranças ocultas.
+- **Dado** administrador autorizado e campanha com dados e regra validados, **quando** a publica, **então** ela fica consultável pelos usuários elegíveis.
+- **Dado** um usuário, **quando** tenta alterar a regra da campanha, **então** a alteração é negada.
+- **Dado** uma condição de participação publicada, **quando** o usuário adere, **então** a participação obedece à condição exibida, sem cobranças ocultas.
 
 #### RF-MVP-029 — Administrar e adquirir vouchers
 
-**Situação:** confirmado com pendências. **Fonte:** S7. **Atores:** administrador e morador.
+**Situação:** confirmado com pendências. **Fonte:** S7. **Atores:** administrador e usuário.
 
 **Objetivo:** trocar pontos por cupons de promoção ou benefícios.
 
 **Pré-condições:** voucher cadastrado e publicado pelo administrador; custo e regras de uso aprovados. **Entrada:** título, descrição, benefício, custo em pontos, instruções e parâmetros de validade/disponibilidade conforme definição.
 
-**Fluxo:** administrador cadastra oferta; morador consulta detalhes e confirma a compra; sistema debita pontos com consistência; disponibiliza voucher adquirido em sua área de recompensas. Forma de emissão do código e validação no parceiro ainda são PD-012.
+**Fluxo:** administrador cadastra oferta; usuário consulta detalhes e confirma a compra; sistema debita pontos com consistência; disponibiliza voucher adquirido em sua área de recompensas. Forma de emissão do código e validação no parceiro ainda são PD-012.
 
 **Exceções:** não emitir voucher sem aquisição confirmada nem cobrar por oferta indisponível. Limite de unidades, cancelamento e devolução de pontos precisam de validação.
 
@@ -733,16 +733,16 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 **Critérios de aceite:**
 
-- **Dado** voucher disponível e saldo suficiente, **quando** o morador confirma, **então** uma aquisição é registrada e o débito corresponde ao custo exibido.
+- **Dado** voucher disponível e saldo suficiente, **quando** o usuário confirma, **então** uma aquisição é registrada e o débito corresponde ao custo exibido.
 - **Dado** voucher adquirido, **quando** consulta suas recompensas, **então** encontra o benefício e as instruções de uso aprovadas.
 
 #### RF-MVP-030 — Administrar sorteios e registrar participações
 
-**Situação:** confirmado com pendências. **Fontes:** S4/RF015 e S7. **Atores:** administrador e morador.
+**Situação:** confirmado com pendências. **Fontes:** S4/RF015 e S7. **Atores:** administrador e usuário.
 
 **Objetivo:** usar pontos para participar de sorteios com regras compreensíveis e resultado rastreável.
 
-**Pré-condições:** sorteio publicado com regras validadas. **Fluxo:** administrador cadastra descrição, prêmio, período e condições; morador consulta e confirma participação; registrar inscrição e custo se aplicável; apurar resultado conforme mecanismo aprovado; disponibilizar resultado e notificação prevista.
+**Pré-condições:** sorteio publicado com regras validadas. **Fluxo:** administrador cadastra descrição, prêmio, período e condições; usuário consulta e confirma participação; registrar inscrição e custo se aplicável; apurar resultado conforme mecanismo aprovado; disponibilizar resultado e notificação prevista.
 
 **Exceções:** custo em pontos, quantidade de chances, limites, algoritmo, cancelamento, prêmio e condições de realização aguardam PD-013. Seleção aleatória e e-mail da V5 são referências para validação, não autorização para realizar promoção sem regras acordadas.
 
@@ -773,7 +773,7 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 **Critérios de aceite:**
 
 - **Dado** cadastro válido realizado pelo administrador, **quando** o ponto é habilitado, **então** aparece nas consultas conforme sua disponibilidade e materiais.
-- **Dado** um morador, **quando** tenta cadastrar um ponto diretamente, **então** a função administrativa não é autorizada.
+- **Dado** um usuário, **quando** tenta cadastrar um ponto diretamente, **então** a função administrativa não é autorizada.
 - **Dado** desativação, **quando** o histórico é consultado, **então** as entregas e coletas anteriores continuam identificando o ponto.
 
 #### RF-MVP-032 — Gerir pontos temporários
@@ -790,7 +790,7 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 **Critérios de aceite:**
 
-- **Dado** ponto temporário fora do período, **quando** o morador busca local disponível, **então** o ponto não é oferecido como destino ativo.
+- **Dado** ponto temporário fora do período, **quando** o usuário busca local disponível, **então** o ponto não é oferecido como destino ativo.
 - **Dado** término de um evento com coletas anteriores, **quando** o ponto deixa de receber, **então** os registros permanecem consultáveis aos perfis autorizados.
 
 #### RF-MVP-033 — Classificar contexto e funcionamento do ponto
@@ -991,7 +991,7 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 - **Dado** coleta aceita, **quando** registra 12 kg de PET e 3 kg de alumínio, **então** o administrador consulta os dois pesos vinculados ao ponto, à coleta e à cooperativa.
 - **Dado** registro reenviado da mesma operação, **quando** processado, **então** não duplica retirada ou peso contabilizado.
-- **Dado** pesagem registrada, **quando** o resultado é gravado, **então** não credita novamente os 10 pontos dos moradores.
+- **Dado** pesagem registrada, **quando** o resultado é gravado, **então** não credita novamente os 10 pontos dos usuários.
 
 ### M08 — Pagamento das coletas
 
@@ -1058,7 +1058,7 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 **Objetivo:** reunir os controles necessários para operar a rede.
 
-**Fluxo:** acessar cadastros de moradores, pontos, cooperativas, convites e loja; acompanhar ocupação e pedidos; encaminhar solicitações; consultar andamento e pagamentos; acessar indicadores e relatórios conforme permissões e plano.
+**Fluxo:** acessar cadastros de usuários, pontos, cooperativas, convites e loja; acompanhar ocupação e pedidos; encaminhar solicitações; consultar andamento e pagamentos; acessar indicadores e relatórios conforme permissões e plano.
 
 **Exceções:** privilégio administrativo não contorna automaticamente limites comerciais de relatórios, pois o usuário confirmou restrição também para esse perfil. Definir informações operacionais mínimas em PD-019 para não bloquear agendamento e pagamento.
 
@@ -1160,11 +1160,11 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 #### RF-MVP-053 — Armazenar e apresentar imagens e vídeos da loja
 
-**Situação:** confirmado com parâmetros pendentes. **Fontes:** S4/RF028 e S7. **Ator:** administrador; morador visualiza.
+**Situação:** confirmado com parâmetros pendentes. **Fontes:** S4/RF028 e S7. **Ator:** administrador; usuário visualiza.
 
 **Objetivo:** permitir mídia nas campanhas e demais ofertas que suportem a configuração.
 
-**Pré-condições:** permissão administrativa e armazenamento disponível. **Fluxo:** selecionar imagem/vídeo; validar formato e tamanho aprovados; enviar e vincular à oferta; apresentar mídia aos moradores com descrição textual independente.
+**Pré-condições:** permissão administrativa e armazenamento disponível. **Fluxo:** selecionar imagem/vídeo; validar formato e tamanho aprovados; enviar e vincular à oferta; apresentar mídia aos usuários com descrição textual independente.
 
 **Exceções:** upload falho não deve ser exibido como concluído; arquivo incompatível é rejeitado. O limite anterior de 5 MB não será imposto indistintamente a vídeo. Upload de arquivo versus link externo, formatos, tamanhos, duração e tratamento aguardam PD-024.
 
@@ -1181,14 +1181,14 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 
 | Regra | Definição | Requisitos principais |
 |---|---|---|
-| RN-001 | Cadastro pelo morador exige convite autorizado; exceções administrativas ainda precisam de política | RF-MVP-001 a RF-MVP-004 |
+| RN-001 | Cadastro pelo usuário exige convite autorizado; exceções administrativas ainda precisam de política | RF-MVP-001 a RF-MVP-004 |
 | RN-002 | Convite individual autoriza um cadastro; compartilhado respeita expiração e limite | RF-MVP-001, RF-MVP-002 |
 | RN-003 | Materiais iniciais são PET e lata de alumínio | RF-MVP-010 a RF-MVP-013, RF-MVP-034, RF-MVP-043 |
 | RN-004 | Registrar embalagem ou importar nota não representa descarte nem concede pontos | RF-MVP-009 a RF-MVP-014 |
 | RN-005 | Informações importadas são revisadas; material desconhecido pode ser completado manualmente | RF-MVP-011, RF-MVP-013 |
 | RN-006 | Presença para descarte é validada por GPS; não há QR de presença no escopo atual | RF-MVP-018 |
 | RN-007 | Material entregue deve ser aceito pelo ponto; seleção não baixa estoque antes da confirmação | RF-MVP-014, RF-MVP-015, RF-MVP-019 |
-| RN-008 | Cada descarte concluído gera 10 pontos básicos ao morador uma única vez | RF-MVP-019, RF-MVP-021 |
+| RN-008 | Cada descarte concluído gera 10 pontos básicos ao usuário uma única vez | RF-MVP-019, RF-MVP-021 |
 | RN-009 | Bônus é adicional e vinculado à regra da campanha; acúmulo ainda depende de decisão | RF-MVP-022, RF-MVP-024, RF-MVP-028 |
 | RN-010 | Pontos são distintos de dinheiro; cashback financeiro permanece fora do MVP | RF-MVP-021, RF-MVP-025, RF-MVP-026 |
 | RN-011 | Pontos e cooperativas são cadastrados pelo administrador, com acessos operacionais vinculados | RF-MVP-008, RF-MVP-031, RF-MVP-038 |
@@ -1196,7 +1196,7 @@ O desenho não aprova uma política de pagamento antes ou depois da conclusão; 
 | RN-013 | Cooperativa precisa aceitar a solicitação; alerta de lotação não gera atribuição automática | RF-MVP-036, RF-MVP-040 |
 | RN-014 | Plataforma fornece rota planejada e horário previsto; cooperativa registra materiais e pesos | RF-MVP-041, RF-MVP-043 |
 | RN-015 | Peso coletado não é peso comprovado de cada embalagem; coleta parcial não zera todo o ponto por inferência | RF-MVP-035, RF-MVP-043 |
-| RN-016 | Pesagem da cooperativa não gera novamente recompensa básica ao morador | RF-MVP-021, RF-MVP-043 |
+| RN-016 | Pesagem da cooperativa não gera novamente recompensa básica ao usuário | RF-MVP-021, RF-MVP-043 |
 | RN-017 | Pagamento é iniciado pelo administrador dentro da plataforma por API; coleta e pagamento são situações separadas | RF-MVP-044 a RF-MVP-046 |
 | RN-018 | Resultado financeiro só é confirmado com evidência do provedor | RF-MVP-046 |
 | RN-019 | Campanhas, vouchers e sorteios são geridos pelo administrador; suas condições precisam ser publicadas | RF-MVP-027 a RF-MVP-030 |
@@ -1221,7 +1221,7 @@ O produto deve permitir uso em navegador móvel e desktop, com câmera e localiz
 
 Todas as operações protegidas devem validar sessão, perfil e vínculo no serviço responsável. Credenciais devem ser protegidas; segredos de integração não podem ser expostos no cliente ou nos documentos. Alterações administrativas devem ter autoria. Política de sessão, senha e papéis depende de PD-003 e PD-023.
 
-**Verificação:** testar acesso horizontal entre moradores/pontos/cooperativas e acesso vertical às funções administrativas. **BDD:** dado usuário sem vínculo, quando envia requisição direta a dados de outro ponto, então a operação é negada mesmo que tenha um plano pago.
+**Verificação:** testar acesso horizontal entre usuários/pontos/cooperativas e acesso vertical às funções administrativas. **BDD:** dado usuário sem vínculo, quando envia requisição direta a dados de outro ponto, então a operação é negada mesmo que tenha um plano pago.
 
 ### RNF-MVP-003 — Integridade, concorrência e idempotência
 
@@ -1237,13 +1237,13 @@ Operações de convite, descarte, crédito/débito, aquisição, coleta e pagame
 
 Falhas de GPS, mapas e consulta de produtos/notas devem ser apresentadas sem inventar resultados. Negação de GPS não pode ser convertida em presença válida. Entrada manual deve permanecer acessível para falhas de identificação. Timeout, tentativas, precisão e validade da posição dependem de PD-004 e PD-008.
 
-**Verificação:** simular permissão negada, baixa precisão, localização antiga, indisponibilidade e recuperação. **BDD:** dado GPS inválido, quando o morador tenta concluir, então os itens e pontos não são movimentados indevidamente.
+**Verificação:** simular permissão negada, baixa precisão, localização antiga, indisponibilidade e recuperação. **BDD:** dado GPS inválido, quando o usuário tenta concluir, então os itens e pontos não são movimentados indevidamente.
 
 ### RNF-MVP-005 — Proteção de dados e privacidade
 
 **Situação:** herdado para validação de produto/jurídico. **Origem:** RNF005 antigo.
 
-Definir finalidade e dados mínimos para moradores, localização e nota fiscal; proteger transmissão e armazenamento; restringir relatórios por autorização; registrar escolhas aplicáveis de compartilhamento. Não tratar consentimento como requisito universal ou comprovação automática de conformidade legal. A política de privacidade, base de tratamento, retenção e atendimento ao titular são PD-022.
+Definir finalidade e dados mínimos para usuários, localização e nota fiscal; proteger transmissão e armazenamento; restringir relatórios por autorização; registrar escolhas aplicáveis de compartilhamento. Não tratar consentimento como requisito universal ou comprovação automática de conformidade legal. A política de privacidade, base de tratamento, retenção e atendimento ao titular são PD-022.
 
 **Verificação:** revisar dados coletados, logs, exportações e acesso direto; comprovar que credenciais, tokens de notas e dados pessoais desnecessários não aparecem em logs comuns. **BDD:** dado relatório sem autorização para dados identificáveis, quando é solicitado, então não retorna identificadores pessoais.
 
@@ -1318,14 +1318,14 @@ Esta tabela indica informação de negócio, não esquema físico de banco. Camp
 | Produto/resíduo | Nome, identificador consultado, material, quantidade e origem da informação | Identificação de produto não comprova entrega física |
 | Consulta de nota | Referência e itens importados necessários ao cadastro | Armazenar integralmente a nota requer decisão de privacidade |
 | Estoque pessoal | Itens e quantidades disponíveis | Não representa peso medido |
-| Descarte | Morador, ponto, itens, quantidades, confirmação e evidência de presença | Origem do crédito básico e eventual bônus |
+| Descarte | Usuário, ponto, itens, quantidades, confirmação e evidência de presença | Origem do crédito básico e eventual bônus |
 | Ponto de coleta | Localização, contexto, duração, responsável, aceitação e disponibilidade | Material aceito separado do acumulado |
 | Estoque do ponto | Entradas, retiradas e unidade de cada informação | Contagem/estimativa/peso precisam ser distinguidos |
 | Cooperativa | CNPJ, identificação, contatos e acessos | Dados do recebedor financeiro dependem da integração |
 | Solicitação/coleta | Ponto, cooperativa, solicitante, agendamento, aceite e registros | Pedido do ponto não é solicitação já aceita pela cooperativa |
 | Peso coletado | Material, peso, unidade, coleta e autoria | Deve ser vinculado ao ponto e à coleta |
 | Ordem de pagamento | Coleta, recebedor, valor, ordem externa e situação | Não deduzir sucesso só do envio |
-| Lançamento de pontos | Morador, valor, crédito/débito, origem e referência | Bônus separado do básico e do dinheiro |
+| Lançamento de pontos | Usuário, valor, crédito/débito, origem e referência | Bônus separado do básico e do dinheiro |
 | Campanha/sorteio/voucher | Conteúdo, condições, publicação e regras aprovadas | Participação e aquisição são registros próprios |
 | Plano e contratação | Modalidade, titular, situação, vigência e benefícios aprovados | Não ampliar permissão por contratação |
 | Auditoria | Autor, evento, entidade, data e resultado | Segredos e dados desnecessários não são conteúdo de log comum |
@@ -1350,32 +1350,32 @@ Esta tabela indica informação de negócio, não esquema físico de banco. Camp
 ```mermaid
 sequenceDiagram
     autonumber
-    actor Morador
+    actor Usuario as Usuário
     participant Interface as Interface Residuum
     participant Servico as Serviço de descarte
     participant Dados as Persistência de negócio
     participant Bonus as Apuração de campanhas
-    Morador->>Interface: Seleciona itens e ponto
+    Usuario->>Interface: Seleciona itens e ponto
     Interface->>Interface: Obtém localização autorizada
     Interface->>Servico: Solicita validação de presença
     Servico-->>Interface: Resultado conforme parâmetros aprovados
     alt Presença inválida
-        Interface-->>Morador: Informa impedimento e preserva itens
+        Interface-->>Usuario: Informa impedimento e preserva itens
     else Presença válida
-        Interface-->>Morador: Mostra resumo para confirmar
-        Morador->>Interface: Confirma entrega
+        Interface-->>Usuario: Mostra resumo para confirmar
+        Usuario->>Interface: Confirma entrega
         Interface->>Servico: Envia confirmação com identificação da operação
         Servico->>Dados: Revalida e registra descarte, estoques e 10 pontos
         alt Falha na conclusão consistente
             Dados-->>Servico: Operação não concluída
             Servico-->>Interface: Falha sem sucesso parcial
-            Interface-->>Morador: Informa falha
+            Interface-->>Usuario: Informa falha
         else Descarte concluído
             Dados-->>Servico: Resultado único do descarte
             Servico->>Bonus: Apura elegibilidade conforme regras aprovadas
             Bonus->>Dados: Registra bônus elegível sem duplicar o básico
             Servico-->>Interface: Resultado e pontos confirmados
-            Interface-->>Morador: Confirmação com Home e Loja
+            Interface-->>Usuario: Confirmação com Home e Loja
         end
     end
 ```
@@ -1600,7 +1600,7 @@ As pendências não são tarefas automaticamente autorizadas. “Responsável su
 | PD-004 | Tipos de notas e identificadores, fonte de consulta, catálogo de produtos, cobertura, autorização, limites e falhas dos serviços | RF-MVP-010, RF-MVP-011 | Equipe técnica/produto |
 | PD-005 | Pode importar a mesma nota novamente? Como evitar inclusão involuntária repetida e selecionar apenas embalagens realmente disponíveis? | RF-MVP-011, RF-MVP-013 | Produto |
 | PD-006 | Decisão de UX aprovada em 10/10/2026: rascunho rápido em memória do fluxo, abandono elimina, rota em outra aba preserva, GPS novo no retorno; seleção parcial e ajuste/remoção sem pontos. Contratos reais de ajuste/exclusão, concorrência e confirmação continuam pendentes; ver handoff. | RF-MVP-014, RF-MVP-017, RF-MVP-019 | Produto e backend |
-| PD-007 | Busca sem GPS, materiais mistos em pontos diferentes, recebimento fora do horário ou com ponto cheio e escolha do serviço de mapa do morador | RF-MVP-015 a RF-MVP-017 | Produto/operação |
+| PD-007 | Busca sem GPS, materiais mistos em pontos diferentes, recebimento fora do horário ou com ponto cheio e escolha do serviço de mapa do usuário | RF-MVP-015 a RF-MVP-017 | Produto/operação |
 | PD-008 | Raio, precisão, idade da posição, tentativas e timeout do GPS; critério de campo para autorizar presença | RF-MVP-018 e RNF-MVP-004 | Produto/equipe técnica |
 | PD-009 | Unidade/cálculo da capacidade e lotação, parâmetros de alertas, regras de funcionamento, tags, edição de horários e saldo ao encerrar evento | RF-MVP-031 a RF-MVP-036 | Produto/operação |
 | PD-010 | Modelo definitivo de pontos, validade, limites, ajustes/estornos e prevenção de fracionamento de descartes para repetir 10 pontos | RF-MVP-021, RF-MVP-023 | Idealizador/produto |

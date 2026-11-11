@@ -1,40 +1,49 @@
 # Decisões que bloqueiam a documentação definitiva
 
-> **Estado:** esboço · **Dono:** Produto · **Atualizado em:** 10/11/2026
-> **Fontes:** decisões D1–D12 dos módulos morador, ponto de coleta, cooperativa e administrador.
+> **Estado:** revisão · **Dono:** Produto · **Atualizado em:** 11/11/2026
+> **Fontes:** [27 decisões PD-001 a PD-027](../01-planejamento/decisoes/README.md), regras de 21 e 22/10, 4 análises por módulo.
 
 ## Resumo
 
-Seis decisões travam a versão definitiva do PRD, do manual e dos casos de teste. As demais podem seguir com o valor recomendado, marcado como provisório. Sugestão: **uma reunião de 30 minutos** para as quatro primeiras.
+**Atualização de 11/11/2026:** as seis decisões que travavam foram respondidas por Vinicius. Restam detalhes menores (algoritmo do sorteio, ajuste manual com saldo negativo) e a **validação formal do produto**.
+
+Numeração: **PD-xxx** é o identificador oficial da V6. A coluna "Análise" liga ao nome usado nos documentos de análise (D1, D2…).
 
 ## Bloqueiam (decidir primeiro)
 
-| # | Pergunta | Opções | Recomendação | Trava |
-|---|---|---|---|---|
-| 1 | Quanto vale o ponto? | 5 por unidade · 10 por operação | 5 por unidade; valor em configuração, gravado em cada lançamento | PRD, manual, testes |
-| 2 | Quem confirma o descarte? | Operador do ponto · morador com GPS | Operador confirma; GPS só habilita o envio | PRD, API, manual |
-| 3 | Estorno maior que o saldo | Bloquear (409) · saldo negativo · zerar | Bloquear e mostrar o déficit | PRD, API |
-| 4 | Perfil "responsável pelo ponto" (PD-023) | Role novo 1:N · vínculo N:N · só renomear | Vínculo N:N | PRD, SAD, API |
-| 5 | Sorteio: cancelar devolve? | Sempre · nunca com bilhetes | Sempre devolve; cancelar substitui apagar | PRD, manual |
-| 6 | Quem é dono do parecer jurídico (Lei 5.768/71)? | Nomear pessoa e prazo | Nomear agora | Qualquer sorteio real |
+| # | PD | Pergunta | Situação | Recomendação | Trava |
+|---|---|---|---|---|---|
+| 1 | [PD-010](../01-planejamento/decisoes/pd-010.md) | Quanto vale o ponto? | **Decidido em 11/11: 10 por descarte concluído** (por operação), como na V6. Contra a divisão: **janela de 60 min no mesmo ponto**. Faltam estorno e limite | Corrigir o código | PRD, manual, testes |
+| 2 | [PD-006](../01-planejamento/decisoes/pd-006.md) / [PD-027](../01-planejamento/decisoes/pd-027.md) | Quem confirma o descarte? | **Decidido em 11/11: o operador do ponto confirma**; o GPS só libera o envio | Corrigir a V6 (RF-019) | PRD, API, manual |
+| 3 | [PD-010](../01-planejamento/decisoes/pd-010.md) | Estorno maior que o saldo | **Decidido em 11/11: a confirmação do operador é final.** Rejeita-se antes de confirmar; depois, só ajuste manual do admin. Sem estorno, o caso não existe | Tirar o estorno de descarte confirmado do código | PRD, API |
+| 4 | [PD-023](../01-planejamento/decisoes/pd-023.md) | Perfil "responsável pelo ponto" e vínculo | **Decidido em 11/11: vínculo N:N** (vários pontos por pessoa, vários responsáveis por ponto); **o admin cria e desfaz o vínculo** | Criar a tabela de vínculo no código | PRD, arquitetura, API |
+| 5 | [PD-013](../01-planejamento/decisoes/pd-013.md) | Sorteio: cancelar devolve? Algoritmo? | **Time decidiu 22/10: só sorteios de teste, 1 bilhete por usuário. 11/11: cancelar devolve os pontos.** Algoritmo aberto | Deixar o algoritmo com a equipe técnica (sha256 com semente nos testes) | PRD, manual |
+| 6 | [PD-013](../01-planejamento/decisoes/pd-013.md) | Dono do parecer jurídico (Lei 5.768/71) | **11/11: adiado.** Sorteios só de teste por enquanto, sem responsável nomeado | Nomear alguém antes de qualquer sorteio com prêmio real | Qualquer sorteio real |
 
 ## Podem seguir provisórios
 
-| # | Tema | Valor provisório |
-|---|---|---|
-| 7 | GPS (PD-008) | Raio 100 m · precisão 60 m · idade 30 s |
-| 8 | Limite diário | 200 unidades/dia, a medir no piloto |
-| 9 | Convite no cadastro | Obrigatório para novos, atrás de flag |
-| 10 | Recuperação de senha (PD-003) | E-mail |
-| 11 | Excluir conta (LGPD) | Anonimizar, não apagar |
-| 12 | Lançamento avulso da cooperativa | Remover no MVP |
-| 13 | Planos e relatórios (PD-019) | Plano único "piloto" |
-| 14 | Pagamento à cooperativa | Decidir antes da Sprint 4 |
+| # | PD | Tema | Valor provisório |
+|---|---|---|---|
+| 7 | [PD-008](../01-planejamento/decisoes/pd-008.md) | GPS | **Decidido em 11/11: raio de 100 m, ajustável por ponto.** Provisórios: precisão 60 m, idade 30 s. QR Code fica fora do MVP |
+| 8 | [PD-010](../01-planejamento/decisoes/pd-010.md) | Limite diário | 200 unidades/dia, a medir no piloto |
+| 9 | [PD-001](../01-planejamento/decisoes/pd-001.md) / [PD-002](../01-planejamento/decisoes/pd-002.md) | Acesso | **Decidido em 11/11:** cadastro com **código** da equipe e **teto de 500 contas** (trava de vagas no banco). Ver [controle de acesso](../pesquisa/controle-de-acesso.md) |
+| 10 | [PD-003](../01-planejamento/decisoes/pd-003.md) | Recuperação de senha | E-mail |
+| 11 | [PD-022](../01-planejamento/decisoes/pd-022.md) | Excluir conta (LGPD) | Anonimizar, não apagar |
+| 12 | [PD-014](../01-planejamento/decisoes/pd-014.md) | Execução da coleta | Manter recusa com motivo; lançamento avulso a revisar. Estudo completo (8 decisões) em [capacidade e execução da coleta](../pesquisa/capacidade-e-execucao-da-coleta.md) |
+| 13 | [PD-019](../01-planejamento/decisoes/pd-019.md) | Planos e relatórios | Plano único "piloto" |
+| 14 | [PD-016](../01-planejamento/decisoes/pd-016.md) | Pagamento à cooperativa | **Decidido em 11/11:** Residuum paga, por kg e material; manual com comprovante no piloto, API depois. Falta o valor por material |
+| 15 | [PD-012](../01-planejamento/decisoes/pd-012.md) | Cancelar voucher e devolver pontos | Manter sem cancelamento no piloto |
+
+## Contradições entre fontes a fechar junto
+
+Lista completa no [PRD](../01-planejamento/prd-srs.md#contradições-entre-as-fontes-a-resolver). A principal: materiais da campanha (6 materiais × só PET e lata).
 
 ## Ações de registro
 
-- [ ] Registrar as decisões 1–6 em `decisoes.md` (TSK-DEC-010 a 013).
-- [ ] Atualizar V6, handoff e critério da Sprint 1 com o valor do ponto.
-- [ ] Mesclar a branch `docs/regras-de-campanhas` (regras de campanha só existem lá).
+- [x] Mesclar as regras de campanhas, de saldo e o mapa de branches (PRs #1 a #3 da organização)
+- [x] Fatiar as decisões em um arquivo por PD
+- [ ] Reunião de validação com o produto (itens 1 a 6)
+- [ ] Registrar as respostas no arquivo de cada PD e na tabela do índice
+- [x] Valor do ponto: V6 e handoff já dizem 10 por descarte, de acordo com a decisão de 11/11
 
-> [LACUNA] Quem decide cada item e a data da reunião não constam nas fontes.
+> [LACUNA] Quem do produto decide cada item e a data da reunião não constam nas fontes.

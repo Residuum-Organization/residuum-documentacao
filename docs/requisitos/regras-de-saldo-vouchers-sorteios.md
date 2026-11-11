@@ -9,9 +9,9 @@ Atividades relacionadas: TSK-MOR-025 (vouchers) e TSK-MOR-026 (sorteios). Regras
 | Tema | Regra (informada pelo time) | Como ficou |
 |---|---|---|
 | Limite de unidades | O administrador escolhe a quantidade. | Campo `quantidade_disponivel` do voucher, editado pelo admin. |
-| Código e parceiro | Os parceiros enviam os códigos, o admin cadastra no sistema e o sistema libera para o morador. | O admin cola os códigos (um por linha). Cada código soma 1 ao estoque. Cada resgate entrega o próximo código disponível. Sem códigos cadastrados, o sistema gera um código próprio (`RSDM-XXXXXXXX`), como antes. |
-| Validade do código | Segue as parcerias futuras; o admin edita. | `validade_codigo_dias` no voucher: o código vale esse número de dias a partir do resgate. Em branco, sem prazo. Mudar o valor vale só para resgates futuros. Código vencido aparece como **expirado** para o morador. |
-| Instruções de uso | Construir instruções objetivas. | O admin pode escrever o texto; em branco, vale o texto padrão (abaixo). O morador vê no detalhe do voucher e em Minhas recompensas. |
+| Código e parceiro | Os parceiros enviam os códigos, o admin cadastra no sistema e o sistema libera para o usuário. | O admin cola os códigos (um por linha). Cada código soma 1 ao estoque. Cada resgate entrega o próximo código disponível. Sem códigos cadastrados, o sistema gera um código próprio (`RSDM-XXXXXXXX`), como antes. |
+| Validade do código | Segue as parcerias futuras; o admin edita. | `validade_codigo_dias` no voucher: o código vale esse número de dias a partir do resgate. Em branco, sem prazo. Mudar o valor vale só para resgates futuros. Código vencido aparece como **expirado** para o usuário. |
+| Instruções de uso | Construir instruções objetivas. | O admin pode escrever o texto; em branco, vale o texto padrão (abaixo). O usuário vê no detalhe do voucher e em Minhas recompensas. |
 | Cancelamento e devolução de pontos | **Em aberto.** | Não implementado: um resgate não é cancelado e os pontos não voltam. |
 
 Texto padrão das instruções:
@@ -20,7 +20,7 @@ Texto padrão das instruções:
 2. Informe o código ao parceiro (nome do parceiro do voucher) na hora de usar o benefício.
 3. Cada código vale uma única vez.
 
-Quando há prazo, entra a linha "O código vale por N dias a partir do resgate" (antes do resgate) ou "Use até dd/mm/aaaa" (depois, horário de Manaus). A frase "cada código vale uma única vez" é uma premissa minha para o texto padrão (cada morador recebe um código próprio do parceiro); o admin pode trocar o texto se a parceria for diferente.
+Quando há prazo, entra a linha "O código vale por N dias a partir do resgate" (antes do resgate) ou "Use até dd/mm/aaaa" (depois, horário de Manaus). A frase "cada código vale uma única vez" é uma premissa minha para o texto padrão (cada usuário recebe um código próprio do parceiro); o admin pode trocar o texto se a parceria for diferente.
 
 **Gestão dos códigos (admin):**
 
@@ -35,6 +35,8 @@ Quando há prazo, entra a linha "O código vale por N dias a partir do resgate" 
 
 Regra informada pelo time em 2026-10-22, **inicial e sujeita a mudança**. Nenhum valor de recompensa foi cadastrado no sistema: o admin define o custo de cada oferta e usa as faixas como referência.
 
+> ⚠️ **Substituída em 11/11/2026:** o valor do ponto passou a ser **10 pontos por descarte concluído, por operação** ([PD-010](../01-planejamento/decisoes/pd-010.md)). O texto abaixo fica como histórico da regra de 22/10. **O código ainda paga 5 por unidade** e precisa ser alterado.
+
 > Regra: 1 descarte = 5 pontos.
 
 **Decisão do time (2026-10-22): a regra acima é a que vale.** O sistema passou a pagar **5 pontos por unidade descartada confirmada** (constante `PONTOS_POR_UNIDADE` em `app/services/pontuacao_service.py`), no lugar dos 10 da V6 e do código anterior. Isso resolve a divergência AUD-002 no valor; o texto da V6 ("10 pontos básicos") fica como histórico e este documento prevalece.
@@ -42,9 +44,9 @@ Regra informada pelo time em 2026-10-22, **inicial e sujeita a mudança**. Nenhu
 Efeitos da mudança:
 
 - O **dobro de pontos** das campanhas paga os pontos básicos das unidades da meta, agora a 5 por unidade (meta de 4 unidades = 20 pontos). Ver [Regras de campanhas](regras-de-campanhas.md).
-- O **estorno** de um descarte confirmado usa a mesma função do crédito.
-- As estimativas de pontos nas telas do morador, do ponto de coleta e do admin usam 5.
-- **Pontos já creditados não foram recalculados.** Saldos antigos continuam como estavam. O estorno de um descarte confirmado **antes** da mudança devolve o valor novo (5 por unidade), menor que o creditado (10); a diferença fica com o morador.
+- O **estorno** de um descarte confirmado usa a mesma função do crédito. ⚠️ **Desde 11/11/2026 não há mais estorno de descarte confirmado** ([PD-010](../01-planejamento/decisoes/pd-010.md)): a confirmação do operador é final; erro posterior vira ajuste manual do admin. O código ainda permite o estorno.
+- As estimativas de pontos nas telas do usuário, do ponto de coleta e do admin usam 5.
+- **Pontos já creditados não foram recalculados.** Saldos antigos continuam como estavam. O estorno de um descarte confirmado **antes** da mudança devolve o valor novo (5 por unidade), menor que o creditado (10); a diferença fica com o usuário.
 - Interpretação adotada: "descarte" = **unidade** descartada, como o código já contava (1 lata = 1 descarte). Se o time quiser 5 pontos por operação de descarte, independentemente da quantidade, a fórmula muda; avise.
 
 | Pontos | Descartes | Resgate | Objetivo |
@@ -58,6 +60,8 @@ Efeitos da mudança:
 | 1.000 | 200 | 50% de desconto (ou o teto da loja), voucher de R$ 1.000,00 ou kit VIP / produto estrela | Nível máximo de fidelidade |
 
 Com 5 pontos por unidade, a coluna "Descartes" da tabela fecha com a pontuação do sistema (10 pontos = 2 descartes, 1.000 pontos = 200 descartes).
+
+> **Com a regra de 11/11 (10 por descarte), a coluna "Descartes" cai pela metade:** 10 pontos = 1 descarte, 1.000 pontos = 100 descartes. `[DECISÃO: manter as faixas de pontos ou ajustá-las]`
 
 Interpretação: as faixas valem como referência de **custo em pontos** das ofertas (vouchers e o custo do bilhete de sorteio). O texto fala em "cliente" e "loja"; tratei como a loja do parceiro.
 
@@ -79,7 +83,7 @@ Ao apurar, o sistema cria um aviso para cada participante:
 - **Ganhador:** "Parabéns! Você ganhou o sorteio '…': prêmio (bilhete nº …)."
 - **Demais participantes:** "O sorteio '…' foi apurado. Veja o resultado na Loja."
 
-O morador vê os avisos não lidos no topo da Loja e marca "Entendi" (`GET /notificacoes/minhas` e `PATCH /notificacoes/minhas/{id}/lida`). Os avisos de morador são separados dos alertas operacionais (ponto cheio) e não aparecem no painel do admin e da cooperativa. Não há e-mail, push nem SMS (integração I05 continua em aberto).
+O usuário vê os avisos não lidos no topo da Loja e marca "Entendi" (`GET /notificacoes/minhas` e `PATCH /notificacoes/minhas/{id}/lida`). Os avisos de usuário são separados dos alertas operacionais (ponto cheio) e não aparecem no painel do admin e da cooperativa. Não há e-mail, push nem SMS (integração I05 continua em aberto).
 
 ### Propostas para o que o time ainda não sabe responder
 
@@ -117,7 +121,7 @@ Todo débito passa por um único serviço (`app/services/saldo_service.py`, `deb
 | Mesma chave em outro voucher/sorteio | 409 |
 | Sem chave | cada pedido é um resgate; no sorteio, o segundo bilhete do mesmo usuário continua recusado |
 
-A chave é conferida antes das validações de estoque e vale por usuário. **A interface envia a chave:** uma por confirmação de resgate aberta (repetida se o morador tentar de novo) e uma por visita à página do sorteio, de modo que reenviar depois de uma falha de rede não debita em duplicidade.
+A chave é conferida antes das validações de estoque e vale por usuário. **A interface envia a chave:** uma por confirmação de resgate aberta (repetida se o usuário tentar de novo) e uma por visita à página do sorteio, de modo que reenviar depois de uma falha de rede não debita em duplicidade.
 
 ## Extrato com origem
 

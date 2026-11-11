@@ -8,7 +8,7 @@ Referência principal para organizar as 93 atividades no modelo da equipe: objet
 
 **[Abrir a proposta de Scrum e sprints](docs/planejamento/modulos/scrum-e-sequencia.md)**
 
-Sequência de entregas: **morador → ponto de coleta → cooperativa → administrador**, com QA durante as sprints e um ciclo final de integração. A proposta deve ser refinada conforme capacidade e decisões da equipe.
+Sequência de entregas: **usuário → ponto de coleta → cooperativa → administrador**, com QA durante as sprints e um ciclo final de integração. A proposta deve ser refinada conforme capacidade e decisões da equipe.
 
 Responsáveis, datas individuais e conteúdo definitivo das sprints estão **a definir pela equipe**. O prazo informado é **20/11/2026**; não é uma garantia de conclusão de todo o backlog.
 
@@ -28,7 +28,7 @@ Pesquisas de mercado e concorrentes, sistema de pontos, dados no Amazonas, monet
 | Comportamento e decisões do produto | [Requisitos V6](docs/requisitos/requisitos-mvp-v6.md) e [regras de negócio](docs/requisitos/regras-de-negocio.md) |
 | Contexto e solução | [Visão do projeto](docs/visao/visao-do-projeto.md) |
 | Base examinada e resultados anteriores | [Estudos](docs/estudos/estudos-do-projeto.md) e [diagnóstico](docs/diagnostico/comparativo-mvp-estagio-v1.md) |
-| Testes com moradores e limites das evidências | [Roteiro](docs/ux/morador-v6-teste-usuarios.md) e [validação registrada](docs/ux/morador-v6-validacao.md) |
+| Testes com usuários e limites das evidências | [Roteiro](docs/ux/morador-v6-teste-usuarios.md) e [validação registrada](docs/ux/morador-v6-validacao.md) |
 | Tecnologias e reuniões | [Stacks](docs/tecnologia/stacks-e-integracoes.md) e [rotina de reuniões](docs/planejamento/rotina-de-reunioes.md) |
 
 [Abrir o guia completo dos documentos](docs/README.md).

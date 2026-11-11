@@ -1,6 +1,6 @@
 # Matriz de adequação da documentação
 
-> **Estado:** esboço · **Dono:** a definir · **Atualizado em:** 10/11/2026
+> **Estado:** esboço · **Dono:** a definir · **Atualizado em:** 11/11/2026
 > **Fontes:** inventário do repositório local + 9 documentos de análise (README, módulos 01–04 e propostas de solução).
 > **Lacunas abertas:** ver coluna "O que falta".
 
@@ -14,12 +14,12 @@ Legenda: ✅ pronto · 🟡 parcial · 🔴 conflitante/desatualizado · ⚪ aus
 
 | # | Documento | Situação | O que já temos | O que falta para o definitivo | Esboço |
 |---|---|---|---|---|---|
-| 1 | Visão e Escopo | 🟡 | `docs/visao/visao-do-projeto.md` | Lista do que **não** será feito; métricas do piloto | [visao-e-escopo](../01-planejamento/visao-e-escopo.md) |
-| 2 | PRD / SRS | 🔴 | V6 (1703 linhas) + regras de negócio | Decisões D1–D12 fechadas; uma versão só | [prd-srs](../01-planejamento/prd-srs.md) |
-| 3 | Backlog e histórias | 🟡 | 93 atividades em `tasks-gerais.md` | Formato "Como… quero… para…"; ondas | [backlog](../01-planejamento/backlog-e-historias.md) |
+| 1 | Visão e Escopo | 🟡 | `docs/visao/visao-do-projeto.md` | Revisada em 11/11: limites, evolução fora do MVP e **metas do piloto aprovadas**. Falta a validação formal do produto | [visao-e-escopo](../01-planejamento/visao-e-escopo.md) |
+| 2 | PRD / SRS | 🟡 | PRD como índice mestre; V6 fatiada em [20 arquivos](../01-planejamento/requisitos/README.md); regras de saldo e campanhas mescladas | Contradições 1 a 4 resolvidas em 11/11 (5 e 6 são correções de código). Falta a validação formal do produto | [prd-srs](../01-planejamento/prd-srs.md) |
+| 3 | Backlog e histórias | 🟡 | 93 atividades em [um arquivo cada](../01-planejamento/backlog/README.md) + [27 decisões](../01-planejamento/decisoes/README.md) | 5 histórias novas em 11/11. Falta converter as demais e ligar os 71 achados às atividades | [backlog](../01-planejamento/backlog-e-historias.md) |
 | 4 | Arquitetura (SAD) | 🟡 | `stacks-e-integracoes.md`, `arquitetura-refatoracao-banco.md` | Camadas, ledger, auth, ambientes | [sad](../02-arquitetura/sad.md) |
 | 5 | Diagramas | ⚪ | Só descrições em texto nas propostas | ER do banco; estados de descarte, sorteio, coleta | [diagramas](../02-arquitetura/diagramas.md) · [dados](../02-arquitetura/modelo-de-dados.md) |
-| 6 | Wireframes / UX | 🟡 | `docs/ux/` (só morador V6) | Telas do responsável, cooperativa e admin | [indice-de-telas](../03-ux/indice-de-telas.md) |
+| 6 | Wireframes / UX | 🟡 | `docs/ux/` (só usuário V6) | Telas do responsável, cooperativa e admin | [indice-de-telas](../03-ux/indice-de-telas.md) |
 | 7 | Documentação de API | ⚪ | Só OpenAPI automático; README do backend defasado | Tabela por rota, com rotas a remover | [api](../04-desenvolvimento/api.md) |
 | 8 | README | 🔴 | 3 READMEs (raiz, back, front) | Remover QR/papéis antigos; setup testado | ver `README.md` |
 | 9 | CONTRIBUTING | ⚪ | Rascunho em `tmp/` | Branches, commits, PR, Definição de Pronto | [CONTRIBUTING](../../CONTRIBUTING.md) |
@@ -32,7 +32,7 @@ Legenda: ✅ pronto · 🟡 parcial · 🔴 conflitante/desatualizado · ⚪ aus
 ## Problemas que atravessam vários documentos
 
 1. **Sem fonte única.** Requisitos existem em 3 lugares (`docs/requisitos`, `backend/docs/requisitos.md`, `frontend/docs/requisitos.md`).
-2. **Contradições de regra.** 10 pontos por operação (V6) × 5 por unidade (regras de saldo e código). Quem confirma o descarte também diverge. Detalhes em [decisoes-pendentes](decisoes-pendentes.md).
+2. **Contradições de regra.** ✅ Resolvidas na documentação em 11/11/2026: **10 pontos por descarte** e **o operador confirma**. O **código ainda diverge** (paga 5 por unidade). Detalhes em [decisoes-pendentes](decisoes-pendentes.md).
 3. **Arquivos grandes demais para ler.** `tasks-gerais.md` (6591 linhas), `decisoes.md` (3768), V6 (1703).
 4. **Docs obsoletos ainda no código.** `GUIA-INTEGRACAO-FRONT.md` e `PEDENCIAS-ENVIADAS-PELO-FRONT.md` no backend; READMEs ainda prometem QR code.
 5. **Formatos fora de `.md`.** PDFs em `frontend/docs/` (DLR V4/V5, manual) precisam ser convertidos.
@@ -40,7 +40,7 @@ Legenda: ✅ pronto · 🟡 parcial · 🔴 conflitante/desatualizado · ⚪ aus
 
 ## Detalhes: inventário por repositório
 
-- **Documentação** (`docs/`, 65 arquivos): visão, requisitos, planejamento por módulo (m01–m11), UX do morador, pesquisa de mercado, histórico.
+- **Documentação** (`docs/`, 65 arquivos): visão, requisitos, planejamento por módulo (m01–m11), UX do usuário, pesquisa de mercado, histórico.
 - **Backend:** README de 746 linhas, `CHANGES.md`, `docs/` (admin-features, requisitos), 32 migrações Alembic, 3 arquivos de teste, um workflow (migração + deploy Vercel, sem CI de testes).
 - **Frontend:** README, `docs/` (requisitos, ata, falas de reunião, manual, PDFs), CI e templates de issue.
 
