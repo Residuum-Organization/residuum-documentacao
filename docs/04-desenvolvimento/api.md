@@ -72,7 +72,7 @@ A API é **REST em JSON**, feita em FastAPI, com **113 rotas** (111 nos 15 arqui
 | PUT | `/pontos-coleta/{ponto_id}` | admin, cooperativa | 🟠 o **responsável vinculado** também edita materiais, com autoria |
 | PUT | `/pontos-coleta/{ponto_id}/horarios` | admin, cooperativa | — |
 | GET | `/meu-ponto-coleta` | ponto_coleta, cooperativa, admin | 🟠 com N:N, devolver **a lista** de pontos do responsável |
-| GET | `/pontos` | logado | `[VERIFICAR NO CÓDIGO]` duplicata de `/pontos-coleta`? |
+| GET | `/pontos` | logado | 🟡 **é um apelido** de `/pontos-coleta` (mesma função, mesmos filtros; conferido no código em 11/11/2026). Manter só uma |
 | POST | `/solicitacoes-pontos-coleta` | pública | 🔴 **remover**: só o admin cadastra pontos (RN-011, confirmado em 11/11) |
 | GET | `/solicitacoes-pontos-coleta/minha` | logado | 🔴 remover junto com o pedido público |
 
