@@ -81,15 +81,19 @@ Depois **pare e espere** a resposta dele.
 - Descarte rápido **não** é função à parte: é o uso do leitor de código de barras e do leitor de QR Code da nota.
 - Sorteios **somente de teste** até haver parecer jurídico.
 - Cashback é ideia **futura**, fora do MVP.
-- O perfil "morador" passa a "usuário" (por ora só na seção 3 da Visão).
+- O perfil "morador" passa a "usuário" **em todos os documentos** (feito em 11/11; nomes de arquivos, links e `TSK-MOR` ficaram iguais).
 - Acesso: cadastro normal; por ora, **código** fornecido pela equipe; o controle de X pessoas está em estudo.
+- **Metas do piloto aprovadas** (100 usuários, 3 pontos, 1 cooperativa, 8 semanas).
+- Leitura do código de barras **sem limite de tentativas**; aviso vermelho a cada falha; cadastro manual recomendado a partir da 2ª.
+- Coleta seletiva de Manaus: usar o **último dado publicado** (SINISA 2024, 33,7%).
 - Campanhas, vouchers e sorteios: regras decididas. Pendentes: **capacidade do ponto (PD-009)** e **execução da coleta (PD-014)**.
 
 ## Pendências abertas que dependem do Vinicius
 
 - Conflito dos pontos: a Visão diz **10 por descarte**; o código e as regras de saldo dizem **5 por unidade** (PD-010).
-- Aprovar as **metas do piloto** (proposta na Visão, seção 6) e definir o **X**.
+- Confirmar **X = 100** e aprovar a **trava de vagas no banco** (avaliada em `docs/pesquisa/controle-de-acesso.md`).
+- Decidir PD-009 e PD-014 a partir do estudo `docs/pesquisa/capacidade-e-execucao-da-coleta.md`.
+- Campos do formulário manual.
 - API de pagamento no MVP, ou pagamento manual primeiro? Quem paga (PD-016) e quanto (PD-015).
-- Se "morador" vira "usuário" em todos os documentos.
 
 **Comece agora pela Fase 1.**

@@ -21,7 +21,7 @@ Os tempos são **leitura atenta mais anotação** (cerca de 200 palavras por min
 
 | # | Documento | Min | O que avaliar | Feito | Meu parecer |
 |---|---|---|---|---|---|
-| 1 | [Visão e escopo](../01-planejamento/visao-e-escopo.md) | 10 | Só o que mudou: números do problema (seção 1), pendências (seção 4), metas do piloto (seção 6) | [ ] | |
+| 1 | [Visão e escopo](../01-planejamento/visao-e-escopo.md) | 10 | Só o que mudou: números do problema (seção 1), pendências (seção 4), metas do piloto (seção 6) | [x] | ✏️ ajustado em 11/11: metas aprovadas; leitura do código de barras sem limite (manual recomendado após 2 falhas); Manaus com SINISA 2024; "usuário" em todos os documentos; estudo de PD-009 e PD-014 |
 | 2 | [Decisões pendentes](decisoes-pendentes.md) | 5 | Quais decisões você ou o produto precisam tomar | [ ] | |
 | 3 | [PRD](../01-planejamento/prd-srs.md) | 8 | Qual documento vale para cada assunto; as 6 contradições | [ ] | |
 | 4 | [Backlog e histórias](../01-planejamento/backlog-e-historias.md) | 6 | Ondas de entrega e as histórias-modelo | [ ] | |
@@ -72,7 +72,7 @@ São **cópias fatiadas do texto original** (cerca de 82 mil palavras no total).
 |---|---|---|---|---|---|
 | 24 | [Índice dos requisitos](../01-planejamento/requisitos/README.md) e [M04 pontuação](../01-planejamento/requisitos/m04-pontuacao-saldo-e-extrato.md) | 10 | O texto do M04 é igual ao da V6, linhas 576 a 665 | [ ] | |
 | 25 | [Índice das decisões](../01-planejamento/decisoes/README.md) e [PD-010](../01-planejamento/decisoes/pd-010.md) | 10 | A coluna "Situação" está correta | [ ] | |
-| 26 | [Índice do backlog](../01-planejamento/backlog/README.md), [pasta do morador](../01-planejamento/backlog/morador/README.md) e [TSK-MOR-017](../01-planejamento/backlog/morador/tsk-mor-017.md) | 10 | As 93 atividades estão onde se espera | [ ] | |
+| 26 | [Índice do backlog](../01-planejamento/backlog/README.md), [pasta do usuário](../01-planejamento/backlog/morador/README.md) e [TSK-MOR-017](../01-planejamento/backlog/morador/tsk-mor-017.md) | 10 | As 93 atividades estão onde se espera | [ ] | |
 
 **Total:** 159 min de leitura (2h40), fora o plano opcional.
 
@@ -101,7 +101,7 @@ Para quando você quiser aprofundar além da amostra. Cada linha junta o requisi
 
 | Ordem | Perfil | Requisitos (V6 fatiada) | Backlog | Decisões relacionadas |
 |---|---|---|---|---|
-| 1 | **Usuário** (morador) | [M01 acesso](../01-planejamento/requisitos/m01-acesso-usuarios-e-convites.md), [M02 cadastro](../01-planejamento/requisitos/m02-cadastro-de-residuos-e-estoque.md), [M03 entrega](../01-planejamento/requisitos/m03-mapa-presenca-e-descarte.md), [M04 pontos](../01-planejamento/requisitos/m04-pontuacao-saldo-e-extrato.md), [M05 loja](../01-planejamento/requisitos/m05-loja-campanhas-vouchers-e-sorteios.md) | [26 atividades](../01-planejamento/backlog/morador/README.md) | PD-001 a 006, 010 a 013 |
+| 1 | **Usuário** | [M01 acesso](../01-planejamento/requisitos/m01-acesso-usuarios-e-convites.md), [M02 cadastro](../01-planejamento/requisitos/m02-cadastro-de-residuos-e-estoque.md), [M03 entrega](../01-planejamento/requisitos/m03-mapa-presenca-e-descarte.md), [M04 pontos](../01-planejamento/requisitos/m04-pontuacao-saldo-e-extrato.md), [M05 loja](../01-planejamento/requisitos/m05-loja-campanhas-vouchers-e-sorteios.md) | [26 atividades](../01-planejamento/backlog/morador/README.md) | PD-001 a 006, 010 a 013 |
 | 2 | **Ponto de coleta** | [M06 pontos e painel](../01-planejamento/requisitos/m06-pontos-de-coleta-e-painel-do-responsavel.md) | [5 atividades](../01-planejamento/backlog/ponto-de-coleta/README.md) | PD-007, 009, 023 |
 | 3 | **Cooperativa** | [M07 coletas](../01-planejamento/requisitos/m07-cooperativas-solicitacoes-e-execucao-de-coletas.md) | [4 atividades](../01-planejamento/backlog/cooperativa/README.md) | PD-014, 017, 018 |
 | 4 | **Administrador** | [M08 pagamento](../01-planejamento/requisitos/m08-pagamento-das-coletas.md), [M09 painel](../01-planejamento/requisitos/m09-administracao-indicadores-e-relatorios.md), [M10 planos](../01-planejamento/requisitos/m10-planos-e-acesso-comercial-a-dados.md), [M11 mídias](../01-planejamento/requisitos/m11-midias-e-comunicacao.md) | [17 atividades](../01-planejamento/backlog/administrador/README.md) | PD-015, 016, 019 a 021, 024 |
