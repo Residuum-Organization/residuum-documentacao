@@ -19,7 +19,7 @@
 
 **Descrição:**
 
-**Pré-condições:** morador autenticado. **Fluxo:** acessar pela confirmação do descarte ou navegação da plataforma; consultar campanhas vigentes, sorteios e vouchers; visualizar título, representação visual, condições resumidas e custo quando aplicável; abrir detalhes antes de participar ou comprar.
+**Pré-condições:** usuário autenticado. **Fluxo:** acessar pela confirmação do descarte ou navegação da plataforma; consultar campanhas vigentes, sorteios e vouchers; visualizar título, representação visual, condições resumidas e custo quando aplicável; abrir detalhes antes de participar ou comprar.
 
 **Exceções:** catálogo vazio deve informar ausência de ofertas. Ofertas não publicadas não são apresentadas como compráveis. A loja comercializa benefícios com pontos; cashback financeiro está fora do MVP.
 
@@ -31,7 +31,7 @@ Regras de origem: RN-010. Conferir texto e situação na V6.
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado campanhas e vouchers publicados, quando o morador abre a loja, então encontra as ofertas disponíveis e pode consultar detalhes.
+- **CA-01:** Dado campanhas e vouchers publicados, quando o usuário abre a loja, então encontra as ofertas disponíveis e pode consultar detalhes.
 - **CA-02:** Dado catálogo sem ofertas vigentes, quando o abre, então vê uma mensagem adequada sem opções fictícias de compra.
 
 **Dependências:**

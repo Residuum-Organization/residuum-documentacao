@@ -25,7 +25,7 @@ A API é REST em JSON, autenticada por **JWT Bearer**. Escritas sensíveis passa
 | POST | `/login`, `/refresh` | público | Refresh deverá conferir `ativo` |
 | POST | `/senha/recuperar`, `/senha/redefinir` | público | **Novo** |
 
-### Morador
+### Usuário
 | Método | Rota | Observação |
 |---|---|---|
 | POST/PUT/DELETE | `/inventario` | Só PET e lata, inteiros |

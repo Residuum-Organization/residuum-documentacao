@@ -5,11 +5,11 @@
 
 ## Resumo
 
-São **93 atividades**: 66 de execução (26 morador, 5 ponto, 4 cooperativa, 17 administrador, 14 transversais) e 27 decisões. As 27 decisões ficam em [decisoes](../decisoes/README.md). Abra a pasta do seu perfil. As histórias-modelo estão em [backlog-e-historias](../backlog-e-historias.md).
+São **93 atividades**: 66 de execução (26 usuário, 5 ponto, 4 cooperativa, 17 administrador, 14 transversais) e 27 decisões. As 27 decisões ficam em [decisoes](../decisoes/README.md). Abra a pasta do seu perfil. As histórias-modelo estão em [backlog-e-historias](../backlog-e-historias.md).
 
 | Pasta | Conteúdo | Atividades |
 |---|---|---|
-| [morador/](morador/README.md) | Morador | 26 |
+| [morador/](morador/README.md) | Usuário | 26 |
 | [ponto-de-coleta/](ponto-de-coleta/README.md) | Ponto de coleta | 5 |
 | [cooperativa/](cooperativa/README.md) | Cooperativa | 4 |
 | [administrador/](administrador/README.md) | Administrador | 17 |

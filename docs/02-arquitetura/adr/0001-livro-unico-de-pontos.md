@@ -2,7 +2,7 @@
 
 [Voltar ao índice](README.md)
 
-> **Estado:** proposta · **Origem:** solução S1 do módulo morador · **Depende de:** [PD-010](../../01-planejamento/decisoes/pd-010.md)
+> **Estado:** proposta · **Origem:** solução S1 do módulo usuário · **Depende de:** [PD-010](../../01-planejamento/decisoes/pd-010.md)
 
 ## Contexto
 
@@ -20,7 +20,7 @@ O saldo (`usuario.pontuacao_total`) é alterado em **6 lugares** do código e a 
 
 - **Melhora:** saldo explicável; extrato soma igual ao saldo; fim do crédito em dobro.
 - **Custa:** migração aditiva, reconciliação dos saldos já inflados (com revisão do produto) e testes em PostgreSQL.
-- **Risco:** morador que já gastou pontos creditados em dobro (ver [PD-010](../../01-planejamento/decisoes/pd-010.md)).
+- **Risco:** usuário que já gastou pontos creditados em dobro (ver [PD-010](../../01-planejamento/decisoes/pd-010.md)).
 
 ## Alternativas
 

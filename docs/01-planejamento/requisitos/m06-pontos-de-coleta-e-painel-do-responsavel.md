@@ -22,7 +22,7 @@
 **Critérios de aceite:**
 
 - **Dado** cadastro válido realizado pelo administrador, **quando** o ponto é habilitado, **então** aparece nas consultas conforme sua disponibilidade e materiais.
-- **Dado** um morador, **quando** tenta cadastrar um ponto diretamente, **então** a função administrativa não é autorizada.
+- **Dado** um usuário, **quando** tenta cadastrar um ponto diretamente, **então** a função administrativa não é autorizada.
 - **Dado** desativação, **quando** o histórico é consultado, **então** as entregas e coletas anteriores continuam identificando o ponto.
 
 #### RF-MVP-032 — Gerir pontos temporários
@@ -39,7 +39,7 @@
 
 **Critérios de aceite:**
 
-- **Dado** ponto temporário fora do período, **quando** o morador busca local disponível, **então** o ponto não é oferecido como destino ativo.
+- **Dado** ponto temporário fora do período, **quando** o usuário busca local disponível, **então** o ponto não é oferecido como destino ativo.
 - **Dado** término de um evento com coletas anteriores, **quando** o ponto deixa de receber, **então** os registros permanecem consultáveis aos perfis autorizados.
 
 #### RF-MVP-033 — Classificar contexto e funcionamento do ponto

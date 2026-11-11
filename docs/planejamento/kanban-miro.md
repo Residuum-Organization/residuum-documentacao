@@ -12,7 +12,7 @@ O Miro é a central de acompanhamento do time. Este documento explica o uso do q
 | Área | Cartões |
 |---|---:|
 | Preparação e diagnóstico | 1 |
-| Morador | 26 |
+| Usuário | 26 |
 | Ponto de coleta | 5 |
 | Cooperativa | 4 |
 | Administrador | 17 |

@@ -38,7 +38,7 @@ Regras de origem: RN-004, RN-007. Conferir texto e situação na V6.
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado cinco latas disponíveis, quando o morador seleciona duas, então a sessão de descarte contém duas, sem baixar o estoque antes da entrega.
+- **CA-01:** Dado cinco latas disponíveis, quando o usuário seleciona duas, então a sessão de descarte contém duas, sem baixar o estoque antes da entrega.
 - **CA-02:** Dado uma seleção maior que o saldo, quando tenta prosseguir, então o sistema impede a operação e informa a quantidade disponível.
 - **CA-03:** Dado apenas o registro de itens, quando o estoque é atualizado, então não há crédito de pontos.
 

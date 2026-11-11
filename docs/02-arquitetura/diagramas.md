@@ -6,7 +6,7 @@
 
 ## Resumo
 
-Cada estado abaixo aparece em dois diagramas: **hoje** (o que o código grava) e **proposto** (o desenho das análises). Os propostos dependem das decisões do produto; o ator da confirmação (operador ou morador) é a [PD-006 / PD-027](../01-planejamento/decisoes/pd-006.md). Toda transição inválida deve responder **409**.
+Cada estado abaixo aparece em dois diagramas: **hoje** (o que o código grava) e **proposto** (o desenho das análises). Os propostos dependem das decisões do produto; o ator da confirmação (operador ou usuário) é a [PD-006 / PD-027](../01-planejamento/decisoes/pd-006.md). Toda transição inválida deve responder **409**.
 
 ## 1. Descarte
 
@@ -14,7 +14,7 @@ Cada estado abaixo aparece em dois diagramas: **hoje** (o que o código grava) e
 
 ```mermaid
 stateDiagram-v2
-  [*] --> pendente: morador envia (credita e baixa estoque)
+  [*] --> pendente: usuário envia (credita e baixa estoque)
   pendente --> confirmado: operador confirma (credita e baixa de novo)
   pendente --> rejeitado: operador rejeita (não estorna, não devolve)
   confirmado --> revertido: admin reverte (estorna parte)
@@ -24,7 +24,7 @@ stateDiagram-v2
 
 ```mermaid
 stateDiagram-v2
-  [*] --> pendente: morador entrega com GPS válido (reserva o item, sem pontos)
+  [*] --> pendente: usuário entrega com GPS válido (reserva o item, sem pontos)
   pendente --> confirmado: operador confirma (credita 1 vez, baixa a reserva)
   pendente --> rejeitado: operador rejeita, com motivo (o item volta)
   confirmado --> revertido: admin reverte (estorna o valor gravado)
@@ -78,11 +78,11 @@ stateDiagram-v2
   desativado --> anonimizado
 ```
 
-## 5. Entrega do morador (sequência proposta)
+## 5. Entrega do usuário (sequência proposta)
 
 ```mermaid
 sequenceDiagram
-  participant M as Morador
+  participant M as Usuário
   participant A as API
   participant O as Operador
   M->>A: POST entrega (GPS novo + Idempotency-Key)

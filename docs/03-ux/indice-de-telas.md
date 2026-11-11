@@ -6,7 +6,7 @@
 
 ## Resumo
 
-O app tem **42 páginas** (`frontend/src/pages`). Só o **morador** tem protótipo documentado (V6, em `docs/ux/`). Os demais perfis têm telas implementadas e **sem wireframe**. Como o formato é `.md`, este índice liga cada tela a rota, arquivo e problema conhecido; desenhos ficam no Figma e as capturas em `docs/03-ux/evidencias/`.
+O app tem **42 páginas** (`frontend/src/pages`). Só o **usuário** tem protótipo documentado (V6, em `docs/ux/`). Os demais perfis têm telas implementadas e **sem wireframe**. Como o formato é `.md`, este índice liga cada tela a rota, arquivo e problema conhecido; desenhos ficam no Figma e as capturas em `docs/03-ux/evidencias/`.
 
 Colunas: **Rota** · **Arquivo** (`frontend/src/pages/…`) · **Achado** (ver análises).
 
@@ -22,7 +22,7 @@ Colunas: **Rota** · **Arquivo** (`frontend/src/pages/…`) · **Achado** (ver a
 | `/cadastro-ponto-coleta`, `/empresa`, `/confirmacao` | RegisterPontoColetaPage, CompanyPage, ConfirmationPage | cadastro público de ponto, com senha (PON-03) |
 | `/acesso-negado`, `/logout` | AcessoNegadoPage, LogoutPage | — |
 
-## Morador
+## Usuário
 
 | Rota | Arquivo | Achado |
 |---|---|---|
@@ -72,9 +72,9 @@ A V6 separa **responsável pelo ponto** e **cooperativa**; o front junta os dois
 
 | Arquivo | Conteúdo |
 |---|---|
-| [morador-v6-handoff.md](../ux/morador-v6-handoff.md) | Jornada e regras aprovadas do morador |
+| [morador-v6-handoff.md](../ux/morador-v6-handoff.md) | Jornada e regras aprovadas do usuário |
 | [morador-v6-validacao.md](../ux/morador-v6-validacao.md) | Validação registrada e seus limites |
-| [morador-v6-teste-usuarios.md](../ux/morador-v6-teste-usuarios.md) | Roteiro de teste com moradores |
+| [morador-v6-teste-usuarios.md](../ux/morador-v6-teste-usuarios.md) | Roteiro de teste com usuários |
 | [residuum-v2-lovable-status.md](../ux/residuum-v2-lovable-status.md) | Demonstração V2 (parcial) |
 | `docs/ux/morador-v6-figma-ledger.json` | Registro do Figma em JSON `[LACUNA]` converter para tabela `.md` |
 

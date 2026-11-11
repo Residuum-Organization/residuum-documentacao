@@ -2,7 +2,7 @@
 
 [Voltar ao índice](README.md)
 
-> **Estado:** proposta · **Origem:** solução S3 do módulo morador · **Depende de:** nada
+> **Estado:** proposta · **Origem:** solução S3 do módulo usuário · **Depende de:** nada
 
 ## Contexto
 

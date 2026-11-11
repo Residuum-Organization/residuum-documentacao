@@ -7,11 +7,11 @@
 
 #### RF-MVP-026 — Consultar a loja de recompensas
 
-**Situação:** confirmado. **Fonte:** S7. **Ator:** morador.
+**Situação:** confirmado. **Fonte:** S7. **Ator:** usuário.
 
 **Objetivo:** descobrir campanhas, sorteios e vouchers disponíveis.
 
-**Pré-condições:** morador autenticado. **Fluxo:** acessar pela confirmação do descarte ou navegação da plataforma; consultar campanhas vigentes, sorteios e vouchers; visualizar título, representação visual, condições resumidas e custo quando aplicável; abrir detalhes antes de participar ou comprar.
+**Pré-condições:** usuário autenticado. **Fluxo:** acessar pela confirmação do descarte ou navegação da plataforma; consultar campanhas vigentes, sorteios e vouchers; visualizar título, representação visual, condições resumidas e custo quando aplicável; abrir detalhes antes de participar ou comprar.
 
 **Exceções:** catálogo vazio deve informar ausência de ofertas. Ofertas não publicadas não são apresentadas como compráveis. A loja comercializa benefícios com pontos; cashback financeiro está fora do MVP.
 
@@ -19,12 +19,12 @@
 
 **Critérios de aceite:**
 
-- **Dado** campanhas e vouchers publicados, **quando** o morador abre a loja, **então** encontra as ofertas disponíveis e pode consultar detalhes.
+- **Dado** campanhas e vouchers publicados, **quando** o usuário abre a loja, **então** encontra as ofertas disponíveis e pode consultar detalhes.
 - **Dado** catálogo sem ofertas vigentes, **quando** o abre, **então** vê uma mensagem adequada sem opções fictícias de compra.
 
 #### RF-MVP-027 — Consultar detalhes e condições da campanha
 
-**Situação:** confirmado com pendências. **Fonte:** S7. **Ator:** morador.
+**Situação:** confirmado com pendências. **Fonte:** S7. **Ator:** usuário.
 
 **Objetivo:** explicar o que fazer e o que poderá ganhar antes da adesão.
 
@@ -36,14 +36,14 @@
 
 **Critérios de aceite:**
 
-- **Dado** campanha baseada no descarte de um produto, **quando** abre seus detalhes, **então** o morador vê produto, meta e benefício configurados.
+- **Dado** campanha baseada no descarte de um produto, **quando** abre seus detalhes, **então** o usuário vê produto, meta e benefício configurados.
 - **Dado** campanha com vídeo, **quando** os detalhes são exibidos, **então** a mídia é acessível e as condições também estão disponíveis em texto.
 
 #### RF-MVP-028 — Administrar e participar de campanhas
 
-**Situação:** confirmado com pendências. **Fonte:** S7. **Atores:** administrador e morador.
+**Situação:** confirmado com pendências. **Fonte:** S7. **Atores:** administrador e usuário.
 
-**Objetivo:** permitir campanhas internas geridas pelo administrador e participação pelos moradores.
+**Objetivo:** permitir campanhas internas geridas pelo administrador e participação pelos usuários.
 
 **Pré-condições:** permissão administrativa para gestão; campanha publicada para participação. **Entrada administrativa:** título, descrição, mídia, período e regra de meta, elegibilidade e recompensa. **Fluxo:** preparar cadastro; validar informações; publicar conforme regra aprovada; permitir adesão quando exigida; acompanhar progresso.
 
@@ -53,19 +53,19 @@
 
 **Critérios de aceite:**
 
-- **Dado** administrador autorizado e campanha com dados e regra validados, **quando** a publica, **então** ela fica consultável pelos moradores elegíveis.
-- **Dado** um morador, **quando** tenta alterar a regra da campanha, **então** a alteração é negada.
-- **Dado** uma condição de participação publicada, **quando** o morador adere, **então** a participação obedece à condição exibida, sem cobranças ocultas.
+- **Dado** administrador autorizado e campanha com dados e regra validados, **quando** a publica, **então** ela fica consultável pelos usuários elegíveis.
+- **Dado** um usuário, **quando** tenta alterar a regra da campanha, **então** a alteração é negada.
+- **Dado** uma condição de participação publicada, **quando** o usuário adere, **então** a participação obedece à condição exibida, sem cobranças ocultas.
 
 #### RF-MVP-029 — Administrar e adquirir vouchers
 
-**Situação:** confirmado com pendências. **Fonte:** S7. **Atores:** administrador e morador.
+**Situação:** confirmado com pendências. **Fonte:** S7. **Atores:** administrador e usuário.
 
 **Objetivo:** trocar pontos por cupons de promoção ou benefícios.
 
 **Pré-condições:** voucher cadastrado e publicado pelo administrador; custo e regras de uso aprovados. **Entrada:** título, descrição, benefício, custo em pontos, instruções e parâmetros de validade/disponibilidade conforme definição.
 
-**Fluxo:** administrador cadastra oferta; morador consulta detalhes e confirma a compra; sistema debita pontos com consistência; disponibiliza voucher adquirido em sua área de recompensas. Forma de emissão do código e validação no parceiro ainda são PD-012.
+**Fluxo:** administrador cadastra oferta; usuário consulta detalhes e confirma a compra; sistema debita pontos com consistência; disponibiliza voucher adquirido em sua área de recompensas. Forma de emissão do código e validação no parceiro ainda são PD-012.
 
 **Exceções:** não emitir voucher sem aquisição confirmada nem cobrar por oferta indisponível. Limite de unidades, cancelamento e devolução de pontos precisam de validação.
 
@@ -73,16 +73,16 @@
 
 **Critérios de aceite:**
 
-- **Dado** voucher disponível e saldo suficiente, **quando** o morador confirma, **então** uma aquisição é registrada e o débito corresponde ao custo exibido.
+- **Dado** voucher disponível e saldo suficiente, **quando** o usuário confirma, **então** uma aquisição é registrada e o débito corresponde ao custo exibido.
 - **Dado** voucher adquirido, **quando** consulta suas recompensas, **então** encontra o benefício e as instruções de uso aprovadas.
 
 #### RF-MVP-030 — Administrar sorteios e registrar participações
 
-**Situação:** confirmado com pendências. **Fontes:** S4/RF015 e S7. **Atores:** administrador e morador.
+**Situação:** confirmado com pendências. **Fontes:** S4/RF015 e S7. **Atores:** administrador e usuário.
 
 **Objetivo:** usar pontos para participar de sorteios com regras compreensíveis e resultado rastreável.
 
-**Pré-condições:** sorteio publicado com regras validadas. **Fluxo:** administrador cadastra descrição, prêmio, período e condições; morador consulta e confirma participação; registrar inscrição e custo se aplicável; apurar resultado conforme mecanismo aprovado; disponibilizar resultado e notificação prevista.
+**Pré-condições:** sorteio publicado com regras validadas. **Fluxo:** administrador cadastra descrição, prêmio, período e condições; usuário consulta e confirma participação; registrar inscrição e custo se aplicável; apurar resultado conforme mecanismo aprovado; disponibilizar resultado e notificação prevista.
 
 **Exceções:** custo em pontos, quantidade de chances, limites, algoritmo, cancelamento, prêmio e condições de realização aguardam PD-013. Seleção aleatória e e-mail da V5 são referências para validação, não autorização para realizar promoção sem regras acordadas.
 

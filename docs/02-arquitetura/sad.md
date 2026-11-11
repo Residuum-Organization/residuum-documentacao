@@ -57,11 +57,11 @@ flowchart LR
 
 Não há desativação de conta, revogação de sessão, convite nem limite de tentativas.
 
-## Fluxo principal: entrega do morador (como é hoje)
+## Fluxo principal: entrega do usuário (como é hoje)
 
 ```mermaid
 sequenceDiagram
-  participant M as Morador
+  participant M as Usuário
   participant A as API
   participant O as Operador
   M->>A: POST /inventario/transferencias (lote + GPS)

@@ -1,10 +1,10 @@
-# Morador
+# Usuário
 
 [Voltar ao índice](../README.md)
 
 | Atividade | Título |
 |---|---|
-| [TSK-MOR-001](tsk-mor-001.md) | Cadastrar morador por convite |
+| [TSK-MOR-001](tsk-mor-001.md) | Cadastrar usuário por convite |
 | [TSK-MOR-002](tsk-mor-002.md) | Autenticar e encerrar sessão |
 | [TSK-MOR-003](tsk-mor-003.md) | Recuperar acesso |
 | [TSK-MOR-004](tsk-mor-004.md) | Consultar e editar perfil |
@@ -16,7 +16,7 @@
 | [TSK-MOR-010](tsk-mor-010.md) | Manter estoque e selecionar quantidades |
 | [TSK-MOR-011](tsk-mor-011.md) | Consultar pontos próximos compatíveis |
 | [TSK-MOR-012](tsk-mor-012.md) | Consultar detalhes do ponto |
-| [TSK-MOR-013](tsk-mor-013.md) | Encaminhar morador à navegação externa |
+| [TSK-MOR-013](tsk-mor-013.md) | Encaminhar usuário à navegação externa |
 | [TSK-MOR-014](tsk-mor-014.md) | Validar presença por GPS |
 | [TSK-MOR-015](tsk-mor-015.md) | Confirmar entrega e movimentar estoques |
 | [TSK-MOR-016](tsk-mor-016.md) | Exibir confirmação e histórico de descartes |

@@ -31,9 +31,9 @@ Regras de origem: RN-009, RN-019. Conferir texto e situação na V6.
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado administrador autorizado e campanha com dados e regra validados, quando a publica, então ela fica consultável pelos moradores elegíveis.
-- **CA-02:** Dado um morador, quando tenta alterar a regra da campanha, então a alteração é negada.
-- **CA-03:** Dado uma condição de participação publicada, quando o morador adere, então a participação obedece à condição exibida, sem cobranças ocultas.
+- **CA-01:** Dado administrador autorizado e campanha com dados e regra validados, quando a publica, então ela fica consultável pelos usuários elegíveis.
+- **CA-02:** Dado um usuário, quando tenta alterar a regra da campanha, então a alteração é negada.
+- **CA-03:** Dado uma condição de participação publicada, quando o usuário adere, então a participação obedece à condição exibida, sem cobranças ocultas.
 
 **Dependências:**
 

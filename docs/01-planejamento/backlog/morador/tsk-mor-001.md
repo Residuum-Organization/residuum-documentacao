@@ -1,15 +1,15 @@
-# TSK-MOR-001 — Cadastrar morador por convite
+# TSK-MOR-001 — Cadastrar usuário por convite
 
 [Voltar ao módulo](../../../planejamento/modulos/README.md)
 
 > **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 108 a 169) em 10/11/2026. Corrija aqui, não na origem.
 
 
-**Nome da atividade:** Cadastrar morador por convite.
+**Nome da atividade:** Cadastrar usuário por convite.
 
 **Módulo:** M01 — Acesso, usuários e convites. **Módulos afetados:** M01.
 
-**Objetivo:** criar acesso do morador sem permitir cadastro público irrestrito.
+**Objetivo:** criar acesso do usuário sem permitir cadastro público irrestrito.
 
 **Responsável:** A definir pelo analista/equipe.
 
@@ -33,7 +33,7 @@ Regras de origem: RN-001. Conferir texto e situação na V6.
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado um convite válido e dados aceitos, quando o morador conclui o formulário, então a conta é criada vinculada ao consumo do convite.
+- **CA-01:** Dado um convite válido e dados aceitos, quando o usuário conclui o formulário, então a conta é criada vinculada ao consumo do convite.
 - **CA-02:** Dado uma tentativa sem convite autorizado, quando o formulário é enviado, então o sistema impede a criação da conta.
 - **CA-03:** Dado uma falha de validação, quando o cadastro não termina, então o convite mantém sua disponibilidade anterior.
 

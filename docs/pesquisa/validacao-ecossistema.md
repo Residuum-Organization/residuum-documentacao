@@ -4,7 +4,7 @@
 
 ## 1. Objetivo
 
-Validar se os problemas e os dados propostos pelo Residuum têm valor real para quatro grupos: moradores, pontos de coleta/estabelecimentos, cooperativas e poder público.
+Validar se os problemas e os dados propostos pelo Residuum têm valor real para quatro grupos: usuários, pontos de coleta/estabelecimentos, cooperativas e poder público.
 
 A pesquisa deve evitar apresentar a solução cedo demais. Primeiro é preciso entender o processo atual, as dores, os dados disponíveis e a disposição de cada ator em adotar uma nova ferramenta.
 

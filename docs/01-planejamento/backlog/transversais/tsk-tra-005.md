@@ -23,7 +23,7 @@
 
 Falhas de GPS, mapas e consulta de produtos/notas devem ser apresentadas sem inventar resultados. Negação de GPS não pode ser convertida em presença válida. Entrada manual deve permanecer acessível para falhas de identificação. Timeout, tentativas, precisão e validade da posição dependem de PD-004 e PD-008.
 
-**Verificação:** simular permissão negada, baixa precisão, localização antiga, indisponibilidade e recuperação. **BDD:** dado GPS inválido, quando o morador tenta concluir, então os itens e pontos não são movimentados indevidamente.
+**Verificação:** simular permissão negada, baixa precisão, localização antiga, indisponibilidade e recuperação. **BDD:** dado GPS inválido, quando o usuário tenta concluir, então os itens e pontos não são movimentados indevidamente.
 
 **Regras:**
 
@@ -31,7 +31,7 @@ As verificações seguem a especificação de origem; não há RN específica ci
 
 **Critérios de aceite:**
 
-- **CA-01:** Dado GPS inválido, quando o morador tenta concluir, então os itens e pontos não são movimentados indevidamente.
+- **CA-01:** Dado GPS inválido, quando o usuário tenta concluir, então os itens e pontos não são movimentados indevidamente.
 
 **Dependências:**
 

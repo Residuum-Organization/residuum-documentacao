@@ -1,6 +1,6 @@
-# Residuum — handoff da experiência do morador
+# Residuum — handoff da experiência do usuário
 
-Data: 10/10/2026. Base funcional: requisitos MVP V6. Decisões de interface aprovadas pelo solicitante nesta sessão. A validação com moradores ainda não ocorreu.
+Data: 10/10/2026. Base funcional: requisitos MVP V6. Decisões de interface aprovadas pelo solicitante nesta sessão. A validação com usuários ainda não ocorreu.
 
 ## Entregas e acesso
 
@@ -8,14 +8,14 @@ Data: 10/10/2026. Base funcional: requisitos MVP V6. Decisões de interface apro
 - Frontend: checkout local em `tmp/morador-v6`, branch `codex/morador-v6-ui`, derivado do frontend `4f41b139ba9871c92a5c5a72ca2f9d98ba6af164`.
 - Entrega de código: commit local `f2887b8`; [patch do frontend](morador-v6-frontend.patch) disponível para revisão/aplicação sobre a base indicada. A branch não foi publicada.
 - Demonstração: iniciar o Vite e acessar `/demo`. Atalho de revisão visual: `/demo/inicio?preview=1`. O parâmetro só funciona na demonstração.
-- Produção: `/morador` exige autenticação e informa a integração pendente. Não há fallback automático de API para fixtures. Cadastro público legado de moradores e pontos foi bloqueado até o contrato de convites/administração.
+- Produção: `/morador` exige autenticação e informa a integração pendente. Não há fallback automático de API para fixtures. Cadastro público legado de usuários e pontos foi bloqueado até o contrato de convites/administração.
 - O backend não foi alterado, a aplicação não foi implantada e nenhuma operação real de recompensa foi realizada.
 
 ## Público e hipótese de uso
 
-Moradores de condomínios piloto, com diferentes níveis de familiaridade digital, usando principalmente o celular. A hipótese de trabalho é que precisam saber o que separar, onde entregar e quando os pontos foram realmente creditados. Nenhuma entrevista foi realizada para confirmar essa hipótese.
+Usuários de condomínios piloto, com diferentes níveis de familiaridade digital, usando principalmente o celular. A hipótese de trabalho é que precisam saber o que separar, onde entregar e quando os pontos foram realmente creditados. Nenhuma entrevista foi realizada para confirmar essa hipótese.
 
-**Proto-persona:** Marina, moradora que acumula algumas embalagens durante a semana. Quer resolver o descarte durante um trajeto habitual; evita formulários longos e precisa de orientação quando GPS ou câmera falham. Nome e comportamento são ilustrativos, não representam pesquisa concluída.
+**Proto-persona:** Marina, usuária que acumula algumas embalagens durante a semana. Quer resolver o descarte durante um trajeto habitual; evita formulários longos e precisa de orientação quando GPS ou câmera falham. Nome e comportamento são ilustrativos, não representam pesquisa concluída.
 
 | Momento | Necessidade | Atrito a investigar | Resposta da interface |
 |---|---|---|---|
@@ -122,7 +122,7 @@ Fixture GPS: raio 100 m, precisão até 60 m, idade máxima 30 s. Estes valores 
 ## Heurísticas e acessibilidade
 
 1. Status visível: etapa, verificação, loading, impedimento e resultado explícitos.
-2. Linguagem do morador: embalagens/unidades, sem pedir kg no descarte.
+2. Linguagem do usuário: embalagens/unidades, sem pedir kg no descarte.
 3. Controle: voltar, revisar, cancelar, sair; explicar perda do rascunho.
 4. Consistência: componentes e cinco destinos estáveis.
 5. Prevenção: limites de estoque e bloqueio de ponto/saldo inválidos.
@@ -140,7 +140,7 @@ Referências: [contraste de texto WCAG 2.1](https://www.w3.org/WAI/WCAG21/Unders
 
 Os testes técnicos e capturas ficam em `tmp/morador-v6/docs/ux/evidence`; regras em `tests/model.test.mjs`, navegador em `tests/resident.e2e.mjs`. O resumo final de evidências fica em [validação](morador-v6-validacao.md). Scripts de testes reproduzíveis estarão no package.json do frontend.
 
-O [roteiro de teste com moradores](morador-v6-teste-usuarios.md) está pronto. A meta é pelo menos 4 de 5 moradores concluírem a interação digital de três embalagens em até 2 minutos, excluindo deslocamento físico. Até a sessão real, a usabilidade permanece hipótese.
+O [roteiro de teste com usuários](morador-v6-teste-usuarios.md) está pronto. A meta é pelo menos 4 de 5 usuários concluírem a interação digital de três embalagens em até 2 minutos, excluindo deslocamento físico. Até a sessão real, a usabilidade permanece hipótese.
 
 ## Manutenção no Figma
 

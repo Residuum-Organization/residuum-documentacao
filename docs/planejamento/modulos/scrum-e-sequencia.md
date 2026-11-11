@@ -2,7 +2,7 @@
 
 [Abrir o documento geral das tasks](tasks-gerais.md).
 
-**Ordem solicitada:** morador → ponto de coleta → cooperativa → administrador. **Prazo informado:** 20/11/2026. Responsáveis, datas individuais, estimativas e seleção definitiva das atividades serão preenchidos pelo analista/equipe.
+**Ordem solicitada:** usuário → ponto de coleta → cooperativa → administrador. **Prazo informado:** 20/11/2026. Responsáveis, datas individuais, estimativas e seleção definitiva das atividades serão preenchidos pelo analista/equipe.
 
 ## Como interpretar a sequência
 
@@ -16,11 +16,11 @@ Esta é uma sequência de objetivos para refinamento, não uma promessa de concl
 
 | Ciclo proposto | Objetivo | Atividades candidatas e fundamentos | Demonstração esperada |
 |---|---|---|---|
-| Sprint 1 — Morador | Completar um recorte da jornada principal do morador com dados reais de avaliação | TSK-MOR pertinentes à entrada, registro manual, estoque, ponto, GPS, descarte e pontos. ADE-000, acessos/convites mínimos de ADE-001–003, materiais de ADE-004 e pontos mínimos de ADE-013 | Registrar sem pontos, entregar apenas unidades selecionadas e confirmar uma vez com dez pontos básicos |
+| Sprint 1 — Usuário | Completar um recorte da jornada principal do usuário com dados reais de avaliação | TSK-MOR pertinentes à entrada, registro manual, estoque, ponto, GPS, descarte e pontos. ADE-000, acessos/convites mínimos de ADE-001–003, materiais de ADE-004 e pontos mínimos de ADE-013 | Registrar sem pontos, entregar apenas unidades selecionadas e confirmar uma vez com dez pontos básicos |
 | Sprint 2 — Ponto de coleta | Tornar visíveis e operáveis os efeitos da entrega para o responsável | TSK-PON-001–004; configuração/ocupação em ADE-013–014 e pedido em ADE-015; relatório depende do recorte comercial aprovado | Responsável vê estoque, configura materiais permitidos e encaminha solicitação ao administrador |
 | Sprint 3 — Cooperativa | Concluir um recorte da retirada atribuída sem perder remanescentes | TSK-COO-001–004, ADE-015–017; atribuição/agendamento mínimo administrativo e regras de conciliação | Cooperativa aceita, consulta agenda/rota e registra pesos; remanescentes e entradas posteriores preservados |
 | Sprint 4 — Administrador | Completar o recorte administrativo priorizado e integrar as jornadas | TSK-ADM pertinentes; consolidar fundamentos já entregues; Loja, pagamento, mídia, planos e relatórios entram conforme prioridades, decisões e capacidade | Administrador gerencia o recorte escolhido, acompanha operação e apresenta resultados coerentes |
-| Sprint final — Integração e entrega | Validar o conjunto selecionado, corrigir regressões e preparar liberação | ADE-024–026, casos integrados, testes com moradores/dispositivos e documentação; funcionalidades inacabadas permanecem explícitas | Jornada entre perfis demonstrada, critérios cumpridos, evidências e limitações registradas |
+| Sprint final — Integração e entrega | Validar o conjunto selecionado, corrigir regressões e preparar liberação | ADE-024–026, casos integrados, testes com usuários/dispositivos e documentação; funcionalidades inacabadas permanecem explícitas | Jornada entre perfis demonstrada, critérios cumpridos, evidências e limitações registradas |
 
 Scanner, nota, campanhas, vouchers e sorteios continuam no backlog e entram na etapa de seu perfil quando houver capacidade e decisões aprovadas. Essa tabela não os adia automaticamente nem remove escopo. Se o conjunto indispensável não couber, o analista/equipe precisa registrar a decisão de recorte; não transferir QA para depois da deadline.
 

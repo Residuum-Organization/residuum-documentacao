@@ -2,15 +2,15 @@
 
 [Voltar ao documento geral](README.md).
 
-**Sequência:** morador → ponto de coleta → cooperativa → administrador. Esta navegação aponta para as mesmas fichas, sem duplicação. A [proposta de Scrum](scrum-e-sequencia.md) explica fundamentos antecipados e recortes por sprint. A [matriz de importância](matriz-importancia.md) apoia a ordenação.
+**Sequência:** usuário → ponto de coleta → cooperativa → administrador. Esta navegação aponta para as mesmas fichas, sem duplicação. A [proposta de Scrum](scrum-e-sequencia.md) explica fundamentos antecipados e recortes por sprint. A [matriz de importância](matriz-importancia.md) apoia a ordenação.
 
 As atividades administrativas de convites, vínculos, cadastro mínimo de pontos e atribuição/agendamento podem ser dependências de perfis anteriores. O painel administrativo completo continua como foco final. Qualidade e decisões acompanham todos os perfis.
 
-## 1. Morador
+## 1. Usuário
 
 | Atividade | Módulo |
 |---|---|
-| [TSK-MOR-001 — Cadastrar morador por convite](m01.md#tsk-mor-001) | M01 |
+| [TSK-MOR-001 — Cadastrar usuário por convite](m01.md#tsk-mor-001) | M01 |
 | [TSK-MOR-002 — Autenticar e encerrar sessão](m01.md#tsk-mor-002) | M01 |
 | [TSK-MOR-003 — Recuperar acesso](m01.md#tsk-mor-003) | M01 |
 | [TSK-MOR-004 — Consultar e editar perfil](m01.md#tsk-mor-004) | M01 |
@@ -22,7 +22,7 @@ As atividades administrativas de convites, vínculos, cadastro mínimo de pontos
 | [TSK-MOR-010 — Manter estoque e selecionar quantidades](m02.md#tsk-mor-010) | M02 |
 | [TSK-MOR-011 — Consultar pontos próximos compatíveis](m03.md#tsk-mor-011) | M03 |
 | [TSK-MOR-012 — Consultar detalhes do ponto](m03.md#tsk-mor-012) | M03 |
-| [TSK-MOR-013 — Encaminhar morador à navegação externa](m03.md#tsk-mor-013) | M03 |
+| [TSK-MOR-013 — Encaminhar usuário à navegação externa](m03.md#tsk-mor-013) | M03 |
 | [TSK-MOR-014 — Validar presença por GPS](m03.md#tsk-mor-014) | M03 |
 | [TSK-MOR-015 — Confirmar entrega e movimentar estoques](m03.md#tsk-mor-015) | M03 |
 | [TSK-MOR-016 — Exibir confirmação e histórico de descartes](m03.md#tsk-mor-016) | M03 |
@@ -62,7 +62,7 @@ As atividades administrativas de convites, vínculos, cadastro mínimo de pontos
 |---|---|
 | [TSK-ADM-001 — Gerenciar convites individuais](m01.md#tsk-adm-001) | M01 |
 | [TSK-ADM-002 — Gerenciar convites compartilhados](m01.md#tsk-adm-002) | M01 |
-| [TSK-ADM-003 — Cadastrar morador pela administração](m01.md#tsk-adm-003) | M01 |
+| [TSK-ADM-003 — Cadastrar usuário pela administração](m01.md#tsk-adm-003) | M01 |
 | [TSK-ADM-004 — Administrar acessos e vínculos](m01.md#tsk-adm-004) | M01 |
 | [TSK-ADM-005 — Cadastrar e administrar pontos de coleta](m06.md#tsk-adm-005) | M06 |
 | [TSK-ADM-006 — Gerir pontos temporários](m06.md#tsk-adm-006) | M06 |

@@ -6,7 +6,7 @@
 |---|---|
 | [TSK-ADM-001](tsk-adm-001.md) | Gerenciar convites individuais |
 | [TSK-ADM-002](tsk-adm-002.md) | Gerenciar convites compartilhados |
-| [TSK-ADM-003](tsk-adm-003.md) | Cadastrar morador pela administração |
+| [TSK-ADM-003](tsk-adm-003.md) | Cadastrar usuário pela administração |
 | [TSK-ADM-004](tsk-adm-004.md) | Administrar acessos e vínculos |
 | [TSK-ADM-005](tsk-adm-005.md) | Cadastrar e administrar pontos de coleta |
 | [TSK-ADM-006](tsk-adm-006.md) | Gerir pontos temporários |

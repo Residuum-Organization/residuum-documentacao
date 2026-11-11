@@ -22,7 +22,7 @@ Os testes documentados usaram Python 3.12.14, enquanto o Docker declara Python 3
 
 | Ferramenta | Uso documentado | Limite |
 |---|---|---|
-| Figma | Fundamentos, componentes, telas e protótipo do morador | [Handoff V6](../ux/morador-v6-handoff.md); validação com moradores pendente |
+| Figma | Fundamentos, componentes, telas e protótipo do usuário | [Handoff V6](../ux/morador-v6-handoff.md); validação com usuários pendente |
 | Frontend demonstrativo V6 | Jornada com dados de demonstração e patch para revisão | Integração backend pendente; não houve implantação nessa entrega |
 | Lovable | Projeto independente de demonstração V2 | [Entrega parcial](../ux/residuum-v2-lovable-status.md), erros de tipagem reportados e retomada bloqueada por créditos |
 

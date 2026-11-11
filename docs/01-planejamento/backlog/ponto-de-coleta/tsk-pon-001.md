@@ -9,7 +9,7 @@
 
 **Módulo:** M06 — Pontos de coleta e painel do responsável. **Módulos afetados:** M06.
 
-**Objetivo:** Informar aos moradores quais embalagens o ponto recebe. Sem esta entrega, a jornada pode ficar bloqueada ou produzir acesso/efeitos incorretos.
+**Objetivo:** Informar aos usuários quais embalagens o ponto recebe. Sem esta entrega, a jornada pode ficar bloqueada ou produzir acesso/efeitos incorretos.
 
 **Responsável:** A definir pelo analista/equipe.
 

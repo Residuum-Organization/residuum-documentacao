@@ -16,14 +16,14 @@ Esta tabela indica informação de negócio, não esquema físico de banco. Camp
 | Produto/resíduo | Nome, identificador consultado, material, quantidade e origem da informação | Identificação de produto não comprova entrega física |
 | Consulta de nota | Referência e itens importados necessários ao cadastro | Armazenar integralmente a nota requer decisão de privacidade |
 | Estoque pessoal | Itens e quantidades disponíveis | Não representa peso medido |
-| Descarte | Morador, ponto, itens, quantidades, confirmação e evidência de presença | Origem do crédito básico e eventual bônus |
+| Descarte | Usuário, ponto, itens, quantidades, confirmação e evidência de presença | Origem do crédito básico e eventual bônus |
 | Ponto de coleta | Localização, contexto, duração, responsável, aceitação e disponibilidade | Material aceito separado do acumulado |
 | Estoque do ponto | Entradas, retiradas e unidade de cada informação | Contagem/estimativa/peso precisam ser distinguidos |
 | Cooperativa | CNPJ, identificação, contatos e acessos | Dados do recebedor financeiro dependem da integração |
 | Solicitação/coleta | Ponto, cooperativa, solicitante, agendamento, aceite e registros | Pedido do ponto não é solicitação já aceita pela cooperativa |
 | Peso coletado | Material, peso, unidade, coleta e autoria | Deve ser vinculado ao ponto e à coleta |
 | Ordem de pagamento | Coleta, recebedor, valor, ordem externa e situação | Não deduzir sucesso só do envio |
-| Lançamento de pontos | Morador, valor, crédito/débito, origem e referência | Bônus separado do básico e do dinheiro |
+| Lançamento de pontos | Usuário, valor, crédito/débito, origem e referência | Bônus separado do básico e do dinheiro |
 | Campanha/sorteio/voucher | Conteúdo, condições, publicação e regras aprovadas | Participação e aquisição são registros próprios |
 | Plano e contratação | Modalidade, titular, situação, vigência e benefícios aprovados | Não ampliar permissão por contratação |
 | Auditoria | Autor, evento, entidade, data e resultado | Segredos e dados desnecessários não são conteúdo de log comum |
@@ -48,32 +48,32 @@ Esta tabela indica informação de negócio, não esquema físico de banco. Camp
 ```mermaid
 sequenceDiagram
     autonumber
-    actor Morador
+    actor Usuario as Usuário
     participant Interface as Interface Residuum
     participant Servico as Serviço de descarte
     participant Dados as Persistência de negócio
     participant Bonus as Apuração de campanhas
-    Morador->>Interface: Seleciona itens e ponto
+    Usuario->>Interface: Seleciona itens e ponto
     Interface->>Interface: Obtém localização autorizada
     Interface->>Servico: Solicita validação de presença
     Servico-->>Interface: Resultado conforme parâmetros aprovados
     alt Presença inválida
-        Interface-->>Morador: Informa impedimento e preserva itens
+        Interface-->>Usuario: Informa impedimento e preserva itens
     else Presença válida
-        Interface-->>Morador: Mostra resumo para confirmar
-        Morador->>Interface: Confirma entrega
+        Interface-->>Usuario: Mostra resumo para confirmar
+        Usuario->>Interface: Confirma entrega
         Interface->>Servico: Envia confirmação com identificação da operação
         Servico->>Dados: Revalida e registra descarte, estoques e 10 pontos
         alt Falha na conclusão consistente
             Dados-->>Servico: Operação não concluída
             Servico-->>Interface: Falha sem sucesso parcial
-            Interface-->>Morador: Informa falha
+            Interface-->>Usuario: Informa falha
         else Descarte concluído
             Dados-->>Servico: Resultado único do descarte
             Servico->>Bonus: Apura elegibilidade conforme regras aprovadas
             Bonus->>Dados: Registra bônus elegível sem duplicar o básico
             Servico-->>Interface: Resultado e pontos confirmados
-            Interface-->>Morador: Confirmação com Home e Loja
+            Interface-->>Usuario: Confirmação com Home e Loja
         end
     end
 ```
