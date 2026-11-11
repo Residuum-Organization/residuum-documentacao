@@ -43,7 +43,7 @@ Atividades `TSK-…` e ondas ainda **não estão ligadas**. `[LACUNA]` ligar cad
 | H-MOR-04 | Como **usuário**, quero ver se o ponto está lotado ou fechado antes de ir. | Ponto indisponível aparece desabilitado com motivo | 5 | [TSK-MOR-011](backlog/morador/tsk-mor-011.md) |
 | H-COO-01 | Como **admin**, quero ser o único a criar cooperativas, para evitar fraude. | Cadastro público responde 410 | 0 | [TSK-ADM-008](backlog/administrador/tsk-adm-008.md) |
 | H-COO-02 | Como **cooperativa**, quero ver só os pontos ligados a mim. | Listas disjuntas entre cooperativas | 2 | [TSK-COO-001](backlog/cooperativa/tsk-coo-001.md) e [TSK-ADM-004](backlog/administrador/tsk-adm-004.md) |
-| H-COO-03 | Como **cooperativa**, quero informar o que retirei por material, sem zerar o ponto. | Estoque baixa só pelo coletado | 4 | [TSK-COO-004](backlog/cooperativa/tsk-coo-004.md) |
+| H-COO-03 | Como **cooperativa**, quero informar o que retirei por material, sem zerar o ponto (coleta parcial **decidida em 11/11**). | Estoque baixa só pelo coletado | 4 | [TSK-COO-004](backlog/cooperativa/tsk-coo-004.md) |
 | H-PON-01 | Como **responsável**, quero editar os materiais do meu ponto, com histórico. | Alteração gera registro de auditoria | 4 | [TSK-PON-001](backlog/ponto-de-coleta/tsk-pon-001.md) |
 | H-PON-02 | Como **responsável**, quero pedir coleta quando o ponto encher. | Pedido aparece ao admin; duplicado → 409 | 4 | [TSK-PON-004](backlog/ponto-de-coleta/tsk-pon-004.md) |
 | H-ADM-01 | Como **admin**, quero cancelar um sorteio devolvendo os pontos. | Cada bilhete devolve 1 vez | 3 | [TSK-MOR-026](backlog/morador/tsk-mor-026.md) |
