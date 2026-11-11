@@ -35,7 +35,7 @@ Este documento diz **o que o produto é, para quem e até onde vai**. O texto lo
 2. **Pontos e Loja.** Pontos por descarte, campanhas com bônus, vouchers de parceiros e sorteios.
 3. **Pontos organizados.** Pontos fixos e temporários, com responsável, materiais aceitos e sinalização de ocupação.
 4. **Coleta coordenada.** O responsável pede, o administrador encaminha, a cooperativa aceita, retira e informa material e peso.
-5. **Pagamento controlado.** O administrador paga a cooperativa dentro da plataforma, por API.
+5. **Pagamento controlado.** A Residuum paga a cooperativa **por kg e material** coletado. No piloto, o administrador paga pelo banco e registra o comprovante; o pagamento **por API** entra depois (decidido em 11/11/2026).
 6. **Dados por plano.** Relatórios e indicadores conforme plano, perfil e vínculo.
 
 ```mermaid
@@ -43,7 +43,7 @@ flowchart LR
   M[Usuário<br/>registra e entrega] --> P[Ponto de coleta<br/>confirma e acumula]
   P --> A[Administrador<br/>encaminha a coleta]
   A --> C[Cooperativa<br/>aceita, retira e pesa]
-  C --> A2[Administrador<br/>paga por API]
+  C --> A2[Administrador<br/>paga e registra]
   M -. pontos .-> L[Loja<br/>campanhas, vouchers, sorteios]
 ```
 
@@ -74,7 +74,7 @@ O perfil que antes se chamava "morador" passa a se chamar **usuário** em todos 
 | Pontos e Loja | Pontos por descarte, campanhas com bônus, vouchers e **sorteios** (ver limite abaixo) |
 | Pontos de coleta | Fixos e temporários, **cadastrados só pelo admin**, com responsável, materiais aceitos, ocupação e **raio de GPS de 100 m ajustável** (decidido em 11/11/2026) |
 | Coleta | Pedido, encaminhamento, aceite, agenda e rota, registro de **material e peso** |
-| Pagamento | **Pagamento à cooperativa por API**, iniciado pelo administrador `[DECISÃO: PD-015, PD-016]` |
+| Pagamento | A **Residuum** paga a cooperativa **por kg e material** ([PD-015](decisoes/pd-015.md), [PD-016](decisoes/pd-016.md)). **No piloto: pagamento manual** com comprovante registrado pelo administrador; **API depois**, testada antes em ambiente de teste (decidido em 11/11/2026). `[LACUNA: valor por kg de PET e de lata]` |
 | Dados | **Planos** (grátis, pré-pago, mensal) para relatórios e indicadores `[DECISÃO: PD-019]` |
 
 ### Limites já decididos

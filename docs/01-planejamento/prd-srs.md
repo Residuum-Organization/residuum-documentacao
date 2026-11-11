@@ -73,7 +73,7 @@ Legenda: ✅ conforme · ❌ violada pelo código · ⏳ não implementada · �
 |---|---|---|
 | RF-004 | Admin cadastra usuário | ⏳ |
 | RN-019b | Só o admin apura, depois do fim | ❌ apura antes |
-| RN-017/018 | Pagamento por API | ⏳ |
+| RN-017/018 | Pagamento à cooperativa: **manual com comprovante no piloto**, API depois; pagador Residuum; valor por kg e material (11/11) | ⏳ |
 | RN-020 | Relatórios por plano | ⏳ |
 
 ## Requisitos não funcionais
