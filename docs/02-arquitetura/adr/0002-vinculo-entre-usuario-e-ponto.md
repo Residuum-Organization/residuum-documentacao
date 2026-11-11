@@ -2,7 +2,7 @@
 
 [Voltar ao índice](README.md)
 
-> **Estado:** proposta · **Origem:** soluções P1/P2 (ponto de coleta) e C2/C3 (cooperativa) · **Depende de:** [PD-023](../../01-planejamento/decisoes/pd-023.md)
+> **Estado:** aceita em 11/11/2026 (Vinicius) · confirmada pela decisão N:N gerida pelo admin · **Origem:** soluções P1/P2 (ponto de coleta) e C2/C3 (cooperativa) · **Depende de:** [PD-023](../../01-planejamento/decisoes/pd-023.md)
 
 ## Contexto
 

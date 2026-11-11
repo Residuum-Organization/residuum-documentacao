@@ -2,7 +2,7 @@
 
 [Voltar ao índice](README.md)
 
-> **Estado:** proposta · **Origem:** soluções S2 (descarte), A1 (sorteio), C4 (coleta) · **Depende de:** [PD-006](../../01-planejamento/decisoes/pd-006.md), [PD-013](../../01-planejamento/decisoes/pd-013.md), [PD-014](../../01-planejamento/decisoes/pd-014.md)
+> **Estado:** aceita em 11/11/2026 (Vinicius) · **Origem:** soluções S2 (descarte), A1 (sorteio), C4 (coleta) · **Depende de:** [PD-006](../../01-planejamento/decisoes/pd-006.md), [PD-013](../../01-planejamento/decisoes/pd-013.md), [PD-014](../../01-planejamento/decisoes/pd-014.md)
 
 ## Contexto
 
@@ -11,7 +11,7 @@ Os status são texto livre (só `solicitacao_ponto_coleta` tem `CHECK`). O `PUT`
 ## Decisão
 
 1. Cada entidade com ciclo de vida tem uma **tabela de transições permitidas** no backend e uma função `transicionar(entidade, para)`.
-2. O `PUT` **nunca** muda o estado; cada mudança é um endpoint próprio (`publicar`, `cancelar`, `sortear`, `aceitar`, `iniciar`, `concluir`).
+2. O `PUT` **nunca** muda o estado; cada mudança é um endpoint próprio (`publicar`, `cancelar`, `sortear`, `aceitar`, `iniciar` = "a caminho", `concluir`). Na coleta, **admin e cooperativa** podem cancelar, com motivo (11/11/2026).
 3. Transição inválida → **409**. Cada transição grava autor, data e, quando for o caso, motivo.
 4. `CHECK` no banco lista os valores válidos.
 5. "Encerrado" do sorteio é **derivado** da data, não gravado por clique.
