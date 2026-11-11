@@ -31,7 +31,7 @@ Numeração: **PD-xxx** é o identificador oficial da V6. A coluna "Análise" li
 | 11 | [PD-022](../01-planejamento/decisoes/pd-022.md) | Excluir conta (LGPD) | Anonimizar, não apagar |
 | 12 | [PD-014](../01-planejamento/decisoes/pd-014.md) | Execução da coleta | Manter recusa com motivo; lançamento avulso a revisar. Estudo completo (8 decisões) em [capacidade e execução da coleta](../pesquisa/capacidade-e-execucao-da-coleta.md) |
 | 13 | [PD-019](../01-planejamento/decisoes/pd-019.md) | Planos e relatórios | Plano único "piloto" |
-| 14 | [PD-016](../01-planejamento/decisoes/pd-016.md) | Pagamento à cooperativa | Decidir antes da Sprint 4 |
+| 14 | [PD-016](../01-planejamento/decisoes/pd-016.md) | Pagamento à cooperativa | **Decidido em 11/11:** Residuum paga, por kg e material; manual com comprovante no piloto, API depois. Falta o valor por material |
 | 15 | [PD-012](../01-planejamento/decisoes/pd-012.md) | Cancelar voucher e devolver pontos | Manter sem cancelamento no piloto |
 
 ## Contradições entre fontes a fechar junto
