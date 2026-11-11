@@ -2,7 +2,7 @@
 
 > **Estado:** revisão (aguardando aprovação do produto) · **Dono:** Produto · **Atualizado em:** 11/11/2026
 > **Fontes:** [visão original](../visao/visao-do-projeto.md) (mantida como referência), [V6](requisitos/README.md), [regras de saldo, vouchers e sorteios](../requisitos/regras-de-saldo-vouchers-sorteios.md), respostas e complementos da revisão de 11/11/2026 (Vinicius).
-> **Lacunas:** 2 · **Conflito aberto:** valor do ponto (ver [seção 5](#5-pontos-e-recompensas))
+> **Lacunas:** 2 · **Conflitos abertos:** nenhum na Visão (o código ainda paga 5 por unidade, ver [seção 5](#5-pontos-e-recompensas))
 
 ## Resumo
 
@@ -67,7 +67,7 @@ O perfil que antes se chamava "morador" passa a se chamar **usuário** em todos 
 
 | Área | O que entra |
 |---|---|
-| Acesso | O usuário **se cadastra normalmente**. O controle de quantas pessoas entram (um número X) ainda está em estudo ([opções pesquisadas](../pesquisa/controle-de-acesso.md)); **por ora, o acesso é liberado por um código** fornecido pela equipe |
+| Acesso | O usuário **se cadastra normalmente**, com um **código** fornecido pela equipe. O número de contas tem um **teto de 500** (decidido em 11/11/2026), controlado por **trava de vagas no banco** (*pessimistic locking*: `SELECT ... FOR UPDATE` na linha de vagas). Ver [controle de acesso](../pesquisa/controle-de-acesso.md) |
 | Cadastro de resíduos | **Três sistemas**, iniciados por um botão **+** centralizado na barra de navegação. **1) Código de barras:** lê o produto e já preenche o formulário. **2) QR Code da nota fiscal:** traz os itens da nota e os materiais. **3) Manual:** o usuário pode tentar ler o código de barras **quantas vezes quiser**. Cada falha mostra um **aviso vermelho** de erro de leitura; a partir da **2ª falha**, o aviso **recomenda o cadastro manual** (nome, material, quantidade `[LACUNA: campos do formulário]`). Decidido em 11/11/2026. Materiais: **PET e lata de alumínio** |
 | Descarte rápido | **Não é uma função à parte.** É o uso do **leitor de código de barras** (agiliza um único produto) e do **leitor de QR Code da nota** (traz todos os materiais da nota) para seguir direto à escolha do ponto, sem passar pelo estoque |
 | Entrega | Escolha do ponto compatível, navegação externa, **validação de presença por GPS**, confirmação |
@@ -97,7 +97,7 @@ As regras de **campanhas, vouchers e sorteios** foram decididas (ver [campanhas]
 |---|---|---|---|
 | **Capacidade do ponto de coleta** e "ponto cheio" | [PD-009](decisoes/pd-009.md) | Estudo e decisão com a operação | **Estudo feito:** [capacidade e coleta](../pesquisa/capacidade-e-execucao-da-coleta.md). Falta decidir |
 | **Execução da coleta** (recusa, prazo, coleta parcial) | [PD-014](decisoes/pd-014.md) | Estudo e decisão com a operação | **Estudo feito:** [capacidade e coleta](../pesquisa/capacidade-e-execucao-da-coleta.md). Falta decidir |
-| Controle de quantas pessoas entram | — | Pesquisa | **Pesquisa feita:** [controle de acesso](../pesquisa/controle-de-acesso.md); trava de vagas no banco avaliada. Falta confirmar X (metas usam 100) |
+| Controle de quantas pessoas entram | — | Pesquisa e decisão | **Decidido em 11/11/2026:** teto de **500** contas, com trava de vagas no banco ([controle de acesso](../pesquisa/controle-de-acesso.md)) |
 | Fonte para código de barras e nota fiscal | [PD-004](decisoes/pd-004.md) | Pesquisa | **Pesquisa feita:** [fontes](../pesquisa/fontes-de-produtos-e-notas.md). Falta **testar** |
 | Provedor de pagamento | [PD-015](decisoes/pd-015.md), [PD-016](decisoes/pd-016.md) | Pesquisa | **Pesquisa feita:** [provedores](../pesquisa/provedores-de-pagamento.md). Falta decidir pagador e valor |
 | Precisão do GPS | [PD-008](decisoes/pd-008.md) | Teste em campo | Medir no piloto |
@@ -111,9 +111,9 @@ As regras de **campanhas, vouchers e sorteios** foram decididas (ver [campanhas]
 
 ## 5. Pontos e recompensas
 
-**Regra desta visão (definida na revisão de 11/11/2026): 10 pontos básicos por descarte concluído**, como regra provisória até o modelo definitivo. Campanhas podem dar pontos extras.
+**Regra decidida em 11/11/2026 ([PD-010](decisoes/pd-010.md)): 10 pontos básicos por descarte concluído**, por operação, **independentemente da quantidade** de embalagens. Campanhas podem dar pontos extras.
 
-> ⚠️ **Conflito aberto.** O time registrou em 22/10, em [regras de saldo, vouchers e sorteios](../requisitos/regras-de-saldo-vouchers-sorteios.md), que o valor vigente é **5 pontos por unidade**, e **o código do backend já aplica 5 por unidade**. A decisão de 11/11 para esta visão volta ao texto da V6 (10 por descarte, não por embalagem). Para valer no sistema, é preciso decidir [PD-010](decisoes/pd-010.md) e atualizar regras de saldo, regras de campanhas (dobro de pontos) e o código. Enquanto isso, **a Visão e o código divergem**.
+> ✅ **Conflito resolvido em 11/11/2026.** Vale **10 por descarte**; a regra do time de 22/10 (5 por unidade) virou histórico. **Ainda falta:** alterar o código do backend (hoje paga 5 por unidade), definir como fica o **dobro de pontos** das campanhas e se as **faixas de recompensa** mudam, e prevenir o **fracionamento** (dividir uma entrega para ganhar mais vezes).
 
 ## 6. Metas e prazo
 
@@ -148,10 +148,12 @@ As regras de **campanhas, vouchers e sorteios** foram decididas (ver [campanhas]
 ## O que falta para fechar
 
 - [ ] Produto validar formalmente esta visão (as respostas de 11/11 vieram da revisão de Vinicius)
-- [ ] Resolver o conflito dos pontos (10 × 5) em [PD-010](decisoes/pd-010.md)
+- [x] Conflito dos pontos resolvido: **10 por descarte** ([PD-010](decisoes/pd-010.md))
+- [ ] Alterar o código para 10 por descarte; definir o dobro de pontos das campanhas e as faixas de recompensa
 - [x] Aprovar as **metas do piloto** (seção 6): aprovadas em 11/11/2026, com **100 usuários**
-- [ ] Confirmar se **X = 100** (o mesmo número das metas) para o teto de cadastros
-- [ ] Escolher a forma de controle de acesso. **Em andamento:** proposta da trava de vagas no banco avaliada como adequada ao lançamento, ver [controle de acesso](../pesquisa/controle-de-acesso.md#proposta-para-o-lançamento-trava-de-vagas-no-banco-vinicius-11112026)
+- [x] Teto de cadastros: **500 contas** (decidido em 11/11/2026)
+- [ ] Ajustar a escala das metas do piloto? Hoje elas usam **100 usuários**; o teto é **500**
+- [x] Forma de controle de acesso: **trava de vagas no banco** (*pessimistic locking*), decidida em 11/11/2026
 - [x] Tentativas do código de barras: sem limite; aviso vermelho a cada falha; cadastro manual recomendado a partir da 2ª
 - [ ] `[LACUNA]` definir os campos do formulário manual
 - [x] Estudar a capacidade do ponto (PD-009) e a execução da coleta (PD-014): [estudo feito](../pesquisa/capacidade-e-execucao-da-coleta.md)
@@ -159,4 +161,4 @@ As regras de **campanhas, vouchers e sorteios** foram decididas (ver [campanhas]
 - [x] "Morador" vira "usuário" em todos os documentos (decidido em 11/11/2026)
 - [x] Coleta seletiva em Manaus: trocado pelo último dado publicado (SINISA 2024, 33,7%)
 - [ ] Ligar os `[VERIFICAR fonte]` que restam em [dados do problema](../pesquisa/dados-do-problema.md)
-- [ ] Depois de aprovada, marcar a [visão original](../visao/visao-do-projeto.md) como histórico e trocar os "10 pontos" dela conforme a decisão
+- [ ] Depois de aprovada, marcar a [visão original](../visao/visao-do-projeto.md) como histórico (os "10 pontos" dela já estão de acordo com a decisão)

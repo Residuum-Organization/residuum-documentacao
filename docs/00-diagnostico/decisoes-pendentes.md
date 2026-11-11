@@ -13,7 +13,7 @@ Numeração: **PD-xxx** é o identificador oficial da V6. A coluna "Análise" li
 
 | # | PD | Pergunta | Situação | Recomendação | Trava |
 |---|---|---|---|---|---|
-| 1 | [PD-010](../01-planejamento/decisoes/pd-010.md) | Quanto vale o ponto? | **Time decidiu 22/10: 5 por unidade confirmada.** Falta validar com o produto e decidir estorno e limite | Validar; corrigir V6, guia e handoff | PRD, manual, testes |
+| 1 | [PD-010](../01-planejamento/decisoes/pd-010.md) | Quanto vale o ponto? | **Decidido em 11/11: 10 por descarte concluído** (por operação), como na V6. Faltam estorno, limite e fracionamento | Corrigir as regras de saldo, de campanhas e o código | PRD, manual, testes |
 | 2 | [PD-006](../01-planejamento/decisoes/pd-006.md) / [PD-027](../01-planejamento/decisoes/pd-027.md) | Quem confirma o descarte? | Aberta. V6 diz usuário; código usa operador | Operador confirma; GPS só habilita o envio | PRD, API, manual |
 | 3 | [PD-010](../01-planejamento/decisoes/pd-010.md) | Estorno maior que o saldo | Aberta | Bloquear (409) e mostrar o déficit | PRD, API |
 | 4 | [PD-023](../01-planejamento/decisoes/pd-023.md) | Perfil "responsável pelo ponto" e vínculo | Aberta | Vínculo N:N | PRD, arquitetura, API |
