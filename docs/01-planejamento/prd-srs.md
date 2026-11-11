@@ -64,7 +64,7 @@ Legenda: ✅ conforme · ❌ violada pelo código · ⏳ não implementada · �
 |---|---|---|
 | RN-011 | Só o admin cria cooperativa | ❌ **cadastro público** (crítico) |
 | RN-013 | Só a cooperativa atribuída aceita | ✅ |
-| RN-015 | Coleta parcial não zera o ponto | ❌ (o [estudo de PD-014](../pesquisa/capacidade-e-execucao-da-coleta.md) propõe não ter coleta parcial no piloto) `[DECISÃO]` |
+| RN-015 | Coleta parcial não zera o ponto (**decidido em 11/11: coleta parcial permitida**) | ❌ o código zera o ponto inteiro |
 | RN-016 | Pesagem não gera pontos | ✅ |
 | RN-014 | Rota e horário previstos | ⏳ |
 
