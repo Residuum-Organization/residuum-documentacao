@@ -44,7 +44,7 @@ Regra informada pelo time em 2026-10-22, **inicial e sujeita a mudança**. Nenhu
 Efeitos da mudança:
 
 - O **dobro de pontos** das campanhas paga os pontos básicos das unidades da meta, agora a 5 por unidade (meta de 4 unidades = 20 pontos). Ver [Regras de campanhas](regras-de-campanhas.md).
-- O **estorno** de um descarte confirmado usa a mesma função do crédito.
+- O **estorno** de um descarte confirmado usa a mesma função do crédito. ⚠️ **Desde 11/11/2026 não há mais estorno de descarte confirmado** ([PD-010](../01-planejamento/decisoes/pd-010.md)): a confirmação do operador é final; erro posterior vira ajuste manual do admin. O código ainda permite o estorno.
 - As estimativas de pontos nas telas do usuário, do ponto de coleta e do admin usam 5.
 - **Pontos já creditados não foram recalculados.** Saldos antigos continuam como estavam. O estorno de um descarte confirmado **antes** da mudança devolve o valor novo (5 por unidade), menor que o creditado (10); a diferença fica com o usuário.
 - Interpretação adotada: "descarte" = **unidade** descartada, como o código já contava (1 lata = 1 descarte). Se o time quiser 5 pontos por operação de descarte, independentemente da quantidade, a fórmula muda; avise.
