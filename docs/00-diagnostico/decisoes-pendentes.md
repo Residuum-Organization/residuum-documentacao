@@ -14,7 +14,7 @@ Numeração: **PD-xxx** é o identificador oficial da V6. A coluna "Análise" li
 | # | PD | Pergunta | Situação | Recomendação | Trava |
 |---|---|---|---|---|---|
 | 1 | [PD-010](../01-planejamento/decisoes/pd-010.md) | Quanto vale o ponto? | **Decidido em 11/11: 10 por descarte concluído** (por operação), como na V6. Contra a divisão: **janela de 60 min no mesmo ponto**. Faltam estorno e limite | Corrigir o código | PRD, manual, testes |
-| 2 | [PD-006](../01-planejamento/decisoes/pd-006.md) / [PD-027](../01-planejamento/decisoes/pd-027.md) | Quem confirma o descarte? | Aberta. V6 diz usuário; código usa operador | Operador confirma; GPS só habilita o envio | PRD, API, manual |
+| 2 | [PD-006](../01-planejamento/decisoes/pd-006.md) / [PD-027](../01-planejamento/decisoes/pd-027.md) | Quem confirma o descarte? | **Decidido em 11/11: o operador do ponto confirma**; o GPS só libera o envio | Corrigir a V6 (RF-019) | PRD, API, manual |
 | 3 | [PD-010](../01-planejamento/decisoes/pd-010.md) | Estorno maior que o saldo | Aberta | Bloquear (409) e mostrar o déficit | PRD, API |
 | 4 | [PD-023](../01-planejamento/decisoes/pd-023.md) | Perfil "responsável pelo ponto" e vínculo | Aberta | Vínculo N:N | PRD, arquitetura, API |
 | 5 | [PD-013](../01-planejamento/decisoes/pd-013.md) | Sorteio: cancelar devolve? Algoritmo? | **Time decidiu 22/10: só sorteios de teste, 1 bilhete por usuário.** Cancelar e algoritmo abertos | Cancelar devolve; sha256 com semente nos testes | PRD, manual |
@@ -36,7 +36,7 @@ Numeração: **PD-xxx** é o identificador oficial da V6. A coluna "Análise" li
 
 ## Contradições entre fontes a fechar junto
 
-Lista completa no [PRD](../01-planejamento/prd-srs.md#contradições-entre-as-fontes-a-resolver). As principais: materiais da campanha (6 materiais × só PET e lata) e quem confirma o descarte.
+Lista completa no [PRD](../01-planejamento/prd-srs.md#contradições-entre-as-fontes-a-resolver). A principal: materiais da campanha (6 materiais × só PET e lata).
 
 ## Ações de registro
 
