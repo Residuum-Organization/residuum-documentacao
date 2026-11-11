@@ -36,6 +36,27 @@ A equipe quer deixar entrar um número **X** de pessoas e, por ora, libera o ace
 
 **Por quê:** combina o que a V6 já prevê com uma proteção simples, e deixa cada ponto do piloto com seu próprio grupo, o que ajuda a medir.
 
+## Proposta para o lançamento: trava de vagas no banco (Vinicius, 11/11/2026)
+
+**A proposta:** uma tabela de controle (por exemplo `configuracoes`) com a coluna `vagas_restantes`. No cadastro, abre-se uma transação, lê-se a linha com `SELECT ... FOR UPDATE` (o banco segura a linha para os outros), diminui-se 1 vaga e conclui-se o cadastro. É a forma de fazer a **opção 3 (teto geral)** sem ferramenta extra, como o Redis.
+
+### Avaliação
+
+| Ponto | Avaliação |
+|---|---|
+| Precisão | **Boa.** Duas pessoas não pegam a mesma última vaga. Serve para o PostgreSQL, que é o banco do backend |
+| Lentidão | **Não é problema no piloto.** Com cerca de 100 usuários, quase nunca haverá dois cadastros no mesmo segundo. A fila só pesa com milhares de cadastros simultâneos |
+| Cuidado 1 | A trava deve durar **só o tempo de gravar**. Nada de enviar e-mail, chamar API externa ou esperar o usuário com a linha travada. Faça tudo isso **depois** de liberar |
+| Cuidado 2 | Se o cadastro falhar depois de tirar a vaga, a transação toda precisa ser **desfeita** (a vaga volta). Por isso vaga e conta devem ser gravadas **na mesma transação** |
+| Cuidado 3 | Contas excluídas ou recusadas devolvem a vaga? **Decisão de produto** |
+| Forma mais simples, mesmo efeito | Um único comando `UPDATE configuracoes SET vagas_restantes = vagas_restantes - 1 WHERE vagas_restantes > 0 RETURNING vagas_restantes`. Se não voltar linha, acabaram as vagas. A trava dura menos e o código fica menor |
+| Combina com o código de acesso? | **Sim.** O código diz **quem** pode entrar; a trava diz **quantos** entram. Um código compartilhado pode ter sua própria coluna de usos restantes, com a mesma técnica |
+| Quando as vagas acabam | A tela deve dizer isso com clareza e oferecer a **lista de espera** (opção 4), para ninguém ficar sem resposta |
+
+**Conclusão técnica:** a proposta **serve para o lançamento**. Recomendo a forma com um único `UPDATE` e as vagas gravadas na mesma transação da conta. Redis só valeria a pena com volume muito maior.
+
+> O teto ainda depende do **valor de X**. As metas do piloto aprovadas em 11/11 usam **100 usuários**.
+
 ## O que precisa ser decidido
 
 | Decisão | Quem |
