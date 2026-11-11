@@ -70,7 +70,7 @@ O perfil que antes se chamava "morador" passa a se chamar **usuário** em todos 
 | Acesso | O usuário **se cadastra normalmente**, com um **código** fornecido pela equipe. O número de contas tem um **teto de 500** (decidido em 11/11/2026), controlado por **trava de vagas no banco** (*pessimistic locking*: `SELECT ... FOR UPDATE` na linha de vagas). Ver [controle de acesso](../pesquisa/controle-de-acesso.md) |
 | Cadastro de resíduos | **Três sistemas**, iniciados por um botão **+** centralizado na barra de navegação. **1) Código de barras:** lê o produto e já preenche o formulário. **2) QR Code da nota fiscal:** traz os itens da nota e os materiais. **3) Manual:** o usuário pode tentar ler o código de barras **quantas vezes quiser**. Cada falha mostra um **aviso vermelho** de erro de leitura; a partir da **2ª falha**, o aviso **recomenda o cadastro manual** (nome, material, quantidade `[LACUNA: campos do formulário]`). Decidido em 11/11/2026. Materiais: **PET e lata de alumínio** |
 | Descarte rápido | **Não é uma função à parte.** É o uso do **leitor de código de barras** (agiliza um único produto) e do **leitor de QR Code da nota** (traz todos os materiais da nota) para seguir direto à escolha do ponto, sem passar pelo estoque |
-| Entrega | Escolha do ponto compatível, navegação externa, **validação de presença por GPS**, confirmação |
+| Entrega | Escolha do ponto compatível, navegação externa, **validação de presença por GPS** (libera o envio) e **confirmação pelo operador do ponto** (decidido em 11/11/2026); os pontos saem só depois da confirmação |
 | Pontos e Loja | Pontos por descarte, campanhas com bônus, vouchers e **sorteios** (ver limite abaixo) |
 | Pontos de coleta | Fixos e temporários, responsável, materiais aceitos, ocupação |
 | Coleta | Pedido, encaminhamento, aceite, agenda e rota, registro de **material e peso** |
@@ -105,7 +105,7 @@ As regras de **campanhas, vouchers e sorteios** foram decididas (ver [campanhas]
 
 ### Evolução a avaliar (fora do MVP)
 
-**Cashback** (ver abaixo) · pontuação definitiva · ranking · confirmação pelo ponto ou QR (PD-027) · certificados com validade regulatória · exportação de arquivos · rotas otimizadas · acompanhamento contínuo · outros materiais além de PET e lata.
+**Cashback** (ver abaixo) · pontuação definitiva · ranking · confirmação por QR (PD-027) · certificados com validade regulatória · exportação de arquivos · rotas otimizadas · acompanhamento contínuo · outros materiais além de PET e lata.
 
 **Ideia de cashback (versão futura, não será implementada agora).** O modelo de referência é o do **Méliuz**: o usuário registra seus produtos, vai somando pontos e, ao atingir um mínimo, **converte os pontos em dinheiro real**. Fica registrada como direção de produto. Ela exige estudo de viabilidade, definição da origem dos recursos e do processo de devolução, e **não faz parte do MVP**.
 
