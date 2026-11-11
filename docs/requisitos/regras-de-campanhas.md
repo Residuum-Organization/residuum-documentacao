@@ -58,7 +58,11 @@ O admin define o **resíduo** (material e/ou código de barras) e a **quantidade
 
 O usuário que participa e recicla essa quantidade, depois de aderir, recebe de bônus **os pontos básicos dessas unidades** (ou seja, dobra o que elas valem). O ponto básico é **5 por unidade** (decisão do time em 2026-10-22; ver [Regras de saldo, vouchers e sorteios](regras-de-saldo-vouchers-sorteios.md)), então uma meta de 4 unidades paga 20 pontos. O valor usa a mesma função da pontuação do descarte e acompanha a regra base se ela mudar.
 
-> ⚠️ **A partir de 11/11/2026 o ponto básico é 10 por descarte (operação), não por unidade** ([PD-010](../01-planejamento/decisoes/pd-010.md)). "Os pontos básicos dessas unidades" deixa de ter um valor direto. `[DECISÃO: como calcular o dobro — 10 por descarte que contou para a meta, ou um bônus fixo definido pelo admin]`
+> ⚠️ **A partir de 11/11/2026 o ponto básico é 10 por descarte (operação), não por unidade** ([PD-010](../01-planejamento/decisoes/pd-010.md)). "Os pontos básicos dessas unidades" deixa de ter um valor direto. 
+>
+> ✅ **Decidido em 11/11/2026 (Vinicius):** a meta do dobro passa a ser contada em **descartes**, não em unidades. O admin define o resíduo e **N descartes**; quem cumpre recebe **10 × N** pontos de bônus (o dobro dos pontos básicos desses descartes). Exemplo: meta de 4 descartes com lata = 40 pontos de bônus.
+>
+> **Atenção:** isso aumenta o incentivo a **dividir uma entrega em várias**. A regra contra o fracionamento ([PD-010](../01-planejamento/decisoes/pd-010.md)) precisa valer também aqui. **O código ainda conta unidades** (`_progresso_dobro_pontos` em `app/services/campanha_service.py`).
 
 ## Pagamento
 
