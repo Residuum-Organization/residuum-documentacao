@@ -18,6 +18,10 @@ Esta pasta reúne pesquisas, hipóteses, comparações e roteiros de validação
 | Teste de campo | [Piloto inicial](piloto-inicial.md) |
 | Questões ainda não resolvidas | [Hipóteses e pendências](hipoteses-e-pendencias.md) |
 | Referências externas | [Fontes da pesquisa](fontes-da-pesquisa.md) |
+| Números do problema (resíduos, PET, latas) | [Dados do problema](dados-do-problema.md) |
+| Como controlar quantas pessoas entram | [Controle de acesso](controle-de-acesso.md) |
+| Fontes para código de barras e nota fiscal | [Fontes de produtos e notas](fontes-de-produtos-e-notas.md) |
+| Provedores para pagar a cooperativa | [Provedores de pagamento](provedores-de-pagamento.md) |
 
 ## Como usar
 

@@ -1,0 +1,59 @@
+# Pesquisa — números do problema
+
+[Voltar ao índice de pesquisas](README.md)
+
+> **Estado:** revisão · **Dono:** Produto · **Pesquisado em:** 11/11/2026 (busca na internet)
+> **Pergunta:** quanto resíduo se gera em Manaus e no Amazonas, e quanto PET e lata se recicla no Brasil?
+> **Cuidado:** os números abaixo vêm de **matérias e estudos que citam** as fontes oficiais, não das fontes oficiais lidas por inteiro. Ligamos cada dado ao link pelo título do resultado da busca. Onde está `[VERIFICAR fonte]`, **não foi possível ligar o número a uma página com certeza**: abra os links, ache o trecho e corrija antes de usar em material externo.
+
+## Resumo
+
+O material que o Residuum quer captar **tem mercado**: o Brasil recicla quase todas as latas de alumínio e mais da metade do PET. O que falta é **coleta**: as recicladoras de PET ficam com capacidade parada e Manaus atende só uma pequena parte da população com coleta seletiva. É aí que a plataforma entra.
+
+## Os 3 números sugeridos para a Visão
+
+| # | Número | O que significa | Ano | Fonte |
+|---|---|---|---|---|
+| 1 | **97,3%** | das latas de alumínio foram recicladas no Brasil | 2024 | [ABC do ABC](https://abcdoabc.com.br/latinhas-de-aluminio-recicladas/), [Bahia Notícias](https://www.bahianoticias.com.br/noticia/307485-brasil-mantem-indice-de-reciclagem-de-latas-de-aluminio-acima-de-96-por-16-anos-consecutivos) |
+| 2 | **~23%** | de capacidade ociosa nas recicladoras de PET (até 40%), por falta de coleta | 2024 | matérias sobre o 13º Censo da Abipet `[VERIFICAR fonte]` ([Monitor Mercantil](https://monitormercantil.com.br/pet-reciclagem-cresce-mesmo-com-desafios-da-coleta-seletiva/), [Movimento Econômico](https://movimentoeconomico.com.br/geral/redacao/2025/04/08/reciclagem-de-pet-cresce-14-no-brasil-e-impulsiona-economia-circular/)) |
+| 3 | **~18%** | da população de Manaus atendida pela coleta seletiva | 2020 | artigo acadêmico, `[VERIFICAR fonte]` (candidatos: [RSD Journal](https://rsdjournal.org/index.php/rsd/article/download/25902/22802), [Plano Municipal](https://planodesaneamento.manaus.am.gov.br/wp-content/uploads/2026/01/PMSB-MANAUS-RESIDUOS-SOLIDOS-Completo-6.pdf)) |
+
+**Leitura em uma frase:** *o Brasil já recicla quase toda lata e mais da metade do PET, mas a coleta não chega: indústria parada por falta de material e uma capital com menos de um quinto da população atendida.*
+
+> ⚠️ O número 3 é o mais frágil: é de 2020 e vem de um artigo. Há uma versão mais recente no [Plano Municipal de Saneamento de Manaus (2026)](https://planodesaneamento.manaus.am.gov.br/wp-content/uploads/2026/01/PMSB-MANAUS-RESIDUOS-SOLIDOS-Completo-6.pdf) e nos relatórios da Semulsp; a busca não conseguiu ler as tabelas. **Peça a alguém para abrir esse PDF e confirmar o número atual.**
+
+## Brasil: PET e latas
+
+| Dado | Valor | Observação | Fonte |
+|---|---|---|---|
+| Reciclagem de latas de alumínio, 2024 | 97,3% | Balanço da Recicla Latas (Abal + Abralatas); 16 anos seguidos acima de 96% | [Tribuna de Minas](https://tribunademinas.com.br/noticias/economia/17-08-2025/latinhas-reciclagem.html) |
+| Reciclagem de latas, 2023 | 99,6% (33,9 bi de 34,8 bi) | Uma matéria cita 100,1%: divergência, não usar | [ABC do ABC](https://abcdoabc.com.br/latinhas-de-aluminio-recicladas/) |
+| PET reciclado, 2024 | 410 mil t | +14% sobre 2022 (359 mil t). 13º Censo da Reciclagem de PET (Abipet) | [Movimento Econômico](https://movimentoeconomico.com.br/geral/redacao/2025/04/08/reciclagem-de-pet-cresce-14-no-brasil-e-impulsiona-economia-circular/), [Diário do Comércio](https://diariodocomercio.com.br/sustentabilidade/em-dois-anos-pais-aumenta-reciclagem-de-embalagens-pet-em-14/) |
+| Taxa de reciclagem de PET | 56,4% | Aparece em matérias, **mas não ficou claro que é do 13º Censo**. Em 2019 foi 55% | [Monitor Mercantil (2019)](https://monitormercantil.com.br/brasil-reciclou-55-das-embalagens-pet-descartadas-no-ano-passado/) |
+| Receita do setor de PET, 2024 | R$ 5,66 bilhões | 32% do faturamento da cadeia | [Movimento Econômico](https://movimentoeconomico.com.br/geral/redacao/2025/04/08/reciclagem-de-pet-cresce-14-no-brasil-e-impulsiona-economia-circular/) |
+
+## Manaus e Amazonas
+
+| Dado | Valor | Ano | Observação | Fonte |
+|---|---|---|---|---|
+| Lixo enviado ao depósito da AM-010 | ~3 mil t por dia | 2025 | Ativo desde 1986; **atingiu o limite em 2024** | [Band](https://www.band.com.br/noticias/manaus-prepara-primeiro-aterro-sanitario-da-historia-do-amazonas-202511181244) |
+| Primeiro aterro sanitário | previsto até 30/04/2028 | 2025 | Acordo com o MP-AM estende o atual até 2028 | [Rede Onda Digital](https://redeondadigital.com.br/amazonas/mpam-inspeciona-obras-de-ampliacao-do-aterro-de-manaus-apos-assinatura-do-tac) |
+| Resíduos coletados | ~2,3 mil t/dia (836.906 t no ano) | 2021 | Dados da prefeitura citados em estudos; conferir no [relatório Semulsp 2021](https://www.manaus.am.gov.br/semulsp/wp-content/uploads/sites/23/2024/11/Relatorio-Cincunstancial-de-Atividade_2021.pdf) `[VERIFICAR fonte]` |
+| População com coleta seletiva | 14,9% (2015); 18,3% (2020) | 2015, 2020 | Metodologias diferentes | 2015: provável [IHU](https://ihu.unisinos.br/noticias/547597-com-potencial-inexplorado-mercado-do-lixo-deixa-legado-de-danos-ambientais-e-sociais); 2020: `[VERIFICAR fonte]` |
+| Resíduos efetivamente reciclados | 2,2% dos gerados | 2020 | Citando a Semulsp, em trabalho acadêmico | `[VERIFICAR fonte]` |
+| Pontos de entrega voluntária (PEVs) | 44, em supermercados | mar/2025 | Material vai a cooperativas e associações de catadores | notícia de março de 2025 `[VERIFICAR fonte]` (ver [Amazonas Virtual](https://amazonasvirtual.com.br/2025/novas-estrategias-para-intensificar-o-combate-as-lixeiras-irregulares)) |
+| Destinação inadequada nas capitais do Norte | ~70% | 2023 | Panorama da Abrema, via reportagem | `[VERIFICAR fonte]` |
+
+**Não encontrado:** geração total de resíduos do **Amazonas** no Panorama da Abrelpe, e um percentual oficial recente de coleta seletiva em Manaus.
+
+## Achado extra: programa municipal concorrente ou aliado
+
+A **Lei nº 3.358/2024** de Manaus instituiu o **Programa Moeda Verde**, de incentivo à reciclagem e à valorização de catadores e cooperativas ([texto da lei](https://www.normasbrasil.com.br/norma/lei-3358-2024-manaus_462139.html)). Vale entender se ele **sobrepõe** o Residuum ou pode **se conectar** a ele (parceria com a prefeitura). Não foi analisado.
+
+## O que falta para fechar
+
+- [ ] Ligar cada `[VERIFICAR fonte]` ao link correto
+- [ ] Confirmar o número 3 no Plano Municipal de Saneamento (2026) ou no relatório Semulsp mais recente
+- [ ] Buscar a geração anual do Amazonas no Panorama da Abrelpe (tabela por estado)
+- [ ] Conferir se a taxa de PET (56,4%) é do 13º Censo
+- [ ] Ler a Lei 3.358/2024 e avaliar o Moeda Verde
