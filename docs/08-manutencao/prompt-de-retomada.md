@@ -40,7 +40,7 @@ Você é o Claude Code. Está ajudando o Vinicius (conta GitHub **Vinny1313**) a
 Responda ao Vinicius com:
 
 - a branch em que você está e se ela está igual à do GitHub;
-- o estado das PRs **#5**, **#6** e **#8** (abertas, mescladas, com comentários novos);
+- o estado das PRs **#5**, **#6**, **#8** e **#9** (abertas, mescladas, com comentários novos);
 - quantos documentos do roteiro ele já marcou como feitos;
 - o resultado dos links (arquivos, links, quebrados);
 - **a próxima ação**, em uma frase. Por exemplo: *"Cole os seus pareceres aqui, ou me diga em qual bloco do roteiro você está."*
@@ -56,6 +56,7 @@ Depois **pare e espere** a resposta dele.
    | Visão, PRD, backlog, decisões, requisitos, pesquisas | `docs/parte-1-planejamento` (PR #5) |
    | SAD, diagramas, modelo de dados, dicionário, ADRs, índice de telas | `docs/parte-2-arquitetura` (PR #6) |
    | Rascunhos das partes 3 a 6 (API, CONTRIBUTING, testes, deploy, manual, governança) | já estão na `main`; crie uma branch nova a partir dela |
+   | API e CONTRIBUTING (parte 3) | `docs/parte-3-api-contributing` (PR #9, base `docs/parte-1-planejamento`) |
    | Roteiro, diários e este prompt | `docs/diario-e-roteiro` (PR #8) |
 
 2. Faça **um commit por tema**, com mensagem no formato `docs(escopo): resumo no imperativo`, e envie com `git push` **na própria branch**. Não abra PR nova se já existir uma.

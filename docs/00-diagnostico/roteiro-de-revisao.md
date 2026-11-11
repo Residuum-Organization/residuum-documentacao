@@ -25,7 +25,7 @@ Os tempos são **leitura atenta mais anotação** (cerca de 200 palavras por min
 | 2 | [Decisões pendentes](decisoes-pendentes.md) | 5 | Quais decisões você ou o produto precisam tomar | [x] | ✅ 11/11: as 6 decisões que travavam foram respondidas (pontos, operador confirma, confirmação final, N:N com admin, sorteio devolve, parecer adiado) |
 | 3 | [PRD](../01-planejamento/prd-srs.md) | 8 | Qual documento vale para cada assunto; as 6 contradições | [x] | ✅ 11/11: contradições 1 a 4 resolvidas (pontos, materiais só PET e lata no início, operador confirma, bônus pelo botão); 5 e 6 são correções de código |
 | 4 | [Backlog e histórias](../01-planejamento/backlog-e-historias.md) | 6 | Ondas de entrega e as histórias-modelo | [x] | ✅ 11/11: ondas mantidas; 5 histórias novas das decisões do dia; coleta parcial permitida (PD-014) |
-| 5 | [Matriz de adequação](matriz-de-adequacao.md) | 5 | O que existe × o que falta nos 14 documentos | [ ] | |
+| 5 | [Matriz de adequação](matriz-de-adequacao.md) | 5 | O que existe × o que falta nos 14 documentos | [x] | ✏️ 11/11: atualizada; a pedido, trabalhamos nos 3 "ausentes" (diagramas, API, CONTRIBUTING) |
 
 *Opcional:* [Plano de adequação](plano-de-adequacao.md), 15 min. Já foi aprovado; releia só se quiser rever a ordem das partes.
 
@@ -55,8 +55,8 @@ Estes documentos estão **em esboço**. Avalie a estrutura e o que falta; o cont
 
 | # | Documento | Min | Parte | Feito | Meu parecer |
 |---|---|---|---|---|---|
-| 16 | [API](../04-desenvolvimento/api.md) | 4 | 3 | [ ] | |
-| 17 | [Como contribuir](../../CONTRIBUTING.md) | 3 | 3 | [ ] | |
+| 16 | [API](../04-desenvolvimento/api.md) | 4 | 3 | [ ] | 🆕 reescrita em 11/11 (113 rotas), na PR #9 |
+| 17 | [Como contribuir](../../CONTRIBUTING.md) | 3 | 3 | [ ] | 🆕 reescrito em 11/11, na PR #9 |
 | 18 | [Plano de testes](../05-qualidade/plano-de-testes.md) | 3 | 4 | [ ] | |
 | 19 | [Casos de teste](../05-qualidade/casos-de-teste.md) | 5 | 4 | [ ] | |
 | 20 | [Guia de deploy](../06-operacao/guia-de-deploy.md) | 4 | 5 | [ ] | |
