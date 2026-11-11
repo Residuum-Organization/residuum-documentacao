@@ -62,7 +62,7 @@ O usuário que participa e recicla essa quantidade, depois de aderir, recebe de 
 >
 > ✅ **Decidido em 11/11/2026 (Vinicius):** a meta do dobro passa a ser contada em **descartes**, não em unidades. O admin define o resíduo e **N descartes**; quem cumpre recebe **10 × N** pontos de bônus (o dobro dos pontos básicos desses descartes). Exemplo: meta de 4 descartes com lata = 40 pontos de bônus.
 >
-> **Contra a divisão de entregas:** vale a **janela no mesmo ponto** ([PD-010](../01-planejamento/decisoes/pd-010.md)). Descartes do mesmo usuário, no mesmo ponto, dentro da janela contam como **um** descarte na meta. **O código ainda conta unidades** (`_progresso_dobro_pontos` em `app/services/campanha_service.py`).
+> **Contra a divisão de entregas:** vale a **janela no mesmo ponto** ([PD-010](../01-planejamento/decisoes/pd-010.md)). Descartes do mesmo usuário, no mesmo ponto, dentro da janela de **60 minutos** contam como **um** descarte na meta. **O código ainda conta unidades** (`_progresso_dobro_pontos` em `app/services/campanha_service.py`).
 
 ## Pagamento
 
