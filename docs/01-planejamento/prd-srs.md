@@ -24,7 +24,7 @@ Este é o **índice mestre dos requisitos**. Ele não repete a V6: diz **qual do
 |---|---|---|---|---|
 | 1 | Valor do ponto | V6 RF-021, handoff, regras de negócio: 10 por descarte, **não** por embalagem | Saldo: 5 por unidade (decidido 22/10) | **Resolvido em 11/11: vale 10 por descarte.** Corrigir regras de saldo, campanhas e o código ([PD-010](decisoes/pd-010.md)) |
 | 2 | Materiais | V6 RN-003: só PET e lata | Campanhas aceita plástico, metal, papel, vidro, orgânico, eletrônico | Campanha usa só `pet` e `lata` ([PD-011](decisoes/pd-011.md)) |
-| 3 | Quem confirma o descarte | V6 RF-019: o **usuário** confirma | Código e saldo: o **operador** confirma | `[DECISÃO: PD-006 / PD-027]` |
+| 3 | Quem confirma o descarte | V6 RF-019: o **usuário** confirma | Código e saldo: o **operador** confirma | **Resolvido em 11/11: o operador confirma**; o GPS só libera o envio |
 | 4 | Crédito da campanha | Campanha: só pelo botão "Receber pontos" | V6 RF-022: "apurar e registrar bônus", sem dizer se é automático | `[DECISÃO: PD-011]` |
 | 5 | Idempotência | V6 RF-021: toda repetição recupera o resultado | Saldo: só voucher e bilhete usam `Idempotency-Key` | Estender ao descarte (achado F05) |
 | 6 | Crédito do descarte | V6/saldo: uma vez, na confirmação | Código atual credita no envio **e** na confirmação (F01) | Corrigir no código (PR-1) |
