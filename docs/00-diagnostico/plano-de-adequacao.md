@@ -43,7 +43,7 @@ Esta etapa só planeja. Nada é alterado até a aprovação.
 
 | # | Tarefa | Fonte | Bloqueio |
 |---|---|---|---|
-| 2.1 | **Gerar o ER real** a partir de `backend/app/models` e das 32 migrações (hoje o esboço usa só nomes citados nas análises); dicionário de colunas; corrigir singular×plural | código do backend | acesso ao código |
+| 2.1 | **Gerar o ER real** a partir de `backend/app/models` e das 34 migrações (feito em 10/11: ver Progresso); dicionário de colunas; corrigir singular×plural | código do backend | acesso ao código |
 | 2.2 | SAD: topologia (onde roda banco/API/front), ambientes, backups, logs; confirmar versão do Python (3.10 no README × 3.11 no deploy) | `stacks-e-integracoes.md`, `deploy.yaml` | infra: Tecnologia |
 | 2.3 | Diagramas: validar os 4 estados contra os valores reais gravados (ex.: `concluida` × `registrada`); acrescentar contas, pagamento e vínculo | propostas S2/A1/C4/P4 | 1.1 (ator da confirmação) |
 | 2.4 | Decisão de arquitetura (ADR curto em `.md`) para: ledger único, vínculo N:N, idempotência, estados no backend | propostas S1, P1, S3 | PD-023 |
@@ -51,6 +51,8 @@ Esta etapa só planeja. Nada é alterado até a aprovação.
 | 2.6 | Wireframes dos perfis sem desenho: responsável, cooperativa, admin (em baixa fidelidade, descritos em `.md`) | propostas P13, C9, A1 | Produto/UX |
 
 **Pronto quando:** ER bate com o banco migrado; todo estado do diagrama existe no código ou está marcado "proposto"; todas as telas listadas têm rota e link.
+
+**Progresso (10/11/2026):** 2.1 ER e dicionário de 27 tabelas gerados a partir do código (não conferidos contra um banco) · 2.2 SAD com versões, camadas e CI reais · 2.3 estados "hoje × proposto" · 2.4 cinco ADRs como proposta · 2.5 índice de 42 telas com rota e achado. **Faltam** topologia e homologação (dependem da equipe), link do Figma, wireframes dos perfis operacionais (2.6) e conferir o ER contra PostgreSQL. **Atenção:** o backend local está na branch `feature/mor-023-024-campanhas`; o ER usa `feature/mor-025-026-vouchers-sorteios`, que ainda não está na `main` do backend.
 
 ## Parte 3 — Desenvolvimento
 **Documentos:** API · README (×3) · CONTRIBUTING.

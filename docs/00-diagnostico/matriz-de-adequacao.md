@@ -17,9 +17,9 @@ Legenda: ✅ pronto · 🟡 parcial · 🔴 conflitante/desatualizado · ⚪ aus
 | 1 | Visão e Escopo | 🟡 | `docs/visao/visao-do-projeto.md` | Lista do que **não** será feito; métricas do piloto | [visao-e-escopo](../01-planejamento/visao-e-escopo.md) |
 | 2 | PRD / SRS | 🟡 | PRD como índice mestre; V6 fatiada em [20 arquivos](../01-planejamento/requisitos/README.md); regras de saldo e campanhas mescladas | Produto validar as regras de 21 e 22/10; fechar 6 contradições | [prd-srs](../01-planejamento/prd-srs.md) |
 | 3 | Backlog e histórias | 🟡 | 93 atividades em [um arquivo cada](../01-planejamento/backlog/README.md) + [27 decisões](../01-planejamento/decisoes/README.md) | Converter para histórias; ligar os 71 achados às atividades | [backlog](../01-planejamento/backlog-e-historias.md) |
-| 4 | Arquitetura (SAD) | 🟡 | `stacks-e-integracoes.md`, `arquitetura-refatoracao-banco.md` | Camadas, ledger, auth, ambientes | [sad](../02-arquitetura/sad.md) |
-| 5 | Diagramas | ⚪ | Só descrições em texto nas propostas | ER do banco; estados de descarte, sorteio, coleta | [diagramas](../02-arquitetura/diagramas.md) · [dados](../02-arquitetura/modelo-de-dados.md) |
-| 6 | Wireframes / UX | 🟡 | `docs/ux/` (só morador V6) | Telas do responsável, cooperativa e admin | [indice-de-telas](../03-ux/indice-de-telas.md) |
+| 4 | Arquitetura (SAD) | 🟡 | [SAD](../02-arquitetura/sad.md) com versões e camadas do código; [5 ADRs](../02-arquitetura/adr/README.md) propostas | Topologia real, homologação, aceite das ADRs | [sad](../02-arquitetura/sad.md) |
+| 5 | Diagramas | 🟡 | [ER real](../02-arquitetura/modelo-de-dados.md) com 27 tabelas e [dicionário](../02-arquitetura/dados/README.md); estados hoje × proposto | Conferir contra banco PostgreSQL; diagramas de pagamento | [diagramas](../02-arquitetura/diagramas.md) · [dados](../02-arquitetura/modelo-de-dados.md) |
+| 6 | Wireframes / UX | 🟡 | [Índice de 42 telas](../03-ux/indice-de-telas.md) com rota e achado; `docs/ux/` (morador V6) | Link do Figma, capturas e wireframes dos perfis operacionais | [indice-de-telas](../03-ux/indice-de-telas.md) |
 | 7 | Documentação de API | ⚪ | Só OpenAPI automático; README do backend defasado | Tabela por rota, com rotas a remover | [api](../04-desenvolvimento/api.md) |
 | 8 | README | 🔴 | 3 READMEs (raiz, back, front) | Remover QR/papéis antigos; setup testado | ver `README.md` |
 | 9 | CONTRIBUTING | ⚪ | Rascunho em `tmp/` | Branches, commits, PR, Definição de Pronto | [CONTRIBUTING](../../CONTRIBUTING.md) |
@@ -41,7 +41,7 @@ Legenda: ✅ pronto · 🟡 parcial · 🔴 conflitante/desatualizado · ⚪ aus
 ## Detalhes: inventário por repositório
 
 - **Documentação** (`docs/`, 65 arquivos): visão, requisitos, planejamento por módulo (m01–m11), UX do morador, pesquisa de mercado, histórico.
-- **Backend:** README de 746 linhas, `CHANGES.md`, `docs/` (admin-features, requisitos), 32 migrações Alembic, 3 arquivos de teste, um workflow (migração + deploy Vercel, sem CI de testes).
+- **Backend:** README de 746 linhas, `CHANGES.md`, `docs/` (admin-features, requisitos), 34 migrações Alembic (branch `feature/mor-025-026-vouchers-sorteios`), 3 arquivos de teste, um workflow (migração + deploy Vercel, sem CI de testes).
 - **Frontend:** README, `docs/` (requisitos, ata, falas de reunião, manual, PDFs), CI e templates de issue.
 
 ## Como usar esta matriz
