@@ -6,7 +6,7 @@
 
 ## Resumo
 
-Cada estado abaixo aparece em dois diagramas: **hoje** (o que o código grava) e **proposto** (o desenho das análises). Os propostos dependem das decisões do produto; o ator da confirmação (operador ou usuário) é a [PD-006 / PD-027](../01-planejamento/decisoes/pd-006.md). Toda transição inválida deve responder **409**.
+Cada estado abaixo aparece em dois diagramas: **hoje** (o que o código grava) e **proposto** (o desenho das análises). Os propostos seguem as decisões de 11/11/2026: **o operador do ponto confirma** ([PD-006 / PD-027](../01-planejamento/decisoes/pd-006.md)) e **a confirmação é final**, sem estorno ([PD-010](../01-planejamento/decisoes/pd-010.md)). Toda transição inválida deve responder **409**.
 
 ## 1. Descarte
 
@@ -25,9 +25,10 @@ stateDiagram-v2
 ```mermaid
 stateDiagram-v2
   [*] --> pendente: usuário entrega com GPS válido (reserva o item, sem pontos)
-  pendente --> confirmado: operador confirma (credita 1 vez, baixa a reserva)
+  pendente --> confirmado: operador confirma (credita 10 pontos 1 vez, baixa a reserva)
   pendente --> rejeitado: operador rejeita, com motivo (o item volta)
-  confirmado --> revertido: admin reverte (estorna o valor gravado)
+  confirmado --> [*]: final (erro posterior vira ajuste manual do admin, fora do descarte)
+  note right of pendente: envios do mesmo usuário no mesmo ponto em 60 min viram um só descarte
 ```
 
 ## 2. Sorteio
@@ -113,4 +114,4 @@ sequenceDiagram
 
 - [ ] `[VERIFICAR]` quais transições existem de fato em cada rota (ex.: quem pode `revertido`)
 - [ ] `[LACUNA]` diagrama de pagamento (PD-016) e de campanha (adesão → missão → recompensa)
-- [ ] `[DECISÃO: PD-006]` ator da confirmação do descarte
+- [x] Ator da confirmação: **operador do ponto** (11/11/2026); confirmação final, sem `revertido`
