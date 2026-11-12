@@ -7,14 +7,15 @@
 
 ## Resumo
 
-A equipe quer deixar entrar um número **X** de pessoas e, por ora, libera o acesso por **código**. Existem seis formas de fazer isso. A recomendação é **combinar três**: código compartilhado com limite, um teto geral de contas e uma lista de espera. Todas dependem de **definir o valor de X**.
+A equipe quer deixar entrar um número **X** de pessoas. **Decisão final (12/11/2026): cadastro aberto, com teto geral de contas (500, podendo subir a 1000) e lista de espera**, sem código de acesso. A tabela de opções e a recomendação abaixo são o **histórico da análise**: a opção escolhida foi a 3, junto com a 4.
 
 ## Situação hoje
 
 | Item | Estado |
 |---|---|
 | Regra da V6 | RN-001: cadastro **só por convite**. Individual vale 1 uso; compartilhado tem expiração e limite |
-| Decisão de 11/11 | O usuário se cadastra normalmente; o controle está em estudo; por ora, código fornecido |
+| Decisão de 11/11 | Código individual de uso único + teto de 500 (**descartado o código em 12/11**) |
+| Decisão de 12/11 | Cadastro **aberto**; só o **teto de contas** (500, até 1000) com trava de vagas no banco |
 | Código do backend | **Não há convite**: qualquer pessoa cria conta (achado F06 do módulo usuário) |
 
 ## Opções
@@ -36,19 +37,24 @@ A equipe quer deixar entrar um número **X** de pessoas e, por ora, libera o ace
 
 **Por quê:** combina o que a V6 já prevê com uma proteção simples, e deixa cada ponto do piloto com seu próprio grupo, o que ajuda a medir.
 
-## ✅ Decisão (11/11/2026)
+## ✅ Decisão (11/11/2026, revista em 12/11/2026)
+
+> **Revisão de 12/11/2026 (Vinicius):** em 11/11 a decisão era um **código individual de uso único** para cada pessoa criar a conta. Isso foi **descartado**: gerar, repassar e controlar os códigos dava muito trabalho e **dificultava o cadastro**. O controle passa a ser **só pelo banco**.
 
 | Item | Decidido |
 |---|---|
+| Cadastro | **Aberto.** A pessoa cria a conta e depois entra normalmente. **Não há código de acesso** |
 | Forma de controle | **Trava de vagas no banco** (*pessimistic locking*): `SELECT ... FOR UPDATE` na linha de vagas, dentro da mesma transação do cadastro |
-| Teto de contas (X) | **500** |
-| Quem pode entrar | Quem tem o **código individual** fornecido pela equipe: **um código por pessoa, uso único** |
-| Conta excluída | **A vaga volta** para o teto de 500 |
-| Vagas esgotadas | A tela avisa que as vagas do piloto acabaram e oferece uma **lista de espera** (e-mail); a equipe libera em lotes |
+| Teto de contas (X) | **500**, **configurável**. Pode subir para **1000**, número pensado para cobrir, por exemplo, uma faculdade com muita oscilação de frequência |
+| Ao chegar no teto | O banco trava: quem já entrou segue participando; **ninguém novo se cadastra** |
+| Conta excluída | **A vaga volta** para o teto |
+| Vagas esgotadas | A tela avisa que as vagas acabaram e oferece uma **lista de espera** (e-mail); a equipe libera em lotes (por exemplo, subindo o teto) |
 
-**Para o desenvolvimento:** manter a trava só durante a gravação (nada de e-mail ou API externa com a linha presa) e gravar a vaga na **mesma transação** da conta. Continua em aberto: **regra contra abuso** da vaga que volta (criar e apagar contas para liberar vagas; sugestão: a vaga volta só para um código novo gerado pela equipe), **validade** do código individual e se quem já tem conta precisa de código.
+**Para o desenvolvimento:** manter a trava só durante a gravação (nada de e-mail ou API externa com a linha presa) e gravar a vaga na **mesma transação** da conta. O valor do teto fica **no banco** e é alterado pelo admin, sem novo deploy. Continua em aberto: a **regra contra abuso** da vaga que volta (criar e apagar contas para liberar vagas). Proposta nos casos de teste, ainda a validar: o mesmo e-mail só se recadastra após 30 dias.
 
-> As metas do piloto usam **100 usuários**; o teto é **500**. Ajustar a escala das metas é uma decisão pendente.
+> As metas do piloto usam **100 usuários**; o teto é **500** (ou 1000). Ajustar a escala das metas é uma decisão pendente.
+
+**Efeito de abrir o cadastro:** como não há código, **qualquer pessoa com o endereço do site pode ocupar uma vaga**, inclusive quem não é do público do piloto. O teto garante o número, mas não **quem** entra. Se isso importar, o produto pode acrescentar depois, sem refazer nada, um limite por domínio de e-mail ou por ponto de coleta `[DECISÃO]`.
 
 ## Proposta para o lançamento: trava de vagas no banco (Vinicius, 11/11/2026)
 
@@ -75,14 +81,14 @@ A equipe quer deixar entrar um número **X** de pessoas e, por ora, libera o ace
 
 | Decisão | Quem |
 |---|---|
-| ~~Valor de **X**~~ | **500** (11/11/2026) |
-| ~~Código individual, compartilhado ou ambos~~ | **Individual, uso único** (11/11/2026; [PD-001](../01-planejamento/decisoes/pd-001.md), [PD-002](../01-planejamento/decisoes/pd-002.md)) |
+| ~~Valor de **X**~~ | **500**, configurável, pode subir a **1000** (11/11 e 12/11/2026) |
+| ~~Código individual, compartilhado ou ambos~~ | **Nenhum código.** Cadastro aberto (12/11/2026; [PD-001](../01-planejamento/decisoes/pd-001.md), [PD-002](../01-planejamento/decisoes/pd-002.md)) |
 | ~~Conta excluída devolve a vaga?~~ | **Sim** (11/11/2026) |
 | ~~Tela sem vagas~~ | **Aviso + lista de espera** (11/11/2026) |
-| Validade do código individual | Produto |
+| ~~Validade do código; quem já tem conta precisa de código?~~ | **Não se aplica mais** (12/11/2026) |
 | Regra contra abuso da vaga que volta | Produto |
-| Quem já tem conta precisa de código? | Produto |
+| Filtrar quem pode se cadastrar (domínio de e-mail, ponto) | Produto, se for preciso |
 
 ## Ligação com o código
 
-O backend precisaria de uma tabela de convites e de um limite de contas. Os detalhes técnicos estão na ADR-0005 (ciclo de vida da conta), da parte 2 da adequação (PR #6).
+O backend precisa de **uma linha de vagas** e de um limite de contas; **não** precisa de tabela de convites nem de códigos. Os detalhes técnicos estão na [ADR-0005](../02-arquitetura/adr/0005-conta-com-ciclo-de-vida.md) (ciclo de vida da conta).

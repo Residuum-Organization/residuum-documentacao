@@ -96,8 +96,8 @@ Depois **pare e espere** a resposta dele.
 - **Campanhas:** só PET e lata no início (outros materiais no futuro); bônus pelo botão "Receber pontos".
 - **Coleta parcial permitida** (PD-014): o resto fica no ponto.
 - **GPS:** raio de 100 m ajustável por ponto; **só o admin** cria ponto de coleta; QR Code fora do MVP.
-- **Acesso:** código individual de uso único; conta excluída devolve a vaga; sem vagas, lista de espera.
-- **Teto de 500 contas**, com **trava de vagas no banco** (*pessimistic locking*, `SELECT ... FOR UPDATE`).
+- **Acesso:** cadastro **aberto, sem código** (revisto em 12/11/2026); conta excluída devolve a vaga; sem vagas, lista de espera.
+- **Teto de 500 contas** (configurável; pode subir a 1000), com **trava de vagas no banco** (*pessimistic locking*, `SELECT ... FOR UPDATE`).
 - Campanhas, vouchers e sorteios: regras decididas. Pendentes: **capacidade do ponto (PD-009)** e **execução da coleta (PD-014)**.
 
 ## Pendências abertas que dependem do Vinicius

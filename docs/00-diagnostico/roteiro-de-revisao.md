@@ -34,7 +34,7 @@ Os tempos são **leitura atenta mais anotação** (cerca de 200 palavras por min
 | # | Documento | Min | O que avaliar | Feito | Meu parecer |
 |---|---|---|---|---|---|
 | 6 | [Dados do problema](../pesquisa/dados-do-problema.md) | 6 | Os 3 números e os `[VERIFICAR fonte]` | [x] | ✏️ 11/11: 3 números da Visão com fonte (fonte dos 23% corrigida); 4 restantes conferidos: Norte trocado por 38,7% (Abrema 2025), SINISA 2024 acrescentado; PEVs e dados de 2020/2021 a confirmar com a Semulsp |
-| 7 | [Controle de acesso](../pesquisa/controle-de-acesso.md) | 4 | Qual opção você prefere; valor de X | [x] | ✅ 11/11: trava de vagas no banco, X = 500, código individual de uso único, vaga devolvida ao excluir conta, lista de espera |
+| 7 | [Controle de acesso](../pesquisa/controle-de-acesso.md) | 4 | Qual opção você prefere; valor de X | [x] | ✅ 11/11: trava de vagas no banco, X = 500 (configurável até 1000), sem código de acesso (revisto em 12/11), vaga devolvida ao excluir conta, lista de espera |
 | 8 | [Fontes de produtos e notas](../pesquisa/fontes-de-produtos-e-notas.md) | 6 | Quais testes você quer que a equipe faça | [x] | ✅ 11/11: 50 códigos de barras em 2 fontes, 10 notas da SEFAZ-AM, leitura nos celulares do piloto; material com sugestão + confirmação sempre |
 | 9 | [Provedores de pagamento](../pesquisa/provedores-de-pagamento.md) | 5 | API no MVP ou pagamento manual primeiro? | [x] | ✅ 11/11: manual com comprovante no piloto, API depois; pagador Residuum; valor por kg e material |
 
@@ -46,7 +46,7 @@ Os tempos são **leitura atenta mais anotação** (cerca de 200 palavras por min
 | 11 | [Diagramas](../02-arquitetura/diagramas.md) | 5 | Estados "hoje × proposto" | [x] | ✏️ 11/11: alinhados às decisões; novos diagramas de pagamento manual e de campanha; coleta com "a caminho" e cancelamento por admin e cooperativa |
 | 12 | [Modelo de dados](../02-arquitetura/modelo-de-dados.md) | 8 | A tabela de achados e a nota sobre a branch do backend | [x] | ✏️ 11/11: modelo proposto alinhado; estrutura conferida com a Neon (= `main`, 22 tabelas); `senha_hash` no pedido público de ponto |
 | 13 | [Dicionário de dados](../02-arquitetura/dados/README.md) | 10 | Leia o índice e **um** dos três arquivos; os outros por amostra | [x] | ✅ 11/11: ok; acrescentadas as diferenças do banco da Neon |
-| 14 | [ADRs](../02-arquitetura/adr/README.md) | 10 | Aceitar, rejeitar ou ajustar cada uma das 5 propostas | [x] | ✅ 11/11: as 5 aceitas, ajustadas às decisões do dia (10 por descarte sem estorno, N:N, "a caminho", código individual e teto de 500) |
+| 14 | [ADRs](../02-arquitetura/adr/README.md) | 10 | Aceitar, rejeitar ou ajustar cada uma das 5 propostas | [x] | ✅ 11/11: as 5 aceitas, ajustadas às decisões do dia (10 por descarte sem estorno, N:N, "a caminho", teto de 500 contas, sem código, revisto em 12/11) |
 | 15 | [Índice de telas](../03-ux/indice-de-telas.md) | 6 | Telas por perfil e o que está sem desenho | [x] | ✏️ 11/11: 11 telas que mudam e 3 novas pelas decisões; ponto cheio bloqueia e sugere outro (PD-009) |
 
 ### Bloco 4: Rascunhos das partes 3 a 6 (≈ 28 min)
@@ -58,7 +58,7 @@ Estes documentos estão **em esboço**. Avalie a estrutura e o que falta; o cont
 | 16 | [API](../04-desenvolvimento/api.md) | 4 | 3 | [x] | ✅ 11/11: reescrita (113 rotas, PR #9); `/painel-testes` sai da produção; `/pontos` é apelido |
 | 17 | [Como contribuir](../../CONTRIBUTING.md) | 3 | 3 | [x] | ✅ 11/11: reescrito (PR #9); branches padronizadas em `feature/` |
 | 18 | [Plano de testes](../05-qualidade/plano-de-testes.md) | 3 | 4 | [x] | ✅ 11/11: testes por onda com as regras do dia; Vitest no front; PostgreSQL de teste em Docker + CI |
-| 19 | [Casos de teste](../05-qualidade/casos-de-teste.md) | 5 | 4 | [x] | ✏️ 11/11: atualizado (10 por descarte, sem estorno, GPS 100 m, código e vagas); de 22 para 61 casos (39 novos, 4 corrigidos); 11 decisões aprovadas (D-CT-01 a 11) |
+| 19 | [Casos de teste](../05-qualidade/casos-de-teste.md) | 5 | 4 | [x] | ✏️ 11/11: atualizado (10 por descarte, sem estorno, GPS 100 m, código e vagas); de 22 para 61 casos (39 novos, 4 corrigidos); 9 decisões em vigor (D-CT-02 e 04 canceladas em 12/11) |
 | 20 | [Guia de deploy](../06-operacao/guia-de-deploy.md) | 4 | 5 | [ ] | |
 | 21 | [Notas de versão](../06-operacao/release-notes.md) | 2 | 5 | [ ] | |
 | 22 | [Manual do usuário](../07-usuario/manual-do-usuario.md) | 4 | 5 | [ ] | |

@@ -6,7 +6,7 @@
 
 ## Resumo
 
-O produto já decidiu **o que** o sistema faz (seção 1). A arquitetura já aceitou **cinco desenhos** (seção 3). O que falta é combinar **como** construir: ordem, migração do que já existe e 18 perguntas técnicas (seção 5). O código atual ainda faz o contrário de várias regras: paga 5 pontos por unidade, credita duas vezes, não tem convite nem vagas e deixa qualquer cooperativa operar qualquer ponto (seção 4).
+O produto já decidiu **o que** o sistema faz (seção 1). A arquitetura já aceitou **cinco desenhos** (seção 3). O que falta é combinar **como** construir: ordem, migração do que já existe e 18 perguntas técnicas (seção 5). O código atual ainda faz o contrário de várias regras: paga 5 pontos por unidade, credita duas vezes, não tem teto de contas e deixa qualquer cooperativa operar qualquer ponto (seção 4).
 
 **Objetivo da reunião:** sair com (1) respostas às perguntas da seção 5, (2) a ordem de entrega confirmada e (3) donos e datas.
 
@@ -41,13 +41,12 @@ Tudo abaixo foi decidido pelo Vinicius em 11/11/2026, salvo quando indicado. **N
 
 | Regra | Valor | Fonte |
 |---|---|---|
-| Entrada | **Código individual de uso único**, entregue pela equipe | [controle de acesso](../pesquisa/controle-de-acesso.md) |
-| Teto | **500 contas**, com trava de vagas no banco | idem |
+| Entrada | Cadastro **aberto, sem código**. A pessoa cria a conta e depois entra normalmente | decisão de 12/11/2026 |
+| Teto | **500 contas**, com trava de vagas no banco. O valor é **configurável** e pode subir para **1000** | [controle de acesso](../pesquisa/controle-de-acesso.md) |
 | Sem vaga | Aviso e **lista de espera** | idem |
 | Conta excluída | **Anonimiza** (não apaga) e **devolve a vaga** | PD-022 |
-| Validade do código | **30 dias** (D-CT-02) | [casos de teste](../05-qualidade/casos-de-teste.md) |
+| Código de acesso | **Não existe mais** (decisão de 12/11/2026): dava trabalho para gerar e repassar e atrapalhava o cadastro. O único controle é o teto | idem |
 | Mesmo e-mail após exclusão | Só recadastra após **30 dias** (D-CT-03) | idem |
-| Quem já tem conta | Não precisa de código (D-CT-04) | idem |
 | Recuperar senha | Por e-mail | PD-003 (provisório) |
 
 ### Cadastro de resíduos
@@ -126,7 +125,7 @@ Aceitas em 11/11/2026. **Nenhuma está implementada.**
 | [0002](adr/0002-vinculo-entre-usuario-e-ponto.md) | **Vínculo usuário↔ponto N:N** | Tabela `vinculo_operacional`; permissão = papel + vínculo |
 | [0003](adr/0003-idempotencia-nas-escritas.md) | **Idempotência** | Cabeçalho `Idempotency-Key` em toda escrita sensível |
 | [0004](adr/0004-estados-no-backend.md) | **Estados no backend** | Tabela de transições; `PUT` nunca muda estado; transição inválida = 409 |
-| [0005](adr/0005-conta-com-ciclo-de-vida.md) | **Conta com ciclo de vida** | `ativo`, `token_version`, código de acesso, vagas, anonimização |
+| [0005](adr/0005-conta-com-ciclo-de-vida.md) | **Conta com ciclo de vida** | `ativo`, `token_version`, teto de contas com vagas, anonimização |
 
 ## 4. O que muda no código
 
@@ -137,7 +136,7 @@ Aceitas em 11/11/2026. **Nenhuma está implementada.**
 | Estorno do descarte | `revertido` pelo admin | Não existe; só ajuste manual com motivo | PD-010 |
 | Janela de 60 min | Não existe | Agrupa envios do par usuário+ponto | [pergunta 1](#bloco-a-pontos-e-descarte) |
 | Saldo | `pontuacao_total` alterado em 6 lugares | Só um serviço, com trava de linha | ADR-0001 |
-| Cadastro | Aberto a qualquer pessoa | Código individual + teto de 500 | ADR-0005 |
+| Cadastro | Aberto a qualquer pessoa | Aberto, com teto de contas (500, configurável) | ADR-0005 |
 | Sessão | Refresh de 30 dias, sem revogação | `token_version`; desativar derruba sessões | ADR-0005 |
 | Permissão no ponto | Qualquer cooperativa opera qualquer ponto | Papel + vínculo N:N | ADR-0002 |
 | Cadastro de cooperativa | Público | Só o admin (responde 410) | Onda 0 |
@@ -170,7 +169,7 @@ A coluna **Proposta** é uma sugestão para abrir a conversa, **não uma decisã
 
 | # | Pergunta | Por que importa | Proposta | Decisão |
 |---|---|---|---|---|
-| 5 | A trava de vagas com `SELECT ... FOR UPDATE` funciona com a Neon e a API na Vercel (conexões curtas)? | Duas pessoas não podem pegar a última vaga | Testar com pool em modo transacional; a linha de vagas e o código são consumidos na mesma transação | |
+| 5 | A trava de vagas com `SELECT ... FOR UPDATE` funciona com a Neon e a API na Vercel (conexões curtas)? | Duas pessoas não podem pegar a última vaga | Testar com pool em modo transacional; a linha de vagas é consumida na mesma transação do cadastro | |
 | 6 | Como migrar `cooperativa_id` (que mistura cooperativa e responsável) para `vinculo_operacional`? | Ligar a regra antes do preenchimento tira o acesso de todos | Escrita dupla por uma versão, *dry-run*, revisão do admin e flag para ligar (ADR-0002) | |
 | 7 | Os papéis `ponto_coleta` e `parceiro` viram aliases de `responsavel_ponto`? Por quanto tempo? | O menu e as rotas do front dependem disso | Uma versão de convivência, depois remover | |
 | 8 | Quem controla o e-mail de recuperação e de aviso? Qual canal? | ADR-0005 e PD-003 precisam enviar e-mail; PD-021 está aberta | Escolher um provedor simples de e-mail transacional | |
@@ -206,6 +205,7 @@ Também decidir, se sobrar tempo (sem pergunta numerada):
 - **Homologação:** hoje não há. Criar uma, ou testar numa cópia (*branch*) do banco da Neon?
 - **Banco:** `residuum-dev` é o de produção? A Neon guarda **6 horas**; definir backup e o RPO/RTO (PD-026).
 - **Observabilidade:** logs, alertas e segredos (`SECRET_KEY`) estão sem política.
+- **Cadastro aberto sem código:** qualquer pessoa ou robô com o endereço do site pode ocupar as vagas do teto. Precisa de limite de tentativas ou captcha no cadastro? E o admin altera o teto por tela ou direto no banco?
 
 ## 6. Pendências de produto que travam o desenvolvimento
 
@@ -229,7 +229,7 @@ Ondas do [backlog](../01-planejamento/backlog-e-historias.md). Cada onda depende
 |---|---|---|
 | 0 | Contenção: fechar cadastro público de cooperativa, travar acesso por ponto, sorteio (estados), remover `/pontuacao/resgates` e `/painel-testes` | Riscos críticos, sem depender de decisão |
 | 1 | Livro de pontos, fluxo único de confirmação, 10 por descarte, janela de 60 min, idempotência, reconciliação | Base de quase tudo |
-| 2 | Vínculo N:N; código de acesso, teto de 500, desativar conta, senha | Destrava os perfis |
+| 2 | Vínculo N:N; teto de contas (500, configurável), desativar conta, senha | Destrava os perfis |
 | 3 | Materiais PET e lata; front do usuário; cancelar sorteio | Dependem de 1 e 2 |
 | 4 | Estados da coleta (parcial, "a caminho", cancelada); campanha e voucher; ponto cheio | Fluxos operacionais |
 | 5 | Extrato, disponibilidade, QR removido | Experiência |
@@ -255,10 +255,10 @@ Encontradas ao preparar esta pauta. **Não bloqueiam a reunião**, mas o arquite
 
 | Onde | Problema | Correção |
 |---|---|---|
-| [RN-001 e RN-002](../01-planejamento/requisitos/07-regras-de-negocio-consolidadas.md) | Falam em **convite** (individual ou compartilhado) | Trocar por **código individual de uso único** e teto de 500 |
+| [RN-001 e RN-002](../01-planejamento/requisitos/07-regras-de-negocio-consolidadas.md) | Falavam em **convite** | **Corrigido em 12/11:** cadastro aberto com teto de contas |
 | RN-017 e RN-018 | Pagamento "por API" e "evidência do provedor" | No piloto é **manual com comprovante**; API depois |
 | [Estudo de coleta](../pesquisa/capacidade-e-execucao-da-coleta.md) × [casos de teste](../05-qualidade/casos-de-teste.md) | O estudo propõe **avisar o admin** no silêncio e **campo de data** para reagendar; os casos (D-CT-08 e 09) adotam **expirar em 48 h** e **uma remarcação** | Valem os casos (aprovados); atualizar o estudo |
-| [ADR-0005](adr/0005-conta-com-ciclo-de-vida.md) | "validade a definir" | Validade de **30 dias** (D-CT-02) |
+| [ADR-0005](adr/0005-conta-com-ciclo-de-vida.md) | Previa código de acesso | **Corrigido em 12/11:** sem código; só o teto |
 | [SAD](sad.md) | Diz 111 endpoints; a [API](../04-desenvolvimento/api.md) conta 113 | Conferir qual vale |
 | Casos D-CT-01 a 11 | Aprovados, mas fora dos requisitos | Registrar nos requisitos e em decisões |
 

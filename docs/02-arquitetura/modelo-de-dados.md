@@ -138,8 +138,8 @@ Colunas e tabelas novas propostas nas análises: ledger em `pontuacao` (origem, 
 
 | Proposta | Como fica |
 |---|---|
-| `convite` | Vira **`codigo_acesso`**: código **individual, uso único** |
-| Teto de contas | Linha de controle com **`vagas_restantes`** (começa em 500), travada com `SELECT ... FOR UPDATE` no cadastro; volta 1 vaga quando a conta é excluída |
+| `convite` | **Descartada** (12/11/2026): não há código de acesso; o cadastro é aberto |
+| Teto de contas | Linha de controle com **`vagas_restantes`** (começa em 500, configurável; pode subir a 1000), travada com `SELECT ... FOR UPDATE` no cadastro; volta 1 vaga quando a conta é excluída |
 | Lista de espera | Tabela nova **`lista_espera`** (e-mail, data) `[LGPD: consentimento]` |
 | `lead_ponto_coleta` | **Descartada**: só o admin cria ponto (RN-011) |
 | `vinculo_operacional` | Confirmada: **N:N**, gerida pelo admin (PD-023) |

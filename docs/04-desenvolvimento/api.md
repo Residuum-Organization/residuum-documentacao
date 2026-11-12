@@ -32,7 +32,7 @@ A API é **REST em JSON**, feita em FastAPI, com **113 rotas** (111 nos 15 arqui
 
 | Método | Rota | Perfil | Muda |
 |---|---|---|---|
-| POST | `/usuarios` | pública | 🟠 exigir o **código individual** (uso único) e respeitar o **teto de 500 contas** (trava de vagas no banco) |
+| POST | `/usuarios` | pública | 🟠 respeitar o **teto de contas** (500, configurável; trava de vagas no banco) |
 | POST | `/login` | pública | — |
 | POST | `/refresh` | pública | 🟡 conferir se a conta está ativa |
 | GET, PUT | `/me` | logado | — |
@@ -187,7 +187,7 @@ A API é **REST em JSON**, feita em FastAPI, com **113 rotas** (111 nos 15 arqui
 
 | Método | Rota sugerida | Para quê | Origem |
 |---|---|---|---|
-| POST | `/admin/codigos-acesso` | Gerar **códigos individuais de uso único** e ver vagas restantes | Teto de 500 |
+| GET/PUT | `/admin/teto-de-contas` | Ver as vagas restantes e **alterar o teto** (500, até 1000) | Revisão de 12/11 |
 | POST | `/lista-espera` | Pública: deixar e-mail quando as vagas acabarem | Decisão de 11/11 |
 | POST, DELETE | `/admin/pontos-coleta/{id}/responsaveis/{usuario_id}` | Ligar e desligar responsáveis | [PD-023](../01-planejamento/decisoes/pd-023.md) |
 | POST | `/sorteios/{id}/cancelar` | Cancelar e devolver pontos | [PD-013](../01-planejamento/decisoes/pd-013.md) |

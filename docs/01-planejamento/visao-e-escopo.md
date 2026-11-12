@@ -58,7 +58,7 @@ O perfil que antes se chamava "morador" passa a se chamar **usuário** em todos 
 | **Usuário** | Registra resíduos, escolhe ponto, entrega, usa pontos na Loja | Menos esforço e incentivo |
 | **Responsável pelo ponto** (vínculo N:N, decidido em 11/11/2026: [PD-023](decisoes/pd-023.md)) | Acompanha materiais e ocupação, edita o que o ponto aceita, pede retirada | Visibilidade e comunicação com a administração |
 | **Cooperativa** | Aceita solicitações, vê agenda e rota, registra material e peso | Coletas organizadas e pagamento acompanhado |
-| **Administrador** | Gere convites, pontos, Loja, solicitações, pagamentos e indicadores | Controle da operação em um só lugar |
+| **Administrador** | Gere o teto de contas, pontos, Loja, solicitações, pagamentos e indicadores | Controle da operação em um só lugar |
 | **Contratante de dados** | Consulta o que o plano autoriza | Informação para análise (pacotes a definir) |
 
 ## 4. Escopo do MVP
@@ -67,7 +67,7 @@ O perfil que antes se chamava "morador" passa a se chamar **usuário** em todos 
 
 | Área | O que entra |
 |---|---|
-| Acesso | O usuário **se cadastra normalmente**, com um **código individual de uso único** fornecido pela equipe. Conta excluída devolve a vaga; sem vagas, aviso e lista de espera. O número de contas tem um **teto de 500** (decidido em 11/11/2026), controlado por **trava de vagas no banco** (*pessimistic locking*: `SELECT ... FOR UPDATE` na linha de vagas). Ver [controle de acesso](../pesquisa/controle-de-acesso.md) |
+| Acesso | O usuário **se cadastra normalmente**, sem código, e depois entra como qualquer outro. O controle é um **teto de 500 contas** (configurável; pode subir a **1000**), com **trava de vagas no banco** (*pessimistic locking*: `SELECT ... FOR UPDATE` na linha de vagas). Ao chegar no teto: aviso e lista de espera. Conta excluída devolve a vaga. Decidido em 11/11/2026 e **revisto em 12/11/2026** (o código individual foi descartado). Ver [controle de acesso](../pesquisa/controle-de-acesso.md) |
 | Cadastro de resíduos | **Três sistemas**, iniciados por um botão **+** centralizado na barra de navegação. **1) Código de barras:** lê o produto e já preenche o formulário. **2) QR Code da nota fiscal:** traz os itens da nota e os materiais. **3) Manual:** o usuário pode tentar ler o código de barras **quantas vezes quiser**. Cada falha mostra um **aviso vermelho** de erro de leitura; a partir da **2ª falha**, o aviso **recomenda o cadastro manual** (nome, material, quantidade `[LACUNA: campos do formulário]`). Decidido em 11/11/2026. Materiais: **PET e lata de alumínio** |
 | Descarte rápido | **Não é uma função à parte.** É o uso do **leitor de código de barras** (agiliza um único produto) e do **leitor de QR Code da nota** (traz todos os materiais da nota) para seguir direto à escolha do ponto, sem passar pelo estoque |
 | Entrega | Escolha do ponto compatível, navegação externa, **validação de presença por GPS** (libera o envio) e **confirmação pelo operador do ponto** (decidido em 11/11/2026); os pontos saem só depois da confirmação |
@@ -155,7 +155,7 @@ As regras de **campanhas, vouchers e sorteios** foram decididas (ver [campanhas]
 - [x] Tamanho da janela: **60 minutos**
 - [ ] Alterar o código para 10 por descarte, meta do dobro em descartes e janela; decidir as faixas de recompensa
 - [x] Aprovar as **metas do piloto** (seção 6): aprovadas em 11/11/2026, com **100 usuários**
-- [x] Teto de cadastros: **500 contas** (decidido em 11/11/2026)
+- [x] Teto de cadastros: **500 contas**, configurável até 1000 (decidido em 11/11/2026; revisto em 12/11/2026)
 - [ ] Ajustar a escala das metas do piloto? Hoje elas usam **100 usuários**; o teto é **500**
 - [x] Forma de controle de acesso: **trava de vagas no banco** (*pessimistic locking*), decidida em 11/11/2026
 - [x] Tentativas do código de barras: sem limite; aviso vermelho a cada falha; cadastro manual recomendado a partir da 2ª

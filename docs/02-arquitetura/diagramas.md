@@ -74,7 +74,7 @@ stateDiagram-v2
 
 ```mermaid
 stateDiagram-v2
-  [*] --> ativo: cadastro com código individual (uso único), se houver vaga no teto de 500
+  [*] --> ativo: cadastro aberto, se houver vaga no teto (500, configurável)
   ativo --> desativado: admin desativa (sessões caem)
   desativado --> ativo: admin reativa
   ativo --> anonimizado: exclusão (LGPD) [PD-022], devolve a vaga

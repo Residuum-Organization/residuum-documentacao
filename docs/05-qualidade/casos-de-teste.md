@@ -19,7 +19,7 @@ Status: ⬜ planejado · ✅ passou · ❌ falhou. Hoje **nenhum foi executado**
 | Janela | Descartes do mesmo usuário no mesmo ponto em **60 min** contam como **um** |
 | Confirmação | O **operador do ponto** confirma; é **final**, sem estorno |
 | Correção | **Ajuste manual** do admin, com motivo obrigatório |
-| Acesso | Código individual de uso único; teto de **500** contas; lista de espera |
+| Acesso | Cadastro **aberto, sem código**; teto de **500** contas (configurável, até 1000); lista de espera |
 | GPS | **100 m** por padrão, ajustável por ponto |
 | Materiais | Só **PET e lata** |
 
@@ -30,9 +30,9 @@ Status: ⬜ planejado · ✅ passou · ❌ falhou. Hoje **nenhum foi executado**
 | Ref. | Pendência | Decisão | Por quê | Caso |
 |---|---|---|---|---|
 | D-CT-01 | Ajuste manual pode deixar saldo negativo? | **Não.** Recusa com 409 `saldo_insuficiente` | O saldo nunca fica negativo; é a invariante do caderno de pontos | CT-ADM-05 |
-| D-CT-02 | Validade do código individual | **30 dias**; vencido é recusado (410) | Evita códigos soltos por tempo indefinido | CT-ACE-02 |
+| D-CT-02 | ~~Validade do código individual~~ | **Cancelada em 12/11/2026:** não há mais código de acesso | O cadastro é aberto | — |
 | D-CT-03 | Abuso da vaga devolvida | A vaga volta na hora, mas o **mesmo e-mail só se recadastra após 30 dias** | Impede apagar e recriar a conta para repetir bônus de cadastro | CT-ACE-05 |
-| D-CT-04 | Quem já tem conta precisa de código? | **Não.** Só cadastros novos | Código serve para controlar entrada | CT-ACE-06 |
+| D-CT-04 | ~~Quem já tem conta precisa de código?~~ | **Cancelada em 12/11/2026:** não há mais código de acesso | O cadastro é aberto | — |
 | D-CT-05 | Unidade da capacidade do ponto (PD-009) | **Unidades por material** (latas e PET separados) | Casa com o caso que já existia | CT-PON-02 |
 | D-CT-06 | Alerta de ponto quase cheio | **80%** da capacidade; cheio aos 100% | Dá tempo de pedir coleta | CT-PON-02 |
 | D-CT-07 | Ponto temporário ao encerrar | Passa a **inativo**; histórico fica | Não apaga descartes antigos | CT-PON-03 |
@@ -63,12 +63,12 @@ Status: ⬜ planejado · ✅ passou · ❌ falhou. Hoje **nenhum foi executado**
 
 | ID | Req. | Pré-condição | Passos | Esperado | St |
 |---|---|---|---|---|---|
-| CT-ACE-01 | PD-001 | Código novo válido | Cadastrar com o código | Conta criada; código marcado como usado | ⬜ |
-| CT-ACE-02 | D-CT-02 | Código com 31 dias | Cadastrar | 410 código vencido | ⬜ |
-| CT-ACE-03 | PD-001 | Código já usado | Cadastrar de novo | 409 código usado | ⬜ |
-| CT-ACE-04 | [acesso](../pesquisa/controle-de-acesso.md) | 499 contas; 2 pessoas com código | Cadastram ao mesmo tempo | Só **uma** entra; a outra vai à lista de espera; total 500 | ⬜ |
+| CT-ACE-01 | PD-001 | Cadastro aberto; 100 contas | Cadastrar sem código | Conta criada; vagas −1 | ⬜ |
+| CT-ACE-02 | PD-001 | E-mail já cadastrado | Cadastrar de novo | 409 e-mail em uso; vagas inalteradas | ⬜ |
+| CT-ACE-03 | [acesso](../pesquisa/controle-de-acesso.md) | 500 contas; admin sobe o teto para 1000 | Cadastrar a 501ª pessoa | Conta criada; cadastros seguem até 1000 | ⬜ |
+| CT-ACE-04 | [acesso](../pesquisa/controle-de-acesso.md) | 499 contas; 2 pessoas | Cadastram ao mesmo tempo | Só **uma** entra; a outra recebe o aviso e vai à lista de espera; total 500 | ⬜ |
 | CT-ACE-05 | D-CT-03 | Conta excluída hoje | 1. Vaga volta 2. Mesmo e-mail recadastra | Vaga volta (total −1); recadastro do mesmo e-mail recusado por 30 dias | ⬜ |
-| CT-ACE-06 | D-CT-04 | Usuário com conta | Entrar sem código | Entra normalmente | ⬜ |
+| CT-ACE-06 | [acesso](../pesquisa/controle-de-acesso.md) | 500 contas cheias; usuário que já tem conta | Fazer login | Entra normalmente; o teto só barra cadastros novos | ⬜ |
 | CT-ACE-07 | [acesso](../pesquisa/controle-de-acesso.md) | 500 contas | Tentar cadastrar | Aviso "sem vagas" + opção de lista de espera | ⬜ |
 
 ## Cadastro de resíduos
@@ -139,14 +139,14 @@ Status: ⬜ planejado · ✅ passou · ❌ falhou. Hoje **nenhum foi executado**
 
 ## Ponta a ponta (roteiro manual)
 
-1. Cadastrar com **código individual** → descarte rápido (leitor de código de barras) → operador confirma → saldo **10** e extrato com **1** lançamento → admin faz **ajuste manual** com motivo → saldo muda e o extrato mostra o motivo.
+1. Cadastrar (com vaga no teto) → descarte rápido (leitor de código de barras) → operador confirma → saldo **10** e extrato com **1** lançamento → admin faz **ajuste manual** com motivo → saldo muda e o extrato mostra o motivo.
 2. Admin cria sorteio de teste (rascunho) → publica → 3 compram → tenta editar custo (bloqueado) → cancela → 3 devoluções no extrato.
 3. Campanha de dobro: usuário cumpre a meta de 3 descartes → clica "Receber pontos" → bônus de 30 no extrato.
 4. Ponto fica cheio → próximo usuário vê bloqueio e sugestão de outro ponto → admin pede coleta → cooperativa aceita, marca "a caminho", conclui parcial → admin registra pagamento manual com comprovante.
 
 ## O que falta para fechar
 
-- [ ] Registrar as 11 decisões aprovadas (D-CT-01 a D-CT-11) nos requisitos e em `decisoes-pendentes.md`
+- [ ] Registrar as decisões em vigor (D-CT-01 a D-CT-11, menos 02 e 04, canceladas em 12/11) nos requisitos e em `decisoes-pendentes.md`
 - [ ] Dados concretos (usuários, pontos, valores) em fixtures
 - [ ] Converter as demais fichas (≈ 70 achados) para este molde
 - [ ] Valor por kg de PET e de lata (PD-015) para fechar o CT-PAG-01

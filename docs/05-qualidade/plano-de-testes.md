@@ -38,7 +38,7 @@ Hoje há **71 testes**, todos em SQLite, em 3 arquivos (`test_campanhas`, `test_
 |---|---|
 | 0 | Cadastro público de cooperativa e pedido público de ponto fecham; `/painel-testes` fora da produção; cooperativa sem vínculo → 403; sorteio não apura antes do fim |
 | 1 | Criar descarte não credita; confirmar credita **10 pontos uma vez**; envios no mesmo ponto em **60 min** viram um descarte; descarte confirmado **sem estorno** (só ajuste do admin); reenvio idempotente |
-| 2 | Usuário inativo → 401; **código individual** usado duas vezes → recusa; **501ª conta** recusada; **duas contas ao mesmo tempo na última vaga** → só uma entra (teste de concorrência); conta excluída devolve a vaga |
+| 2 | Usuário inativo → 401; **501ª conta** recusada; **duas contas ao mesmo tempo na última vaga** → só uma entra (teste de concorrência); conta excluída devolve a vaga |
 | 3+ | Só PET e lata; GPS com raio de **100 m** por ponto; ponto **cheio** bloqueado; cancelar sorteio devolve pontos; dobro = **10 × N descartes**; coleta **parcial** baixa só o coletado; "a caminho" e cancelamento da coleta |
 
 ## Testes existentes a corrigir

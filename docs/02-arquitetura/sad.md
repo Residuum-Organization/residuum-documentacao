@@ -55,7 +55,7 @@ flowchart LR
 3. Cada rota restringe por **papel** com `require_role(...)`: `usuario`, `admin`, `cooperativa`, `ponto_coleta`, `parceiro`.
 4. Para operar um ponto, `validar_acesso_operacional_ao_ponto` libera `admin` e **qualquer** `cooperativa`; `ponto_coleta` e `parceiro` só o ponto cujo `cooperativa_id` é o seu.
 
-Não há desativação de conta, revogação de sessão, convite nem limite de tentativas.
+Não há desativação de conta, revogação de sessão, teto de contas nem limite de tentativas.
 
 ## Fluxo principal: entrega do usuário (como é hoje)
 

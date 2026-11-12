@@ -17,7 +17,7 @@ Colunas: **Rota** · **Arquivo** (`frontend/src/pages/…`) · **Achado** (ver a
 | `/` | LandingPage | FAQ promete caridade, ingressos e pontos por kg (F22) |
 | `/welcome`, `/boas-vindas` | WelcomePage, WelcomeOnboardingPage | — |
 | `/login` | LoginPage | — |
-| `/cadastro` | RegisterPage | sem convite (F06) |
+| `/cadastro` | RegisterPage | aberto a qualquer pessoa (F06); falta o teto de contas |
 | `/recuperar-senha` | ForgotPasswordPage | só mostra aviso (F16) |
 | `/cadastro-ponto-coleta`, `/empresa`, `/confirmacao` | RegisterPontoColetaPage, CompanyPage, ConfirmationPage | cadastro público de ponto, com senha (PON-03) |
 | `/acesso-negado`, `/logout` | AcessoNegadoPage, LogoutPage | — |
@@ -84,7 +84,7 @@ Nenhum teste de usabilidade executado foi encontrado.
 
 | Tela | O que muda | Decisão |
 |---|---|---|
-| `/cadastro` | Pedir o **código individual**; sem vaga, mostrar aviso e **lista de espera** | PD-001, PD-002 |
+| `/cadastro` | Cadastro aberto; com o teto cheio, mostrar aviso e **lista de espera** | PD-001, PD-002 |
 | `/cadastro-ponto-coleta`, `/empresa`, `/confirmacao` | **Remover**: só o admin cria ponto | RN-011 |
 | Barra de navegação | Botão **+** no centro abre: código de barras, QR da nota, manual | Visão |
 | `/cadastrar-residuo` | Aviso **vermelho** a cada falha de leitura; a partir da **2ª**, recomendar o manual; **confirmar o material** (PET ou lata) sempre | PD-004 |
@@ -94,7 +94,7 @@ Nenhum teste de usabilidade executado foi encontrado.
 | `/loja/campanhas/:id` | Meta do dobro em **descartes**; botão **"Receber pontos"**; avisar quando houver bônus esperando | PD-011 |
 | `/admin-sorteios` | Botão **cancelar** (devolve os pontos); sem "Encerrar" antecipado | PD-013 |
 | `/admin-pontos` | Campo de **raio do GPS** por ponto; **vínculo de responsáveis** (vários por ponto) | PD-008, PD-023 |
-| `/usuarios` | Gerar **códigos de acesso**, ver **vagas** e a **lista de espera**; ajuste manual de pontos com motivo | PD-001, PD-010 |
+| `/usuarios` | Ver **vagas** e a **lista de espera**; alterar o **teto** de contas; ajuste manual de pontos com motivo | PD-001, PD-010 |
 
 **Telas novas (não existem):**
 
