@@ -25,9 +25,9 @@ Status: ⬜ planejado · ✅ passou · ❌ falhou. Hoje **nenhum foi executado**
 
 ## Decisões tomadas para fechar os casos
 
-> **[DECISÃO PROPOSTA]** O Vinicius pediu que eu decidisse para destravar os casos. São **propostas do Claude, a validar**. Se você mudar uma, avise e eu ajusto o caso. Elas **não** estão nos requisitos ainda.
+> Decisões **aprovadas pelo Vinicius em 11/11/2026** para fechar os casos. Ainda falta registrá-las nos requisitos.
 
-| Ref. | Pendência | Decisão proposta | Por quê | Caso |
+| Ref. | Pendência | Decisão | Por quê | Caso |
 |---|---|---|---|---|
 | D-CT-01 | Ajuste manual pode deixar saldo negativo? | **Não.** Recusa com 409 `saldo_insuficiente` | O saldo nunca fica negativo; é a invariante do caderno de pontos | CT-ADM-05 |
 | D-CT-02 | Validade do código individual | **30 dias**; vencido é recusado (410) | Evita códigos soltos por tempo indefinido | CT-ACE-02 |
@@ -146,7 +146,7 @@ Status: ⬜ planejado · ✅ passou · ❌ falhou. Hoje **nenhum foi executado**
 
 ## O que falta para fechar
 
-- [ ] Validar as 11 decisões propostas (D-CT-01 a D-CT-11) e, se aprovadas, registrar nos requisitos
+- [ ] Registrar as 11 decisões aprovadas (D-CT-01 a D-CT-11) nos requisitos e em `decisoes-pendentes.md`
 - [ ] Dados concretos (usuários, pontos, valores) em fixtures
 - [ ] Converter as demais fichas (≈ 70 achados) para este molde
 - [ ] Valor por kg de PET e de lata (PD-015) para fechar o CT-PAG-01
