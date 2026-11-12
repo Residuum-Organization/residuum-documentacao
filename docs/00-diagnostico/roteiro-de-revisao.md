@@ -58,7 +58,7 @@ Estes documentos estão **em esboço**. Avalie a estrutura e o que falta; o cont
 | 16 | [API](../04-desenvolvimento/api.md) | 4 | 3 | [x] | ✅ 11/11: reescrita (113 rotas, PR #9); `/painel-testes` sai da produção; `/pontos` é apelido |
 | 17 | [Como contribuir](../../CONTRIBUTING.md) | 3 | 3 | [x] | ✅ 11/11: reescrito (PR #9); branches padronizadas em `feature/` |
 | 18 | [Plano de testes](../05-qualidade/plano-de-testes.md) | 3 | 4 | [x] | ✅ 11/11: testes por onda com as regras do dia; Vitest no front; PostgreSQL de teste em Docker + CI |
-| 19 | [Casos de teste](../05-qualidade/casos-de-teste.md) | 5 | 4 | [ ] | |
+| 19 | [Casos de teste](../05-qualidade/casos-de-teste.md) | 5 | 4 | [x] | ✏️ 11/11: atualizado (10 por descarte, sem estorno, GPS 100 m, código e vagas); 45 casos novos ou ajustados; 11 decisões propostas D-CT-01 a 11 a validar |
 | 20 | [Guia de deploy](../06-operacao/guia-de-deploy.md) | 4 | 5 | [ ] | |
 | 21 | [Notas de versão](../06-operacao/release-notes.md) | 2 | 5 | [ ] | |
 | 22 | [Manual do usuário](../07-usuario/manual-do-usuario.md) | 4 | 5 | [ ] | |
