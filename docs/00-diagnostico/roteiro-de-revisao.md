@@ -84,13 +84,13 @@ Cada módulo é uma pasta de `docs/`. Copie esta tabela para a sua agenda e atua
 
 | Módulo | Pasta | Documentos | Escrito | Revisado por você |
 |---|---|---|---|---|
-| 00 Diagnóstico | `00-diagnostico` | matriz, plano, decisões pendentes, este roteiro | 🟡 revisão | ☐ 0/3 |
-| 01 Planejamento e requisitos | `01-planejamento` | visão, PRD, backlog, + 3 pastas fatiadas | 🟡 revisão | ☐ 0/3 + amostra |
-| Pesquisas de apoio | `pesquisa` | 4 documentos novos | 🟡 revisão | ☐ 0/4 |
-| 02 Arquitetura | `02-arquitetura` | SAD, diagramas, modelo de dados, dicionário, 5 ADRs | 🟡 revisão | ☐ 0/5 |
-| 03 UX | `03-ux` | índice de telas | 🟡 revisão | ☐ 0/1 |
-| 04 Desenvolvimento | `04-desenvolvimento` + raiz | API, CONTRIBUTING | 🔴 esboço | ☐ 0/2 |
-| 05 Qualidade | `05-qualidade` | plano de testes, casos de teste | 🔴 esboço | ☐ 0/2 |
+| 00 Diagnóstico | `00-diagnostico` | matriz, plano, decisões pendentes, este roteiro | 🟡 revisão | ☑ 2/3 |
+| 01 Planejamento e requisitos | `01-planejamento` | visão, PRD, backlog, + 3 pastas fatiadas | 🟡 revisão | ☑ 3/3 + amostra pendente |
+| Pesquisas de apoio | `pesquisa` | 4 documentos novos | 🟡 revisão | ☑ 4/4 |
+| 02 Arquitetura | `02-arquitetura` | SAD, diagramas, modelo de dados, dicionário, 5 ADRs | 🟡 revisão | ☑ 5/5 |
+| 03 UX | `03-ux` | índice de telas | 🟡 revisão | ☑ 1/1 |
+| 04 Desenvolvimento | `04-desenvolvimento` + raiz | API, CONTRIBUTING | 🟡 revisão | ☑ 2/2 |
+| 05 Qualidade | `05-qualidade` | plano de testes, casos de teste | 🟡 revisão | ☑ 2/2 |
 | 06 Operação | `06-operacao` | deploy, notas de versão | 🔴 esboço | ☐ 0/2 |
 | 07 Usuário | `07-usuario` | manual | 🔴 esboço | ☐ 0/1 |
 | 08 Manutenção | `08-manutencao` | governança, diário de bordo | 🔴 esboço | ☐ 0/1 |
