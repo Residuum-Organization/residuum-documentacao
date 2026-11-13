@@ -2,9 +2,9 @@
 
 [Voltar à pauta](pauta-reuniao-arquitetura.md)
 
-> **Estado:** revisão · **Dono:** Tecnologia · **Elaborado em:** 13/11/2026
+> **Estado:** revisão · **Dono:** Tecnologia · **Elaborado em:** 13/11/2026 · **Propostas da seção 8 aprovadas pelo Vinicius em 13/11/2026**
 > **Origem:** dois pareceres de engenheiros de software sobre a [pauta](pauta-reuniao-arquitetura.md), trazidos pelo Vinicius depois da reunião.
-> **Natureza:** avaliação do Claude, com pesquisa na internet (13/11/2026). **Nada foi testado.** As recomendações abaixo são **propostas**, não decisões, até o Vinicius aprovar.
+> **Natureza:** avaliação do Claude, com pesquisa na internet (13/11/2026). **Nada foi testado.** As 10 propostas da seção 8 foram **aprovadas em 13/11/2026**; as demais recomendações do texto seguem como propostas.
 
 ## Resumo
 
@@ -109,9 +109,9 @@ A sugestão de **pré-carregar 50 a 100 produtos** por planilha é boa e barata.
 
 **Alternativa de infraestrutura (para registro, sem recomendar agora):** várias dores deste documento (pooler, aviso em tempo real, tarefas agendadas, arquivos) vêm de rodar a API em funções **serverless**. Uma hospedagem com **servidor contínuo** (por exemplo, um serviço de contêiner) resolveria todas de uma vez, ao custo de mudar a decisão já tomada. Para 100 usuários em 3 pontos, **recomendo manter Vercel + Neon** e anotar um **gatilho** para rever: precisar de aviso instantâneo ao operador, de tarefas frequentes ou de lentidão na primeira chamada. O FastAPI é portátil, então a mudança futura não exige reescrita.
 
-## 8. Proposta de decisões para aprovar
+## 8. Decisões aprovadas (13/11/2026)
 
-| # | Proposta | Quem decide |
+| # | Decisão | Quem executa |
 |---|---|---|
 | 1 | Nota fiscal: pedir cotação à Infosimples; ordem **A com teto → C**; teste de B em 1 hora a partir da Vercel | Vinicius + engenheiro |
 | 2 | Guardar a nota pela **chave única** (não pagar duas vezes; resolve PD-005) | Vinicius |
@@ -127,3 +127,5 @@ A sugestão de **pré-carregar 50 a 100 produtos** por planilha é boa e barata.
 ## Fontes
 
 Busca na internet em 13/11/2026: [Neon, pooling](https://neon.com/docs/connect/connection-pooling) · [Vercel, plano Hobby](https://vercel.com/docs/plans/hobby) · [Infosimples, cobrança](https://infosimples.com/consultas/precos/) · [Cloudflare R2, preços](https://developers.cloudflare.com/r2/pricing) · [Vercel Blob, preços](https://vercel.com/docs/vercel-blob/usage-and-pricing).
+
+**Atenção:** aprovar não significa que esteja feito. Estão **por fazer**: a cotação da Infosimples, o teste de uma hora a partir da Vercel, a conferência do plano da Vercel e das tarefas agendadas e os testes de concorrência. O item 10 aprovou que a **janela de 60 minutos** e a **proteção contra robôs** precisam ser respondidas: **as duas continuam sem resposta**.

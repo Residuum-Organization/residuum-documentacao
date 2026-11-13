@@ -104,6 +104,7 @@ Depois **pare e espere** a resposta dele.
 - Produção: **API na Vercel**, **PostgreSQL na Neon**. `/painel-testes` **sai da produção**; branches padronizadas em **`feature/`**.
 - Testes: **Vitest** no front; PostgreSQL de teste em **Docker + CI** (sem tocar na Neon).
 - Dados de Manaus: usar o **último dado publicado** (SINISA 2024).
+- **Aprovadas em 13/11** (ver `docs/02-arquitetura/avaliacao-da-reuniao-de-arquitetura.md`): nota fiscal com Infosimples e teto, depois itens à mão; nota guardada pela **chave única**; fila do operador a cada **20 s** só com a aba visível; endereço **`-pooler`** da Neon com `NullPool` e migrações no endereço direto; teste de concorrência no CI; comprovantes em **R2 privado** atrás de uma interface única; cache de produtos pré-carregado; CI roda os testes antes de migrar e publicar.
 
 ## Pendências abertas
 
@@ -117,6 +118,7 @@ Depois **pare e espere** a resposta dele.
 
 **Do Claude (documentação)**
 - Ler com o Vinicius os documentos **20 a 26** do roteiro.
+- Acompanhar as decisões de 13/11: **cotação da Infosimples**, teste de 1 h a partir da Vercel, plano da Vercel e **tarefas agendadas** (expiração em 48 h) ainda por fazer. **Sem resposta:** janela de 60 min e proteção contra robôs.
 - Registrar as decisões **D-CT-01 a 11** (menos 02 e 04, canceladas) nos requisitos e em `decisoes-pendentes.md`.
 - Corrigir os textos que ainda falam em **convite**: backlog (TSK-MOR-001 e outros), `docs/planejamento/modulos`, `docs/requisitos` e o M01 (que só tem um aviso no topo).
 - Corrigir **RN-017 e RN-018** (pagamento manual no piloto) e o **estudo de coleta** (silêncio e reagendamento, que divergem dos casos de teste).
