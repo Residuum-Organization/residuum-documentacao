@@ -197,7 +197,7 @@ A API é **REST em JSON**, feita em FastAPI, com **113 rotas** (111 nos 15 arqui
 | POST | `/admin/cooperativas` | Admin cria cooperativa | RN-011 |
 | POST | `/senha/recuperar`, `/senha/redefinir` | Recuperar acesso | RF-006, [PD-003](../01-planejamento/decisoes/pd-003.md) |
 
-Os nomes acima são **sugestões**; a equipe de backend decide.
+Os nomes das rotas novas são definidos pela equipe de backend.
 
 ## O que falta para fechar
 

@@ -2,7 +2,7 @@
 
 > **Estado:** revisão · **Dono:** Tecnologia · **Atualizado em:** 11/11/2026
 > **Fontes:** código do backend (branch `feature/mor-025-026-vouchers-sorteios`, `11f0d8e`) e do frontend (`package.json`, `App.jsx`, `ci.yml`), [stacks e integrações](../tecnologia/stacks-e-integracoes.md), [mapa de branches](../tecnologia/mapa-de-branches.md), propostas das análises.
-> **Lacunas:** 5 · Decisões de arquitetura propostas em [adr/](adr/README.md)
+> **Pendências:** ver "O que falta para fechar" · Decisões de arquitetura aceitas em [adr/](adr/README.md)
 
 ## Resumo
 
@@ -71,7 +71,7 @@ sequenceDiagram
   A->>A: baixa estoque de novo, credita pontos (2ª vez)
 ```
 
-Os dois créditos e as duas baixas são o defeito F01/F02. O desenho proposto está em [diagramas](diagramas.md) e na [ADR-0001](adr/0001-livro-unico-de-pontos.md).
+Os dois créditos e as duas baixas são o defeito F01/F02. O novo desenho está em [diagramas](diagramas.md) e na [ADR-0001](adr/0001-livro-unico-de-pontos.md).
 
 ## Decisões de desenho (aceitas)
 
@@ -98,6 +98,12 @@ As cinco foram **aceitas em 11/11/2026**, ajustadas às decisões do dia. Nenhum
 | Projeto do banco | `residuum-dev` (PostgreSQL 18, região São Paulo). Há um segundo projeto sem nome e sem uso `[VERIFICAR]` se é para produção |
 | Homologação | `[LACUNA]` não há ambiente de homologação conhecido |
 | Quem publica | Quem faz merge na `main` do backend dispara migração e deploy automaticamente `[LACUNA]` pessoas com essa permissão |
+| Conexão com o banco | A API usa o endereço **pooler** (`-pooler`) da Neon, com o pool do SQLAlchemy desligado (`NullPool`). As migrações usam o endereço **direto**. Decidido em 13/11/2026 |
+| Fila do operador | A tela atualiza a cada **20 segundos**, só com a aba visível. Decidido em 13/11/2026 |
+| Comprovantes de pagamento | Armazenamento de objetos privado (Cloudflare R2) atrás de uma interface única. Decidido em 13/11/2026 |
+| Tarefas agendadas | A coleta sem resposta expira em 48 h e a lista de espera precisa de aviso: exigem tarefa agendada. `[VERIFICAR]` limite do agendador da Vercel |
+| Plano da Vercel | O plano gratuito é só para uso não comercial. `[VERIFICAR]` se o projeto exige o plano pago |
+| Testes no CI | Rodam **antes** de migrar e publicar. Decidido em 13/11/2026 |
 
 ## Riscos e dívidas
 
@@ -124,6 +130,5 @@ Levantados no DLR V4 e no Plano de Tasks (jun/2026, Google Drive; ver o [compara
 - [ ] `[LACUNA]` topologia real: onde rodam API, banco e frontend; backups; RPO/RTO (PD-026)
 - [ ] `[LACUNA]` observabilidade, logs e alertas
 - [ ] `[LACUNA]` política de segredos e rotação do `SECRET_KEY`
-- [ ] `[DECISÃO: PD-023]` modelo de vínculo (ADR-0002)
 - [ ] `[VERIFICAR]` quais rotas estão ativas na `main` do backend
 - [ ] Conciliar versões de Python (3.10/3.11/3.12) e Node/pnpm (CI × local)

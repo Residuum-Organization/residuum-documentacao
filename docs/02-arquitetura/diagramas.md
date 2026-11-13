@@ -1,12 +1,12 @@
 # Diagramas de fluxo e de estado
 
-> **Estado:** revisão · **Dono:** Tecnologia · **Atualizado em:** 10/11/2026
+> **Estado:** revisão · **Dono:** Tecnologia · **Atualizado em:** 13/11/2026
 > **Fontes:** estados gravados no código (branch `feature/mor-025-026-vouchers-sorteios`) e propostas S2, A1, C4, P4 das análises. ER em [modelo-de-dados](modelo-de-dados.md).
 > **Lacunas:** 3
 
 ## Resumo
 
-Cada estado abaixo aparece em dois diagramas: **hoje** (o que o código grava) e **proposto** (o desenho das análises). Os propostos seguem as decisões de 11/11/2026: **o operador do ponto confirma** ([PD-006 / PD-027](../01-planejamento/decisoes/pd-006.md)) e **a confirmação é final**, sem estorno ([PD-010](../01-planejamento/decisoes/pd-010.md)). Toda transição inválida deve responder **409**.
+Cada estado abaixo aparece em dois diagramas: **hoje** (o que o código grava) e **novo desenho** (aprovado). Os novos desenhos seguem as decisões de 11/11/2026: **o operador do ponto confirma** ([PD-006 / PD-027](../01-planejamento/decisoes/pd-006.md)) e **a confirmação é final**, sem estorno ([PD-010](../01-planejamento/decisoes/pd-010.md)). Toda transição inválida deve responder **409**.
 
 ## 1. Descarte
 
@@ -20,7 +20,7 @@ stateDiagram-v2
   confirmado --> revertido: admin reverte (estorna parte)
 ```
 
-**Proposto:**
+**Novo desenho:**
 
 ```mermaid
 stateDiagram-v2
@@ -35,7 +35,7 @@ stateDiagram-v2
 
 **Hoje:** `ativo → encerrado`. O admin encerra por `PUT` e apura antes da data; excluir apaga os bilhetes.
 
-**Proposto:**
+**Novo desenho:**
 
 ```mermaid
 stateDiagram-v2
@@ -51,14 +51,16 @@ stateDiagram-v2
 
 **Hoje:** `solicitada → aceita → concluida`, e `solicitada → recusada`.
 
-**Proposto:**
+**Novo desenho:**
 
 ```mermaid
 stateDiagram-v2
   [*] --> pedida: responsável pede
   pedida --> solicitada: admin encaminha
   solicitada --> aceita: cooperativa aceita
-  solicitada --> recusada: cooperativa recusa [PD-014]
+  solicitada --> recusada: cooperativa recusa, com motivo
+  solicitada --> expirada: sem resposta em 48 h, volta ao admin
+  aceita --> aceita: cooperativa reagenda (uma vez) e o ponto confirma
   aceita --> em_execucao: cooperativa marca "a caminho"
   solicitada --> cancelada: admin ou cooperativa cancela, com motivo
   aceita --> cancelada: admin ou cooperativa cancela, com motivo
@@ -70,7 +72,7 @@ stateDiagram-v2
 
 **Hoje:** uma conta existe ou não. Não há desativar.
 
-**Proposto:**
+**Novo desenho:**
 
 ```mermaid
 stateDiagram-v2
@@ -81,7 +83,7 @@ stateDiagram-v2
   desativado --> anonimizado: devolve a vaga
 ```
 
-## 5. Entrega do usuário (sequência proposta)
+## 5. Entrega do usuário (sequência)
 
 ```mermaid
 sequenceDiagram
@@ -97,7 +99,7 @@ sequenceDiagram
 
 O fluxo atual está no [SAD](sad.md#fluxo-principal-entrega-do-usuário-como-é-hoje). Envios do mesmo usuário no mesmo ponto em 60 minutos viram **um** descarte e **10 pontos** ([PD-010](../01-planejamento/decisoes/pd-010.md)).
 
-## 6. Pedido de coleta pelo responsável (sequência proposta)
+## 6. Pedido de coleta pelo responsável (sequência)
 
 ```mermaid
 sequenceDiagram
@@ -143,7 +145,3 @@ Descartes no mesmo ponto em 60 minutos contam como **um** na meta. Ver [regras d
 ## O que falta para fechar
 
 - [ ] `[VERIFICAR]` quais transições existem de fato em cada rota (ex.: quem pode `revertido`)
-- [x] Diagramas de pagamento (manual no piloto) e de campanha (dobro em descartes) (11/11/2026)
-- [x] Coleta: estado "a caminho" (`em_execucao`) mantido; cancelamento por admin e cooperativa, com motivo (11/11/2026)
-- [ ] `[DECISÃO: PD-014]` prazo de aceite, silêncio e reagendamento
-- [x] Ator da confirmação: **operador do ponto** (11/11/2026); confirmação final, sem `revertido`

@@ -2,7 +2,7 @@
 
 > **Estado:** revisão · **Dono:** Tecnologia · **Atualizado em:** 11/11/2026
 > **Fonte:** código do backend, branch `feature/mor-025-026-vouchers-sorteios` (commit `11f0d8e`, 22/10/2026), lido dos arquivos `app/models/*.py` e das 34 migrações Alembic. **Não foi executado contra um banco PostgreSQL.**
-> **Lacunas:** 3 · Dicionário de colunas em [dados/](dados/README.md).
+> Dicionário de colunas em [dados/](dados/README.md).
 
 ## Resumo
 
@@ -130,13 +130,13 @@ Todas as abaixo dependem só do código (e por isso falham em concorrência ou f
 | 7 | `descarte.usuario_id` é nulo-permitido; `descarte` tem coordenadas do ponto copiadas | Dados duplicados que podem divergir do cadastro |
 | 8 | Tabelas no plural (`sorteios`, `vouchers`, `campanhas`) e no singular (`usuario`, `descarte`) | Inconsistência de nomes |
 
-## Modelo proposto (resumo)
+## Modelo novo (resumo)
 
-Colunas e tabelas novas propostas nas análises: ledger em `pontuacao` (origem, referência, chave), `usuario.ativo` e `token_version`, `recuperacao_senha`, `vinculo_operacional`, `coleta_item`, `resultado_sorteio`, `pagamento`, `plano`. Detalhes e justificativas em [ADRs](adr/README.md). Nada disso existe no código.
+Colunas e tabelas novas definidas nas análises e nas decisões: ledger em `pontuacao` (origem, referência, chave), `usuario.ativo` e `token_version`, `recuperacao_senha`, `vinculo_operacional`, `coleta_item`, `resultado_sorteio`, `pagamento`, `plano`. Detalhes e justificativas em [ADRs](adr/README.md). Nada disso existe no código.
 
 **Ajustes pelas decisões de 11/11/2026:**
 
-| Proposta | Como fica |
+| Item | Como fica |
 |---|---|
 | `convite` | **Descartada** (12/11/2026): não há código de acesso; o cadastro é aberto |
 | Teto de contas | Linha de controle com **`vagas_restantes`** (começa em 500, configurável; pode subir a 1000), travada com `SELECT ... FOR UPDATE` no cadastro; volta 1 vaga quando a conta é excluída |
@@ -147,14 +147,14 @@ Colunas e tabelas novas propostas nas análises: ledger em `pontuacao` (origem, 
 | `pontuacao` (ledger) | **10 pontos por descarte**; sem estorno de descarte confirmado; correção por lançamento de ajuste com motivo |
 | `descarte` | Agrupar envios do mesmo usuário no mesmo ponto em 60 min (chave de agrupamento) |
 | `solicitacao_coleta` | Novos estados `em_execucao` e `cancelada` (com motivo e quem cancelou); `coleta_item` permite coleta parcial |
-| `pagamento` | No piloto: valor calculado, data, **comprovante** e quem registrou; sem integração |
-| `qrcode_token` | **Remover** (QR fora do MVP) `[DECISÃO da equipe técnica]` |
+| `pagamento` | No piloto: valor calculado, data, **comprovante** (arquivo em armazenamento de objetos privado; no banco só o endereço) e quem registrou; sem integração |
+| `qrcode_token` | **Remover** (QR fora do MVP) |
+| `nota_importada` | **Chave de acesso de 44 dígitos única**: a mesma nota não é importada nem consultada (paga) duas vezes. Decidido em 13/11/2026 |
 
 **Histórico:** antes do Alembic, a equipe de banco de dados modelou o esquema no MySQL Workbench e o converteu para PostgreSQL (maio de 2026; ver o [comparativo do Drive](../00-diagnostico/comparativo-documentos-drive.md)). O banco atual é o das migrações Alembic.
 
 ## O que falta para fechar
 
-- [x] Estrutura conferida com o banco da Neon (11/11/2026): igual à `main` (29 migrações, cabeça `c8b2c451f28b`)
 - [ ] Conferir de novo quando a branch de feature (34 migrações) for aplicada
-- [ ] `[LACUNA]` decidir o que fazer com `cooperativa`, `qrcode_token` e `estoque` (remover ou usar)
+- [ ] Remover ou aproveitar `cooperativa`, `qrcode_token` e `estoque` (código sem uso)
 - [ ] Atualizar quando a branch for mesclada na `main`

@@ -2,7 +2,7 @@
 
 > **Estado:** revisão · **Dono:** Produto · **Atualizado em:** 11/11/2026
 > **Fontes:** [atividades por módulo](backlog/README.md) (93 = 66 de execução + 27 decisões), [decisões](decisoes/README.md), roteiro de PRs das análises.
-> **Lacunas:** responsáveis, datas e sprints finais.
+> **Pendências:** responsáveis, datas e capacidade do time estão em [decisões pendentes](../00-diagnostico/decisoes-pendentes.md).
 
 ## Resumo
 
@@ -74,5 +74,3 @@ As atividades acima foram cruzadas pelo título. Os 71 achados das análises (F,
 
 - [ ] Converter as 66 atividades de execução para o molde de história
 - [ ] Ligar cada achado a uma atividade existente ou criar a atividade que falta
-- [ ] `[LACUNA]` responsável, início e entrega por item
-- [ ] `[LACUNA]` capacidade do time para dimensionar sprints

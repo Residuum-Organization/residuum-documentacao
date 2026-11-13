@@ -2,7 +2,7 @@
 
 > **Estado:** revisão · **Dono:** Produto · **Atualizado em:** 11/11/2026
 > **Fontes:** V6 ([por módulo](requisitos/README.md)), [regras de saldo, vouchers e sorteios](../requisitos/regras-de-saldo-vouchers-sorteios.md) (22/10), [regras de campanhas](../requisitos/regras-de-campanhas.md) (21/10), [regras de negócio](../requisitos/regras-de-negocio.md), análises dos 4 módulos.
-> **Lacunas:** 6 · **Decisões abertas:** ver [decisões](decisoes/README.md)
+> **Pendências:** reunidas em [decisões pendentes](../00-diagnostico/decisoes-pendentes.md)
 
 ## Resumo
 
@@ -18,16 +18,16 @@ Este é o **índice mestre dos requisitos**. Ele não repete a V6: diz **qual do
 | Todo o resto | [V6 por módulo](requisitos/README.md) | M01 a M11 e RNF |
 | Resumo das regras | [Regras de negócio](../requisitos/regras-de-negocio.md) | Guia de leitura; diz 10 pontos, **de acordo** com a decisão de 11/11 |
 
-## Contradições entre as fontes (a resolver)
+## Contradições entre as fontes e como foram resolvidas
 
-| # | Tema | Fonte A | Fonte B | Resolução proposta |
+| # | Tema | Fonte A | Fonte B | Resolução |
 |---|---|---|---|---|
 | 1 | Valor do ponto | V6 RF-021, handoff, regras de negócio: 10 por descarte, **não** por embalagem | Saldo: 5 por unidade (decidido 22/10) | **Resolvido em 11/11: vale 10 por descarte.** Corrigir regras de saldo, campanhas e o código ([PD-010](decisoes/pd-010.md)) |
 | 2 | Materiais | V6 RN-003: só PET e lata | Campanhas aceita plástico, metal, papel, vidro, orgânico, eletrônico | **Resolvido em 11/11:** no início, campanhas usam **só `pet` e `lata`**. Outros materiais ficam para o futuro, junto com a expansão dos pontos ([PD-011](decisoes/pd-011.md)) |
 | 3 | Quem confirma o descarte | V6 RF-019: o **usuário** confirma | Código e saldo: o **operador** confirma | **Resolvido em 11/11: o operador confirma**; o GPS só libera o envio |
-| 4 | Crédito da campanha | Campanha: só pelo botão "Receber pontos" | V6 RF-022: "apurar e registrar bônus", sem dizer se é automático | **Resolvido em 11/11: pelo botão "Receber pontos"**, como nas regras de campanhas |
-| 5 | Idempotência | V6 RF-021: toda repetição recupera o resultado | Saldo: só voucher e bilhete usam `Idempotency-Key` | Estender ao descarte (achado F05) |
-| 6 | Crédito do descarte | V6/saldo: uma vez, na confirmação | Código atual credita no envio **e** na confirmação (F01) | Corrigir no código (PR-1) |
+| 4 | Crédito da campanha | Campanha: só pelo botão "Receber pontos" | V6 RF-022: "apurar e registrar bônus", sem dizer se é automático | **Resolvido em 11/11: pelo botão "Receber pontos"**, como nas regras de campanhas. **O bônus não recebido até o fim da campanha se perde** (12/11) |
+| 5 | Idempotência | V6 RF-021: toda repetição recupera o resultado | Saldo: só voucher e bilhete usam `Idempotency-Key` | **Resolvido:** estender o `Idempotency-Key` ao descarte ([ADR-0003](../02-arquitetura/adr/0003-idempotencia-nas-escritas.md)) |
+| 6 | Crédito do descarte | V6/saldo: uma vez, na confirmação | Código atual credita no envio **e** na confirmação (F01) | **Resolvido:** credita uma vez, na confirmação ([ADR-0001](../02-arquitetura/adr/0001-livro-unico-de-pontos.md)). O código ainda precisa ser corrigido (PR-1) |
 
 ## Requisitos por perfil (visão resumida)
 
@@ -95,13 +95,6 @@ Requisito → atividade (`TSK-…`) → achado (F, F-, PON, ADM) → caso de tes
 
 ## O que falta para fechar
 
-- [x] Valor do ponto: 10 por descarte concluído (decidido em 11/11/2026)
-- [x] Contradição 3 (quem confirma): o operador (11/11/2026)
-- [x] Contradição 2 (materiais): só PET e lata no início; outros no futuro (11/11/2026)
-- [x] Contradição 4 (crédito da campanha): pelo botão "Receber pontos" (11/11/2026)
-- [ ] Produto validar formalmente as regras de campanhas (21/10)
-- [ ] `[DECISÃO]` o bônus não recebido até o fim da campanha se perde? (sugestão: avisar o usuário quando houver bônus esperando)
-- [ ] Alterar o código do backend: 10 por descarte, janela de 60 min, dobro em descartes, sem estorno de confirmado, vínculo N:N, teto de 500
-- [ ] `[LACUNA]` metas de desempenho e disponibilidade (PD-025, PD-026)
+- [ ] Alterar o código do backend: 10 por descarte, janela de 60 min, dobro em descartes, sem estorno de confirmado, vínculo N:N, teto de contas
 - [ ] Arquivar `backend/docs/requisitos.md` e `frontend/docs/requisitos.md` (duplicatas, fora deste repositório)
-- [ ] Marcar a V6 original como histórico após a validação
+- [ ] Marcar a V6 original como histórico

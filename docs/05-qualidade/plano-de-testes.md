@@ -1,8 +1,8 @@
 # Plano de testes
 
-> **Estado:** esboço · **Dono:** QA · **Atualizado em:** 11/11/2026
+> **Estado:** revisão · **Dono:** QA · **Atualizado em:** 13/11/2026
 > **Fontes:** `testes-integrados.md` (planejado), seções de testes das propostas.
-> **Lacunas:** cronograma, responsáveis, ferramentas de front.
+> **Pendências:** cronograma e responsáveis estão em [decisões pendentes](../00-diagnostico/decisoes-pendentes.md).
 
 ## Resumo
 
@@ -24,7 +24,8 @@ Hoje há **71 testes**, todos em SQLite, em 3 arquivos (`test_campanhas`, `test_
 - Serviço `postgres-test` no `docker-compose.yml` (com tmpfs) e variável `TEST_DATABASE_URL`. **Decidido em 11/11/2026:** PostgreSQL de teste em **Docker local e no CI** (GitHub Actions); os testes **não tocam** no banco da Neon.
 - Cada teste dentro de transação com rollback.
 - `pytest` e `httpx` em `requirements-dev.txt` (hoje fora do `requirements`).
-- CI que rode a suíte a cada PR `[LACUNA]` hoje só existe deploy no backend.
+- CI que rode a suíte a cada PR e **antes** de migrar e publicar (decidido em 13/11/2026). Hoje só existe o deploy no backend.
+- A API usa o endereço **pooler** da Neon; o teste de concorrência das últimas vagas e do saldo roda no PostgreSQL do CI e é repetido uma vez no ambiente real (decidido em 13/11/2026).
 
 ## Invariantes (rodam em todo teste de saldo)
 
@@ -51,6 +52,4 @@ Suíte verde em PostgreSQL no CI; invariantes ativas; roteiro manual de ponta a 
 
 ## O que falta para fechar
 
-- [ ] `[LACUNA]` datas, responsáveis, ambiente de homologação
 - [ ] Registrar evidências executadas (hoje tudo é "planejado")
-- [x] Vitest adotado no front; testes de banco em Docker local + CI (11/11/2026)

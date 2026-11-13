@@ -1,8 +1,8 @@
 # Visão e Escopo
 
-> **Estado:** revisão (aguardando aprovação do produto) · **Dono:** Produto · **Atualizado em:** 11/11/2026
+> **Estado:** revisão · **Dono:** Produto · **Atualizado em:** 11/11/2026
 > **Fontes:** [visão original](../visao/visao-do-projeto.md) (mantida como referência), [V6](requisitos/README.md), [regras de saldo, vouchers e sorteios](../requisitos/regras-de-saldo-vouchers-sorteios.md), respostas e complementos da revisão de 11/11/2026 (Vinicius).
-> **Lacunas:** 2 · **Conflitos abertos:** nenhum na Visão (o código ainda paga 5 por unidade, ver [seção 5](#5-pontos-e-recompensas))
+> **Pendências:** reunidas em [decisões pendentes](../00-diagnostico/decisoes-pendentes.md) · O código do backend ainda paga 5 pontos por unidade (ver [seção 5](#5-pontos-e-recompensas))
 
 ## Resumo
 
@@ -59,7 +59,7 @@ O perfil que antes se chamava "morador" passa a se chamar **usuário** em todos 
 | **Responsável pelo ponto** (vínculo N:N, decidido em 11/11/2026: [PD-023](decisoes/pd-023.md)) | Acompanha materiais e ocupação, edita o que o ponto aceita, pede retirada | Visibilidade e comunicação com a administração |
 | **Cooperativa** | Aceita solicitações, vê agenda e rota, registra material e peso | Coletas organizadas e pagamento acompanhado |
 | **Administrador** | Gere o teto de contas, pontos, Loja, solicitações, pagamentos e indicadores | Controle da operação em um só lugar |
-| **Contratante de dados** | Consulta o que o plano autoriza | Informação para análise (pacotes a definir) |
+| **Contratante de dados** | Consulta o que o plano autoriza | Informação para análise (plano único no piloto) |
 
 ## 4. Escopo do MVP
 
@@ -68,14 +68,14 @@ O perfil que antes se chamava "morador" passa a se chamar **usuário** em todos 
 | Área | O que entra |
 |---|---|
 | Acesso | O usuário **se cadastra normalmente**, sem código, e depois entra como qualquer outro. O controle é um **teto de 500 contas** (configurável; pode subir a **1000**), com **trava de vagas no banco** (*pessimistic locking*: `SELECT ... FOR UPDATE` na linha de vagas). Ao chegar no teto: aviso e lista de espera. Conta excluída devolve a vaga. Decidido em 11/11/2026 e **revisto em 12/11/2026** (o código individual foi descartado). Ver [controle de acesso](../pesquisa/controle-de-acesso.md) |
-| Cadastro de resíduos | **Três sistemas**, iniciados por um botão **+** centralizado na barra de navegação. **1) Código de barras:** lê o produto e já preenche o formulário. **2) QR Code da nota fiscal:** traz os itens da nota e os materiais. **3) Manual:** o usuário pode tentar ler o código de barras **quantas vezes quiser**. Cada falha mostra um **aviso vermelho** de erro de leitura; a partir da **2ª falha**, o aviso **recomenda o cadastro manual** (nome, material, quantidade `[LACUNA: campos do formulário]`). Decidido em 11/11/2026. Materiais: **PET e lata de alumínio** |
+| Cadastro de resíduos | **Três sistemas**, iniciados por um botão **+** centralizado na barra de navegação. **1) Código de barras:** lê o produto e já preenche o formulário. **2) QR Code da nota fiscal:** traz os itens da nota e os materiais. **3) Manual:** o usuário pode tentar ler o código de barras **quantas vezes quiser**. Cada falha mostra um **aviso vermelho** de erro de leitura; a partir da **2ª falha**, o aviso **recomenda o cadastro manual** (material e quantidade inteira obrigatórios; nome opcional). Decidido em 11/11/2026. Materiais: **PET e lata de alumínio** |
 | Descarte rápido | **Não é uma função à parte.** É o uso do **leitor de código de barras** (agiliza um único produto) e do **leitor de QR Code da nota** (traz todos os materiais da nota) para seguir direto à escolha do ponto, sem passar pelo estoque |
 | Entrega | Escolha do ponto compatível, navegação externa, **validação de presença por GPS** (libera o envio) e **confirmação pelo operador do ponto** (decidido em 11/11/2026); os pontos saem só depois da confirmação |
 | Pontos e Loja | Pontos por descarte, campanhas com bônus, vouchers e **sorteios** (ver limite abaixo) |
 | Pontos de coleta | Fixos e temporários, **cadastrados só pelo admin**, com responsável, materiais aceitos, ocupação e **raio de GPS de 100 m ajustável** (decidido em 11/11/2026) |
 | Coleta | Pedido, encaminhamento, aceite, agenda e rota, registro de **material e peso** |
-| Pagamento | A **Residuum** paga a cooperativa **por kg e material** ([PD-015](decisoes/pd-015.md), [PD-016](decisoes/pd-016.md)). **No piloto: pagamento manual** com comprovante registrado pelo administrador; **API depois**, testada antes em ambiente de teste (decidido em 11/11/2026). `[LACUNA: valor por kg de PET e de lata]` |
-| Dados | **Planos** (grátis, pré-pago, mensal) para relatórios e indicadores `[DECISÃO: PD-019]` |
+| Pagamento | A **Residuum** paga a cooperativa **por kg e material** ([PD-015](decisoes/pd-015.md), [PD-016](decisoes/pd-016.md)). **No piloto: pagamento manual** com comprovante registrado pelo administrador; **API depois**, testada antes em ambiente de teste (decidido em 11/11/2026). O valor por kg de cada material está em [decisões pendentes](../00-diagnostico/decisoes-pendentes.md) |
+| Dados | **Plano único no piloto** para relatórios e indicadores; pacotes e preços vêm depois ([PD-019](decisoes/pd-019.md)) |
 
 ### Limites já decididos
 
@@ -90,19 +90,17 @@ O perfil que antes se chamava "morador" passa a se chamar **usuário** em todos 
 
 ### Decisões já tomadas
 
-As regras de **campanhas, vouchers e sorteios** foram decididas (ver [campanhas](../requisitos/regras-de-campanhas.md) e [saldo, vouchers e sorteios](../requisitos/regras-de-saldo-vouchers-sorteios.md)). Restam só a validação do produto e dois detalhes: o algoritmo da apuração do sorteio e o dono do parecer jurídico.
+As regras de **campanhas, vouchers e sorteios** foram decididas (ver [campanhas](../requisitos/regras-de-campanhas.md) e [saldo, vouchers e sorteios](../requisitos/regras-de-saldo-vouchers-sorteios.md)). O que ainda está em aberto fica em [decisões pendentes](../00-diagnostico/decisoes-pendentes.md).
 
-### Ainda pendente
+### Pesquisas de apoio
 
-| O que está pendente | Decisão | Tipo | Situação |
-|---|---|---|---|
-| **Capacidade do ponto de coleta** e "ponto cheio" | [PD-009](decisoes/pd-009.md) | Estudo e decisão com a operação | **Estudo feito:** [capacidade e coleta](../pesquisa/capacidade-e-execucao-da-coleta.md). Falta decidir |
-| **Execução da coleta** (recusa, prazo, coleta parcial) | [PD-014](decisoes/pd-014.md) | Estudo e decisão com a operação | **Estudo feito:** [capacidade e coleta](../pesquisa/capacidade-e-execucao-da-coleta.md). Falta decidir |
-| Controle de quantas pessoas entram | — | Pesquisa e decisão | **Decidido em 11/11/2026:** teto de **500** contas, com trava de vagas no banco ([controle de acesso](../pesquisa/controle-de-acesso.md)) |
-| Fonte para código de barras e nota fiscal | [PD-004](decisoes/pd-004.md) | Pesquisa | **Pesquisa feita:** [fontes](../pesquisa/fontes-de-produtos-e-notas.md). Falta **testar** |
-| Provedor de pagamento | [PD-015](decisoes/pd-015.md), [PD-016](decisoes/pd-016.md) | Pesquisa | **Pesquisa feita:** [provedores](../pesquisa/provedores-de-pagamento.md). Falta decidir pagador e valor |
-| Precisão do GPS | [PD-008](decisoes/pd-008.md) | Teste em campo | Medir no piloto |
-| Pacotes e preços dos planos | [PD-019](decisoes/pd-019.md) | Pesquisa e decisão | Falta fazer |
+| Tema | Documento |
+|---|---|
+| Capacidade do ponto de coleta e execução da coleta | [capacidade e coleta](../pesquisa/capacidade-e-execucao-da-coleta.md) |
+| Controle de quantas pessoas entram | [controle de acesso](../pesquisa/controle-de-acesso.md) |
+| Fontes para código de barras e nota fiscal | [fontes](../pesquisa/fontes-de-produtos-e-notas.md) |
+| Provedor de pagamento | [provedores](../pesquisa/provedores-de-pagamento.md) |
+| Números do problema | [dados do problema](../pesquisa/dados-do-problema.md) |
 
 ### Evolução a avaliar (fora do MVP)
 
@@ -114,7 +112,7 @@ As regras de **campanhas, vouchers e sorteios** foram decididas (ver [campanhas]
 
 **Regra decidida em 11/11/2026 ([PD-010](decisoes/pd-010.md)): 10 pontos básicos por descarte concluído**, por operação, **independentemente da quantidade** de embalagens. Campanhas podem dar pontos extras.
 
-> ✅ **Conflito resolvido em 11/11/2026.** Vale **10 por descarte**; a regra do time de 22/10 (5 por unidade) virou histórico. O **dobro de pontos** das campanhas passa a contar **descartes** (bônus de 10 × N). **Ainda falta:** alterar o código do backend (hoje paga 5 por unidade e conta unidades no dobro), decidir se as **faixas de recompensa** mudam, e aplicar a **janela de 60 minutos** contra a divisão de entregas ( descartes do mesmo usuário no mesmo ponto, dentro da janela, contam como um só).
+> ✅ **Conflito resolvido em 11/11/2026.** Vale **10 por descarte**; a regra do time de 22/10 (5 por unidade) virou histórico. O **dobro de pontos** das campanhas conta **descartes** (bônus de 10 × N). Descartes do mesmo usuário no mesmo ponto, dentro de **60 minutos**, contam como um só. O código do backend ainda paga 5 por unidade e precisa ser alterado.
 
 ## 6. Metas e prazo
 
@@ -122,15 +120,15 @@ As regras de **campanhas, vouchers e sorteios** foram decididas (ver [campanhas]
 |---|---|
 | Prazo informado | **20/11/2026** (não garante todo o backlog) |
 | Ordem das entregas | usuário → ponto de coleta → cooperativa → administrador |
-| Região e pontos do piloto | `[LACUNA]` ver [piloto inicial](../pesquisa/piloto-inicial.md) |
+| Região e pontos do piloto | Ver [piloto inicial](../pesquisa/piloto-inicial.md) e [decisões pendentes](../00-diagnostico/decisoes-pendentes.md) |
 
 ### Como medir o sucesso do piloto
 
-**Escala sugerida:** 100 usuários, 3 pontos de coleta, 1 cooperativa e 8 semanas. Segue o [piloto inicial](../pesquisa/piloto-inicial.md): poucos pontos, uma ou duas cooperativas, número limitado de usuários, período fechado. **Aprovadas por Vinicius em 11/11/2026**; falta a validação formal do produto.
+**Escala:** 100 usuários, 3 pontos de coleta, 1 cooperativa e 8 semanas. Segue o [piloto inicial](../pesquisa/piloto-inicial.md): poucos pontos, uma ou duas cooperativas, número limitado de usuários, período fechado. **Aprovadas por Vinicius em 11/11/2026.**
 
 | # | Indicador | Como calcular | Meta |
 |---|---|---|---|
-| 1 | Cadastro | cadastrados ÷ códigos entregues | **70% ou mais** |
+| 1 | Cadastro | cadastrados ÷ pessoas que abriram a tela de cadastro | **70% ou mais** |
 | 2 | Primeiro descarte | cadastrados com 1 descarte confirmado em até 14 dias ÷ cadastrados | **50% ou mais** |
 | 3 | Recorrência | usuários com 3 ou mais descartes em 8 semanas ÷ usuários com 1 descarte | **30% ou mais** |
 | 4 | Uso de recompensa | usuários que resgataram voucher ou entraram em campanha ÷ usuários com 1 descarte | **25% ou mais** |
@@ -148,21 +146,6 @@ As regras de **campanhas, vouchers e sorteios** foram decididas (ver [campanhas]
 
 ## O que falta para fechar
 
-- [ ] Produto validar formalmente esta visão (as respostas de 11/11 vieram da revisão de Vinicius)
-- [x] Conflito dos pontos resolvido: **10 por descarte** ([PD-010](decisoes/pd-010.md))
-- [x] Dobro de pontos: meta em **descartes**, bônus de **10 × N** ([regras de campanhas](../requisitos/regras-de-campanhas.md))
-- [x] Contra a divisão de entregas: **janela no mesmo ponto** ([PD-010](decisoes/pd-010.md))
-- [x] Tamanho da janela: **60 minutos**
-- [ ] Alterar o código para 10 por descarte, meta do dobro em descartes e janela; decidir as faixas de recompensa
-- [x] Aprovar as **metas do piloto** (seção 6): aprovadas em 11/11/2026, com **100 usuários**
-- [x] Teto de cadastros: **500 contas**, configurável até 1000 (decidido em 11/11/2026; revisto em 12/11/2026)
-- [ ] Ajustar a escala das metas do piloto? Hoje elas usam **100 usuários**; o teto é **500**
-- [x] Forma de controle de acesso: **trava de vagas no banco** (*pessimistic locking*), decidida em 11/11/2026
-- [x] Tentativas do código de barras: sem limite; aviso vermelho a cada falha; cadastro manual recomendado a partir da 2ª
-- [ ] `[LACUNA]` definir os campos do formulário manual
-- [x] Estudar a capacidade do ponto (PD-009) e a execução da coleta (PD-014): [estudo feito](../pesquisa/capacidade-e-execucao-da-coleta.md)
-- [ ] Decidir PD-009 e PD-014 com a operação (8 decisões listadas no estudo)
-- [x] "Morador" vira "usuário" em todos os documentos (decidido em 11/11/2026)
-- [x] Coleta seletiva em Manaus: trocado pelo último dado publicado (SINISA 2024, 33,7%)
 - [ ] Ligar os `[VERIFICAR fonte]` que restam em [dados do problema](../pesquisa/dados-do-problema.md)
-- [ ] Depois de aprovada, marcar a [visão original](../visao/visao-do-projeto.md) como histórico (os "10 pontos" dela já estão de acordo com a decisão)
+- [ ] Alterar o código do backend: 10 pontos por descarte, dobro de pontos em descartes e janela de 60 minutos
+- [ ] Marcar a [visão original](../visao/visao-do-projeto.md) como histórico
