@@ -1,7 +1,7 @@
 # Prompt de retomada
 
 > **Como usar:** abra o Claude Code em qualquer computador e **cole tudo o que está abaixo da linha** no chat. Ele prepara o ambiente, lê o que foi feito e te diz onde parou. Você não precisa explicar nada.
-> **Atualizado em:** 12/11/2026, ao fim do dia. **Atualize este arquivo** sempre que mudar a branch, o roteiro ou as regras.
+> **Atualizado em:** 13/11/2026, ao fim do dia. **Atualize este arquivo** sempre que mudar a branch, o roteiro ou as regras.
 
 ---
 
@@ -26,7 +26,7 @@ Você é o Claude Code. Está ajudando o Vinicius (conta GitHub **Vinny1313**) a
    - `git switch docs/revisao-2026-11-11-casos-de-teste && git pull` (é a branch **mais completa**).
    - Se ela não existir mais porque já foi mesclada: `git switch main && git pull`.
 4. Leia, nesta ordem:
-   1. `docs/08-manutencao/diario-de-bordo/2026-11-12.md` (comece por **"Como retomar"**)
+   1. `docs/08-manutencao/diario-de-bordo/2026-11-13.md` (comece por **"Como retomar"**)
    2. `docs/00-diagnostico/roteiro-de-revisao.md`
    3. `docs/00-diagnostico/decisoes-pendentes.md`
    4. o diário mais recente em `docs/08-manutencao/diario-de-bordo/`, se for posterior a 12/11
@@ -53,7 +53,7 @@ Depois **pare e espere** a resposta dele.
 1. **Continue na mesma branch** `docs/revisao-2026-11-11-casos-de-teste`. Só crie outra se ela já tiver sido mesclada (então parta da `main`, por exemplo `docs/revisao-AAAA-MM-DD`).
 2. Faça **um commit por tema**, com mensagem no formato `docs(escopo): resumo no imperativo`, e envie com `git push`. **Não abra PR** até o Vinicius pedir.
 3. Rode o verificador de links de novo.
-4. Marque no `roteiro-de-revisao.md` o que ele concluiu e **escreva o diário do dia** em `docs/08-manutencao/diario-de-bordo/AAAA-MM-DD.md`, com a seção "Como retomar" no topo, no mesmo molde do diário de 12/11.
+4. Marque no `roteiro-de-revisao.md` o que ele concluiu e **escreva o diário do dia** em `docs/08-manutencao/diario-de-bordo/AAAA-MM-DD.md`, com a seção "Como retomar" no topo, no mesmo molde do diário de 13/11.
 5. Atualize **este arquivo** com o que mudou (branch, próximo documento, decisões novas).
 6. Ao encerrar, avise o que foi enviado e o que ficou pendente.
 
@@ -115,6 +115,6 @@ Depois **pare e espere** a resposta dele.
 - Registrar no `decisoes-pendentes.md` o resultado da reunião de arquitetura.
 - Corrigir os textos que ainda falam em **convite**: backlog (TSK-MOR-001 e outros), `docs/planejamento/modulos`, `docs/requisitos` e o M01 (que só tem um aviso no topo).
 - Corrigir **RN-017 e RN-018** (pagamento manual no piloto) e conferir se a API tem 111 ou 113 rotas (SAD × API).
-- Protótipo FigCraft: o documento `docs/03-ux/prototipo-figcraft.md` descreve o estado de 13/11; atualizar quando o v7 for fechado e os SVG forem exportados para o Figma.
+- Protótipo FigCraft: `docs/03-ux/prototipo-figcraft.md` descreve o estado de 13/11 (v7 reorganizado; 44 telas de celular em três larguras). Falta tablet e celular das 52 telas de computador, o teste do modo apresentação e a exportação dos SVG.
 
 **Comece agora pela Fase 1.**
