@@ -222,7 +222,7 @@ Arquivos de apoio em `tmp/figcraft/`: `residuum-v7-antes-da-reorganizacao.figcra
 | Estrutura (antes em cima, depois embaixo, por módulo) | ✅ Feita em 13/11 nos três perfis |
 | Telas e fluxos | ✅ 82 telas e 12 fluxos preservados (as ligações não mudaram de lugar) |
 | Erro, por quê e como fica | ✅ Em uma nota abaixo de cada tela, e não separada em "erro junto do antes" |
-| Três larguras por tela (celular, tablet, computador) | 🟡 **Piloto feito** em 4 telas do Usuário (Login, Início, Descarte e Loja), na página 2, no fim, sob a faixa "Responsivo". O resto não foi feito: ver a seção 10 |
+| Três larguras por tela (celular, tablet, computador) | ✅ **44 telas de celular** (31 do Usuário e 13 de Responsável e Cooperativa) têm tablet (768 × 1024) e computador (1440 × 900), com a regra de largura máxima. 🟡 As **52 telas de computador** ainda não têm tablet nem celular: precisam de desenho próprio (seção 10) |
 | Modo apresentação | ⬜ Não testado com cliques reais |
 | Estados de vazio, erro e carregando | ⬜ Só o painel do ponto tem "carregando" |
 | Exportação dos SVG do v7 e importação no Figma | ⬜ Pendente |
@@ -232,19 +232,21 @@ Arquivos de apoio em `tmp/figcraft/`: `residuum-v7-antes-da-reorganizacao.figcra
 
 As decisões de design em aberto estão em [decisões pendentes](../00-diagnostico/decisoes-pendentes.md).
 
-## 10. Piloto das três larguras
+## 10. Três larguras: o que foi feito e o que falta
 
-Para testar a regra, montei **4 telas do Usuário** (Login, Início, Descarte e Loja) em **celular, tablet (768 × 1024) e computador (1440 × 900)**. Estão na página **2 · Usuário**, depois do módulo 6, sob a faixa **Responsivo**.
+As **44 telas de celular** (31 do Usuário e 13 de Responsável e Cooperativa no celular) agora existem em **três tamanhos**: celular (o desenho original), **tablet (768 × 1024)** e **computador (1440 × 900)**. Os quadros novos têm o mesmo nome do original, com o sufixo `TABLET 768×1024` ou `COMPUTADOR 1440×900`.
 
-![Piloto: telas do Usuário em tablet e computador](prototipo/img/piloto-responsivo.png)
+- **Usuário:** na página **2 · Usuário**, depois do módulo 6, sob a faixa azul **Responsivo** (as 4 primeiras telas são o piloto; as demais continuam abaixo).
+- **Responsável e Cooperativa no celular:** na página **4 · Cooperativa e Ponto**, no fim, sob a faixa azul **Responsivo**.
 
-| Tamanho | Regra aplicada no piloto |
+![Exemplo: telas do Usuário em tablet e computador](prototipo/img/piloto-responsivo.png)
+
+| Tamanho | Regra aplicada |
 |---|---|
 | Celular | O desenho original, 390 × 844 |
 | Tablet | O app mantém a **coluna central de 390 px**, com margens maiores (largura máxima) |
 | Computador | A mesma coluna, centralizada |
 
-**Limite do piloto:** é a regra de **largura máxima**, e não um novo desenho para tablet e computador. A barra de navegação inferior continua na coluna e não vira menu lateral. Os botões das variantes ainda levam aos quadros de celular, e não às variantes.
+**Limites:** é a regra de **largura máxima**, e não um novo desenho para tablet e computador. A barra de navegação inferior continua na coluna e não vira menu lateral. Os botões das variantes ainda levam aos quadros de celular, e não às variantes.
 
-**O que falta para replicar:** (1) as outras 27 telas do Usuário e as 11 telas de celular de Responsável e Cooperativa seguem a mesma regra e podem ser geradas do mesmo jeito; (2) as 52 telas de computador (Responsável, Cooperativa e Administrador) precisam de um **desenho próprio** para tablet e celular (menu que recolhe, tabelas viram cartões), o que é trabalho de design, não de replicação.
-
+**O que falta:** as **52 telas de computador** (Responsável, Cooperativa e Administrador) precisam de um **desenho próprio** para tablet e celular (menu que recolhe, tabelas viram cartões). Isso é trabalho de design: encolher essas telas deixaria o texto pequeno demais para ler.
