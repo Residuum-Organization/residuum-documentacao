@@ -4,6 +4,7 @@
 > **Foco:** a jornada central do produto: **cadastrar → registrar o resíduo → entregar e ser confirmado → ganhar pontos → gastar na loja**, mais o pagamento à cooperativa.
 > **Pesquisa:** feita por busca na internet em 12/11/2026. **Nada foi testado.** O que está marcado `[VERIFICAR]` precisa de teste antes de virar decisão.
 > **Versão completa (regras, 18 perguntas, riscos):** [anexo](pauta-reuniao-arquitetura-completa.md). Use só se sobrar tempo.
+> **Depois da reunião:** a [avaliação dos pareceres dos engenheiros](avaliacao-da-reuniao-de-arquitetura.md) tem os riscos, as correções e as propostas de decisão.
 
 ## Resumo
 
