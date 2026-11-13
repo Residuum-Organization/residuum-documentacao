@@ -1,12 +1,12 @@
 # Índice de telas e protótipos
 
-> **Estado:** revisão · **Dono:** UX · **Atualizado em:** 11/11/2026
-> **Fontes:** rotas de `frontend/src/App.jsx` (branch local do frontend), `docs/ux/` (handoff, validação, Figma ledger), fichas dos achados.
-> **Lacunas:** link do Figma por perfil, capturas atuais, wireframes dos perfis operacionais.
+> **Estado:** revisão · **Dono:** UX · **Atualizado em:** 13/11/2026
+> **Fontes:** rotas de `frontend/src/App.jsx` (branch local do frontend), `docs/ux/` (handoff e validação do usuário), o [protótipo no FigCraft](prototipo-figcraft.md) e as fichas dos achados.
+> **Pendências:** capturas atuais do app, para o [manual](../07-usuario/manual-do-usuario.md).
 
 ## Resumo
 
-O app tem **42 páginas** (`frontend/src/pages`). Só o **usuário** tem protótipo documentado (V6, em `docs/ux/`). Os demais perfis têm telas implementadas e **sem wireframe**. Como o formato é `.md`, este índice liga cada tela a rota, arquivo e problema conhecido; desenhos ficam no Figma e as capturas em `docs/03-ux/evidencias/`.
+O app tem **42 páginas** (`frontend/src/pages`). Os desenhos dos três perfis (Usuário, Responsável e Cooperativa, Administrador) estão no [protótipo no FigCraft](prototipo-figcraft.md), com o antes e o depois de cada tela. Este índice liga cada tela do app a rota, arquivo e problema conhecido; o protótipo antigo do usuário (V6) está em `docs/ux/` e as capturas em [prototipo/img](prototipo/img/).
 
 Colunas: **Rota** · **Arquivo** (`frontend/src/pages/…`) · **Achado** (ver análises).
 
@@ -76,7 +76,8 @@ A V6 separa **responsável pelo ponto** e **cooperativa**; o front junta os dois
 | [morador-v6-validacao.md](../ux/morador-v6-validacao.md) | Validação registrada e seus limites |
 | [morador-v6-teste-usuarios.md](../ux/morador-v6-teste-usuarios.md) | Roteiro de teste com usuários |
 | [residuum-v2-lovable-status.md](../ux/residuum-v2-lovable-status.md) | Demonstração V2 (parcial) |
-| `docs/ux/morador-v6-figma-ledger.json` | Registro do Figma em JSON `[LACUNA]` converter para tabela `.md` |
+| [prototipo-figcraft.md](prototipo-figcraft.md) | **Protótipo atual no FigCraft**: 82 telas, 12 fluxos, antes e depois |
+| `docs/ux/morador-v6-figma-ledger.json` | Registro do protótipo antigo (V6) em JSON |
 
 Nenhum teste de usabilidade executado foi encontrado.
 
@@ -120,8 +121,5 @@ Do Levantamento de Requisitos de 16/04/2026 (RNF009), no Google Drive; ver o [co
 
 ## O que falta para fechar
 
-- [ ] Link do arquivo Figma por perfil
-- [ ] Capturas atuais de cada tela (para o [manual](../07-usuario/manual-do-usuario.md))
-- [ ] Wireframes do responsável, cooperativa e admin (em `.md`, baixa fidelidade)
-- [ ] Fluxo de navegação por perfil (Mermaid)
+- [ ] Capturas atuais de cada tela do app (para o [manual](../07-usuario/manual-do-usuario.md))
 - [ ] `[VERIFICAR]` quem pode ver `/aprovacao` e `/certificado-coleta` (perfis conferidos só em parte)
