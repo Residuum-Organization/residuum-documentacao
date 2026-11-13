@@ -108,28 +108,13 @@ Depois **pare e espere** a resposta dele.
 
 ## Pendências abertas
 
-**Do Vinicius**
-- Reunião de arquitetura: preencher a tabela "Decisões para sair da reunião" da pauta `docs/02-arquitetura/pauta-reuniao-arquitetura.md` e passar o resultado.
-- Faixas de recompensa: manter ou ajustar com 10 pontos por descarte?
-- Escala das metas do piloto (100 usuários) diante do teto de 500 ou 1000?
-- Valor por kg de PET e de lata (PD-015).
-- PD-009: horários, tags e capacidade de cada ponto. PD-014: confirmar 48 h e uma remarcação (os casos de teste já usam isso).
-- Se o ajuste manual do admin precisa de limite de valor.
+**Decisões do Vinicius e verificações da equipe:** ficam **só** em `docs/00-diagnostico/decisoes-pendentes.md`. Os demais documentos não carregam decisões em aberto: se aparecer uma nova, registre lá.
 
 **Do Claude (documentação)**
 - Ler com o Vinicius os documentos **20 a 26** do roteiro.
-- Acompanhar as decisões de 13/11: **cotação da Infosimples**, teste de 1 h a partir da Vercel, plano da Vercel e **tarefas agendadas** (expiração em 48 h) ainda por fazer. **Sem resposta:** janela de 60 min e proteção contra robôs.
-- Registrar as decisões **D-CT-01 a 11** (menos 02 e 04, canceladas) nos requisitos e em `decisoes-pendentes.md`.
+- Registrar no `decisoes-pendentes.md` o resultado da reunião de arquitetura.
 - Corrigir os textos que ainda falam em **convite**: backlog (TSK-MOR-001 e outros), `docs/planejamento/modulos`, `docs/requisitos` e o M01 (que só tem um aviso no topo).
-- Corrigir **RN-017 e RN-018** (pagamento manual no piloto) e o **estudo de coleta** (silêncio e reagendamento, que divergem dos casos de teste).
-- Conferir se a API tem 111 ou 113 rotas (SAD × API).
-
-**Da equipe**
-- Aplicar no código do backend as regras de 11 e 12/11 (10 pontos, 60 min, sem estorno, teto de contas, GPS, coleta parcial, remover pedido público e `/painel-testes`).
-- Mesclar as branches de feature do backend na `main` (29 × 34 migrações) antes das ondas novas.
-- Confirmar se `residuum-dev` é o banco de produção; backup (a Neon guarda só **6 horas**).
-- Conferir Terraform, criptografia de dados pessoais e backups, que o Backlog v2 do Drive dá como feitos e não aparecem no código.
-- Confirmar com a Semulsp o número de pontos de entrega (25, 44 ou 49).
-- Testar as fontes de código de barras e de nota fiscal e o leitor de câmera nos celulares do piloto.
+- Corrigir **RN-017 e RN-018** (pagamento manual no piloto) e conferir se a API tem 111 ou 113 rotas (SAD × API).
+- Protótipo FigCraft: o documento `docs/03-ux/prototipo-figcraft.md` descreve o estado de 13/11; atualizar quando o v7 for fechado e os SVG forem exportados para o Figma.
 
 **Comece agora pela Fase 1.**
