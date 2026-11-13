@@ -3,7 +3,7 @@
 [Voltar ao protótipo](../prototipo-figcraft.md)
 
 > **Estado:** revisão · **Dono:** UX · **Atualizado em:** 13/11/2026
-> **Arquivo:** `residuum-v7.figcraft`, página **Administrador (1440 px)** · **Tamanho das telas:** computador, 1440 × 900
+> **Arquivo:** `residuum-v7.figcraft`, página **5 · Administrador (1440 px)** · **Tamanho das telas:** computador, 1440 × 900
 > **Fontes:** `indice-correcoes-administrador.md` e `revisao-geral.md` do FigCraft; regras das decisões de 11 e 12/11/2026.
 
 ## Resumo
@@ -66,7 +66,7 @@ Outras telas do menu: **A10** Validar descartes e **A11** Relatórios e auditori
 
 ## Antes e depois, tela por tela
 
-Cada bloco traz o **antes** (captura do app atual) e o **depois** (novo desenho) lado a lado e, abaixo, as correções: **Erro**, **Por quê** (veja o [glossário](../prototipo-figcraft.md#as-leis-de-ux-em-uma-frase)) e **Como fica**. As capturas "antes" de 1440 px têm baixa resolução (saíram em 800 × 500 e foram esticadas).
+Cada bloco traz o **antes** (captura do app atual) e o **depois** (novo desenho) lado a lado e, abaixo, as correções: **Erro**, **Por quê** (veja os [princípios de design](../prototipo-figcraft.md#2-princípios-de-design)) e **Como fica**. As capturas "antes" de 1440 px têm baixa resolução (saíram em 800 × 500 e foram esticadas).
 
 ### A01 Painel
 

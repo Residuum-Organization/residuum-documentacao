@@ -3,7 +3,7 @@
 [Voltar ao protótipo](../prototipo-figcraft.md)
 
 > **Estado:** revisão · **Dono:** UX · **Atualizado em:** 13/11/2026
-> **Arquivo:** `residuum-v7.figcraft`, página **Usuário (390 px)** · **Tamanho das telas:** celular, 390 × 844
+> **Arquivo:** `residuum-v7.figcraft`, página **2 · Usuário (390 px)** · **Tamanho das telas:** celular, 390 × 844
 > **Fontes:** `indice-correcoes-usuario.md` e `revisao-geral.md` do FigCraft; as regras vêm das decisões de 11 e 12/11/2026.
 
 ## Resumo
@@ -76,7 +76,7 @@ flowchart LR
 
 ## Antes e depois, tela por tela
 
-Cada bloco traz o **antes** e o **depois** lado a lado e, abaixo, as correções: **Erro** (o que estava errado), **Por quê** (a lei de UX que explica; veja o [glossário](../prototipo-figcraft.md#as-leis-de-ux-em-uma-frase)) e **Como fica**.
+Cada bloco traz o **antes** e o **depois** lado a lado e, abaixo, as correções: **Erro** (o que estava errado), **Por quê** (a lei de UX que explica; veja os [princípios de design](../prototipo-figcraft.md#2-princípios-de-design)) e **Como fica**.
 
 ### U01 Login
 

@@ -3,7 +3,7 @@
 [Voltar ao protótipo](../prototipo-figcraft.md)
 
 > **Estado:** revisão · **Dono:** UX · **Atualizado em:** 13/11/2026
-> **Arquivo:** `residuum-v7.figcraft`, página **Cooperativa e Ponto (1440 e 390 px)** · **Tamanhos:** computador (1440 × 900) e celular (390 × 844)
+> **Arquivo:** `residuum-v7.figcraft`, página **4 · Cooperativa e Ponto (1440 e 390 px)** · **Tamanhos:** computador (1440 × 900) e celular (390 × 844)
 > **Fontes:** `indice-correcoes-cooperativa.md` e `revisao-geral.md` do FigCraft; regras das decisões de 11 e 12/11/2026.
 
 ## Resumo
@@ -80,7 +80,7 @@ flowchart LR
 
 ## Antes e depois, tela por tela
 
-Cada bloco traz o **antes** (captura do app atual) e o **depois** (novo desenho) lado a lado e, abaixo, as correções: **Erro**, **Por quê** (veja o [glossário](../prototipo-figcraft.md#as-leis-de-ux-em-uma-frase)) e **Como fica**.
+Cada bloco traz o **antes** (captura do app atual) e o **depois** (novo desenho) lado a lado e, abaixo, as correções: **Erro**, **Por quê** (veja os [princípios de design](../prototipo-figcraft.md#2-princípios-de-design)) e **Como fica**.
 
 ### P01 Painel do ponto
 
