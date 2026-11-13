@@ -222,7 +222,7 @@ Arquivos de apoio em `tmp/figcraft/`: `residuum-v7-antes-da-reorganizacao.figcra
 | Estrutura (antes em cima, depois embaixo, por módulo) | ✅ Feita em 13/11 nos três perfis |
 | Telas e fluxos | ✅ 82 telas e 12 fluxos preservados (as ligações não mudaram de lugar) |
 | Erro, por quê e como fica | ✅ Em uma nota abaixo de cada tela, e não separada em "erro junto do antes" |
-| Três larguras por tela (celular, tablet, computador) | ⬜ Não feito: cada tela tem uma largura (celular ou computador); **tablet não existe** |
+| Três larguras por tela (celular, tablet, computador) | 🟡 **Piloto feito** em 4 telas do Usuário (Login, Início, Descarte e Loja), na página 2, no fim, sob a faixa "Responsivo". O resto não foi feito: ver a seção 10 |
 | Modo apresentação | ⬜ Não testado com cliques reais |
 | Estados de vazio, erro e carregando | ⬜ Só o painel do ponto tem "carregando" |
 | Exportação dos SVG do v7 e importação no Figma | ⬜ Pendente |
@@ -231,3 +231,20 @@ Arquivos de apoio em `tmp/figcraft/`: `residuum-v7-antes-da-reorganizacao.figcra
 | Capturas "antes" de 1440 px | Baixa resolução (800 × 500, esticadas) |
 
 As decisões de design em aberto estão em [decisões pendentes](../00-diagnostico/decisoes-pendentes.md).
+
+## 10. Piloto das três larguras
+
+Para testar a regra, montei **4 telas do Usuário** (Login, Início, Descarte e Loja) em **celular, tablet (768 × 1024) e computador (1440 × 900)**. Estão na página **2 · Usuário**, depois do módulo 6, sob a faixa **Responsivo**.
+
+![Piloto: telas do Usuário em tablet e computador](prototipo/img/piloto-responsivo.png)
+
+| Tamanho | Regra aplicada no piloto |
+|---|---|
+| Celular | O desenho original, 390 × 844 |
+| Tablet | O app mantém a **coluna central de 390 px**, com margens maiores (largura máxima) |
+| Computador | A mesma coluna, centralizada |
+
+**Limite do piloto:** é a regra de **largura máxima**, e não um novo desenho para tablet e computador. A barra de navegação inferior continua na coluna e não vira menu lateral. Os botões das variantes ainda levam aos quadros de celular, e não às variantes.
+
+**O que falta para replicar:** (1) as outras 27 telas do Usuário e as 11 telas de celular de Responsável e Cooperativa seguem a mesma regra e podem ser geradas do mesmo jeito; (2) as 52 telas de computador (Responsável, Cooperativa e Administrador) precisam de um **desenho próprio** para tablet e celular (menu que recolhe, tabelas viram cartões), o que é trabalho de design, não de replicação.
+
