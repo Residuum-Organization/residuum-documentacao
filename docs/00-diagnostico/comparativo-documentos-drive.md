@@ -57,7 +57,7 @@ O Backlog v2 marca como **Done**, mas o backend atual não mostra:
 
 ## O que aproveitar
 
-- **"~13 pontos públicos de coleta em Manaus, além de grandes supermercados"**: informação da reunião de 16/04/2026 com o fundador. Pode entrar nos [dados do problema](../pesquisa/dados-do-problema.md), citando a reunião como fonte.
+- **"~13 pontos públicos de coleta em Manaus, além de grandes supermercados"**: informação da reunião de 16/04/2026 com o fundador. Pode entrar nos [dados do problema](../09-pesquisa/dados-do-problema.md), citando a reunião como fonte.
 - **Identidade visual:** fundo branco, azul-marinho `#1F4E79`, cinza e verde de apoio; "tom de tecnologia, não de empresa ambiental tradicional" (RNF009).
 - **Objetivos de negócio:** base qualificada de quem descarta, descentralizar pontos, dados para rotas das cooperativas, receita com venda de dados (com consentimento).
 - **Riscos:** scanner e GPS instáveis em Android de entrada; fraude nos pontos; LGPD antes do lançamento; parceiros não confirmados; excesso de engenharia antes de validar.
@@ -66,6 +66,6 @@ O Backlog v2 marca como **Done**, mas o backend atual não mostra:
 ## O que falta
 
 - [ ] Conferir com a equipe os itens `[VERIFICAR]` (Terraform, LGPD, backups)
-- [x] "~13 pontos públicos" levados aos [dados do problema](../pesquisa/dados-do-problema.md) (11/11/2026)
+- [x] "~13 pontos públicos" levados aos [dados do problema](../09-pesquisa/dados-do-problema.md) (11/11/2026)
 - [x] Identidade visual levada ao índice de telas (parte 2) e ao manual (11/11/2026)
 - [x] Tabela de riscos levada ao SAD (parte 2), revista com as decisões de 11/11

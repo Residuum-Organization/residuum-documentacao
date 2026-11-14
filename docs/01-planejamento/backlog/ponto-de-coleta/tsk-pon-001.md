@@ -1,8 +1,8 @@
 # TSK-PON-001 — Editar materiais aceitos
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 1619 a 1675) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 1619 a 1675) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Editar materiais aceitos.
@@ -56,6 +56,6 @@ PD-009. Vincular às fichas TSK-DEC correspondentes. Avançar diagnóstico, inte
 
 **Rastreabilidade:** RF-MVP-034; RNF-MVP-001, RNF-MVP-002; RN-003; ficha [TSK-PON-001 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-001](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-001), [ADE-013](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-013).
 
-**Casos detalhados e ficha de origem:** [TSK-PON-001](../../../planejamento/modulos/m06.md#tsk-pon-001).
+**Casos detalhados e ficha de origem:** [TSK-PON-001](../../../historico/modulos-e-tasks/m06.md#tsk-pon-001).
 
 <a id="tsk-pon-002"></a>

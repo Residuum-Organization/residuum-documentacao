@@ -8,7 +8,7 @@
 
 O banco tem **27 tabelas** em 5 grupos. Todas as regras de negócio importantes ainda dependem do código, não do banco: poucas tabelas têm restrições únicas ou `CHECK`. As maiores fragilidades são o **saldo de pontos** (sem lançamento com origem nos créditos), o **vínculo do ponto** (um único campo `cooperativa_id` serve a dois papéis) e o uso de **JSON** para estoque e materiais.
 
-**Qual branch é "o banco"?** A `main` do backend parou em 28/07/2026. As tabelas de campanhas, vouchers, sorteios e as colunas de idempotência só existem nas branches de feature (ainda sem PR). Este documento descreve a mais completa. Ver [mapa de branches](../tecnologia/mapa-de-branches.md).
+**Qual branch é "o banco"?** A `main` do backend parou em 28/07/2026. As tabelas de campanhas, vouchers, sorteios e as colunas de idempotência só existem nas branches de feature (ainda sem PR). Este documento descreve a mais completa. Ver [mapa de branches](mapa-de-branches.md).
 
 | Onde | Migrações | Cabeça única |
 |---|---|---|
@@ -143,7 +143,7 @@ Colunas e tabelas novas definidas nas análises e nas decisões: ledger em `pont
 | Lista de espera | Tabela nova **`lista_espera`** (e-mail, data) `[LGPD: consentimento]` |
 | `lead_ponto_coleta` | **Descartada**: só o admin cria ponto (RN-011) |
 | `vinculo_operacional` | Confirmada: **N:N**, gerida pelo admin (PD-023) |
-| `ponto_coleta` | Nova coluna **`raio_gps_m`** (padrão 100); capacidade numa unidade só (ver [estudo](../pesquisa/capacidade-e-execucao-da-coleta.md)) |
+| `ponto_coleta` | Nova coluna **`raio_gps_m`** (padrão 100); capacidade numa unidade só (ver [estudo](../09-pesquisa/capacidade-e-execucao-da-coleta.md)) |
 | `pontuacao` (ledger) | **10 pontos por descarte**; sem estorno de descarte confirmado; correção por lançamento de ajuste com motivo |
 | `descarte` | Agrupar envios do mesmo usuário no mesmo ponto em 60 min (chave de agrupamento) |
 | `solicitacao_coleta` | Novos estados `em_execucao` e `cancelada` (com motivo e quem cancelou); `coleta_item` permite coleta parcial |

@@ -1,7 +1,7 @@
 # PRD / Especificação de Requisitos
 
 > **Estado:** revisão · **Dono:** Produto · **Atualizado em:** 11/11/2026
-> **Fontes:** V6 ([por módulo](requisitos/README.md)), [regras de saldo, vouchers e sorteios](../requisitos/regras-de-saldo-vouchers-sorteios.md) (22/10), [regras de campanhas](../requisitos/regras-de-campanhas.md) (21/10), [regras de negócio](../requisitos/regras-de-negocio.md), análises dos 4 módulos.
+> **Fontes:** V6 ([por módulo](requisitos/README.md)), [regras de saldo, vouchers e sorteios](regras/regras-de-saldo-vouchers-sorteios.md) (22/10), [regras de campanhas](regras/regras-de-campanhas.md) (21/10), [regras de negócio](regras/regras-de-negocio.md), análises dos 4 módulos.
 > **Pendências:** reunidas em [decisões pendentes](../00-diagnostico/decisoes-pendentes.md)
 
 ## Resumo
@@ -13,10 +13,10 @@ Este é o **índice mestre dos requisitos**. Ele não repete a V6: diz **qual do
 | Assunto | Documento que vale | Observação |
 |---|---|---|
 | Pontos por descarte | [PD-010](decisoes/pd-010.md) e V6 (RN-008) | **10 pontos por descarte concluído**, por operação (decidido em 11/11/2026). Os 5 por unidade de 22/10 viraram histórico |
-| Campanhas | [Regras de campanhas](../requisitos/regras-de-campanhas.md) | Participar é grátis; bônus separado; pagamento pelo botão "Receber pontos" |
+| Campanhas | [Regras de campanhas](regras/regras-de-campanhas.md) | Participar é grátis; bônus separado; pagamento pelo botão "Receber pontos" |
 | Vouchers e sorteios | Saldo, vouchers e sorteios | Sorteio **só de teste**, 1 bilhete por usuário |
 | Todo o resto | [V6 por módulo](requisitos/README.md) | M01 a M11 e RNF |
-| Resumo das regras | [Regras de negócio](../requisitos/regras-de-negocio.md) | Guia de leitura; diz 10 pontos, **de acordo** com a decisão de 11/11 |
+| Resumo das regras | [Regras de negócio](regras/regras-de-negocio.md) | Guia de leitura; diz 10 pontos, **de acordo** com a decisão de 11/11 |
 
 ## Contradições entre as fontes e como foram resolvidas
 

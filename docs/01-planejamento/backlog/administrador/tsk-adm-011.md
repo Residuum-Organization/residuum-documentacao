@@ -1,8 +1,8 @@
 # TSK-ADM-011 — Iniciar pagamento por API
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 2757 a 2814) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 2757 a 2814) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Iniciar pagamento por API.
@@ -57,6 +57,6 @@ PD-015, PD-016. Vincular às fichas TSK-DEC correspondentes. Avançar diagnósti
 
 **Rastreabilidade:** RF-MVP-045; RNF-MVP-002, RNF-MVP-003, RNF-MVP-008, RNF-MVP-009; RN-017; ficha [TSK-ADM-011 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-018](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-018).
 
-**Casos detalhados e ficha de origem:** [TSK-ADM-011](../../../planejamento/modulos/m08.md#tsk-adm-011).
+**Casos detalhados e ficha de origem:** [TSK-ADM-011](../../../historico/modulos-e-tasks/m08.md#tsk-adm-011).
 
 <a id="tsk-adm-012"></a>

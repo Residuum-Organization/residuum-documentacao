@@ -1,8 +1,8 @@
 # TSK-MOR-020 — Apurar metas de descarte das campanhas
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 1213 a 1268) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 1213 a 1268) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Apurar metas de descarte das campanhas.
@@ -55,6 +55,6 @@ PD-011. Vincular às fichas TSK-DEC correspondentes. Avançar diagnóstico, inte
 
 **Rastreabilidade:** RF-MVP-024; RNF-MVP-001, RNF-MVP-002; RN-009; ficha [TSK-MOR-020 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-019](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-019).
 
-**Casos detalhados e ficha de origem:** [TSK-MOR-020](../../../planejamento/modulos/m04.md#tsk-mor-020).
+**Casos detalhados e ficha de origem:** [TSK-MOR-020](../../../historico/modulos-e-tasks/m04.md#tsk-mor-020).
 
 <a id="tsk-mor-021"></a>

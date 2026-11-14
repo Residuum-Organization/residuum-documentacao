@@ -72,10 +72,10 @@ A V6 separa **responsável pelo ponto** e **cooperativa**; o front junta os dois
 
 | Arquivo | Conteúdo |
 |---|---|
-| [morador-v6-handoff.md](../ux/morador-v6-handoff.md) | Jornada e regras aprovadas do usuário |
-| [morador-v6-validacao.md](../ux/morador-v6-validacao.md) | Validação registrada e seus limites |
-| [morador-v6-teste-usuarios.md](../ux/morador-v6-teste-usuarios.md) | Roteiro de teste com usuários |
-| [residuum-v2-lovable-status.md](../ux/residuum-v2-lovable-status.md) | Demonstração V2 (parcial) |
+| [morador-v6-handoff.md](../historico/ux-v6-e-v2/morador-v6-handoff.md) | Jornada e regras aprovadas do usuário |
+| [morador-v6-validacao.md](../historico/ux-v6-e-v2/morador-v6-validacao.md) | Validação registrada e seus limites |
+| [morador-v6-teste-usuarios.md](../historico/ux-v6-e-v2/morador-v6-teste-usuarios.md) | Roteiro de teste com usuários |
+| [residuum-v2-lovable-status.md](../historico/ux-v6-e-v2/residuum-v2-lovable-status.md) | Demonstração V2 (parcial) |
 | [prototipo-figcraft.md](prototipo-figcraft.md) | **Protótipo atual no FigCraft**: 82 telas, 12 fluxos, antes e depois |
 | `docs/ux/morador-v6-figma-ledger.json` | Registro do protótipo antigo (V6) em JSON |
 

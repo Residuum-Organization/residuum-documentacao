@@ -1,8 +1,8 @@
 # TSK-MOR-001 — Cadastrar usuário por convite
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 108 a 169) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 108 a 169) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Cadastrar usuário por convite.
@@ -61,6 +61,6 @@ PD-003, PD-001, PD-022, PD-002. Vincular às fichas TSK-DEC correspondentes. Ava
 
 **Rastreabilidade:** RF-MVP-003; RNF-MVP-001, RNF-MVP-002; RN-001; ficha [TSK-MOR-001 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-002](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-002).
 
-**Casos detalhados e ficha de origem:** [TSK-MOR-001](../../../planejamento/modulos/m01.md#tsk-mor-001).
+**Casos detalhados e ficha de origem:** [TSK-MOR-001](../../../historico/modulos-e-tasks/m01.md#tsk-mor-001).
 
 <a id="tsk-mor-002"></a>

@@ -1,8 +1,8 @@
 # TSK-COO-004 — Registrar materiais e pesos retirados
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 2088 a 2149) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 2088 a 2149) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Registrar materiais e pesos retirados.
@@ -61,6 +61,6 @@ PD-014, PD-018. Vincular às fichas TSK-DEC correspondentes. Avançar diagnósti
 
 **Rastreabilidade:** RF-MVP-043; RNF-MVP-002, RNF-MVP-003, RNF-MVP-008, RNF-MVP-009; RN-003, RN-014, RN-015, RN-016; ficha [TSK-COO-004 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-004](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-004), [ADE-017](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-017).
 
-**Casos detalhados e ficha de origem:** [TSK-COO-004](../../../planejamento/modulos/m07.md#tsk-coo-004).
+**Casos detalhados e ficha de origem:** [TSK-COO-004](../../../historico/modulos-e-tasks/m07.md#tsk-coo-004).
 
 <a id="administrador"></a>

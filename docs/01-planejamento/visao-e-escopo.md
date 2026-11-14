@@ -1,14 +1,14 @@
 # Visão e Escopo
 
 > **Estado:** revisão · **Dono:** Produto · **Atualizado em:** 11/11/2026
-> **Fontes:** [visão original](../visao/visao-do-projeto.md) (mantida como referência), [V6](requisitos/README.md), [regras de saldo, vouchers e sorteios](../requisitos/regras-de-saldo-vouchers-sorteios.md), respostas e complementos da revisão de 11/11/2026 (Vinicius).
+> **Fontes:** [visão original](../historico/visao/visao-do-projeto.md) (mantida como referência), [V6](requisitos/README.md), [regras de saldo, vouchers e sorteios](regras/regras-de-saldo-vouchers-sorteios.md), respostas e complementos da revisão de 11/11/2026 (Vinicius).
 > **Pendências:** reunidas em [decisões pendentes](../00-diagnostico/decisoes-pendentes.md) · O código do backend ainda paga 5 pontos por unidade (ver [seção 5](#5-pontos-e-recompensas))
 
 ## Resumo
 
 O Residuum é uma plataforma web que **conecta usuários, responsáveis por pontos de coleta, cooperativas e a administração**. O usuário registra embalagens de **PET e latas de alumínio**, entrega num ponto de coleta, comprova a presença por GPS e ganha pontos. A cooperativa retira e pesa o material. O administrador coordena tudo, inclusive o pagamento à cooperativa. O MVP existe e está sendo documentado para a equipe atual de **seis pessoas**.
 
-Este documento diz **o que o produto é, para quem e até onde vai**. O texto longo e completo continua em [visao-do-projeto.md](../visao/visao-do-projeto.md).
+Este documento diz **o que o produto é, para quem e até onde vai**. O texto longo e completo continua em [visao-do-projeto.md](../historico/visao/visao-do-projeto.md).
 
 ## 1. O problema
 
@@ -24,10 +24,10 @@ Este documento diz **o que o produto é, para quem e até onde vai**. O texto lo
 | Número | O que mostra | Fonte |
 |---|---|---|
 | **97,3%** | das latas de alumínio foram recicladas no Brasil em 2024. O material **tem mercado** | [ABC do ABC](https://abcdoabc.com.br/latinhas-de-aluminio-recicladas/) |
-| **~23%** | de capacidade parada nas recicladoras de PET, por **falta de coleta** (410 mil t recicladas em 2024) | [Dados do problema](../pesquisa/dados-do-problema.md) |
-| **33,7%** | da população urbana de Manaus com coleta seletiva (SINISA 2024, último dado publicado) | [Instituto Água e Saneamento](https://www.aguaesaneamento.org.br/municipios-e-saneamento/am/manaus), ver [dados do problema](../pesquisa/dados-do-problema.md) |
+| **~23%** | de capacidade parada nas recicladoras de PET, por **falta de coleta** (410 mil t recicladas em 2024) | [Dados do problema](../09-pesquisa/dados-do-problema.md) |
+| **33,7%** | da população urbana de Manaus com coleta seletiva (SINISA 2024, último dado publicado) | [Instituto Água e Saneamento](https://www.aguaesaneamento.org.br/municipios-e-saneamento/am/manaus), ver [dados do problema](../09-pesquisa/dados-do-problema.md) |
 
-**Em uma frase:** o Brasil já recicla quase toda lata e mais da metade do PET, mas a coleta não chega: indústria parada por falta de material e uma capital onde só um terço da população urbana tem coleta seletiva. Detalhes, ressalvas e o que falta confirmar estão em [dados do problema](../pesquisa/dados-do-problema.md).
+**Em uma frase:** o Brasil já recicla quase toda lata e mais da metade do PET, mas a coleta não chega: indústria parada por falta de material e uma capital onde só um terço da população urbana tem coleta seletiva. Detalhes, ressalvas e o que falta confirmar estão em [dados do problema](../09-pesquisa/dados-do-problema.md).
 
 ## 2. A solução
 
@@ -47,7 +47,7 @@ flowchart LR
   M -. pontos .-> L[Loja<br/>campanhas, vouchers, sorteios]
 ```
 
-O fluxo completo, passo a passo, está na [seção 4 da visão original](../visao/visao-do-projeto.md#4-fluxo-integrado-do-mvp).
+O fluxo completo, passo a passo, está na [seção 4 da visão original](../historico/visao/visao-do-projeto.md#4-fluxo-integrado-do-mvp).
 
 ## 3. Quem usa
 
@@ -67,7 +67,7 @@ O perfil que antes se chamava "morador" passa a se chamar **usuário** em todos 
 
 | Área | O que entra |
 |---|---|
-| Acesso | O usuário **se cadastra normalmente**, sem código, e depois entra como qualquer outro. O controle é um **teto de 500 contas** (configurável; pode subir a **1000**), com **trava de vagas no banco** (*pessimistic locking*: `SELECT ... FOR UPDATE` na linha de vagas). Ao chegar no teto: aviso e lista de espera. Conta excluída devolve a vaga. Decidido em 11/11/2026 e **revisto em 12/11/2026** (o código individual foi descartado). Ver [controle de acesso](../pesquisa/controle-de-acesso.md) |
+| Acesso | O usuário **se cadastra normalmente**, sem código, e depois entra como qualquer outro. O controle é um **teto de 500 contas** (configurável; pode subir a **1000**), com **trava de vagas no banco** (*pessimistic locking*: `SELECT ... FOR UPDATE` na linha de vagas). Ao chegar no teto: aviso e lista de espera. Conta excluída devolve a vaga. Decidido em 11/11/2026 e **revisto em 12/11/2026** (o código individual foi descartado). Ver [controle de acesso](../09-pesquisa/controle-de-acesso.md) |
 | Cadastro de resíduos | **Três sistemas**, iniciados por um botão **+** centralizado na barra de navegação. **1) Código de barras:** lê o produto e já preenche o formulário. **2) QR Code da nota fiscal:** traz os itens da nota e os materiais. **3) Manual:** o usuário pode tentar ler o código de barras **quantas vezes quiser**. Cada falha mostra um **aviso vermelho** de erro de leitura; a partir da **2ª falha**, o aviso **recomenda o cadastro manual** (material e quantidade inteira obrigatórios; nome opcional). Decidido em 11/11/2026. Materiais: **PET e lata de alumínio** |
 | Descarte rápido | **Não é uma função à parte.** É o uso do **leitor de código de barras** (agiliza um único produto) e do **leitor de QR Code da nota** (traz todos os materiais da nota) para seguir direto à escolha do ponto, sem passar pelo estoque |
 | Entrega | Escolha do ponto compatível, navegação externa, **validação de presença por GPS** (libera o envio) e **confirmação pelo operador do ponto** (decidido em 11/11/2026); os pontos saem só depois da confirmação |
@@ -90,17 +90,17 @@ O perfil que antes se chamava "morador" passa a se chamar **usuário** em todos 
 
 ### Decisões já tomadas
 
-As regras de **campanhas, vouchers e sorteios** foram decididas (ver [campanhas](../requisitos/regras-de-campanhas.md) e [saldo, vouchers e sorteios](../requisitos/regras-de-saldo-vouchers-sorteios.md)). O que ainda está em aberto fica em [decisões pendentes](../00-diagnostico/decisoes-pendentes.md).
+As regras de **campanhas, vouchers e sorteios** foram decididas (ver [campanhas](regras/regras-de-campanhas.md) e [saldo, vouchers e sorteios](regras/regras-de-saldo-vouchers-sorteios.md)). O que ainda está em aberto fica em [decisões pendentes](../00-diagnostico/decisoes-pendentes.md).
 
 ### Pesquisas de apoio
 
 | Tema | Documento |
 |---|---|
-| Capacidade do ponto de coleta e execução da coleta | [capacidade e coleta](../pesquisa/capacidade-e-execucao-da-coleta.md) |
-| Controle de quantas pessoas entram | [controle de acesso](../pesquisa/controle-de-acesso.md) |
-| Fontes para código de barras e nota fiscal | [fontes](../pesquisa/fontes-de-produtos-e-notas.md) |
-| Provedor de pagamento | [provedores](../pesquisa/provedores-de-pagamento.md) |
-| Números do problema | [dados do problema](../pesquisa/dados-do-problema.md) |
+| Capacidade do ponto de coleta e execução da coleta | [capacidade e coleta](../09-pesquisa/capacidade-e-execucao-da-coleta.md) |
+| Controle de quantas pessoas entram | [controle de acesso](../09-pesquisa/controle-de-acesso.md) |
+| Fontes para código de barras e nota fiscal | [fontes](../09-pesquisa/fontes-de-produtos-e-notas.md) |
+| Provedor de pagamento | [provedores](../09-pesquisa/provedores-de-pagamento.md) |
+| Números do problema | [dados do problema](../09-pesquisa/dados-do-problema.md) |
 
 ### Evolução a avaliar (fora do MVP)
 
@@ -120,11 +120,11 @@ As regras de **campanhas, vouchers e sorteios** foram decididas (ver [campanhas]
 |---|---|
 | Prazo informado | **20/11/2026** (não garante todo o backlog) |
 | Ordem das entregas | usuário → ponto de coleta → cooperativa → administrador |
-| Região e pontos do piloto | Ver [piloto inicial](../pesquisa/piloto-inicial.md) e [decisões pendentes](../00-diagnostico/decisoes-pendentes.md) |
+| Região e pontos do piloto | Ver [piloto inicial](../09-pesquisa/piloto-inicial.md) e [decisões pendentes](../00-diagnostico/decisoes-pendentes.md) |
 
 ### Como medir o sucesso do piloto
 
-**Escala:** 100 usuários, 3 pontos de coleta, 1 cooperativa e 8 semanas. Segue o [piloto inicial](../pesquisa/piloto-inicial.md): poucos pontos, uma ou duas cooperativas, número limitado de usuários, período fechado. **Aprovadas por Vinicius em 11/11/2026.**
+**Escala:** 100 usuários, 3 pontos de coleta, 1 cooperativa e 8 semanas. Segue o [piloto inicial](../09-pesquisa/piloto-inicial.md): poucos pontos, uma ou duas cooperativas, número limitado de usuários, período fechado. **Aprovadas por Vinicius em 11/11/2026.**
 
 | # | Indicador | Como calcular | Meta |
 |---|---|---|---|
@@ -146,6 +146,6 @@ As regras de **campanhas, vouchers e sorteios** foram decididas (ver [campanhas]
 
 ## O que falta para fechar
 
-- [ ] Ligar os `[VERIFICAR fonte]` que restam em [dados do problema](../pesquisa/dados-do-problema.md)
+- [ ] Ligar os `[VERIFICAR fonte]` que restam em [dados do problema](../09-pesquisa/dados-do-problema.md)
 - [ ] Alterar o código do backend: 10 pontos por descarte, dobro de pontos em descartes e janela de 60 minutos
-- [ ] Marcar a [visão original](../visao/visao-do-projeto.md) como histórico
+- [ ] Marcar a [visão original](../historico/visao/visao-do-projeto.md) como histórico

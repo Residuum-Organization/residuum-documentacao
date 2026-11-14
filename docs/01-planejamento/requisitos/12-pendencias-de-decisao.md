@@ -2,7 +2,7 @@
 
 [Voltar ao índice](README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/requisitos/requisitos-mvp-v6.md` (linhas 1591 a 1632) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/01-planejamento/regras/requisitos-mvp-v6.md` (linhas 1591 a 1632) em 10/11/2026. Corrija aqui, não na origem.
 
 
 As pendências não são tarefas automaticamente autorizadas. “Responsável sugerido” indica quem deve validar a regra. Quando uma pendência bloqueia critérios ou integração, a equipe deve resolver antes de implementar aquele trecho; pode continuar capacidades independentes.

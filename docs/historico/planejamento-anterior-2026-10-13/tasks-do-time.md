@@ -1,12 +1,12 @@
 # Residuum — tasks de desenvolvimento do time
 
-**Documento anterior, preservado para rastreabilidade.** Para executar o trabalho atual, consulte o [documento geral das tasks](../../planejamento/modulos/tasks-gerais.md). Este arquivo não é uma segunda lista vigente de atividades.
+**Documento anterior, preservado para rastreabilidade.** Para executar o trabalho atual, consulte o [documento geral das tasks](../modulos-e-tasks/tasks-gerais.md). Este arquivo não é uma segunda lista vigente de atividades.
 
 
-**[Documento geral das atividades por módulo e perfil](../../planejamento/modulos/README.md)** — modelo padronizado, testes, proposta de Scrum e matriz de importância; responsáveis e datas a preencher pela equipe.
+**[Documento geral das atividades por módulo e perfil](../modulos-e-tasks/README.md)** — modelo padronizado, testes, proposta de Scrum e matriz de importância; responsáveis e datas a preencher pela equipe.
 
 
-**Acompanhamento:** [abrir o Kanban no Miro](https://miro.com/app/board/uXjVGjiRgKQ=/?moveToWidget=3458764686954066612). As 93 tasks agora são cartões agrupados por área. Use este guia e as fichas completas como documentação de apoio; veja [como utilizar o Kanban](../../planejamento/kanban-miro.md).
+**Acompanhamento:** [abrir o Kanban no Miro](https://miro.com/app/board/uXjVGjiRgKQ=/?moveToWidget=3458764686954066612). As 93 tasks agora são cartões agrupados por área. Use este guia e as fichas completas como documentação de apoio; veja [como utilizar o Kanban](../../08-manutencao/kanban-miro.md).
 
 **No Miro:** [abrir o guia de tasks do time](https://miro.com/app/board/uXjVGjiRgKQ=/?moveToWidget=3458764686953010924) ou [abrir os 27 pacotes de adequação](https://miro.com/app/board/uXjVGjiRgKQ=/?moveToWidget=3458764686953010926). Os documentos detalhados por assunto estão ligados ao guia e ao índice de Documentações.
 
@@ -57,4 +57,4 @@ Uma entrega exige implementação revisada, critérios verificados, evidências 
 
 ## Atenção à decisão posterior da jornada
 
-A decisão de 10/10/2026 sobre rascunho do descarte rápido e GPS novo está na [visão](../../visao/visao-do-projeto.md#decisão-de-experiência-do-morador--10102026) e no [handoff](../../ux/morador-v6-handoff.md). Leia com ADE-006 e TSK-MOR-005; não trate gravação automática de itens rápidos no estoque como regra aprovada.
+A decisão de 10/10/2026 sobre rascunho do descarte rápido e GPS novo está na [visão](../visao/visao-do-projeto.md#decisão-de-experiência-do-morador--10102026) e no [handoff](../ux-v6-e-v2/morador-v6-handoff.md). Leia com ADE-006 e TSK-MOR-005; não trate gravação automática de itens rápidos no estoque como regra aprovada.

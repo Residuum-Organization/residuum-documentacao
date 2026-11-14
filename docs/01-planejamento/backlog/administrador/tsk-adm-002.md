@@ -1,8 +1,8 @@
 # TSK-ADM-002 — Gerenciar convites compartilhados
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 2230 a 2287) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 2230 a 2287) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Gerenciar convites compartilhados.
@@ -57,6 +57,6 @@ PD-001, PD-002. Vincular às fichas TSK-DEC correspondentes. Avançar diagnósti
 
 **Rastreabilidade:** RF-MVP-002; RNF-MVP-001, RNF-MVP-002; RN-001, RN-002; ficha [TSK-ADM-002 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-002](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-002).
 
-**Casos detalhados e ficha de origem:** [TSK-ADM-002](../../../planejamento/modulos/m01.md#tsk-adm-002).
+**Casos detalhados e ficha de origem:** [TSK-ADM-002](../../../historico/modulos-e-tasks/m01.md#tsk-adm-002).
 
 <a id="tsk-adm-003"></a>

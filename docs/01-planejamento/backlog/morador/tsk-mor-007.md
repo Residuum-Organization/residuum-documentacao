@@ -1,8 +1,8 @@
 # TSK-MOR-007 — Importar itens de nota fiscal
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 459 a 517) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 459 a 517) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Importar itens de nota fiscal.
@@ -58,6 +58,6 @@ PD-005, PD-004, PD-022. Vincular às fichas TSK-DEC correspondentes. Avançar di
 
 **Rastreabilidade:** RF-MVP-011; RNF-MVP-001, RNF-MVP-002; RN-003, RN-004, RN-005; ficha [TSK-MOR-007 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-008](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-008).
 
-**Casos detalhados e ficha de origem:** [TSK-MOR-007](../../../planejamento/modulos/m02.md#tsk-mor-007).
+**Casos detalhados e ficha de origem:** [TSK-MOR-007](../../../historico/modulos-e-tasks/m02.md#tsk-mor-007).
 
 <a id="tsk-mor-008"></a>

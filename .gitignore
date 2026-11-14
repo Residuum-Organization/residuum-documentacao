@@ -20,3 +20,7 @@ node_modules/
 .cache/
 /.pnpm-store/
 tmp/
+
+# Clones locais dos repositórios de código
+/backend/
+/frontend/

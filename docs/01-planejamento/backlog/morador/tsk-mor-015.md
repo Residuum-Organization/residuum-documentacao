@@ -1,8 +1,8 @@
 # TSK-MOR-015 — Confirmar entrega e movimentar estoques
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 924 a 986) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 924 a 986) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Confirmar entrega e movimentar estoques.
@@ -62,6 +62,6 @@ Decisão de rascunho e abandono aplicada em 10/10/2026. PD-006 permanece parcial
 
 **Rastreabilidade:** RF-MVP-019; RNF-MVP-002, RNF-MVP-003, RNF-MVP-008, RNF-MVP-009; RN-007, RN-008; ficha [TSK-MOR-015 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-006](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-006), [ADE-011](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-011).
 
-**Casos detalhados e ficha de origem:** [TSK-MOR-015](../../../planejamento/modulos/m03.md#tsk-mor-015).
+**Casos detalhados e ficha de origem:** [TSK-MOR-015](../../../historico/modulos-e-tasks/m03.md#tsk-mor-015).
 
 <a id="tsk-mor-016"></a>

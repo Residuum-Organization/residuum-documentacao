@@ -2,7 +2,7 @@
 
 [Voltar ao índice](README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/requisitos/requisitos-mvp-v6.md` (linhas 1633 a 1678) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/01-planejamento/regras/requisitos-mvp-v6.md` (linhas 1633 a 1678) em 10/11/2026. Corrija aqui, não na origem.
 
 
 Os cenários abaixo complementam os critérios individuais. São roteiros de homologação, não evidências de testes executados no produto.

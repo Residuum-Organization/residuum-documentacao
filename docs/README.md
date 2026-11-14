@@ -1,34 +1,39 @@
-# Residuum — guia dos documentos atuais
+# Residuum: guia da documentação
 
-## Referências principais de trabalho
+> **Atualizado em:** 14/11/2026 · Só arquivos `.md`; diagramas em Mermaid. O código fica em `residuum-backend` e `residuum-frontend`.
 
-1. **[Documento geral das tasks](planejamento/modulos/tasks-gerais.md):** atividades no modelo combinado, critérios, dependências, bloqueios, importância e testes vinculados.
-2. **[Proposta de Scrum e sprints](planejamento/modulos/scrum-e-sequencia.md):** usuário → ponto de coleta → cooperativa → administrador, com fundamentos e QA durante as entregas.
+## Onde está cada coisa
 
-Responsáveis, datas, estimativas e compromissos finais de sprint são preenchidos pela equipe. O guia por módulos contém as mesmas atividades para consulta, não outro backlog.
+| Pasta | O que tem | Comece por |
+|---|---|---|
+| [`00-diagnostico`](00-diagnostico/) | Diagnóstico, **decisões em aberto**, roteiro de revisão | [Decisões pendentes](00-diagnostico/decisoes-pendentes.md) |
+| [`01-planejamento`](01-planejamento/) | Visão, PRD, backlog, 27 decisões (PD), regras de negócio | [Visão e escopo](01-planejamento/visao-e-escopo.md) |
+| [`02-arquitetura`](02-arquitetura/) | SAD, ADRs, modelo de dados, diagramas, stacks, branches | [SAD](02-arquitetura/sad.md) |
+| [`03-ux`](03-ux/) | Protótipo no FigCraft, índice de telas | [Protótipo](03-ux/prototipo-figcraft.md) |
+| [`04-desenvolvimento`](04-desenvolvimento/) | API | [API](04-desenvolvimento/api.md) |
+| [`05-qualidade`](05-qualidade/) | Plano e casos de teste | [Plano de testes](05-qualidade/plano-de-testes.md) |
+| [`06-operacao`](06-operacao/) | Deploy e notas de versão | [Guia de deploy](06-operacao/guia-de-deploy.md) |
+| [`07-usuario`](07-usuario/) | Manual do usuário | [Manual](07-usuario/manual-do-usuario.md) |
+| [`08-manutencao`](08-manutencao/) | Diário de bordo, governança, rotina de reuniões, Kanban, **prompt de retomada** | [Prompt de retomada](08-manutencao/prompt-de-retomada.md) |
+| [`09-pesquisa`](09-pesquisa/) | Mercado, concorrentes, pontos, piloto, pagamento | [Índice](09-pesquisa/README.md) |
+| [`historico`](historico/) | Versões antigas (V1 a V6, tasks, UX V6 e V2), só para rastreio | [Histórico](historico/README.md) |
 
-## Apoio por assunto
+## Atalhos por assunto
 
-| Assunto | Documento |
+| Preciso de | Documento |
 |---|---|
-| Visão do projeto | [Problema, participantes, solução e limites](visao/visao-do-projeto.md) |
-| Requisitos | [Especificação V6](requisitos/requisitos-mvp-v6.md) |
-| Regras | [Regras de negócio](requisitos/regras-de-negocio.md) · [Regras de campanhas](requisitos/regras-de-campanhas.md) |
-| Módulos | [Fichas e navegação por módulo](planejamento/modulos/README.md) |
-| Importância | [Impacto × urgência](planejamento/modulos/matriz-importancia.md) |
-| Arquitetura e banco | [Recortes técnicos](planejamento/modulos/arquitetura-refatoracao-banco.md) |
-| Testes integrados | [Casos de validação](planejamento/modulos/testes-integrados.md) |
-| Quadro do time | [Uso do Kanban](planejamento/kanban-miro.md) |
-| Reuniões | [Rotina](planejamento/rotina-de-reunioes.md) |
-| Estudos e implementação examinada | [Estudos](estudos/estudos-do-projeto.md) e [diagnóstico](diagnostico/comparativo-mvp-estagio-v1.md) |
-| Pesquisa de negócio e mercado | [Índice de pesquisas](pesquisa/README.md) |
-| Tecnologia | [Stacks e integrações](tecnologia/stacks-e-integracoes.md) |
-| Experiência do usuário | [Handoff](ux/morador-v6-handoff.md), [validação registrada](ux/morador-v6-validacao.md) e [teste com usuários](ux/morador-v6-teste-usuarios.md) |
-| Demonstração independente V2 | [Estado e limites](ux/residuum-v2-lovable-status.md) |
-| Documentos anteriores | [Histórico](historico/README.md) |
+| O que está decidido e o que falta decidir | [Decisões pendentes](00-diagnostico/decisoes-pendentes.md) |
+| Requisitos e regras de negócio | [PRD/SRS](01-planejamento/prd-srs.md) · [Regras](01-planejamento/regras/regras-de-negocio.md) |
+| Backlog por perfil e por onda | [Backlog e histórias](01-planejamento/backlog-e-historias.md) |
+| Decisões individuais (PD-001 a PD-027) | [Índice das decisões](01-planejamento/decisoes/README.md) |
+| Regras de pontos, campanhas e sorteios | [Campanhas](01-planejamento/regras/regras-de-campanhas.md) · [Saldo e vouchers](01-planejamento/regras/regras-de-saldo-vouchers-sorteios.md) |
+| Decisões de arquitetura (ADR) | [`02-arquitetura/adr`](02-arquitetura/adr/) |
+| Retomar o trabalho de documentação | [Prompt de retomada](08-manutencao/prompt-de-retomada.md) |
 
-## Qual referência utilizar
+## Convenções
 
-O documento geral orienta a execução atual. A V6 e as decisões posteriores do handoff orientam comportamento e regras; a proposta de Scrum organiza objetivos e responsabilidades; o diagnóstico e os registros de UX descrevem evidências com versões e limites próprios. As pesquisas de negócio registram hipóteses e referências externas e não substituem requisitos aprovados. O estado atual do trabalho é acompanhado no quadro da equipe, não inferido dos documentos históricos.
-
-Os arquivos de tasks V1 e de adequação foram preservados no histórico como fontes. Seus identificadores continuam vinculados ao documento atual para rastreabilidade, sem duplicar entregas. Testes preparados permanecem diferentes de testes executados e aprovados.
+- **Uma decisão em aberto vive em um só lugar:** [decisões pendentes](00-diagnostico/decisoes-pendentes.md).
+- Nomes em minúsculas e com hífen; pastas numeradas na ordem de leitura.
+- O que foi substituído vai para [`historico`](historico/README.md), nunca é apagado.
+- Documento preparado não é teste executado: os documentos distinguem requisito, proposta, teste planejado e evidência.
+- Detalhes de contribuição: [CONTRIBUTING](../CONTRIBUTING.md).

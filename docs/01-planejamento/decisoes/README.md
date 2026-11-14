@@ -1,7 +1,7 @@
 # Decisões e pendências (PD-001 a PD-027)
 
 > **Estado:** revisão · **Dono:** Produto · **Atualizado em:** 10/11/2026
-> **Origem:** [decisoes.md](../../planejamento/modulos/decisoes.md) (3768 linhas), um arquivo por decisão; texto não alterado. Pergunta e responsável vêm da seção 12 da V6.
+> **Origem:** [decisoes.md](../../historico/modulos-e-tasks/decisoes.md) (3768 linhas), um arquivo por decisão; texto não alterado. Pergunta e responsável vêm da seção 12 da V6.
 
 ## Resumo
 
@@ -12,7 +12,7 @@ São 27 decisões. Algumas já têm resposta do time (coluna **Situação**), ma
 | PD-001 | Prazo do link individual, vinculação ao destinatário, limites do compartilhado, fuso, revogação e política de … | Produto/idealizador | Aberta | [pd-001.md](pd-001.md) |
 | PD-002 | Convites valem para usuários existentes e operadores? Cadastro pelo administrador consome convite? Como nasce … | Produto/segurança | Aberta | [pd-002.md](pd-002.md) |
 | PD-003 | Campos obrigatórios por perfil, CPF/documentos do ponto, verificação de e-mail, recuperação e habilitação de a… | Produto/equipe técnica | Aberta | [pd-003.md](pd-003.md) |
-| PD-004 | Tipos de notas e identificadores, fonte de consulta, catálogo de produtos, cobertura, autorização, limites e f… | Equipe técnica/produto | Pesquisa feita em 11/11 ([fontes](../../pesquisa/fontes-de-produtos-e-notas.md)). Falta testar as fontes. | [pd-004.md](pd-004.md) |
+| PD-004 | Tipos de notas e identificadores, fonte de consulta, catálogo de produtos, cobertura, autorização, limites e f… | Equipe técnica/produto | Pesquisa feita em 11/11 ([fontes](../../09-pesquisa/fontes-de-produtos-e-notas.md)). Falta testar as fontes. | [pd-004.md](pd-004.md) |
 | PD-005 | Pode importar a mesma nota novamente? Como evitar inclusão involuntária repetida e selecionar apenas embalagen… | Produto | Aberta | [pd-005.md](pd-005.md) |
 | PD-006 | Decisão de UX aprovada em 10/10/2026: rascunho rápido em memória do fluxo, abandono elimina, rota em outra aba… | Produto e backend | UX aprovada em 10/10 (rascunho em memória). **11/11: o operador do ponto confirma o descarte.** Contrato de ajuste em aberto. | [pd-006.md](pd-006.md) |
 | PD-007 | Busca sem GPS, materiais mistos em pontos diferentes, recebimento fora do horário ou com ponto cheio e escolha… | Produto/operação | Aberta | [pd-007.md](pd-007.md) |

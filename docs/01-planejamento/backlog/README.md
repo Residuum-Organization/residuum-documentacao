@@ -1,7 +1,7 @@
 # Backlog — atividades por módulo
 
 > **Estado:** revisão · **Dono:** Produto · **Atualizado em:** 10/11/2026
-> **Origem:** [tasks-gerais.md](../../planejamento/modulos/tasks-gerais.md) (6591 linhas), um arquivo por atividade; texto não alterado.
+> **Origem:** [tasks-gerais.md](../../historico/modulos-e-tasks/tasks-gerais.md) (6591 linhas), um arquivo por atividade; texto não alterado.
 
 ## Resumo
 

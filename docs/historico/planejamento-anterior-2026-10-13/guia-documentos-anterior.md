@@ -1,18 +1,18 @@
 # Residuum — guia dos documentos
 
-**[Documento geral das atividades por módulo e perfil](../../planejamento/modulos/README.md)** — modelo padronizado, testes, proposta de Scrum e matriz de importância; responsáveis e datas a preencher pela equipe.
+**[Documento geral das atividades por módulo e perfil](../modulos-e-tasks/README.md)** — modelo padronizado, testes, proposta de Scrum e matriz de importância; responsáveis e datas a preencher pela equipe.
 
 
 **Para a reunião de 13/10/2026:** siga a ordem abaixo. Cada assunto tem uma referência principal; versões antigas ficam em `historico`.
 
 | Ordem | Assunto | Documento para abrir | O que apresentar |
 |---|---|---|---|
-| 1 | Visão do projeto | [Problemática e solução](../../visao/visao-do-projeto.md) | Problema, participantes, solução, valor esperado, fluxo e limites do MVP |
-| 2 | Estudo realizado | [Estudos e diagnóstico](../../estudos/estudos-do-projeto.md) | Referências utilizadas, análise do MVP existente, resultados e limites das evidências |
-| 3 | Requisitos | [Especificação do MVP V6](../../requisitos/requisitos-mvp-v6.md) | Escopo, 53 requisitos funcionais, 12 não funcionais, permissões e critérios de aceite |
-| 4 | Regras de negócio | [Guia das regras](../../requisitos/regras-de-negocio.md) | Acesso, materiais, descarte, recompensas, coleta, pagamento e dados |
-| 5 | Tasks de desenvolvimento | [Kanban do time](../../planejamento/kanban-miro.md) e [guia de apoio](tasks-do-time.md) | 93 cartões por área no Miro; documentação de critérios e pacotes ADE preservada |
-| 6 | Encaminhamentos | [Pendências da V6](../../requisitos/requisitos-mvp-v6.md#12-pendências-de-decisão) e [roteiro de adequação](tasks-adequacao-reativacao-mvp-v1.md) | Decisões necessárias, prioridades, responsáveis e próximos passos a acordar |
+| 1 | Visão do projeto | [Problemática e solução](../visao/visao-do-projeto.md) | Problema, participantes, solução, valor esperado, fluxo e limites do MVP |
+| 2 | Estudo realizado | [Estudos e diagnóstico](../estudos/estudos-do-projeto.md) | Referências utilizadas, análise do MVP existente, resultados e limites das evidências |
+| 3 | Requisitos | [Especificação do MVP V6](../requisitos-mvp-v6.md) | Escopo, 53 requisitos funcionais, 12 não funcionais, permissões e critérios de aceite |
+| 4 | Regras de negócio | [Guia das regras](../../01-planejamento/regras/regras-de-negocio.md) | Acesso, materiais, descarte, recompensas, coleta, pagamento e dados |
+| 5 | Tasks de desenvolvimento | [Kanban do time](../../08-manutencao/kanban-miro.md) e [guia de apoio](tasks-do-time.md) | 93 cartões por área no Miro; documentação de critérios e pacotes ADE preservada |
+| 6 | Encaminhamentos | [Pendências da V6](../requisitos-mvp-v6.md#12-pendências-de-decisão) e [roteiro de adequação](tasks-adequacao-reativacao-mvp-v1.md) | Decisões necessárias, prioridades, responsáveis e próximos passos a acordar |
 
 ## Como conduzir a apresentação
 
@@ -20,7 +20,7 @@ Comece pelo problema e pela solução. Mostre a jornada do morador e a jornada d
 
 Nos requisitos, use o sumário da V6 para navegar por módulo; não é necessário ler os 53 RF durante a reunião. Nas regras, destaque que registrar não concede pontos, cada descarte concluído concede 10 pontos básicos uma vez e pesagem não concede novamente a recompensa. Termine pelas tasks de desenvolvimento, sua ordem de execução e pelas decisões que impedem completar capacidades do MVP.
 
-As [stacks e integrações](../../tecnologia/stacks-e-integracoes.md) permanecem como consulta complementar. Tasks são as tarefas do time; stacks são as tecnologias.
+As [stacks e integrações](../../02-arquitetura/stacks-e-integracoes.md) permanecem como consulta complementar. Tasks são as tarefas do time; stacks são as tecnologias.
 
 **Resultado esperado da reunião:** alinhar o entendimento do produto e registrar quais decisões e pacotes de trabalho serão tratados, com responsáveis. Este guia não aprova requisitos nem define um novo prazo de entrega.
 
@@ -28,8 +28,8 @@ As [stacks e integrações](../../tecnologia/stacks-e-integracoes.md) permanecem
 
 - **Especificação:** V6 consolidada para validação, com decisões ainda pendentes. Consulte a situação de cada requisito.
 - **Implementação existente:** diagnóstico de 09/10/2026 registra 4 capacidades para reaproveitar, 34 para ajustar e 15 para construir. Isso não é percentual de conclusão.
-- **Experiência do morador:** [handoff V6](../../ux/morador-v6-handoff.md), [validação técnica](../../ux/morador-v6-validacao.md) e [plano de teste com usuários](../../ux/morador-v6-teste-usuarios.md). Integração real e validação com moradores permanecem pendentes conforme esses registros.
-- **Demonstração V2:** [estado no Lovable](../../ux/residuum-v2-lovable-status.md), entrega parcial com continuidade bloqueada por créditos.
+- **Experiência do morador:** [handoff V6](../ux-v6-e-v2/morador-v6-handoff.md), [validação técnica](../ux-v6-e-v2/morador-v6-validacao.md) e [plano de teste com usuários](../ux-v6-e-v2/morador-v6-teste-usuarios.md). Integração real e validação com moradores permanecem pendentes conforme esses registros.
+- **Demonstração V2:** [estado no Lovable](../ux-v6-e-v2/residuum-v2-lovable-status.md), entrega parcial com continuidade bloqueada por créditos.
 
 ## Consulta por pasta
 

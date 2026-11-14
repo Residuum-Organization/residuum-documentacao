@@ -26,8 +26,8 @@ Esta etapa só planeja. Nada é alterado até a aprovação.
 | # | Tarefa | Fonte | Bloqueio |
 |---|---|---|---|
 | 1.1 | Reunião de 30 min: decisões 1–6 de `00-diagnostico/decisoes-pendentes.md` (valor do ponto, quem confirma, estorno, responsável do ponto, cancelar sorteio, dono do parecer jurídico) | análises dos 4 módulos | Produto |
-| 1.2 | Registrar as decisões em `docs/planejamento/modulos/decisoes.md` (TSK-DEC-010–013) e fatiar esse arquivo (3768 linhas) em índice + um arquivo por assunto | `decisoes.md` | 1.1 |
-| 1.3 | Visão: fechar "fora de escopo", metas numéricas do piloto, 3 números do problema (de `docs/pesquisa/`) | `visao-do-projeto.md`, pesquisa | metas = Produto |
+| 1.2 | Registrar as decisões em `docs/historico/modulos-e-tasks/decisoes.md` (TSK-DEC-010–013) e fatiar esse arquivo (3768 linhas) em índice + um arquivo por assunto | `decisoes.md` | 1.1 |
+| 1.3 | Visão: fechar "fora de escopo", metas numéricas do piloto, 3 números do problema (de `docs/09-pesquisa/`) | `visao-do-projeto.md`, pesquisa | metas = Produto |
 | 1.4 | PRD: reconciliar V6 × regras de saldo × código; reescrever RN-008 e RF-019; uma tabela regra→fonte→status por perfil; metas de RNF (desempenho, disponibilidade) | V6 (1703 linhas), `regras-de-negocio.md`, `regras-de-campanhas.md` | 1.1 |
 | 1.5 | Fatiar a V6 em anexos por perfil (usuário, ponto, cooperativa, admin) e arquivar `backend/docs/requisitos.md` e `frontend/docs/requisitos.md` | V6, duplicatas | 1.4 |
 | 1.6 | Backlog: converter as 93 atividades de `tasks-gerais.md` (6591 linhas) em histórias "Como… quero… para…" com aceite, agrupadas nas ondas 0–6; um arquivo por módulo | `tasks-gerais.md`, ondas do README das análises | 1.4 |
@@ -35,7 +35,7 @@ Esta etapa só planeja. Nada é alterado até a aprovação.
 
 **Pronto quando:** PRD sem `[DECISÃO]` aberta das 6 bloqueantes; backlog cobre as 93 atividades e os 71 achados (F, F-, PON, ADM); só existe um PRD.
 
-**Progresso (10/11/2026):** 1.2 decisões fatiadas em 27 arquivos (PD-001 a PD-027) · 1.5 V6 fatiada em 20 arquivos por módulo (duplicatas do backend e frontend continuam por arquivar) · 1.6 backlog fatiado em 66 arquivos de atividade · 1.7 PRs #1 a #3 mescladas · 1.4 PRD reescrito como índice mestre com 6 contradições · **faltam** 1.1 (reunião com o produto), 1.3 (metas do piloto) e converter as 66 atividades em histórias. Os arquivos grandes originais continuam em `docs/planejamento/modulos/` e `docs/requisitos/`; serão movidos para o histórico na parte 6, junto com a correção dos links que apontam para eles.
+**Progresso (10/11/2026):** 1.2 decisões fatiadas em 27 arquivos (PD-001 a PD-027) · 1.5 V6 fatiada em 20 arquivos por módulo (duplicatas do backend e frontend continuam por arquivar) · 1.6 backlog fatiado em 66 arquivos de atividade · 1.7 PRs #1 a #3 mescladas · 1.4 PRD reescrito como índice mestre com 6 contradições · **faltam** 1.1 (reunião com o produto), 1.3 (metas do piloto) e converter as 66 atividades em histórias. Os arquivos grandes originais continuam em `docs/historico/modulos-e-tasks/` e `docs/01-planejamento/regras/`; serão movidos para o histórico na parte 6, junto com a correção dos links que apontam para eles.
 
 ## Parte 2 — Arquitetura e design
 **Documentos:** SAD · Diagramas · Modelo de dados · Wireframes/UX.

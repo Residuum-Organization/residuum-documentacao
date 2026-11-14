@@ -1,9 +1,9 @@
 # Residuum — Tasks direcionadas de adequação e reativação do MVP
 
-**Documento anterior, preservado para rastreabilidade.** Para executar o trabalho atual, consulte o [documento geral das tasks](../../planejamento/modulos/tasks-gerais.md). Este arquivo não é uma segunda lista vigente de atividades.
+**Documento anterior, preservado para rastreabilidade.** Para executar o trabalho atual, consulte o [documento geral das tasks](../modulos-e-tasks/tasks-gerais.md). Este arquivo não é uma segunda lista vigente de atividades.
 
 
-**[Documento geral das atividades por módulo e perfil](../../planejamento/modulos/README.md)** — modelo padronizado, testes, proposta de Scrum e matriz de importância; responsáveis e datas a preencher pela equipe.
+**[Documento geral das atividades por módulo e perfil](../modulos-e-tasks/README.md)** — modelo padronizado, testes, proposta de Scrum e matriz de importância; responsáveis e datas a preencher pela equipe.
 
 
 **Versão:** 1.0 — roteiro de execução para refinamento da equipe
@@ -12,7 +12,7 @@
 
 **Público:** equipe de seis pessoas: produto, design, frontend, backend e QA.
 
-**Base:** [visão do projeto](../../visao/visao-do-projeto.md), [requisitos V6](../../requisitos/requisitos-mvp-v6.md), [diagnóstico do código](../../diagnostico/comparativo-mvp-estagio-v1.md) e [tasks V1](tasks-desenvolvimento-mvp-v1.md).
+**Base:** [visão do projeto](../visao/visao-do-projeto.md), [requisitos V6](../requisitos-mvp-v6.md), [diagnóstico do código](../../00-diagnostico/comparativo-mvp-estagio-v1.md) e [tasks V1](tasks-desenvolvimento-mvp-v1.md).
 
 **Objetivo:** orientar a adequação do MVP do estágio à proposta consolidada com o idealizador, explicando o comportamento atual, a mudança necessária e a evidência que permitirá aceitar cada entrega.
 

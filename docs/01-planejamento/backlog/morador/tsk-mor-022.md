@@ -1,8 +1,8 @@
 # TSK-MOR-022 — Consultar a loja de recompensas
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 1326 a 1379) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 1326 a 1379) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Consultar a loja de recompensas.
@@ -53,6 +53,6 @@ Sem pendência específica citada na ficha V6; validar políticas comuns de aces
 
 **Rastreabilidade:** RF-MVP-026; RNF-MVP-001, RNF-MVP-002; RN-010; ficha [TSK-MOR-022 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-020](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-020).
 
-**Casos detalhados e ficha de origem:** [TSK-MOR-022](../../../planejamento/modulos/m05.md#tsk-mor-022).
+**Casos detalhados e ficha de origem:** [TSK-MOR-022](../../../historico/modulos-e-tasks/m05.md#tsk-mor-022).
 
 <a id="tsk-mor-023"></a>

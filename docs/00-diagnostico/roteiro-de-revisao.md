@@ -33,10 +33,10 @@ Os tempos são **leitura atenta mais anotação** (cerca de 200 palavras por min
 
 | # | Documento | Min | O que avaliar | Feito | Meu parecer |
 |---|---|---|---|---|---|
-| 6 | [Dados do problema](../pesquisa/dados-do-problema.md) | 6 | Os 3 números e os `[VERIFICAR fonte]` | [x] | ✏️ 11/11: 3 números da Visão com fonte (fonte dos 23% corrigida); 4 restantes conferidos: Norte trocado por 38,7% (Abrema 2025), SINISA 2024 acrescentado; PEVs e dados de 2020/2021 a confirmar com a Semulsp |
-| 7 | [Controle de acesso](../pesquisa/controle-de-acesso.md) | 4 | Qual opção você prefere; valor de X | [x] | ✅ 11/11: trava de vagas no banco, X = 500 (configurável até 1000), sem código de acesso (revisto em 12/11), vaga devolvida ao excluir conta, lista de espera |
-| 8 | [Fontes de produtos e notas](../pesquisa/fontes-de-produtos-e-notas.md) | 6 | Quais testes você quer que a equipe faça | [x] | ✅ 11/11: 50 códigos de barras em 2 fontes, 10 notas da SEFAZ-AM, leitura nos celulares do piloto; material com sugestão + confirmação sempre |
-| 9 | [Provedores de pagamento](../pesquisa/provedores-de-pagamento.md) | 5 | API no MVP ou pagamento manual primeiro? | [x] | ✅ 11/11: manual com comprovante no piloto, API depois; pagador Residuum; valor por kg e material |
+| 6 | [Dados do problema](../09-pesquisa/dados-do-problema.md) | 6 | Os 3 números e os `[VERIFICAR fonte]` | [x] | ✏️ 11/11: 3 números da Visão com fonte (fonte dos 23% corrigida); 4 restantes conferidos: Norte trocado por 38,7% (Abrema 2025), SINISA 2024 acrescentado; PEVs e dados de 2020/2021 a confirmar com a Semulsp |
+| 7 | [Controle de acesso](../09-pesquisa/controle-de-acesso.md) | 4 | Qual opção você prefere; valor de X | [x] | ✅ 11/11: trava de vagas no banco, X = 500 (configurável até 1000), sem código de acesso (revisto em 12/11), vaga devolvida ao excluir conta, lista de espera |
+| 8 | [Fontes de produtos e notas](../09-pesquisa/fontes-de-produtos-e-notas.md) | 6 | Quais testes você quer que a equipe faça | [x] | ✅ 11/11: 50 códigos de barras em 2 fontes, 10 notas da SEFAZ-AM, leitura nos celulares do piloto; material com sugestão + confirmação sempre |
+| 9 | [Provedores de pagamento](../09-pesquisa/provedores-de-pagamento.md) | 5 | API no MVP ou pagamento manual primeiro? | [x] | ✅ 11/11: manual com comprovante no piloto, API depois; pagador Residuum; valor por kg e material |
 
 ### Bloco 3: Arquitetura e design (≈ 46 min)
 

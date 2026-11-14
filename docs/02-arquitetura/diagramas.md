@@ -140,7 +140,7 @@ stateDiagram-v2
   meta_cumprida --> recebido: usuário aperta "Receber pontos" (10 × N)
 ```
 
-Descartes no mesmo ponto em 60 minutos contam como **um** na meta. Ver [regras de campanhas](../requisitos/regras-de-campanhas.md).
+Descartes no mesmo ponto em 60 minutos contam como **um** na meta. Ver [regras de campanhas](../01-planejamento/regras/regras-de-campanhas.md).
 
 ## O que falta para fechar
 

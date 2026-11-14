@@ -2,7 +2,7 @@
 
 [Voltar ao índice](README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/requisitos/requisitos-mvp-v6.md` (linhas 1206 a 1307) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/01-planejamento/regras/requisitos-mvp-v6.md` (linhas 1206 a 1307) em 10/11/2026. Corrija aqui, não na origem.
 
 
 As capacidades abaixo derivam dos documentos anteriores e das condições necessárias para consistência do MVP. Metas antigas são referências para homologação, não medições já realizadas. Ferramentas específicas exigem revisão da arquitetura existente.

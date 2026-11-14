@@ -1,8 +1,8 @@
 # TSK-ADM-001 — Gerenciar convites individuais
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 2172 a 2229) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 2172 a 2229) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Gerenciar convites individuais.
@@ -57,6 +57,6 @@ PD-001, PD-002. Vincular às fichas TSK-DEC correspondentes. Avançar diagnósti
 
 **Rastreabilidade:** RF-MVP-001; RNF-MVP-001, RNF-MVP-002; RN-001, RN-002; ficha [TSK-ADM-001 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-002](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-002).
 
-**Casos detalhados e ficha de origem:** [TSK-ADM-001](../../../planejamento/modulos/m01.md#tsk-adm-001).
+**Casos detalhados e ficha de origem:** [TSK-ADM-001](../../../historico/modulos-e-tasks/m01.md#tsk-adm-001).
 
 <a id="tsk-adm-002"></a>

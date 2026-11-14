@@ -1,8 +1,8 @@
 # TSK-PON-003 — Sinalizar necessidade de coleta
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 1736 a 1792) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 1736 a 1792) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Sinalizar necessidade de coleta.
@@ -56,6 +56,6 @@ PD-009, PD-021. Vincular às fichas TSK-DEC correspondentes. Avançar diagnósti
 
 **Rastreabilidade:** RF-MVP-036; RNF-MVP-001, RNF-MVP-002; RN-013; ficha [TSK-PON-003 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-014](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-014).
 
-**Casos detalhados e ficha de origem:** [TSK-PON-003](../../../planejamento/modulos/m06.md#tsk-pon-003).
+**Casos detalhados e ficha de origem:** [TSK-PON-003](../../../historico/modulos-e-tasks/m06.md#tsk-pon-003).
 
 <a id="tsk-pon-004"></a>

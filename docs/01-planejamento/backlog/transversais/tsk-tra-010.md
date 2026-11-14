@@ -1,8 +1,8 @@
 # TSK-TRA-010 — Segurança das integrações
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 3724 a 3776) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 3724 a 3776) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Segurança das integrações.
@@ -52,6 +52,6 @@ Não há pendência específica citada; confirmar as condições comuns antes de
 
 **Rastreabilidade:** RNF-MVP-009; ficha [TSK-TRA-010 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-007](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-007), [ADE-008](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-008), [ADE-016](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-016), [ADE-018](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-018), [ADE-025](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-025).
 
-**Casos detalhados e ficha de origem:** [TSK-TRA-010](../../../planejamento/modulos/transversal.md#tsk-tra-010).
+**Casos detalhados e ficha de origem:** [TSK-TRA-010](../../../historico/modulos-e-tasks/transversal.md#tsk-tra-010).
 
 <a id="tsk-tra-011"></a>

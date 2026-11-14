@@ -1,8 +1,8 @@
 # TSK-MOR-014 — Validar presença por GPS
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 867 a 923) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 867 a 923) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Validar presença por GPS.
@@ -56,6 +56,6 @@ PD-008, PD-027. Vincular às fichas TSK-DEC correspondentes. Avançar diagnósti
 
 **Rastreabilidade:** RF-MVP-018; RNF-MVP-002, RNF-MVP-003, RNF-MVP-004; RN-006; ficha [TSK-MOR-014 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-010](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-010).
 
-**Casos detalhados e ficha de origem:** [TSK-MOR-014](../../../planejamento/modulos/m03.md#tsk-mor-014).
+**Casos detalhados e ficha de origem:** [TSK-MOR-014](../../../historico/modulos-e-tasks/m03.md#tsk-mor-014).
 
 <a id="tsk-mor-015"></a>

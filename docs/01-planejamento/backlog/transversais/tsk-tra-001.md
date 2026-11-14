@@ -1,8 +1,8 @@
 # TSK-TRA-001 — Autorizar dados por perfil, vínculo e plano
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 3174 a 3229) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 3174 a 3229) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Autorizar dados por perfil, vínculo e plano.
@@ -55,6 +55,6 @@ PD-019. Vincular às fichas TSK-DEC correspondentes. Avançar diagnóstico, inte
 
 **Rastreabilidade:** RF-MVP-052; RNF-MVP-001, RNF-MVP-002; RN-020; ficha [TSK-TRA-001 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-022](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-022).
 
-**Casos detalhados e ficha de origem:** [TSK-TRA-001](../../../planejamento/modulos/m10.md#tsk-tra-001).
+**Casos detalhados e ficha de origem:** [TSK-TRA-001](../../../historico/modulos-e-tasks/m10.md#tsk-tra-001).
 
 <a id="tsk-tra-000"></a>

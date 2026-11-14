@@ -1,14 +1,14 @@
 # Residuum — Tasks de desenvolvimento do MVP
 
-**Documento anterior, preservado para rastreabilidade.** Para executar o trabalho atual, consulte o [documento geral das tasks](../../planejamento/modulos/tasks-gerais.md). Este arquivo não é uma segunda lista vigente de atividades.
+**Documento anterior, preservado para rastreabilidade.** Para executar o trabalho atual, consulte o [documento geral das tasks](../modulos-e-tasks/tasks-gerais.md). Este arquivo não é uma segunda lista vigente de atividades.
 
 
-**[Documento geral das atividades por módulo e perfil](../../planejamento/modulos/README.md)** — modelo padronizado, testes, proposta de Scrum e matriz de importância; responsáveis e datas a preencher pela equipe.
+**[Documento geral das atividades por módulo e perfil](../modulos-e-tasks/README.md)** — modelo padronizado, testes, proposta de Scrum e matriz de importância; responsáveis e datas a preencher pela equipe.
 
 
 **Versão:** 1.0 — proposta de backlog para refinamento da equipe
 **Data:** 09/10/2026
-**Base:** [Visão do projeto](../../visao/visao-do-projeto.md) e [Requisitos MVP V6](../../requisitos/requisitos-mvp-v6.md).
+**Base:** [Visão do projeto](../visao/visao-do-projeto.md) e [Requisitos MVP V6](../requisitos-mvp-v6.md).
 **Equipe:** seis pessoas; responsáveis nominais, esforço, sprint e datas a definir pela equipe.
 
 ## Navegação
@@ -517,7 +517,7 @@ As etapas organizam dependências, não fixam calendário nem impedem paralelism
 
 **Pré-condições:** itens confirmados. **Fluxo:** salvar entradas; listar nome, material e quantidade; selecionar itens e quantidades disponíveis; iniciar escolha de ponto. Identificação e quantidade não equivalem a peso medido.
 
-**Decisão posterior — 10/10/2026:** o caminho rápido mantém itens somente na memória do fluxo, sem inclusão automática no estoque. Cancelar, sair para outra área, recarregar ou fechar a aba elimina o rascunho. Abrir a rota em outra aba preserva o fluxo; retornar exige GPS novo. Falhas recuperáveis preservam os itens enquanto a pessoa continua no fluxo. Contratos reais de ajuste/exclusão, concorrência e confirmação continuam pendentes em PD-006; ver [handoff](../../ux/morador-v6-handoff.md#jornada-e-regras-aprovadas).
+**Decisão posterior — 10/10/2026:** o caminho rápido mantém itens somente na memória do fluxo, sem inclusão automática no estoque. Cancelar, sair para outra área, recarregar ou fechar a aba elimina o rascunho. Abrir a rota em outra aba preserva o fluxo; retornar exige GPS novo. Falhas recuperáveis preservam os itens enquanto a pessoa continua no fluxo. Contratos reais de ajuste/exclusão, concorrência e confirmação continuam pendentes em PD-006; ver [handoff](../ux-v6-e-v2/morador-v6-handoff.md#jornada-e-regras-aprovadas).
 
 **Exceções:** impedir seleção superior à quantidade disponível; evitar gravação duplicada por repetição de confirmação. Exclusão e ajustes manuais do estoque são PD-006.
 
@@ -3775,7 +3775,7 @@ O conteúdo foi verificado documentalmente quanto a identificadores, referência
 
 ## 13. Diagnóstico do código disponível
 
-O [comparativo do MVP do estágio V1](../../diagnostico/comparativo-mvp-estagio-v1.md) registra a análise dos commits indicados de frontend e backend, a estratégia por requisito e as verificações locais. Use essa evidência para refinar as fichas, sem importar regras antigas como decisões atuais.
+O [comparativo do MVP do estágio V1](../../00-diagnostico/comparativo-mvp-estagio-v1.md) registra a análise dos commits indicados de frontend e backend, a estratégia por requisito e as verificações locais. Use essa evidência para refinar as fichas, sem importar regras antigas como decisões atuais.
 
 TSK-TRA-000 avançou com a inspeção do código, build e testes locais, mas permanece parcial: faltam ambiente implantado, banco de avaliação com migrations, jornadas HTTP/navegador e validação da equipe. As demais tarefas não foram implementadas por esta análise.
 
@@ -3783,4 +3783,4 @@ Priorizar os achados de integridade e acesso do comparativo: dupla baixa/crédit
 
 ## Atualização de experiência do morador — 10/10/2026
 
-O [handoff do morador V6](../../ux/morador-v6-handoff.md) registra a implementação de demonstração, o Figma, os contratos pendentes e a decisão de rascunho de PD-006. Os [testes com moradores](../../ux/morador-v6-teste-usuarios.md) estão preparados, não realizados. Esta entrega não declara as tasks funcionais prontas em produção nem resolve as pendências transacionais do backend. O diagnóstico técnico do frontend usado neste ciclo foi feito sobre o commit 4f41b139ba9871c92a5c5a72ca2f9d98ba6af164; os comportamentos incompatíveis e as evidências estão no handoff.
+O [handoff do morador V6](../ux-v6-e-v2/morador-v6-handoff.md) registra a implementação de demonstração, o Figma, os contratos pendentes e a decisão de rascunho de PD-006. Os [testes com moradores](../ux-v6-e-v2/morador-v6-teste-usuarios.md) estão preparados, não realizados. Esta entrega não declara as tasks funcionais prontas em produção nem resolve as pendências transacionais do backend. O diagnóstico técnico do frontend usado neste ciclo foi feito sobre o commit 4f41b139ba9871c92a5c5a72ca2f9d98ba6af164; os comportamentos incompatíveis e as evidências estão no handoff.

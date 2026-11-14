@@ -1,6 +1,6 @@
 # Residuum — avaliação da organização em módulos e dos testes
 
-**Documento anterior, preservado para rastreabilidade.** Para executar o trabalho atual, consulte o [documento geral das tasks](../../planejamento/modulos/tasks-gerais.md). Este arquivo não é uma segunda lista vigente de atividades.
+**Documento anterior, preservado para rastreabilidade.** Para executar o trabalho atual, consulte o [documento geral das tasks](../modulos-e-tasks/tasks-gerais.md). Este arquivo não é uma segunda lista vigente de atividades.
 
 
 **Data:** 13/10/2026. **Prazo informado pela equipe:** 20/11/2026.
@@ -13,16 +13,16 @@ Esta é uma revisão documental. Não houve execução de testes, inspeção de 
 
 | Documento | Enquadramento no modelo | Ajuste recomendado |
 |---|---|---|
-| [Requisitos V6](../../requisitos/requisitos-mvp-v6.md), módulos e seção 13 | 11 módulos, 53 RF, 12 RNF, regras, critérios e 29 cenários integrados | Vincular cada atividade ao módulo e desdobrar cenários em casos reproduzíveis |
+| [Requisitos V6](../requisitos-mvp-v6.md), módulos e seção 13 | 11 módulos, 53 RF, 12 RNF, regras, critérios e 29 cenários integrados | Vincular cada atividade ao módulo e desdobrar cenários em casos reproduzíveis |
 | [Tasks de desenvolvimento](tasks-desenvolvimento-mvp-v1.md) | 93 fichas: 53 funcionais, 12 de qualidade, 27 de decisão e uma de diagnóstico | Uniformizar os campos do modelo; explicitar responsável, início, entrega, sprint e evidências por atividade |
 | [Adequação e reativação](tasks-adequacao-reativacao-mvp-v1.md) | 27 pacotes de mudanças no código existente, vinculados às TSK | Usar como agrupamento de execução; dividir pacotes extensos em atividades pequenas |
-| [Guia do time](tasks-do-time.md) e [Kanban](../../planejamento/kanban-miro.md) | Sequência, relações entre ADE/TSK e estados do trabalho | Adicionar módulo e acompanhamento ao cartão existente, evitando outra lista independente de status |
-| [Diagnóstico comparativo](../../diagnostico/comparativo-mvp-estagio-v1.md) | Evidências anteriores, divergências e ações por requisito | Usar os achados como origem de regressões; confirmar no código de trabalho se ainda se aplicam |
-| [Roteiro com moradores](../../ux/morador-v6-teste-usuarios.md) | Teste de usabilidade com preparação, tarefas e medidas | Criar atividade de execução, responsável, datas e registro por participante; sessões continuam pendentes |
-| [Validação do morador](../../ux/morador-v6-validacao.md) | Registro de testes da demonstração, com limites explícitos | Vincular evidências às atividades pertinentes; não usá-las como aprovação do backend real |
-| [Handoff do morador](../../ux/morador-v6-handoff.md) | Jornadas, decisões posteriores, contratos e erros esperados | Incorporar decisões posteriores no refinamento e testar integração real separadamente |
-| [Estado da V2](../../ux/residuum-v2-lovable-status.md) | Experimentos de uma demonstração independente e pendências | Manter separado da homologação do MVP; não importar status como entrega concluída |
-| [Rotina de reuniões](../../planejamento/rotina-de-reunioes.md) | Alinhamentos com idealizador e equipe | Se Scrum for adotado, combinar eventos e responsabilidades; a agenda atual não descreve o processo completo |
+| [Guia do time](tasks-do-time.md) e [Kanban](../../08-manutencao/kanban-miro.md) | Sequência, relações entre ADE/TSK e estados do trabalho | Adicionar módulo e acompanhamento ao cartão existente, evitando outra lista independente de status |
+| [Diagnóstico comparativo](../../00-diagnostico/comparativo-mvp-estagio-v1.md) | Evidências anteriores, divergências e ações por requisito | Usar os achados como origem de regressões; confirmar no código de trabalho se ainda se aplicam |
+| [Roteiro com moradores](../ux-v6-e-v2/morador-v6-teste-usuarios.md) | Teste de usabilidade com preparação, tarefas e medidas | Criar atividade de execução, responsável, datas e registro por participante; sessões continuam pendentes |
+| [Validação do morador](../ux-v6-e-v2/morador-v6-validacao.md) | Registro de testes da demonstração, com limites explícitos | Vincular evidências às atividades pertinentes; não usá-las como aprovação do backend real |
+| [Handoff do morador](../ux-v6-e-v2/morador-v6-handoff.md) | Jornadas, decisões posteriores, contratos e erros esperados | Incorporar decisões posteriores no refinamento e testar integração real separadamente |
+| [Estado da V2](../ux-v6-e-v2/residuum-v2-lovable-status.md) | Experimentos de uma demonstração independente e pendências | Manter separado da homologação do MVP; não importar status como entrega concluída |
+| [Rotina de reuniões](../../08-manutencao/rotina-de-reunioes.md) | Alinhamentos com idealizador e equipe | Se Scrum for adotado, combinar eventos e responsabilidades; a agenda atual não descreve o processo completo |
 
 A visão, o guia de regras e os registros posteriores orientam a interpretação. Os documentos históricos servem para rastreabilidade: seus prazos antigos, regras substituídas e marcações de conclusão não determinam o estado atual.
 
