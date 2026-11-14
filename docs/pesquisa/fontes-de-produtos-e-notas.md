@@ -60,21 +60,22 @@ Nenhuma fonte acima informa se a embalagem é PET ou lata. Opções, **ainda sem
 
 **Decidido em 11/11/2026:** usar as três em conjunto (tabela do Residuum e palavras da descrição para **sugerir**), com **confirmação do usuário sempre** antes de salvar.
 
-## Decisões e testes necessários
+## Caminho adotado
 
-| Item | Tipo |
-|---|---|
-| Qual fonte de GTIN usar (GS1, Cosmos, outra) | Teste com 50 produtos reais de Manaus + contato comercial |
-| Se é possível ler os itens da nota da SEFAZ-AM | Teste técnico e consulta à SEFAZ |
-| ~~Como classificar o material~~ | **Decidido em 11/11/2026:** sugestão automática + confirmação do usuário sempre |
-| ~~Valor de X tentativas~~ | **Decidido em 11/11/2026:** tentativas sem limite; aviso vermelho a cada falha; cadastro manual recomendado a partir da 2ª |
+| Tema | Decisão | Data |
+|---|---|---|
+| Material (PET ou lata) | Sugestão automática + confirmação do usuário sempre | 11/11/2026 |
+| Tentativas de leitura | Sem limite; aviso vermelho a cada falha; cadastro manual recomendado a partir da 2ª | 11/11/2026 |
+| Ordem de consulta do produto | Cache próprio → Open Food Facts → Cosmos → manual (prevista na pauta de arquitetura) | 12/11/2026 |
+| Nota fiscal | Consulta paga (Infosimples) com **teto mensal**; se estourar, o usuário informa os **itens à mão**. A leitura direta do portal da SEFAZ-AM é só um experimento de 1 hora, a partir da Vercel | 13/11/2026 |
+| Chave da nota | Guardada como **chave única** de 44 dígitos: a mesma nota não é importada nem paga duas vezes | 13/11/2026 |
+| Cache de produtos | Pré-carregado com os mais vendidos na região e crescendo a cada item confirmado | 13/11/2026 |
 
 ## O que falta para fechar
 
-**Testes pedidos à equipe (11/11/2026):**
-
+- [ ] Pedir a cotação por escrito da Infosimples para a SEFAZ-AM
+- [ ] Testar a leitura direta do portal a partir da Vercel e a leitura de 10 notas reais da SEFAZ-AM
 - [ ] Testar a consulta de 50 códigos de barras comuns em Manaus (PET e lata) em pelo menos duas fontes
-- [ ] Testar a leitura de 10 notas reais da SEFAZ-AM
 - [ ] Testar a leitura do código de barras nos celulares Android mais comuns entre os usuários do piloto
-- [ ] ~~Contatar GS1 Brasil e Bluesoft~~ não pedido por ora; só se os testes gratuitos falharem
+- [ ] Levantar os produtos mais vendidos para pré-carregar o cache
 - [ ] Registrar o resultado em [PD-004](../01-planejamento/decisoes/pd-004.md)

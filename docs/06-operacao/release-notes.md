@@ -24,7 +24,7 @@ As mudanças hoje ficam só no `CHANGES.md` do backend, sem número de versão. 
 |---|---|---|
 | 0.2.0 | Contenção: cadastro de cooperativa fechado; sorteio sem apuração antecipada | Cooperativas legítimas precisam de vínculo |
 | 0.3.0 | Pontos pelo ledger; descarte credita só na confirmação | Saldos serão reconciliados; avisar usuários |
-| 0.4.0 | Convite e desativação de conta | Flag `EXIGIR_CONVITE` |
+| 0.4.0 | Teto de contas com trava de vagas, lista de espera e desativação de conta | Valor `TETO_CONTAS` |
 | 0.5.0 | Materiais só PET/lata; GPS com política | Nomes antigos aceitos por 1 versão |
 
 ## Histórico

@@ -8,7 +8,7 @@
 
 ## Resumo
 
-Três provedores oferecem envio de dinheiro por API: **Asaas**, **Efí** e **Mercado Pago**. Os três cobrem o essencial (Pix para terceiros e aviso de resultado), mas **não consegui confirmar os preços de envio** de dois deles. A pergunta mais importante não é técnica: **de onde sai o dinheiro e quem é o pagador** ([PD-016](../01-planejamento/decisoes/pd-016.md)).
+Três provedores oferecem envio de dinheiro por API: **Asaas**, **Efí** e **Mercado Pago**. Os três cobrem o essencial (Pix para terceiros e aviso de resultado), mas **não consegui confirmar os preços de envio** de dois deles. O pagador está decidido: é a **Residuum** ([PD-016](../01-planejamento/decisoes/pd-016.md)).
 
 ## O que o Residuum precisa
 
@@ -29,15 +29,15 @@ Da V6 (RF-044 a RF-046): o administrador **inicia** o pagamento da coleta; o sis
 
 O Banco Central **permite que instituições cobrem pessoas jurídicas** no envio e no recebimento de Pix. Bancos tradicionais cobram valores variados; por exemplo, uma reportagem cita 0,99% no envio no Banco do Brasil, com mínimo de R$ 1 e máximo de R$ 10 ([Serasa](https://www.serasa.com.br/minhas-contas/blog/taxa-pix-para-cnpj/)) `[VERIFICAR: dado de outra instituição, pode estar desatualizado]`.
 
-## Perguntas que decidem o provedor
+## O que ainda precisa ser levantado
 
-| Pergunta | Quem responde |
+| Item | Quem responde |
 |---|---|
-| De onde vem o dinheiro? Quem é o **pagador** (a empresa do projeto, patrocinador, ponto)? | Idealizador / financeiro ([PD-016](../01-planejamento/decisoes/pd-016.md)) |
-| Quanto se paga por coleta? Por peso, material ou valor fixo? | Idealizador ([PD-015](../01-planejamento/decisoes/pd-015.md)) |
 | A cooperativa tem **chave Pix** em nome dela (CNPJ)? | Operação |
-| Quantas coletas por mês no piloto? | Produto (define se a tarifa importa) |
-| Há exigência de nota fiscal ou recibo para repassar? | Contábil / jurídico `[LACUNA]` |
+| Quantas coletas por mês no piloto? (define se a tarifa importa) | Produto |
+| Há exigência de nota fiscal ou recibo para repassar? | Contábil e jurídico |
+
+As decisões de produto (valor por kg, por coleta ou por lote, dono da conta) estão em [decisões pendentes](../00-diagnostico/decisoes-pendentes.md).
 
 ## Decisão (11/11/2026)
 
@@ -46,20 +46,17 @@ O Banco Central **permite que instituições cobrem pessoas jurídicas** no envi
 | Como começa o piloto | **Pagamento manual** com comprovante registrado no sistema; **API depois** |
 | Quem paga | **A empresa Residuum** ([PD-016](../01-planejamento/decisoes/pd-016.md)) |
 | Como calcular | **Por kg e material** ([PD-015](../01-planejamento/decisoes/pd-015.md)); valores a definir |
+| Comprovante | Guardado em armazenamento de objetos **privado**, atrás de uma interface única (13/11/2026) |
 
-## Recomendação para o piloto
+## Caminho adotado
 
 1. **Pagamento manual com registro no sistema** nas primeiras coletas: o administrador paga pelo banco e marca "pago" com o comprovante. Zero integração, zero risco financeiro.
-2. Enquanto isso, **testar a API do Asaas e do Mercado Pago em ambiente de teste**, que ambos possuem, e pedir tabela de tarifas por escrito às três.
-3. Só integrar quando o pagador e o valor por coleta estiverem decididos.
-
-> Aceita em 11/11/2026: a Visão foi ajustada (manual no piloto, API depois).
+2. A API entra depois. O Asaas tem ambiente de teste que simula falhas ([doc](https://docs.asaas.com/docs/testing-transfers)); nos outros dois `[VERIFICAR]`.
+3. Pedir a tabela de tarifas de envio por escrito às três.
 
 ## O que falta para fechar
 
-- [x] Pagador (Residuum), forma de cálculo (por kg e material) e início manual decididos em 11/11/2026
-- [ ] Valor por kg de PET e de lata; chave Pix da cooperativa; coletas por mês; exigência de nota ou recibo
 - [ ] Pedir tabela de tarifas de envio de Pix ao Asaas, à Efí e ao Mercado Pago
 - [ ] Testar a API em ambiente de teste
-- [ ] `[LACUNA]` conferir exigência legal para uma plataforma pagar terceiros (instituição de pagamento ou conta digital de parceiro)
+- [ ] Conferir a exigência legal para uma plataforma pagar terceiros (instituição de pagamento ou conta digital de parceiro)
 - [ ] Registrar o resultado em [PD-015](../01-planejamento/decisoes/pd-015.md) e [PD-016](../01-planejamento/decisoes/pd-016.md)

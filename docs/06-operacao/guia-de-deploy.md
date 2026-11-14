@@ -44,7 +44,7 @@ Segredos usados: `DATABASE_URL`, `VERCEL_DEPLOY_HOOK_URL`.
 | `DATABASE_URL`, `SECRET_KEY` | Banco e assinatura do JWT | trocar o placeholder "troque…" |
 | `ENV` | Desliga `/painel-testes` em produção | `production` |
 | Origens permitidas (CORS) | Lista no lugar de `*` | `[LACUNA]` |
-| `EXIGIR_CONVITE` | Cadastro só com convite | ligado no piloto `[DECISÃO: D6]` |
+| `TETO_CONTAS` | Valor inicial do teto de contas (depois o admin altera no banco) | 500 (pode subir a 1000) |
 | `SORTEIOS_SOMENTE_TESTE` | Todo sorteio é de teste | **ligado** até o parecer jurídico |
 | `GPS_RAIO_M`, `GPS_PRECISAO_MAX_M`, `GPS_IDADE_MAX_S` | Política de presença | 100 / 60 / 30 `[DECISÃO: PD-008]` |
 | `LANCAMENTO_AVULSO_ATIVO` | Lançamento avulso da cooperativa | desligado |

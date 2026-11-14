@@ -7,8 +7,8 @@
 
 | Regra | Definição | Requisitos principais |
 |---|---|---|
-| RN-001 | Cadastro pelo usuário exige convite autorizado; exceções administrativas ainda precisam de política | RF-MVP-001 a RF-MVP-004 |
-| RN-002 | Convite individual autoriza um cadastro; compartilhado respeita expiração e limite | RF-MVP-001, RF-MVP-002 |
+| RN-001 | Cadastro pelo usuário é aberto; o controle de entrada é o teto de contas (500, configurável; pode subir a 1000), com trava de vagas no banco (revisto em 12/11/2026) | RF-MVP-001 a RF-MVP-004 |
+| RN-002 | Sem vaga no teto, a pessoa recebe aviso e entra na lista de espera; conta excluída devolve a vaga (revisto em 12/11/2026) | RF-MVP-001, RF-MVP-002 |
 | RN-003 | Materiais iniciais são PET e lata de alumínio | RF-MVP-010 a RF-MVP-013, RF-MVP-034, RF-MVP-043 |
 | RN-004 | Registrar embalagem ou importar nota não representa descarte nem concede pontos | RF-MVP-009 a RF-MVP-014 |
 | RN-005 | Informações importadas são revisadas; material desconhecido pode ser completado manualmente | RF-MVP-011, RF-MVP-013 |

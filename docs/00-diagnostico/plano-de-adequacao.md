@@ -47,7 +47,7 @@ Esta etapa só planeja. Nada é alterado até a aprovação.
 | 2.2 | SAD: topologia (onde roda banco/API/front), ambientes, backups, logs; confirmar versão do Python (3.10 no README × 3.11 no deploy) | `stacks-e-integracoes.md`, `deploy.yaml` | infra: Tecnologia |
 | 2.3 | Diagramas: validar os 4 estados contra os valores reais gravados (ex.: `concluida` × `registrada`); acrescentar contas, pagamento e vínculo | propostas S2/A1/C4/P4 | 1.1 (ator da confirmação) |
 | 2.4 | Decisão de arquitetura (ADR curto em `.md`) para: ledger único, vínculo N:N, idempotência, estados no backend | propostas S1, P1, S3 | PD-023 |
-| 2.5 | UX: link do Figma por perfil, capturas atuais, fluxo de navegação por perfil em Mermaid; converter `morador-v6-figma-ledger.json`/`manifest.json` em tabela `.md` | `docs/ux/` | acesso ao Figma |
+| 2.5 | UX: protótipo no **FigCraft** (não no Figma), com os SVG exportados para o Figma; documento do protótipo com capturas e fluxos por perfil | `tmp/figcraft/` | arquivo do FigCraft |
 | 2.6 | Wireframes dos perfis sem desenho: responsável, cooperativa, admin (em baixa fidelidade, descritos em `.md`) | propostas P13, C9, A1 | Produto/UX |
 
 **Pronto quando:** ER bate com o banco migrado; todo estado do diagrama existe no código ou está marcado "proposto"; todas as telas listadas têm rota e link.
