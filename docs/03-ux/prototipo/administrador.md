@@ -2,8 +2,8 @@
 
 [Voltar ao protótipo](../prototipo-figcraft.md)
 
-> **Estado:** revisão · **Dono:** UX · **Atualizado em:** 13/11/2026
-> **Arquivo:** `residuum-v8.figcraft`, página **4 · Computador · 1440 px** (módulos "Administrador") · **Tamanho das telas:** computador, 1440 × 900
+> **Estado:** revisão · **Dono:** UX · **Atualizado em:** 14/11/2026
+> **Arquivo:** `residuum-v7.figcraft`, página **4 · Computador · 1440 px** (módulos "Administrador"); celular na página 2 e tablet na página 3, com estados de vazio, carregando e erro (Painel, Pontos de coleta e Pagamentos) nos blocos "ESTADOS" · **Tamanho das telas:** computador, 1440 × 900
 > **Fontes:** `indice-correcoes-administrador.md` e `revisao-geral.md` do FigCraft; regras das decisões de 11 e 12/11/2026.
 
 ## Resumo

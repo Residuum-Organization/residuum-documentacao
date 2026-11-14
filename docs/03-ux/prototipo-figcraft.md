@@ -1,8 +1,8 @@
 # Entrega de design do Residuum
 
-> **Estado:** revisão · **Dono:** UX · **Atualizado em:** 13/11/2026
-> **Arquivo de design:** `residuum-v8.figcraft`, feito no **FigCraft** (não no Figma). Os desenhos são exportados em **SVG** para o Figma.
-> **Fontes:** o próprio arquivo (reorganizado e conferido em 13/11/2026), `revisao-geral.md`, os três índices de correções e o diário do FigCraft, em `tmp/figcraft/`.
+> **Estado:** revisão · **Dono:** UX · **Atualizado em:** 14/11/2026
+> **Arquivo de design:** `residuum-v7.figcraft`, feito no **FigCraft** (não no Figma). Os desenhos são exportados em **SVG** para o Figma.
+> **Fontes:** o próprio arquivo (reorganizado, ampliado e conferido em 13 e 14/11/2026), `revisao-geral.md`, os três índices de correções e o diário do FigCraft, em `tmp/figcraft/`.
 
 ## 1. O que está sendo entregue
 
@@ -10,12 +10,14 @@ Uma revisão de design completa do app, em três perfis, com **o antes e o depoi
 
 | Item | Quantidade |
 |---|---|
-| Perfis | 3: Usuário, Responsável e Cooperativa, Administrador |
+| Perfis | 4: Usuário, Responsável pelo ponto, Cooperativa e Administrador |
 | Módulos | 19 |
-| Telas novas (depois) | 82 |
-| Capturas do app atual (antes) | 36 |
+| Telas novas (depois) | 234: **celular 77**, **tablet 75**, **computador 82** (todos os perfis em cada tamanho) |
+| Telas de estado (vazio, carregando, erro) | **72**: 36 no celular e 36 no tablet, 3 telas por perfil |
+| Capturas do app atual (antes) | 36, nas páginas de comparativo |
 | Notas de correção (erro, por quê, como fica) | 33 |
-| Fluxos clicáveis | 12 |
+| Componentes reutilizáveis | 6 conjuntos com variantes (botão, campo, selo, estado da tela, item de lista, barra inferior) |
+| Fluxos clicáveis | 23 |
 | Documentos | Este, mais um por perfil: [Usuário](prototipo/usuario.md), [Responsável e Cooperativa](prototipo/cooperativa-e-ponto.md), [Administrador](prototipo/administrador.md) |
 
 ![Página "Comece aqui" do arquivo de design](prototipo/img/comece-aqui.png)
@@ -75,27 +77,39 @@ A comparação de azul, verde, logo, menu e avisos está na página **Para decid
 | **Modal** | Título, o impacto em uma frase, ação segura preenchida e ação destrutiva separada com borda vermelha |
 | **Aviso de apoio** | Itálico, 13 px, `#5F6B7A` (5,4 para 1) |
 | **Menu do Administrador** | Lateral, em 3 grupos: Operação, Pessoas e ofertas, Governança |
-| **Barra do celular** | Inferior, com o botão **+** centralizado para registrar resíduo |
+| **Barra do celular** | Inferior. Usuário: Início, Mapa, **+** (centro), Loja e Perfil. Responsável: Painel, Entregas, Conferência, Pedir coleta e Mais. Cooperativa: Painel, Coletas, Locais, Avulso e Conta. Administrador: Painel, Pontos, Coletas, Pagamentos e Mais |
+| **Estado da tela** | Três versões para toda lista: **vazio** (explica e oferece a ação), **carregando** (blocos cinza) e **erro** (aviso vermelho com "Tentar de novo") |
+
+### Biblioteca de componentes
+
+A página **8 · Tokens e componentes** tem, abaixo dos fundamentos, a biblioteca (criada em 14/11) com **6 conjuntos de componentes** e suas variantes. As telas já desenhadas ainda **não usam** esses componentes; eles servem para as telas novas e para os estados.
+
+| Conjunto | Variantes |
+|---|---|
+| Botão | Primário, Verde, Secundário, Perigo, Desabilitado |
+| Campo | Normal, Foco, Erro |
+| Selo | Ok, Atenção, Erro, Info, Neutro |
+| Estado da tela | Vazio, Carregando, Erro, Sucesso |
+| Item de lista | Normal, Alerta |
+| Barra inferior | Responsável, Cooperativa, Administrador |
 
 ## 4. Como o arquivo está organizado
 
-O arquivo tem **6 páginas**. Em cada página de perfil o desenho segue **sempre a mesma divisão**:
-
-1. **Faixa rosa, em cima: ANTIGO.** As capturas do app atual, por perfil e módulo, **cada uma com a nota logo abaixo** (erro, por quê, como fica).
-2. **Faixa verde, embaixo: NOVO.** O novo desenho, clicável, por perfil e módulo.
-
-Telas sem captura no antigo são **telas novas**. O tablet não tem antigo: o app atual não tem layout de tablet.
-
-Desde 13/11 (arquivo `residuum-v8.figcraft`) as páginas se separam **por tamanho de tela**:
+O arquivo `residuum-v7.figcraft` tem **9 páginas**, separadas **por tamanho de tela**. As páginas 2, 3 e 4 trazem **só as telas novas, de todos os perfis**; o antigo com as correções fica nas páginas de comparativo.
 
 | # | Página | Conteúdo |
 |---|---|---|
 | 1 | Comece aqui | Três cartões: celular, tablet e computador |
-| 2 | Celular · 390 px | Usuário (31), responsável (5) e cooperativa (8) no celular: 44 telas |
-| 3 | Tablet · 768 px | As mesmas 44 telas em 768 × 1024 |
-| 4 | Computador · 1440 px | 38 telas nativas (responsável 10, cooperativa 7, administrador 21) e as 44 do celular em 1440 × 900 |
-| 5 | Tokens e componentes | Cores, tipografia e peças |
-| 6 | Para decidir (comparar) | 5 quadros de comparação |
+| 2 | Celular · 390 px | **77 telas** dos 4 perfis, clicáveis, mais **36 telas de estado** (blocos "ESTADOS" à esquerda) |
+| 3 | Tablet · 768 px | **75 telas** dos 4 perfis, mais **36 telas de estado** (blocos "ESTADOS" à esquerda) |
+| 4 | Computador · 1440 px | **82 telas**: 38 nativas e as adaptadas do celular, em 1440 × 900 |
+| 5 | Comparativo · Celular | **Antigo em cima** (captura com a nota de erro logo abaixo) e **novo embaixo** (cópia da tela nova) |
+| 6 | Comparativo · Tablet | O tablet não tem antigo (o app atual não tem layout de tablet); mostra o novo com notas |
+| 7 | Comparativo · Computador | Antigo em cima e novo embaixo |
+| 8 | Tokens e componentes | Cores, tipografia e a biblioteca de componentes |
+| 9 | Para decidir (comparar) | 5 quadros de comparação |
+
+Os comparativos ainda **não incluem** as telas novas de administrador, responsável e cooperativa no celular e no tablet (só as que têm captura do antigo).
 
 **Nomes dos quadros:** `ANTES · USU · U05 · Início`, `DEPOIS · USU · U05 · Início`, `NOTA · USU · U05 · Correções`. As siglas são **USU** (usuário), **PONTO**, **COOP** e **ADM**.
 
@@ -175,9 +189,11 @@ Detalhe de cada tela: [administrador.md](prototipo/administrador.md).
 |---|---|
 | ![A05b](prototipo/img/A05b.png) | ![A09b](prototipo/img/A09b.png) |
 
-## 6. Os 12 fluxos
+## 6. Os 23 fluxos
 
 Um fluxo é um caminho de telas que se percorre clicando, no modo apresentação. A jornada central, **cadastrar, registrar o resíduo, entregar, ser confirmado, ganhar pontos e gastar na loja**, passa pelos fluxos do Usuário e pelo do Responsável, que confirma a entrega.
+
+Em 14/11 o arquivo passou de 12 para **23 fluxos**: os 12 originais e **11 novos** (administrador, responsável e cooperativa no celular e no tablet). A tabela abaixo lista os 12 originais; os novos seguem o mesmo padrão, com o sufixo "(celular)" ou "(tablet)" no nome.
 
 | Perfil | Fluxo | Começa em |
 |---|---|---|
@@ -204,51 +220,50 @@ Os diagramas dos caminhos de cada perfil estão nos documentos por perfil.
 | **Rotas** | Cada tela do app atual tem sua rota no [índice de telas](indice-de-telas.md); cada quadro do arquivo leva a rota no nome do "antes" |
 | **Regras de negócio** | Estão em [decisões pendentes](../00-diagnostico/decisoes-pendentes.md) (seção "Já decidido"); cada nota de correção cita a PD ou a decisão que a originou |
 | **Telas removidas** | `/campanha-heineken`, `/cadastro-ponto-coleta`, `/empresa`, `/confirmacao` e a aba "Solicitações pendentes" de `/admin-pontos` |
-| **Estados** | Existe "carregando" só no painel do ponto; vazio e erro ainda precisam ser desenhados |
+| **Estados** | Desenhados em 14/11 para 3 telas de cada perfil, no celular e no tablet (vazio, carregando e erro); os textos são **propostas**, sujeitas a aprovação. As demais telas e o computador ainda não têm estados |
 | **Dados** | Todos os dados do protótipo são fictícios |
 
 ## 8. Como abrir, apresentar e exportar
 
-1. Abra `tmp/figcraft/residuum-v8.figcraft` no aplicativo **FigCraft**. A pasta `tmp/` **não está no repositório**; ao trocar de computador, leve-a em ZIP.
-2. Comece pela página **1 · Comece aqui**, entre no **modo apresentação** e siga os 12 fluxos. As ligações foram conferidas por consulta, mas **o modo apresentação ainda não foi testado com cliques reais**.
+1. Abra `tmp/figcraft/residuum-v7.figcraft` no aplicativo **FigCraft**. A pasta `tmp/` **não está no repositório**; ao trocar de computador, leve-a em ZIP.
+2. Comece pela página **1 · Comece aqui**, entre no **modo apresentação** e siga os 23 fluxos. As ligações foram conferidas por consulta, mas **o modo apresentação ainda não foi testado com cliques reais**.
 3. Para o Figma: selecione os quadros **DEPOIS** e use **Exportar**, formato **SVG**. O texto sai como contorno (não editável); para manter o texto editável, exporte com texto como `<text>` e instale a fonte **Inter**. No Figma, arraste os `.svg` para a área de trabalho. `[VERIFICAR]` a importação não foi testada.
 4. O SVG leva só o **desenho**: não leva ligações de clique, componentes nem variáveis. Os SVG que existem em `tmp/figcraft/svg*` são de 12/11 (v6): **exporte de novo**.
 
-Arquivos de apoio em `tmp/figcraft/`: `residuum-v7.figcraft` (organização anterior, por perfil), `residuum-v7-antes-da-reorganizacao.figcraft`, `residuum-v6.figcraft`, `revisao-geral.md`, três índices de correções, `logo/`, `export/` e `screenshots/`. As **imagens** deste documento estão em [prototipo/img](prototipo/img/).
+Arquivos de apoio em `tmp/figcraft/`: `residuum-v7-por-perfil.figcraft` (organização anterior, por perfil), `residuum-v8.figcraft` (intermediário), `residuum-v7-antes-da-reorganizacao.figcraft`, `residuum-v6.figcraft`, `revisao-geral.md`, três índices de correções, `logo/`, `export/` e `screenshots/`. As **imagens** deste documento estão em [prototipo/img](prototipo/img/).
 
 ## 9. Estado da entrega e limites
 
 | Item | Situação |
 |---|---|
-| Estrutura (páginas por tamanho de tela; antigo com notas em cima, novo embaixo) | ✅ Feita em 13/11 (v8) |
-| Telas e fluxos | ✅ 82 telas e 12 fluxos preservados (as ligações não mudaram de lugar) |
-| Erro, por quê e como fica | ✅ Em uma nota logo abaixo de cada captura do antigo |
-| Três larguras por tela (celular, tablet, computador) | ✅ **44 telas de celular** (31 do Usuário e 13 de Responsável e Cooperativa) têm tablet (768 × 1024) e computador (1440 × 900), com a regra de largura máxima. 🟡 As **52 telas de computador** ainda não têm tablet nem celular: precisam de desenho próprio (seção 10) |
+| Estrutura (9 páginas: tamanhos, comparativos, tokens, para decidir) | ✅ Feita em 13/11 e ampliada em 14/11 |
+| Telas e fluxos | ✅ Celular 77, tablet 75 e computador 82 telas, de todos os perfis; 23 fluxos |
+| Erro, por quê e como fica | ✅ Em uma nota logo abaixo de cada captura do antigo (páginas de comparativo) |
+| Três larguras por tela | ✅ Os 4 perfis têm celular, tablet e computador desenhados (seção 10) |
+| Navegação alinhada | ✅ Responsável (5 itens) e cooperativa (5 itens) iguais nas telas antigas e novas |
+| Quantidades | ✅ Em unidades inteiras ("1 un.") em todas as telas; as notas de correção mantêm o exemplo antigo |
+| Biblioteca de componentes | ✅ 6 conjuntos com variantes; as telas existentes ainda não usam instâncias |
+| Estados de vazio, erro e carregando | 🟡 72 telas (3 por perfil, celular e tablet); falta o computador e as demais telas. Textos são propostas |
+| Comparativos | 🟡 Sem as telas novas de administrador, responsável e cooperativa no celular e no tablet |
 | Modo apresentação | ⬜ Não testado com cliques reais |
-| Estados de vazio, erro e carregando | ⬜ Só o painel do ponto tem "carregando" |
 | Exportação dos SVG do v7 e importação no Figma | ⬜ Pendente |
-| Fora do desenho | Aba "Vouchers", passo 3 de nova campanha, detalhe completo da campanha, conferência em 390 px, landing e telas fora do piloto |
+| Itens sem destino | O item "Conta" da cooperativa no celular não leva a tela; alguns itens do menu do tablet levam às telas antigas em coluna central |
+| Fora do desenho | Aba "Vouchers", passo 3 de nova campanha, detalhe completo da campanha, landing |
 | Toque | O menu lateral do Administrador (40 px) e "Editar" e "Mais" nas tabelas ficaram abaixo de 44 px |
 | Capturas "antes" de 1440 px | Baixa resolução (800 × 500, esticadas) |
 
-As decisões de design em aberto estão em [decisões pendentes](../00-diagnostico/decisoes-pendentes.md).
+## 10. Três larguras
 
-## 10. Três larguras: o que foi feito e o que falta
+Os 4 perfis existem em **três tamanhos**, cada um em sua página: **celular (390 × 844)**, **tablet (768 × 1024)** e **computador (1440 × 900)**.
 
-As **44 telas de celular** (31 do Usuário e 13 de Responsável e Cooperativa no celular) agora existem em **três tamanhos**: celular (o desenho original), **tablet (768 × 1024)** e **computador (1440 × 900)**. Os quadros novos têm o mesmo nome do original, com o sufixo `TABLET 768×1024` ou `COMPUTADOR 1440×900`.
-
-- **Tablet:** na página **3 · Tablet · 768 px**, por perfil e módulo.
-- **Computador:** na página **4 · Computador · 1440 px**, na última faixa verde ("telas do celular em 1440 px").
-- **Limite:** os botões dessas versões ainda levam às telas do celular, que ficam em outra página; pode não funcionar na apresentação.
-
-![Exemplo: telas do Usuário em tablet e computador](prototipo/img/piloto-responsivo.png)
-
-| Tamanho | Regra aplicada |
+| Tamanho | Como é desenhado |
 |---|---|
-| Celular | O desenho original, 390 × 844 |
-| Tablet | O app mantém a **coluna central de 390 px**, com margens maiores (largura máxima) |
-| Computador | A mesma coluna, centralizada |
+| Celular | Barra inferior (5 itens por perfil), cartões no lugar de tabelas, botões de 44 px ou mais |
+| Tablet | Menu lateral de 208 px, conteúdo em 1 ou 2 colunas. O usuário segue a coluna central de 390 px, com margens |
+| Computador | Menu lateral e tabelas, em 1440 × 900 |
 
-**Limites:** é a regra de **largura máxima**, e não um novo desenho para tablet e computador. A barra de navegação inferior continua na coluna e não vira menu lateral. Os botões das variantes ainda levam aos quadros de celular, e não às variantes.
+**Estados:** os blocos "ESTADOS" das páginas de celular e tablet trazem vazio, carregando e erro de 3 telas por perfil.
 
-**O que falta:** as **52 telas de computador** (Responsável, Cooperativa e Administrador) precisam de um **desenho próprio** para tablet e celular (menu que recolhe, tabelas viram cartões). Isso é trabalho de design: encolher essas telas deixaria o texto pequeno demais para ler.
+![Estados do Meu estoque: vazio, carregando e erro](prototipo/img/estados-u12.png)
+
+**Limites:** algumas telas antigas do tablet (Entregas, Pedir coleta, Solicitações da cooperativa) ainda usam a coluna central e não o menu lateral; as cópias nas páginas de tablet e computador mostram a barra nova, mas sem links.

@@ -2,8 +2,8 @@
 
 [Voltar ao protótipo](../prototipo-figcraft.md)
 
-> **Estado:** revisão · **Dono:** UX · **Atualizado em:** 13/11/2026
-> **Arquivo:** `residuum-v8.figcraft`, página **2 · Celular · 390 px** (tablet na página 3 e computador na 4) · **Tamanho das telas:** celular, 390 × 844
+> **Estado:** revisão · **Dono:** UX · **Atualizado em:** 14/11/2026
+> **Arquivo:** `residuum-v7.figcraft`, página **2 · Celular · 390 px** (tablet na página 3, computador na 4 e antigo com correções nos comparativos 5 a 7). Estados de vazio, carregando e erro (Meu estoque, Extrato e Loja) em blocos "ESTADOS" das páginas 2 e 3 · **Tamanho das telas:** celular, 390 × 844
 > **Fontes:** `indice-correcoes-usuario.md` e `revisao-geral.md` do FigCraft; as regras vêm das decisões de 11 e 12/11/2026.
 
 ## Resumo
@@ -356,6 +356,6 @@ Landing (`/`, com FAQ que promete caridade, ingressos e pontos por kg), `/welcom
 
 ## Pontos a observar
 
-- Em **U13** o desenho mostra "0,5 un." de PET, e a regra de quantidade inteira (achado F23) pede unidades inteiras. O dado é fictício do protótipo; vale conferir ao implementar.
+- A regra de quantidade inteira (achado F23) foi aplicada em 14/11: as telas mostram "1 un." (antes havia "0,5 un." em U12, U13 e U15). O dado é fictício do protótipo.
 - Os dados de todas as telas são **fictícios** (nomes como "Maria Souza" e e-mails `@exemplo.com`).
 - Só foram vistos os estados com dados; vazio, erro e carregando não foram desenhados de forma sistemática.
