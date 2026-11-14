@@ -1,7 +1,7 @@
 # Prompt de retomada
 
 > **Como usar:** abra o Claude Code em qualquer computador e **cole tudo o que está abaixo da linha** no chat. Ele prepara o ambiente, lê o que foi feito e te diz onde parou. Você não precisa explicar nada.
-> **Atualizado em:** 13/11/2026, ao fim do dia. **Atualize este arquivo** sempre que mudar a branch, o roteiro ou as regras.
+> **Atualizado em:** 14/11/2026, ao fim do dia. **Atualize este arquivo** sempre que mudar a branch, o roteiro ou as regras.
 
 ---
 
@@ -115,6 +115,6 @@ Depois **pare e espere** a resposta dele.
 - Registrar no `decisoes-pendentes.md` o resultado da reunião de arquitetura.
 - Corrigir os textos que ainda falam em **convite**: backlog (TSK-MOR-001 e outros), `docs/planejamento/modulos`, `docs/requisitos` e o M01 (que só tem um aviso no topo).
 - Corrigir **RN-017 e RN-018** (pagamento manual no piloto) e conferir se a API tem 111 ou 113 rotas (SAD × API).
-- Protótipo FigCraft: `docs/03-ux/prototipo-figcraft.md` descreve o estado de 13/11 (v7 reorganizado; 44 telas de celular em três larguras). Falta tablet e celular das 52 telas de computador, o teste do modo apresentação e a exportação dos SVG.
+- Protótipo FigCraft (`tmp/figcraft/residuum-v7.figcraft`, fora do repositório): em 14/11 ficou com celular 77 / tablet 75 / computador 82 telas, 72 estados, 6 componentes e o **redesenho v2 do celular** (14 telas e 36 estados). `docs/03-ux/prototipo-figcraft.md` descreve o estado até os estados do tablet, **sem o v2**. Falta: levar o v2 ao tablet e ao computador, trocar as telas antigas pelas v2, atualizar os documentos, testar o modo apresentação e exportar os SVG. A lista completa está no [diário de 14/11](diario-de-bordo/2026-11-14.md).
 
 **Comece agora pela Fase 1.**
