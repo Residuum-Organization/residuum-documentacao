@@ -1,8 +1,8 @@
 # TSK-MOR-025 — Administrar e adquirir vouchers
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 1493 a 1550) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 1493 a 1550) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Administrar e adquirir vouchers.
@@ -57,6 +57,6 @@ PD-012. Vincular às fichas TSK-DEC correspondentes. Avançar diagnóstico, inte
 
 **Rastreabilidade:** RF-MVP-029; RNF-MVP-002, RNF-MVP-003, RNF-MVP-008, RNF-MVP-009; RN-019; ficha [TSK-MOR-025 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-020](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-020).
 
-**Casos detalhados e ficha de origem:** [TSK-MOR-025](../../../planejamento/modulos/m05.md#tsk-mor-025).
+**Casos detalhados e ficha de origem:** [TSK-MOR-025](../../../historico/modulos-e-tasks/m05.md#tsk-mor-025).
 
 <a id="tsk-mor-026"></a>

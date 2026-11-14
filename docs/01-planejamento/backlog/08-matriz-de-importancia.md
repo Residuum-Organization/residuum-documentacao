@@ -1,8 +1,8 @@
 # 8. Matriz de importância
 
-[Voltar ao índice](../../planejamento/modulos/README.md)
+[Voltar ao índice](../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 5520 a 5660) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 5520 a 5660) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Eixos escolhidos:** impacto na entrega × urgência. As classificações abaixo são propostas documentais, não estimativas nem decisões definitivas do analista. Responsáveis, datas e ordenação final permanecem a definir.
@@ -136,7 +136,7 @@ Não somar estes recortes novamente às atividades de origem.
 | TEC-05 — Autorização | Alto | Urgente | Restrição de acesso acompanha todas as entregas |
 | TEC-06 — Regressões e entrega | Alto | Urgente | Iniciar com a base e acompanhar todas as sprints |
 
-[Abrir fichas técnicas](../../planejamento/modulos/arquitetura-refatoracao-banco.md).
+[Abrir fichas técnicas](../../historico/modulos-e-tasks/arquitetura-refatoracao-banco.md).
 
 ### Revisão pelo analista/equipe
 

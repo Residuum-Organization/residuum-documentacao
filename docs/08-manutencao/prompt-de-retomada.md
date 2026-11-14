@@ -11,8 +11,8 @@ Você é o Claude Code. Está ajudando o Vinicius (conta GitHub **Vinny1313**) a
 
 - O Residuum é uma plataforma que premia **usuários** com pontos por entregar **PET e latas de alumínio** em pontos de coleta. Cooperativas recolhem; o administrador coordena.
 - Toda a documentação fica em **https://github.com/Residuum-Organization/residuum-documentacao** (só arquivos `.md`). O código está em repositórios separados (`residuum-backend`, `residuum-frontend`).
-- A documentação tem 9 pastas (`docs/00-diagnostico` a `docs/08-manutencao`). Em 11/11/2026 as partes 1 a 3 foram **mescladas na `main`** (PRs #5, #6, #8 e #9).
-- O trabalho de 11 e 12/11 depois disso está na branch **`docs/revisao-2026-11-11-casos-de-teste`**, **ainda não mesclada e sem PR**. O Vinicius pediu para **não abrir PR** por enquanto.
+- A documentação tem 10 pastas numeradas (`docs/00-diagnostico` a `docs/09-pesquisa`) e `docs/historico` para o que foi substituído. Em 11/11/2026 as partes 1 a 3 foram mescladas na `main` (PRs #5, #6, #8 e #9).
+- Em 14/11/2026 a **PR #10** (revisão de 11 a 14/11, protótipo FigCraft v7) foi **mesclada na `main`**. A reorganização das pastas está na branch `docs/organizacao-do-repositorio`.
 - O Vinicius está **lendo os documentos do roteiro e dando o parecer**: **19 de 26 feitos**. O próximo é o **nº 20, Guia de deploy**.
 - O Vinicius se perde com facilidade: explique em passos curtos, **uma coisa de cada vez**, em português simples. Para decisões, faça perguntas com opções e diga qual você recomenda.
 
@@ -23,8 +23,8 @@ Você é o Claude Code. Está ajudando o Vinicius (conta GitHub **Vinny1313**) a
    `git clone https://github.com/Residuum-Organization/residuum-documentacao.git`
 3. Atualize e escolha a branch:
    - `git fetch --all --prune`
-   - `git switch docs/revisao-2026-11-11-casos-de-teste && git pull` (é a branch **mais completa**).
-   - Se ela não existir mais porque já foi mesclada: `git switch main && git pull`.
+   - `git switch main && git pull` (a revisão de 11 a 14/11 já está na `main`).
+   - Se a reorganização (`docs/organizacao-do-repositorio`) ainda não foi mesclada, use essa branch.
 4. Leia, nesta ordem:
    1. `docs/08-manutencao/diario-de-bordo/2026-11-13.md` (comece por **"Como retomar"**)
    2. `docs/00-diagnostico/roteiro-de-revisao.md`
@@ -113,7 +113,7 @@ Depois **pare e espere** a resposta dele.
 **Do Claude (documentação)**
 - Ler com o Vinicius os documentos **20 a 26** do roteiro.
 - Registrar no `decisoes-pendentes.md` o resultado da reunião de arquitetura.
-- Corrigir os textos que ainda falam em **convite**: backlog (TSK-MOR-001 e outros), `docs/planejamento/modulos`, `docs/requisitos` e o M01 (que só tem um aviso no topo).
+- Corrigir os textos que ainda falam em **convite**: backlog (TSK-MOR-001 e outros), `docs/historico/modulos-e-tasks`, `docs/01-planejamento/regras` e o M01 (que só tem um aviso no topo).
 - Corrigir **RN-017 e RN-018** (pagamento manual no piloto) e conferir se a API tem 111 ou 113 rotas (SAD × API).
 - Protótipo FigCraft (`tmp/figcraft/residuum-v7.figcraft`, fora do repositório): em 14/11 ficou com celular 77 / tablet 75 / computador 82 telas, 72 estados, 6 componentes e o **redesenho v2 do celular** (14 telas e 36 estados). `docs/03-ux/prototipo-figcraft.md` descreve o estado até os estados do tablet, **sem o v2**. Falta: levar o v2 ao tablet e ao computador, trocar as telas antigas pelas v2, atualizar os documentos, testar o modo apresentação e exportar os SVG. A lista completa está no [diário de 14/11](diario-de-bordo/2026-11-14.md).
 

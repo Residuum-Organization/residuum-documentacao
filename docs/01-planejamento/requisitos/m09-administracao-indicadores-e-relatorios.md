@@ -2,7 +2,7 @@
 
 [Voltar ao índice](README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/requisitos/requisitos-mvp-v6.md` (linhas 1053 a 1105) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/01-planejamento/regras/requisitos-mvp-v6.md` (linhas 1053 a 1105) em 10/11/2026. Corrija aqui, não na origem.
 
 
 #### RF-MVP-047 — Disponibilizar visão administrativa da operação

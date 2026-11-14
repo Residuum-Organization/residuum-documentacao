@@ -1,8 +1,8 @@
 # TSK-ADM-007 — Classificar contexto e funcionamento do ponto
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 2521 a 2576) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 2521 a 2576) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Classificar contexto e funcionamento do ponto.
@@ -55,6 +55,6 @@ PD-009. Vincular às fichas TSK-DEC correspondentes. Avançar diagnóstico, inte
 
 **Rastreabilidade:** RF-MVP-033; RNF-MVP-001, RNF-MVP-002; ficha [TSK-ADM-007 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-013](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-013).
 
-**Casos detalhados e ficha de origem:** [TSK-ADM-007](../../../planejamento/modulos/m06.md#tsk-adm-007).
+**Casos detalhados e ficha de origem:** [TSK-ADM-007](../../../historico/modulos-e-tasks/m06.md#tsk-adm-007).
 
 <a id="tsk-adm-008"></a>

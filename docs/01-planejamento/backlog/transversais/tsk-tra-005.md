@@ -1,8 +1,8 @@
 # TSK-TRA-005 — Resiliência de localização e consulta externa
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 3445 a 3500) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 3445 a 3500) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Resiliência de localização e consulta externa.
@@ -55,6 +55,6 @@ Não há pendência específica citada; confirmar as condições comuns antes de
 
 **Rastreabilidade:** RNF-MVP-004; ficha [TSK-TRA-005 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-007](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-007), [ADE-008](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-008), [ADE-009](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-009), [ADE-010](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-010), [ADE-016](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-016).
 
-**Casos detalhados e ficha de origem:** [TSK-TRA-005](../../../planejamento/modulos/transversal.md#tsk-tra-005).
+**Casos detalhados e ficha de origem:** [TSK-TRA-005](../../../historico/modulos-e-tasks/transversal.md#tsk-tra-005).
 
 <a id="tsk-tra-006"></a>

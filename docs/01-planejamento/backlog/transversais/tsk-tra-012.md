@@ -1,8 +1,8 @@
 # TSK-TRA-012 — Padronização e entrega técnica
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 3830 a 3882) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 3830 a 3882) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Padronização e entrega técnica.
@@ -52,6 +52,6 @@ Não há pendência específica citada; confirmar as condições comuns antes de
 
 **Rastreabilidade:** RNF-MVP-011; ficha [TSK-TRA-012 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-000](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-000), [ADE-024](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-024).
 
-**Casos detalhados e ficha de origem:** [TSK-TRA-012](../../../planejamento/modulos/transversal.md#tsk-tra-012).
+**Casos detalhados e ficha de origem:** [TSK-TRA-012](../../../historico/modulos-e-tasks/transversal.md#tsk-tra-012).
 
 <a id="tsk-tra-013"></a>

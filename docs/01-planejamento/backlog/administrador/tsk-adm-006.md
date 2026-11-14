@@ -1,8 +1,8 @@
 # TSK-ADM-006 — Gerir pontos temporários
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 2465 a 2520) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 2465 a 2520) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Gerir pontos temporários.
@@ -55,6 +55,6 @@ PD-009. Vincular às fichas TSK-DEC correspondentes. Avançar diagnóstico, inte
 
 **Rastreabilidade:** RF-MVP-032; RNF-MVP-001, RNF-MVP-002; RN-021; ficha [TSK-ADM-006 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-013](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-013).
 
-**Casos detalhados e ficha de origem:** [TSK-ADM-006](../../../planejamento/modulos/m06.md#tsk-adm-006).
+**Casos detalhados e ficha de origem:** [TSK-ADM-006](../../../historico/modulos-e-tasks/m06.md#tsk-adm-006).
 
 <a id="tsk-adm-007"></a>

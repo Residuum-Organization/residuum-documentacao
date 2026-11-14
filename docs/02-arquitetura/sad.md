@@ -1,7 +1,7 @@
 # Arquitetura de Software (SAD)
 
 > **Estado:** revisão · **Dono:** Tecnologia · **Atualizado em:** 11/11/2026
-> **Fontes:** código do backend (branch `feature/mor-025-026-vouchers-sorteios`, `11f0d8e`) e do frontend (`package.json`, `App.jsx`, `ci.yml`), [stacks e integrações](../tecnologia/stacks-e-integracoes.md), [mapa de branches](../tecnologia/mapa-de-branches.md), propostas das análises.
+> **Fontes:** código do backend (branch `feature/mor-025-026-vouchers-sorteios`, `11f0d8e`) e do frontend (`package.json`, `App.jsx`, `ci.yml`), [stacks e integrações](stacks-e-integracoes.md), [mapa de branches](mapa-de-branches.md), propostas das análises.
 > **Pendências:** ver "O que falta para fechar" · Decisões de arquitetura aceitas em [adr/](adr/README.md)
 
 ## Resumo

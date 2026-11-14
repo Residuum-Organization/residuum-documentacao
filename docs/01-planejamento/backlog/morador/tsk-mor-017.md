@@ -1,8 +1,8 @@
 # TSK-MOR-017 — Creditar recompensa básica provisória
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 1042 a 1098) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 1042 a 1098) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Creditar recompensa básica provisória.
@@ -56,6 +56,6 @@ PD-010. Vincular às fichas TSK-DEC correspondentes. Avançar diagnóstico, inte
 
 **Rastreabilidade:** RF-MVP-021; RNF-MVP-002, RNF-MVP-003, RNF-MVP-008, RNF-MVP-009; RN-008, RN-010, RN-016; ficha [TSK-MOR-017 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-011](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-011).
 
-**Casos detalhados e ficha de origem:** [TSK-MOR-017](../../../planejamento/modulos/m04.md#tsk-mor-017).
+**Casos detalhados e ficha de origem:** [TSK-MOR-017](../../../historico/modulos-e-tasks/m04.md#tsk-mor-017).
 
 <a id="tsk-mor-018"></a>

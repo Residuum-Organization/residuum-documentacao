@@ -13,7 +13,7 @@ As decisões que travavam a documentação foram tomadas em 11, 12 e 13/11/2026 
 | # | Tema | Pergunta | Ref. | Enquanto isso |
 |---|---|---|---|---|
 | 1 | Janela de 60 min | Ela agrupa o **descarte** ou só o **crédito**? Quem confirma: o grupo ou cada envio? | [PD-010](../01-planejamento/decisoes/pd-010.md) | Sem valor; precisa de resposta antes da onda 1 |
-| 2 | Cadastro aberto | Qual proteção contra robôs entra já (limite de tentativas, captcha)? | [controle de acesso](../pesquisa/controle-de-acesso.md) | Sem proteção |
+| 2 | Cadastro aberto | Qual proteção contra robôs entra já (limite de tentativas, captcha)? | [controle de acesso](../09-pesquisa/controle-de-acesso.md) | Sem proteção |
 | 3 | Cadastro aberto | Filtrar quem pode se cadastrar (por exemplo, domínio de e-mail ou ponto)? | idem | Sem filtro |
 | 4 | Saldos antigos | Reconciliar os saldos creditados em dobro ou zerar e recalcular? Há usuários reais no banco? | [ADR-0001](../02-arquitetura/adr/0001-livro-unico-de-pontos.md) | Depende de conferir o banco |
 | 5 | Loja | As faixas de recompensa mudam, agora que o ponto vale 10 por descarte? | [PD-010](../01-planejamento/decisoes/pd-010.md) | Manter as atuais |
@@ -28,7 +28,7 @@ As decisões que travavam a documentação foram tomadas em 11, 12 e 13/11/2026 
 | 14 | Qualidade e operação | Metas de desempenho, disponibilidade, RPO e RTO | [PD-025](../01-planejamento/decisoes/pd-025.md), [PD-026](../01-planejamento/decisoes/pd-026.md) | RPO 24 h e RTO 4 h do DLR antigo, a validar |
 | 15 | Design | Azul da marca (código `#1A2C71`, documentação `#1F4E79` ou logo `#00206E`), verde (contraste de texto), logo (a oficial do Drive ou a do app), menu da cooperativa (plano ou agrupado) e avisos "sujeito a decisão" (manter ou esconder na apresentação) | [protótipo](../03-ux/prototipo-figcraft.md) | Valores do protótipo atual; quadros de comparação na página "Para decidir" |
 | 16 | Descartes | O administrador também aprova ou rejeita descartes, além do operador do ponto? | [PD-006](../01-planejamento/decisoes/pd-006.md) | O protótipo mantém "Aprovar" e "Rejeitar" na visão do administrador |
-| 17 | Teto de contas | Existe um limite máximo para o teto (por exemplo, 1000) ou o administrador pode digitar qualquer valor? | [controle de acesso](../pesquisa/controle-de-acesso.md) | O campo aceita qualquer valor |
+| 17 | Teto de contas | Existe um limite máximo para o teto (por exemplo, 1000) ou o administrador pode digitar qualquer valor? | [controle de acesso](../09-pesquisa/controle-de-acesso.md) | O campo aceita qualquer valor |
 
 ### Seguem com valor provisório
 

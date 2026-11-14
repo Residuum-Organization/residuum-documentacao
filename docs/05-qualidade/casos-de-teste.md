@@ -65,11 +65,11 @@ Status: ⬜ planejado · ✅ passou · ❌ falhou. Hoje **nenhum foi executado**
 |---|---|---|---|---|---|
 | CT-ACE-01 | PD-001 | Cadastro aberto; 100 contas | Cadastrar sem código | Conta criada; vagas −1 | ⬜ |
 | CT-ACE-02 | PD-001 | E-mail já cadastrado | Cadastrar de novo | 409 e-mail em uso; vagas inalteradas | ⬜ |
-| CT-ACE-03 | [acesso](../pesquisa/controle-de-acesso.md) | 500 contas; admin sobe o teto para 1000 | Cadastrar a 501ª pessoa | Conta criada; cadastros seguem até 1000 | ⬜ |
-| CT-ACE-04 | [acesso](../pesquisa/controle-de-acesso.md) | 499 contas; 2 pessoas | Cadastram ao mesmo tempo | Só **uma** entra; a outra recebe o aviso e vai à lista de espera; total 500 | ⬜ |
+| CT-ACE-03 | [acesso](../09-pesquisa/controle-de-acesso.md) | 500 contas; admin sobe o teto para 1000 | Cadastrar a 501ª pessoa | Conta criada; cadastros seguem até 1000 | ⬜ |
+| CT-ACE-04 | [acesso](../09-pesquisa/controle-de-acesso.md) | 499 contas; 2 pessoas | Cadastram ao mesmo tempo | Só **uma** entra; a outra recebe o aviso e vai à lista de espera; total 500 | ⬜ |
 | CT-ACE-05 | D-CT-03 | Conta excluída hoje | 1. Vaga volta 2. Mesmo e-mail recadastra | Vaga volta (total −1); recadastro do mesmo e-mail recusado por 30 dias | ⬜ |
-| CT-ACE-06 | [acesso](../pesquisa/controle-de-acesso.md) | 500 contas cheias; usuário que já tem conta | Fazer login | Entra normalmente; o teto só barra cadastros novos | ⬜ |
-| CT-ACE-07 | [acesso](../pesquisa/controle-de-acesso.md) | 500 contas | Tentar cadastrar | Aviso "sem vagas" + opção de lista de espera | ⬜ |
+| CT-ACE-06 | [acesso](../09-pesquisa/controle-de-acesso.md) | 500 contas cheias; usuário que já tem conta | Fazer login | Entra normalmente; o teto só barra cadastros novos | ⬜ |
+| CT-ACE-07 | [acesso](../09-pesquisa/controle-de-acesso.md) | 500 contas | Tentar cadastrar | Aviso "sem vagas" + opção de lista de espera | ⬜ |
 
 ## Cadastro de resíduos
 

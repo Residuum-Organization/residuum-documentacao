@@ -1,8 +1,8 @@
 # TSK-MOR-019 — Consultar saldo e extrato de pontos
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 1156 a 1212) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 1156 a 1212) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Consultar saldo e extrato de pontos.
@@ -56,6 +56,6 @@ PD-010, PD-012. Vincular às fichas TSK-DEC correspondentes. Avançar diagnósti
 
 **Rastreabilidade:** RF-MVP-023; RNF-MVP-001, RNF-MVP-002; ficha [TSK-MOR-019 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-012](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-012).
 
-**Casos detalhados e ficha de origem:** [TSK-MOR-019](../../../planejamento/modulos/m04.md#tsk-mor-019).
+**Casos detalhados e ficha de origem:** [TSK-MOR-019](../../../historico/modulos-e-tasks/m04.md#tsk-mor-019).
 
 <a id="tsk-mor-020"></a>

@@ -1,8 +1,8 @@
 # 7. Arquitetura, refatoração e banco
 
-[Voltar ao índice](../../planejamento/modulos/README.md)
+[Voltar ao índice](../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 5404 a 5519) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 5404 a 5519) em 10/11/2026. Corrija aqui, não na origem.
 
 
 As seis fichas abaixo desdobram trabalho técnico já previsto nos pacotes ADE. Seus identificadores TEC são recortes de execução; não são seis novas funcionalidades nem devem ser somados às 93 atividades como escopo independente. Manter vínculo ao cartão TSK/ADE pertinente; se criar subtarefas no quadro, evitar duplicar status e contabilização.
@@ -61,7 +61,7 @@ As seis fichas abaixo desdobram trabalho técnico já previsto nos pacotes ADE. 
 
 **Dependências:** TEC-01/02, acessos, ponto, GPS e contratos aprovados do recorte. **Origem:** ADE-011; TSK-MOR-015, TSK-MOR-017, TSK-TRA-004; AUD-001/002; PD-006/009/010.
 
-**Evidências de entrega:** revisão, contrato e registros antes/depois na API e no banco de avaliação. **Testes planejados:** CT-011-01 a CT-011-03 do [roteiro integrado](../../planejamento/modulos/testes-integrados.md), com concorrência no banco de avaliação pertinente.
+**Evidências de entrega:** revisão, contrato e registros antes/depois na API e no banco de avaliação. **Testes planejados:** CT-011-01 a CT-011-03 do [roteiro integrado](../../historico/modulos-e-tasks/testes-integrados.md), com concorrência no banco de avaliação pertinente.
 
 ### TEC-04 — Adequar retirada e conciliação da coleta
 

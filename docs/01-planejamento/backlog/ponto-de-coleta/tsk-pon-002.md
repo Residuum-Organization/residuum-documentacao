@@ -1,8 +1,8 @@
 # TSK-PON-002 — Acompanhar estoque e ocupação do ponto
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 1676 a 1735) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 1676 a 1735) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Acompanhar estoque e ocupação do ponto.
@@ -59,6 +59,6 @@ PD-009, PD-014, PD-019, PD-018. Vincular às fichas TSK-DEC correspondentes. Ava
 
 **Rastreabilidade:** RF-MVP-035; RNF-MVP-001, RNF-MVP-002; RN-015, RN-021; ficha [TSK-PON-002 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-004](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-004), [ADE-014](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-014), [ADE-017](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-017).
 
-**Casos detalhados e ficha de origem:** [TSK-PON-002](../../../planejamento/modulos/m06.md#tsk-pon-002).
+**Casos detalhados e ficha de origem:** [TSK-PON-002](../../../historico/modulos-e-tasks/m06.md#tsk-pon-002).
 
 <a id="tsk-pon-003"></a>

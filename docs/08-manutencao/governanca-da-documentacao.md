@@ -39,7 +39,7 @@ Regras simples para a documentação **parar de se contradizer**: um lugar só, 
 | Ação | Item |
 |---|---|
 | Arquivar | `backend/GUIA-INTEGRACAO-FRONT.md`, `PEDENCIAS-ENVIADAS-PELO-FRONT.md` |
-| Unificar | `docs/requisitos`, `backend/docs/requisitos.md`, `frontend/docs/requisitos.md` |
+| Unificar | `docs/01-planejamento/regras`, `backend/docs/requisitos.md`, `frontend/docs/requisitos.md` |
 | Converter | PDFs em `frontend/docs/` |
 | Fatiar | `tasks-gerais.md`, `decisoes.md`, V6 |
 | Remover | pasta `tmp/` |

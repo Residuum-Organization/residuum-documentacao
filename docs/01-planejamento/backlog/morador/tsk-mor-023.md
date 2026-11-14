@@ -1,8 +1,8 @@
 # TSK-MOR-023 — Consultar detalhes e condições da campanha
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 1380 a 1435) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 1380 a 1435) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Consultar detalhes e condições da campanha.
@@ -55,6 +55,6 @@ PD-011. Vincular às fichas TSK-DEC correspondentes. Avançar diagnóstico, inte
 
 **Rastreabilidade:** RF-MVP-027; RNF-MVP-001, RNF-MVP-002; RN-019; ficha [TSK-MOR-023 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-019](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-019).
 
-**Casos detalhados e ficha de origem:** [TSK-MOR-023](../../../planejamento/modulos/m05.md#tsk-mor-023).
+**Casos detalhados e ficha de origem:** [TSK-MOR-023](../../../historico/modulos-e-tasks/m05.md#tsk-mor-023).
 
 <a id="tsk-mor-024"></a>

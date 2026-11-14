@@ -1,8 +1,8 @@
 # TSK-MOR-004 — Consultar e editar perfil
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 285 a 340) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 285 a 340) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Consultar e editar perfil.
@@ -55,6 +55,6 @@ PD-003. Vincular às fichas TSK-DEC correspondentes. Avançar diagnóstico, inte
 
 **Rastreabilidade:** RF-MVP-007; RNF-MVP-001, RNF-MVP-002; ficha [TSK-MOR-004 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-003](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-003).
 
-**Casos detalhados e ficha de origem:** [TSK-MOR-004](../../../planejamento/modulos/m01.md#tsk-mor-004).
+**Casos detalhados e ficha de origem:** [TSK-MOR-004](../../../historico/modulos-e-tasks/m01.md#tsk-mor-004).
 
 <a id="tsk-mor-005"></a>

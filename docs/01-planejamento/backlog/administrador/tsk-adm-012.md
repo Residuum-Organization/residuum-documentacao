@@ -1,8 +1,8 @@
 # TSK-ADM-012 — Acompanhar confirmação e falhas de pagamento
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 2815 a 2871) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 2815 a 2871) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Acompanhar confirmação e falhas de pagamento.
@@ -56,6 +56,6 @@ PD-016. Vincular às fichas TSK-DEC correspondentes. Avançar diagnóstico, inte
 
 **Rastreabilidade:** RF-MVP-046; RNF-MVP-002, RNF-MVP-003, RNF-MVP-008, RNF-MVP-009; RN-017, RN-018; ficha [TSK-ADM-012 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-018](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-018).
 
-**Casos detalhados e ficha de origem:** [TSK-ADM-012](../../../planejamento/modulos/m08.md#tsk-adm-012).
+**Casos detalhados e ficha de origem:** [TSK-ADM-012](../../../historico/modulos-e-tasks/m08.md#tsk-adm-012).
 
 <a id="tsk-adm-013"></a>

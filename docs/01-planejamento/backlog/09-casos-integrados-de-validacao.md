@@ -1,8 +1,8 @@
 # 9. Casos integrados de validação
 
-[Voltar ao índice](../../planejamento/modulos/README.md)
+[Voltar ao índice](../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 5661 a 6592) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 5661 a 6592) em 10/11/2026. Corrija aqui, não na origem.
 
 
 Desdobramento dos 29 cenários da seção 13 da V6. São casos planejados; não foram executados nesta adequação. Complementam os casos das atividades e os requisitos de qualidade. Dados numéricos aqui são exemplos sintéticos de avaliação; políticas e valores comerciais precisam de aprovação. Condições não definidas impedem homologação do trecho dependente.
@@ -11,7 +11,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-001 — Usar convite individual duas vezes e em paralelo
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M01. **Atividades:** TSK-ADM-001, TSK-MOR-001.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M01. **Atividades:** TSK-ADM-001, TSK-MOR-001.
 
 #### CT-001-01 — uso inicial
 
@@ -69,7 +69,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-002 — Concorrer pela última vaga de convite compartilhado
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M01. **Atividades:** TSK-ADM-002, TSK-MOR-001.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M01. **Atividades:** TSK-ADM-002, TSK-MOR-001.
 
 #### CT-002-01 — última vaga
 
@@ -91,7 +91,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-003 — Abrir link expirado e enviar cadastro inválido
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M01. **Atividades:** TSK-ADM-001, TSK-MOR-001.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M01. **Atividades:** TSK-ADM-001, TSK-MOR-001.
 
 #### CT-003-01 — expiração
 
@@ -131,7 +131,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-004 — Registrar manualmente duas latas
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M02. **Atividades:** TSK-MOR-008, TSK-MOR-010.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M02. **Atividades:** TSK-MOR-008, TSK-MOR-010.
 
 #### CT-004-01 — registro
 
@@ -153,7 +153,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-005 — Importar nota com PET, lata e item sem material identificável
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M02. **Atividades:** TSK-MOR-007, TSK-MOR-009.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M02. **Atividades:** TSK-MOR-007, TSK-MOR-009.
 
 #### CT-005-01 — revisão
 
@@ -175,7 +175,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-006 — Falhar scanner/consulta de produto/nota
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M02. **Atividades:** TSK-MOR-006, TSK-MOR-007, TSK-MOR-008.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M02. **Atividades:** TSK-MOR-006, TSK-MOR-007, TSK-MOR-008.
 
 #### CT-006-01 — scanner
 
@@ -233,7 +233,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-007 — Descarte rápido de lata de Coca-Cola identificada
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M02, M03, M04. **Atividades:** TSK-MOR-005, TSK-MOR-014, TSK-MOR-015, TSK-MOR-017.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M02, M03, M04. **Atividades:** TSK-MOR-005, TSK-MOR-014, TSK-MOR-015, TSK-MOR-017.
 
 #### CT-007-01 — rápido
 
@@ -255,7 +255,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-008 — Selecionar parte do estoque para entrega
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M02, M03. **Atividades:** TSK-MOR-010, TSK-MOR-015.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M02, M03. **Atividades:** TSK-MOR-010, TSK-MOR-015.
 
 #### CT-008-01 — parcial
 
@@ -277,7 +277,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-009 — Entregar PET em ponto que não aceita PET
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M03, M06. **Atividades:** TSK-MOR-011, TSK-MOR-015, TSK-PON-001.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M03, M06. **Atividades:** TSK-MOR-011, TSK-MOR-015, TSK-PON-001.
 
 #### CT-009-01 — incompatível
 
@@ -299,7 +299,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-010 — Negar GPS, usar posição antiga ou fora do raio aprovado
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M03. **Atividades:** TSK-MOR-014, TSK-MOR-015.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M03. **Atividades:** TSK-MOR-014, TSK-MOR-015.
 
 #### CT-010-01 — permissão negada
 
@@ -375,7 +375,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-011 — Reenviar confirmação e provocar falha concorrente
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M03, M04. **Atividades:** TSK-MOR-015, TSK-MOR-017, TSK-TRA-004.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M03, M04. **Atividades:** TSK-MOR-015, TSK-MOR-017, TSK-TRA-004.
 
 #### CT-011-01 — reenvio
 
@@ -433,7 +433,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-012 — Concluir descarte elegível a campanha
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M04, M05. **Atividades:** TSK-MOR-018, TSK-MOR-020, TSK-MOR-024.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M04, M05. **Atividades:** TSK-MOR-018, TSK-MOR-020, TSK-MOR-024.
 
 #### CT-012-01 — bônus
 
@@ -455,7 +455,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-013 — Comprar voucher sem saldo e depois com saldo
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M04, M05. **Atividades:** TSK-MOR-021, TSK-MOR-025.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M04, M05. **Atividades:** TSK-MOR-021, TSK-MOR-025.
 
 #### CT-013-01 — saldo insuficiente
 
@@ -495,7 +495,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-014 — Participar em sorteio conforme regra aprovada
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M05. **Atividades:** TSK-MOR-026.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M05. **Atividades:** TSK-MOR-026.
 
 #### CT-014-01 — participação
 
@@ -517,7 +517,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-015 — Encerrar ponto temporário com material remanescente
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M06. **Atividades:** TSK-ADM-006.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M06. **Atividades:** TSK-ADM-006.
 
 #### CT-015-01 — encerramento
 
@@ -539,7 +539,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-016 — Editar materiais aceitos no ponto
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M06. **Atividades:** TSK-PON-001.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M06. **Atividades:** TSK-PON-001.
 
 #### CT-016-01 — materiais
 
@@ -561,7 +561,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-017 — Responsável solicitar retirada
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M06. **Atividades:** TSK-PON-004.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M06. **Atividades:** TSK-PON-004.
 
 #### CT-017-01 — pedido
 
@@ -583,7 +583,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-018 — Administrador solicitar e cooperativa aceitar
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M07. **Atividades:** TSK-ADM-009, TSK-COO-001.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M07. **Atividades:** TSK-ADM-009, TSK-COO-001.
 
 #### CT-018-01 — aceite
 
@@ -605,7 +605,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-019 — Cooperativa registrar 12 kg PET e 3 kg alumínio
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M07. **Atividades:** TSK-COO-004.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M07. **Atividades:** TSK-COO-004.
 
 #### CT-019-01 — pesagem
 
@@ -627,7 +627,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-020 — Registrar coleta parcial
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M06, M07. **Atividades:** TSK-PON-002, TSK-COO-004.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M06, M07. **Atividades:** TSK-PON-002, TSK-COO-004.
 
 #### CT-020-01 — retirada parcial
 
@@ -649,7 +649,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-021 — Concluir coleta sem pagar
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M07, M08. **Atividades:** TSK-COO-004, TSK-ADM-012.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M07, M08. **Atividades:** TSK-COO-004, TSK-ADM-012.
 
 #### CT-021-01 — separação de estados
 
@@ -671,7 +671,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-022 — Administrador iniciar pagamento e repetir após timeout
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M08. **Atividades:** TSK-ADM-011.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M08. **Atividades:** TSK-ADM-011.
 
 #### CT-022-01 — timeout
 
@@ -693,7 +693,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-023 — Receber retorno de pagamento inválido, repetido ou incerto
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M08. **Atividades:** TSK-ADM-012.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M08. **Atividades:** TSK-ADM-012.
 
 #### CT-023-01 — retorno inválido
 
@@ -751,7 +751,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-024 — Solicitar relatório sem benefício de plano
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M09, M10. **Atividades:** TSK-PON-005, TSK-TRA-001.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M09, M10. **Atividades:** TSK-PON-005, TSK-TRA-001.
 
 #### CT-024-01 — sem benefício
 
@@ -773,7 +773,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-025 — Ter plano pago e pedir dados de ponto sem autorização
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M10. **Atividades:** TSK-TRA-001.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M10. **Atividades:** TSK-TRA-001.
 
 #### CT-025-01 — sem vínculo
 
@@ -795,7 +795,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-026 — Exibir ativo, aberto e conectado
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M09. **Atividades:** TSK-ADM-014.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M09. **Atividades:** TSK-ADM-014.
 
 #### CT-026-01 — indicadores
 
@@ -817,7 +817,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-027 — Adicionar imagem/vídeo válido e inválido
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M11. **Atividades:** TSK-ADM-017.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M11. **Atividades:** TSK-ADM-017.
 
 #### CT-027-01 — mídia válida
 
@@ -857,7 +857,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-028 — Abrir confirmação e seguir para Home ou Loja
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M03. **Atividades:** TSK-MOR-016.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** M03. **Atividades:** TSK-MOR-016.
 
 #### CT-028-01 — Home
 
@@ -897,7 +897,7 @@ Para cada execução preencher: executor, data, ambiente, versão, resultado obs
 
 ### CT-029 — Restaurar backup e investigar crédito/pagamento
 
-**Origem:** [V6, seção 13](../../requisitos/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** TRANSVERSAL. **Atividades:** TSK-TRA-008, TSK-TRA-009.
+**Origem:** [V6, seção 13](../../historico/requisitos-mvp-v6.md#13-cenários-integrados-de-validação). **Módulos:** TRANSVERSAL. **Atividades:** TSK-TRA-008, TSK-TRA-009.
 
 #### CT-029-01 — restauração
 

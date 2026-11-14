@@ -1,8 +1,8 @@
 # TSK-TRA-008 — Disponibilidade, backups e recuperação
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 3611 a 3665) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 3611 a 3665) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Disponibilidade, backups e recuperação.
@@ -54,6 +54,6 @@ Não há pendência específica citada; confirmar as condições comuns antes de
 
 **Rastreabilidade:** RNF-MVP-007; ficha [TSK-TRA-008 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-026](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-026).
 
-**Casos detalhados e ficha de origem:** [TSK-TRA-008](../../../planejamento/modulos/transversal.md#tsk-tra-008).
+**Casos detalhados e ficha de origem:** [TSK-TRA-008](../../../historico/modulos-e-tasks/transversal.md#tsk-tra-008).
 
 <a id="tsk-tra-009"></a>

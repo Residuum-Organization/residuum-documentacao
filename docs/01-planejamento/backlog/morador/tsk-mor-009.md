@@ -1,8 +1,8 @@
 # TSK-MOR-009 — Revisar itens antes da inclusão
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 574 a 627) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 574 a 627) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Revisar itens antes da inclusão.
@@ -53,6 +53,6 @@ PD-005. Vincular às fichas TSK-DEC correspondentes. Avançar diagnóstico, inte
 
 **Rastreabilidade:** RF-MVP-013; RNF-MVP-001, RNF-MVP-002; RN-003, RN-004, RN-005; ficha [TSK-MOR-009 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-005](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-005), [ADE-007](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-007), [ADE-008](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-008).
 
-**Casos detalhados e ficha de origem:** [TSK-MOR-009](../../../planejamento/modulos/m02.md#tsk-mor-009).
+**Casos detalhados e ficha de origem:** [TSK-MOR-009](../../../historico/modulos-e-tasks/m02.md#tsk-mor-009).
 
 <a id="tsk-mor-010"></a>

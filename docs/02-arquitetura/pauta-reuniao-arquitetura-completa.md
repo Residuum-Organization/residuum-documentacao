@@ -3,7 +3,7 @@
 [Voltar à pauta enxuta](pauta-reuniao-arquitetura.md)
 
 > **Estado:** revisão · **Dono:** Produto e Tecnologia · **Preparado em:** 11/11/2026 para a reunião de 12/11/2026
-> **Fontes:** [regras de negócio](../01-planejamento/requisitos/07-regras-de-negocio-consolidadas.md), [SAD](sad.md), [ADRs](adr/README.md), [diagramas](diagramas.md), [modelo de dados](modelo-de-dados.md), [decisões pendentes](../00-diagnostico/decisoes-pendentes.md), [casos de teste](../05-qualidade/casos-de-teste.md), [estudo de capacidade e coleta](../pesquisa/capacidade-e-execucao-da-coleta.md).
+> **Fontes:** [regras de negócio](../01-planejamento/requisitos/07-regras-de-negocio-consolidadas.md), [SAD](sad.md), [ADRs](adr/README.md), [diagramas](diagramas.md), [modelo de dados](modelo-de-dados.md), [decisões pendentes](../00-diagnostico/decisoes-pendentes.md), [casos de teste](../05-qualidade/casos-de-teste.md), [estudo de capacidade e coleta](../09-pesquisa/capacidade-e-execucao-da-coleta.md).
 > **Lacunas:** a coluna "Decisão" da seção 5 fica em branco até a reunião.
 
 ## Resumo
@@ -44,7 +44,7 @@ Tudo abaixo foi decidido pelo Vinicius em 11/11/2026, salvo quando indicado. **N
 | Regra | Valor | Fonte |
 |---|---|---|
 | Entrada | Cadastro **aberto, sem código**. A pessoa cria a conta e depois entra normalmente | decisão de 12/11/2026 |
-| Teto | **500 contas**, com trava de vagas no banco. O valor é **configurável** e pode subir para **1000** | [controle de acesso](../pesquisa/controle-de-acesso.md) |
+| Teto | **500 contas**, com trava de vagas no banco. O valor é **configurável** e pode subir para **1000** | [controle de acesso](../09-pesquisa/controle-de-acesso.md) |
 | Sem vaga | Aviso e **lista de espera** | idem |
 | Conta excluída | **Anonimiza** (não apaga) e **devolve a vaga** | PD-022 |
 | Código de acesso | **Não existe mais** (decisão de 12/11/2026): dava trabalho para gerar e repassar e atrapalhava o cadastro. O único controle é o teto | idem |
@@ -55,7 +55,7 @@ Tudo abaixo foi decidido pelo Vinicius em 11/11/2026, salvo quando indicado. **N
 
 | Regra | Valor | Fonte |
 |---|---|---|
-| Entradas | Código de barras e QR da nota fiscal, **dentro do MVP**; cadastro manual como alternativa | [fontes](../pesquisa/fontes-de-produtos-e-notas.md) |
+| Entradas | Código de barras e QR da nota fiscal, **dentro do MVP**; cadastro manual como alternativa | [fontes](../09-pesquisa/fontes-de-produtos-e-notas.md) |
 | Falha de leitura | Aviso vermelho a cada falha; **manual recomendado a partir da 2ª** | idem |
 | Material | **Sugestão automática + confirmação do usuário sempre** | idem |
 | Campos do manual | Material e quantidade inteira obrigatórios; nome opcional (D-CT-11) | casos de teste |
@@ -259,7 +259,7 @@ Encontradas ao preparar esta pauta. **Não bloqueiam a reunião**, mas o arquite
 |---|---|---|
 | [RN-001 e RN-002](../01-planejamento/requisitos/07-regras-de-negocio-consolidadas.md) | Falavam em **convite** | **Corrigido em 12/11:** cadastro aberto com teto de contas |
 | RN-017 e RN-018 | Pagamento "por API" e "evidência do provedor" | No piloto é **manual com comprovante**; API depois |
-| [Estudo de coleta](../pesquisa/capacidade-e-execucao-da-coleta.md) × [casos de teste](../05-qualidade/casos-de-teste.md) | O estudo propõe **avisar o admin** no silêncio e **campo de data** para reagendar; os casos (D-CT-08 e 09) adotam **expirar em 48 h** e **uma remarcação** | Valem os casos (aprovados); atualizar o estudo |
+| [Estudo de coleta](../09-pesquisa/capacidade-e-execucao-da-coleta.md) × [casos de teste](../05-qualidade/casos-de-teste.md) | O estudo propõe **avisar o admin** no silêncio e **campo de data** para reagendar; os casos (D-CT-08 e 09) adotam **expirar em 48 h** e **uma remarcação** | Valem os casos (aprovados); atualizar o estudo |
 | [ADR-0005](adr/0005-conta-com-ciclo-de-vida.md) | Previa código de acesso | **Corrigido em 12/11:** sem código; só o teto |
 | [SAD](sad.md) | Diz 111 endpoints; a [API](../04-desenvolvimento/api.md) conta 113 | Conferir qual vale |
 | Casos D-CT-01 a 11 | Aprovados, mas fora dos requisitos | Registrar nos requisitos e em decisões |

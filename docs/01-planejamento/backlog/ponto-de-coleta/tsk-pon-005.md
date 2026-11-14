@@ -1,8 +1,8 @@
 # TSK-PON-005 — Consultar relatórios dos pontos
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 1849 a 1905) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 1849 a 1905) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Consultar relatórios dos pontos.
@@ -56,6 +56,6 @@ PD-020, PD-019. Vincular às fichas TSK-DEC correspondentes. Avançar diagnósti
 
 **Rastreabilidade:** RF-MVP-049; RNF-MVP-001, RNF-MVP-002; RN-020; ficha [TSK-PON-005 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-022](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-022), [ADE-023](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-023).
 
-**Casos detalhados e ficha de origem:** [TSK-PON-005](../../../planejamento/modulos/m09.md#tsk-pon-005).
+**Casos detalhados e ficha de origem:** [TSK-PON-005](../../../historico/modulos-e-tasks/m09.md#tsk-pon-005).
 
 <a id="cooperativa"></a>

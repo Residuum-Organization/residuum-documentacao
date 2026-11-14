@@ -1,8 +1,8 @@
 # TSK-MOR-018 — Aplicar bônus de campanha
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 1099 a 1155) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 1099 a 1155) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Aplicar bônus de campanha.
@@ -56,6 +56,6 @@ PD-011. Vincular às fichas TSK-DEC correspondentes. Avançar diagnóstico, inte
 
 **Rastreabilidade:** RF-MVP-022; RNF-MVP-001, RNF-MVP-002; RN-009; ficha [TSK-MOR-018 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-019](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-019).
 
-**Casos detalhados e ficha de origem:** [TSK-MOR-018](../../../planejamento/modulos/m04.md#tsk-mor-018).
+**Casos detalhados e ficha de origem:** [TSK-MOR-018](../../../historico/modulos-e-tasks/m04.md#tsk-mor-018).
 
 <a id="tsk-mor-019"></a>

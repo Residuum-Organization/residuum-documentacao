@@ -1,8 +1,8 @@
 # TSK-MOR-006 — Identificar produto por código de barras
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 403 a 458) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 403 a 458) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Identificar produto por código de barras.
@@ -55,6 +55,6 @@ PD-004. Vincular às fichas TSK-DEC correspondentes. Avançar diagnóstico, inte
 
 **Rastreabilidade:** RF-MVP-010; RNF-MVP-001, RNF-MVP-002; RN-003, RN-004; ficha [TSK-MOR-006 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-007](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-007).
 
-**Casos detalhados e ficha de origem:** [TSK-MOR-006](../../../planejamento/modulos/m02.md#tsk-mor-006).
+**Casos detalhados e ficha de origem:** [TSK-MOR-006](../../../historico/modulos-e-tasks/m02.md#tsk-mor-006).
 
 <a id="tsk-mor-007"></a>

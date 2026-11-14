@@ -1,8 +1,8 @@
 # TSK-TRA-002 — Plataforma responsiva e compatibilidade
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 3281 a 3335) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 3281 a 3335) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Plataforma responsiva e compatibilidade.
@@ -54,6 +54,6 @@ Não há pendência específica citada; confirmar as condições comuns antes de
 
 **Rastreabilidade:** RNF-MVP-001; ficha [TSK-TRA-002 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-026](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-026).
 
-**Casos detalhados e ficha de origem:** [TSK-TRA-002](../../../planejamento/modulos/transversal.md#tsk-tra-002).
+**Casos detalhados e ficha de origem:** [TSK-TRA-002](../../../historico/modulos-e-tasks/transversal.md#tsk-tra-002).
 
 <a id="tsk-tra-003"></a>

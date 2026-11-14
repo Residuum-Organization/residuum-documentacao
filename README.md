@@ -1,40 +1,47 @@
-# Residuum — documentação para o time
+# Residuum: documentação
 
-## Comece pelas tasks
+Plataforma que premia **usuários** com pontos por entregar **PET e latas de alumínio** em pontos de coleta. Cooperativas recolhem; o administrador coordena. Projeto de Manaus (AM).
 
-**[Abrir o documento geral das tasks](docs/planejamento/modulos/tasks-gerais.md)**
+> Este repositório guarda **só a documentação** (arquivos `.md`). O código fica em `residuum-backend` (FastAPI) e `residuum-frontend` (React).
 
-Referência principal para organizar as 93 atividades no modelo da equipe: objetivo, responsável, início, entrega, descrição, regras, critérios de aceite, dependências e evidências. Inclui matriz de importância, recortes de arquitetura/refatoração/banco e vínculos para os testes detalhados.
+## Comece por aqui
 
-**[Abrir a proposta de Scrum e sprints](docs/planejamento/modulos/scrum-e-sequencia.md)**
-
-Sequência de entregas: **usuário → ponto de coleta → cooperativa → administrador**, com QA durante as sprints e um ciclo final de integração. A proposta deve ser refinada conforme capacidade e decisões da equipe.
-
-Responsáveis, datas individuais e conteúdo definitivo das sprints estão **a definir pela equipe**. O prazo informado é **20/11/2026**; não é uma garantia de conclusão de todo o backlog.
-
-## Pesquisa da ideia e do negócio
-
-**[Abrir o índice das pesquisas](docs/pesquisa/README.md)**
-
-Pesquisas de mercado e concorrentes, sistema de pontos, dados no Amazonas, monetização, expansão territorial, piloto e validação com o ecossistema. O índice também reúne as fontes, hipóteses e questões pendentes. Esses documentos apoiam a descoberta e o embasamento do negócio; decisões aprovadas continuam registradas nos requisitos e no planejamento.
-
-## Consulta de apoio
-
-| Preciso consultar | Documento |
+| Eu quero... | Abra |
 |---|---|
-| Navegação das mesmas atividades por módulo | [Guia dos módulos](docs/planejamento/modulos/README.md) |
-| Impacto na entrega × urgente/não urgente | [Matriz de importância](docs/planejamento/modulos/matriz-importancia.md) |
-| Acompanhamento do time | [Uso do Kanban](docs/planejamento/kanban-miro.md) |
-| Comportamento e decisões do produto | [Requisitos V6](docs/requisitos/requisitos-mvp-v6.md) e [regras de negócio](docs/requisitos/regras-de-negocio.md) |
-| Contexto e solução | [Visão do projeto](docs/visao/visao-do-projeto.md) |
-| Base examinada e resultados anteriores | [Estudos](docs/estudos/estudos-do-projeto.md) e [diagnóstico](docs/diagnostico/comparativo-mvp-estagio-v1.md) |
-| Testes com usuários e limites das evidências | [Roteiro](docs/ux/morador-v6-teste-usuarios.md) e [validação registrada](docs/ux/morador-v6-validacao.md) |
-| Tecnologias e reuniões | [Stacks](docs/tecnologia/stacks-e-integracoes.md) e [rotina de reuniões](docs/planejamento/rotina-de-reunioes.md) |
+| Entender o produto e o escopo | [Visão e escopo](docs/01-planejamento/visao-e-escopo.md) |
+| Ver o que já foi decidido e o que falta | [Decisões pendentes](docs/00-diagnostico/decisoes-pendentes.md) |
+| Ver requisitos e regras | [PRD/SRS](docs/01-planejamento/prd-srs.md) · [Regras de negócio](docs/01-planejamento/regras/regras-de-negocio.md) |
+| Pegar uma tarefa | [Backlog e histórias](docs/01-planejamento/backlog-e-historias.md) |
+| Entender a arquitetura | [SAD](docs/02-arquitetura/sad.md) · [ADRs](docs/02-arquitetura/adr/) |
+| Ver as telas | [Protótipo FigCraft](docs/03-ux/prototipo-figcraft.md) |
+| Testar | [Plano de testes](docs/05-qualidade/plano-de-testes.md) |
+| Publicar | [Guia de deploy](docs/06-operacao/guia-de-deploy.md) |
+| Retomar o trabalho de documentação | [Prompt de retomada](docs/08-manutencao/prompt-de-retomada.md) |
+| Contribuir | [CONTRIBUTING](CONTRIBUTING.md) |
 
-[Abrir o guia completo dos documentos](docs/README.md).
+## Estrutura
 
-## Documentos anteriores
+```text
+docs/
+├── 00-diagnostico/     diagnóstico, decisões em aberto, roteiro de revisão
+├── 01-planejamento/    visão, PRD, backlog, decisões PD, regras de negócio
+├── 02-arquitetura/     SAD, ADRs, modelo de dados, diagramas, stacks
+├── 03-ux/              protótipo FigCraft e índice de telas
+├── 04-desenvolvimento/ API
+├── 05-qualidade/       plano e casos de teste
+├── 06-operacao/        deploy e notas de versão
+├── 07-usuario/         manual do usuário
+├── 08-manutencao/      diário de bordo, governança, reuniões, prompt de retomada
+├── 09-pesquisa/        mercado, concorrentes, pontos, piloto, pagamento
+└── historico/          versões antigas, só para rastreio
+```
 
-**[Abrir o histórico](docs/historico/README.md).** Tasks V1, pacotes de adequação, guias anteriores e versões antigas ficam separados para rastreabilidade. Para o trabalho atual, use o documento geral destacado acima.
+Guia completo: [docs/README.md](docs/README.md).
 
-Os documentos distinguem requisitos, propostas, testes planejados e evidências executadas. Uma demonstração ou uma marcação histórica de conclusão não comprova homologação do sistema integrado.
+## Regras do repositório
+
+- Só `.md`; diagramas em Mermaid.
+- Uma decisão em aberto vive em **um só lugar**: [decisões pendentes](docs/00-diagnostico/decisoes-pendentes.md).
+- O que é substituído vai para [`docs/historico`](docs/historico/README.md); nada é apagado.
+- Mudanças entram por Pull Request.
+- Documento preparado não é teste executado: os textos separam requisito, proposta, teste planejado e evidência.

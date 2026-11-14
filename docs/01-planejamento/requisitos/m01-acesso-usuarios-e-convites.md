@@ -2,9 +2,9 @@
 
 [Voltar ao índice](README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/requisitos/requisitos-mvp-v6.md` (linhas 212 a 358) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/01-planejamento/regras/requisitos-mvp-v6.md` (linhas 212 a 358) em 10/11/2026. Corrija aqui, não na origem.
 
-> ⚠️ **Revisto em 12/11/2026:** o texto abaixo é a cópia da V6 e fala em **convites e códigos**. Isso foi **descartado**: o cadastro agora é **aberto**, controlado por um **teto de contas** (500, configurável; pode subir a 1000) com trava de vagas no banco. Vale a regra nova; ver [controle de acesso](../../pesquisa/controle-de-acesso.md) e [PD-001](../decisoes/pd-001.md).
+> ⚠️ **Revisto em 12/11/2026:** o texto abaixo é a cópia da V6 e fala em **convites e códigos**. Isso foi **descartado**: o cadastro agora é **aberto**, controlado por um **teto de contas** (500, configurável; pode subir a 1000) com trava de vagas no banco. Vale a regra nova; ver [controle de acesso](../../09-pesquisa/controle-de-acesso.md) e [PD-001](../decisoes/pd-001.md).
 
 
 #### RF-MVP-001 — Gerenciar convites individuais

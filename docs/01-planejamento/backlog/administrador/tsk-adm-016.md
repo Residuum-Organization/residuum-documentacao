@@ -1,8 +1,8 @@
 # TSK-ADM-016 — Associar contratação e vigência de plano
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 3040 a 3095) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 3040 a 3095) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Associar contratação e vigência de plano.
@@ -55,6 +55,6 @@ PD-019. Vincular às fichas TSK-DEC correspondentes. Avançar diagnóstico, inte
 
 **Rastreabilidade:** RF-MVP-051; RNF-MVP-001, RNF-MVP-002; RN-020; ficha [TSK-ADM-016 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-022](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-022).
 
-**Casos detalhados e ficha de origem:** [TSK-ADM-016](../../../planejamento/modulos/m10.md#tsk-adm-016).
+**Casos detalhados e ficha de origem:** [TSK-ADM-016](../../../historico/modulos-e-tasks/m10.md#tsk-adm-016).
 
 <a id="tsk-adm-017"></a>

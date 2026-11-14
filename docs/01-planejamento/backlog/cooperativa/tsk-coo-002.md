@@ -1,8 +1,8 @@
 # TSK-COO-002 — Fornecer rota e agendamento no painel
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 1972 a 2027) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 1972 a 2027) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Fornecer rota e agendamento no painel.
@@ -55,6 +55,6 @@ PD-017. Vincular às fichas TSK-DEC correspondentes. Avançar diagnóstico, inte
 
 **Rastreabilidade:** RF-MVP-041; RNF-MVP-001, RNF-MVP-002; RN-014; ficha [TSK-COO-002 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-016](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-016).
 
-**Casos detalhados e ficha de origem:** [TSK-COO-002](../../../planejamento/modulos/m07.md#tsk-coo-002).
+**Casos detalhados e ficha de origem:** [TSK-COO-002](../../../historico/modulos-e-tasks/m07.md#tsk-coo-002).
 
 <a id="tsk-coo-003"></a>

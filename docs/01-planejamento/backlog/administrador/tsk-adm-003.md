@@ -1,8 +1,8 @@
 # TSK-ADM-003 — Cadastrar usuário pela administração
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 2288 a 2346) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 2288 a 2346) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Cadastrar usuário pela administração.
@@ -58,6 +58,6 @@ PD-002, PD-003, PD-022. Vincular às fichas TSK-DEC correspondentes. Avançar di
 
 **Rastreabilidade:** RF-MVP-004; RNF-MVP-001, RNF-MVP-002; RN-001; ficha [TSK-ADM-003 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-002](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-002).
 
-**Casos detalhados e ficha de origem:** [TSK-ADM-003](../../../planejamento/modulos/m01.md#tsk-adm-003).
+**Casos detalhados e ficha de origem:** [TSK-ADM-003](../../../historico/modulos-e-tasks/m01.md#tsk-adm-003).
 
 <a id="tsk-adm-004"></a>

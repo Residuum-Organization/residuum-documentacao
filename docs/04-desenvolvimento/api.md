@@ -68,7 +68,7 @@ A API é **REST em JSON**, feita em FastAPI, com **113 rotas** (111 nos 15 arqui
 | POST | `/pontos-coleta` | admin | — |
 | GET | `/pontos-coleta` | logado | 🟡 dizer se o ponto está disponível e o motivo (cheio, fechado) |
 | GET | `/pontos-coleta/{ponto_id}` | logado | — |
-| GET | `/pontos-coleta/{ponto_id}/dashboard` | admin, cooperativa, ponto_coleta | 🟡 ocupação mistura kg e unidades ([estudo](../pesquisa/capacidade-e-execucao-da-coleta.md)) |
+| GET | `/pontos-coleta/{ponto_id}/dashboard` | admin, cooperativa, ponto_coleta | 🟡 ocupação mistura kg e unidades ([estudo](../09-pesquisa/capacidade-e-execucao-da-coleta.md)) |
 | PUT | `/pontos-coleta/{ponto_id}` | admin, cooperativa | 🟠 o **responsável vinculado** também edita materiais, com autoria |
 | PUT | `/pontos-coleta/{ponto_id}/horarios` | admin, cooperativa | — |
 | GET | `/meu-ponto-coleta` | ponto_coleta, cooperativa, admin | 🟠 com N:N, devolver **a lista** de pontos do responsável |

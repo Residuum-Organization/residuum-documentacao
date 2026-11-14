@@ -30,7 +30,7 @@ flowchart LR
 
 ## 1. Cadastro do usuário e teto de contas
 
-**Já decidido:** cadastro **aberto, sem código**; **teto de 500 contas** (configurável, pode subir a 1000) com trava de vagas no banco; conta excluída devolve a vaga; sem vaga, aviso e lista de espera. Detalhes em [controle de acesso](../pesquisa/controle-de-acesso.md).
+**Já decidido:** cadastro **aberto, sem código**; **teto de 500 contas** (configurável, pode subir a 1000) com trava de vagas no banco; conta excluída devolve a vaga; sem vaga, aviso e lista de espera. Detalhes em [controle de acesso](../09-pesquisa/controle-de-acesso.md).
 
 **Como construir**
 
@@ -191,4 +191,4 @@ Bancos tradicionais cobram Pix de empresas: por exemplo, até R$ 10 por envio ([
 
 ## Fontes da pesquisa
 
-Busca na internet em 12/11/2026, sem testes: [caniuse: BarcodeDetector](https://caniuse.com/mdn-api_barcodedetector) · [benchmark zxing-wasm](https://www.dynamsoft.com/codepool/benchmark-barcode-reading-javascript-zxing-wasm-dynamsoft-barcode-reader.html) · [Open Food Facts](https://openfoodfacts.github.io/documentation/docs/Product-Opener/api/) · [GS1 Brasil](https://www.gs1br.org/educacao-e-eventos/Documents/Manual_API_de_Consulta_GS1.pdf) · [QR da NFC-e](https://oobj.com.br/bc/rejeicao-396-como-resolver) · [Decreto 34.459/2014](https://www.contabeis.com.br/legislacao/65185/decreto-34459-2014/) · [Infosimples SEFAZ-AM](https://infosimples.com/consultas/sefaz-am-nfce/) · [Asaas: transferências](https://docs.asaas.com/docs/webhook-para-transferencias) · [Efí: envio de Pix](https://dev.efipay.com.br/en/docs/api-pix/envio-pagamento-pix/). Pesquisas anteriores: [fontes de produtos e notas](../pesquisa/fontes-de-produtos-e-notas.md) e [provedores de pagamento](../pesquisa/provedores-de-pagamento.md).
+Busca na internet em 12/11/2026, sem testes: [caniuse: BarcodeDetector](https://caniuse.com/mdn-api_barcodedetector) · [benchmark zxing-wasm](https://www.dynamsoft.com/codepool/benchmark-barcode-reading-javascript-zxing-wasm-dynamsoft-barcode-reader.html) · [Open Food Facts](https://openfoodfacts.github.io/documentation/docs/Product-Opener/api/) · [GS1 Brasil](https://www.gs1br.org/educacao-e-eventos/Documents/Manual_API_de_Consulta_GS1.pdf) · [QR da NFC-e](https://oobj.com.br/bc/rejeicao-396-como-resolver) · [Decreto 34.459/2014](https://www.contabeis.com.br/legislacao/65185/decreto-34459-2014/) · [Infosimples SEFAZ-AM](https://infosimples.com/consultas/sefaz-am-nfce/) · [Asaas: transferências](https://docs.asaas.com/docs/webhook-para-transferencias) · [Efí: envio de Pix](https://dev.efipay.com.br/en/docs/api-pix/envio-pagamento-pix/). Pesquisas anteriores: [fontes de produtos e notas](../09-pesquisa/fontes-de-produtos-e-notas.md) e [provedores de pagamento](../09-pesquisa/provedores-de-pagamento.md).

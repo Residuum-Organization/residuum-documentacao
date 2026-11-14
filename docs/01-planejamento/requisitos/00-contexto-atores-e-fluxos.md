@@ -2,7 +2,7 @@
 
 [Voltar ao índice](README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/requisitos/requisitos-mvp-v6.md` (linhas 1 a 209) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/01-planejamento/regras/requisitos-mvp-v6.md` (linhas 1 a 209) em 10/11/2026. Corrija aqui, não na origem.
 
 # Residuum — Levantamento de requisitos do MVP
 
@@ -64,8 +64,8 @@ Não são compromissos do MVP: cashback em dinheiro, ranking competitivo, confir
 
 | Referência | Fonte | Uso nesta versão |
 |---|---|---|
-| S1 | [Visão do projeto](../../visao/visao-do-projeto.md) | Visão de negócio, cadeia de resíduos, monetização por dados |
-| S2 | [Referências](../../visao/referencias.md) | Inspirações de negócio; links não tratados como prova de integração disponível |
+| S1 | [Visão do projeto](../../historico/visao/visao-do-projeto.md) | Visão de negócio, cadeia de resíduos, monetização por dados |
+| S2 | [Referências](../../historico/visao/referencias.md) | Inspirações de negócio; links não tratados como prova de integração disponível |
 | S3 | [Levantamento V4](../../historico/levantamento-requisitos-v4.md) | Catálogo original e priorização |
 | S4 | [Levantamento V5](../../historico/levantamento-requisitos-v5.md) | Revisão do GPS e catálogo de RF/RNF |
 | S5 | [Backlog V2](../../historico/backlog-v2.md) | Histórico declarado, divergências de escopo e status |
@@ -186,7 +186,7 @@ flowchart TD
     tela --> loja["Ir para a Loja"]
 ```
 
-Decisão aprovada em 10/10/2026 para RF-MVP-014/PD-006: o caminho rápido mantém rascunho somente na memória do fluxo. Cancelar, sair do fluxo, recarregar ou fechar a aba elimina o rascunho. Abrir a rota em outra aba mantém os itens; ao retornar é obrigatório obter GPS novo. Registro não gera pontos e confirmação não duplica efeitos. Ver [handoff do usuário](../../ux/morador-v6-handoff.md).
+Decisão aprovada em 10/10/2026 para RF-MVP-014/PD-006: o caminho rápido mantém rascunho somente na memória do fluxo. Cancelar, sair do fluxo, recarregar ou fechar a aba elimina o rascunho. Abrir a rota em outra aba mantém os itens; ao retornar é obrigatório obter GPS novo. Registro não gera pontos e confirmação não duplica efeitos. Ver [handoff do usuário](../../historico/ux-v6-e-v2/morador-v6-handoff.md).
 
 ### 5.2 Jornada da coleta
 

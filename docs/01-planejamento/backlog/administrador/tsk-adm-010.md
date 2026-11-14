@@ -1,8 +1,8 @@
 # TSK-ADM-010 — Preparar informações de pagamento
 
-[Voltar ao módulo](../../../planejamento/modulos/README.md)
+[Voltar ao módulo](../../../historico/modulos-e-tasks/README.md)
 
-> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/planejamento/modulos/tasks-gerais.md` (linhas 2698 a 2756) em 10/11/2026. Corrija aqui, não na origem.
+> **Estado:** revisão · **Origem:** fatiado sem alterar o texto de `docs/historico/modulos-e-tasks/tasks-gerais.md` (linhas 2698 a 2756) em 10/11/2026. Corrija aqui, não na origem.
 
 
 **Nome da atividade:** Preparar informações de pagamento.
@@ -58,6 +58,6 @@ PD-015, PD-016. Vincular às fichas TSK-DEC correspondentes. Avançar diagnósti
 
 **Rastreabilidade:** RF-MVP-044; RNF-MVP-001, RNF-MVP-002; RN-017; ficha [TSK-ADM-010 original](../../../historico/planejamento-anterior-2026-10-13/tasks-desenvolvimento-mvp-v1.md). Pacotes: [ADE-018](../../../historico/planejamento-anterior-2026-10-13/tasks-adequacao-reativacao-mvp-v1.md#ade-018).
 
-**Casos detalhados e ficha de origem:** [TSK-ADM-010](../../../planejamento/modulos/m08.md#tsk-adm-010).
+**Casos detalhados e ficha de origem:** [TSK-ADM-010](../../../historico/modulos-e-tasks/m08.md#tsk-adm-010).
 
 <a id="tsk-adm-011"></a>

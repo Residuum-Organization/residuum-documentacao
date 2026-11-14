@@ -1,20 +1,20 @@
 # Residuum — documentação do projeto
 
-**[Documento geral das atividades por módulo e perfil](../../planejamento/modulos/README.md)** — modelo padronizado, testes, proposta de Scrum e matriz de importância; responsáveis e datas a preencher pela equipe.
+**[Documento geral das atividades por módulo e perfil](../modulos-e-tasks/README.md)** — modelo padronizado, testes, proposta de Scrum e matriz de importância; responsáveis e datas a preencher pela equipe.
 
 
 **[Abrir o guia dos documentos e o roteiro da reunião de 13/10/2026](../../README.md)**
 
 | Documento | Acesso | Conteúdo |
 |---|---|---|
-| Visão do projeto | [Problemática e solução](../../visao/visao-do-projeto.md) | Problema, proposta, participantes e limites |
-| Estudo realizado | [Estudos e diagnóstico](../../estudos/estudos-do-projeto.md) | Referências, análise do MVP e evidências |
-| Requisitos | [Especificação MVP V6](../../requisitos/requisitos-mvp-v6.md) | 53 RF, 12 RNF, fluxos e critérios de aceite |
-| Regras de negócio | [Guia das regras](../../requisitos/regras-de-negocio.md) | Regras organizadas por assunto e acesso ao catálogo RN |
-| Tasks de desenvolvimento | [Kanban do time](../../planejamento/kanban-miro.md) e [documentos de apoio](tasks-do-time.md) | 93 cartões no Miro; pacotes ADE e critérios completos em documentos |
-| Stacks | [Tecnologias e integrações](../../tecnologia/stacks-e-integracoes.md) | Base examinada, ferramentas e decisões pendentes |
+| Visão do projeto | [Problemática e solução](../visao/visao-do-projeto.md) | Problema, proposta, participantes e limites |
+| Estudo realizado | [Estudos e diagnóstico](../estudos/estudos-do-projeto.md) | Referências, análise do MVP e evidências |
+| Requisitos | [Especificação MVP V6](../requisitos-mvp-v6.md) | 53 RF, 12 RNF, fluxos e critérios de aceite |
+| Regras de negócio | [Guia das regras](../../01-planejamento/regras/regras-de-negocio.md) | Regras organizadas por assunto e acesso ao catálogo RN |
+| Tasks de desenvolvimento | [Kanban do time](../../08-manutencao/kanban-miro.md) e [documentos de apoio](tasks-do-time.md) | 93 cartões no Miro; pacotes ADE e critérios completos em documentos |
+| Stacks | [Tecnologias e integrações](../../02-arquitetura/stacks-e-integracoes.md) | Base examinada, ferramentas e decisões pendentes |
 
-Para planejar o trabalho após o alinhamento, abra o [roteiro de adequação e reativação](tasks-adequacao-reativacao-mvp-v1.md). Para consultar decisões abertas, abra as [pendências da V6](../../requisitos/requisitos-mvp-v6.md#12-pendências-de-decisão).
+Para planejar o trabalho após o alinhamento, abra o [roteiro de adequação e reativação](tasks-adequacao-reativacao-mvp-v1.md). Para consultar decisões abertas, abra as [pendências da V6](../requisitos-mvp-v6.md#12-pendências-de-decisão).
 
 A documentação distingue comportamento esperado, implementação examinada e demonstrações. A V6 é a referência funcional consolidada; decisões posteriores de experiência estão indicadas no guia. Os documentos históricos permanecem disponíveis para rastreabilidade.
 
@@ -35,7 +35,7 @@ Os requisitos V6 e as tasks V1 permanecem preservados. O roteiro direciona a ade
 
 ## Diagnóstico que fundamenta as entregas
 
-**[Abrir o diagnóstico comparativo do MVP do estágio](../../diagnostico/comparativo-mvp-estagio-v1.md)**
+**[Abrir o diagnóstico comparativo do MVP do estágio](../../00-diagnostico/comparativo-mvp-estagio-v1.md)**
 
 Documento separado para orientar a revisão do código existente: o que reaproveitar, ajustar, construir e verificar antes das próximas entregas. Inclui a comparação dos **53 requisitos funcionais e 12 não funcionais**, **16 achados com evidências** e os resultados das verificações locais.
 
@@ -43,10 +43,10 @@ Para a reunião da equipe, comece pela conclusão, revise os achados prioritári
 
 ## Comece por aqui
 
-1. Leia a [visão do projeto](../../visao/visao-do-projeto.md).
-2. Consulte o [levantamento de requisitos do MVP — V6](../../requisitos/requisitos-mvp-v6.md), documento consolidado atual para validação da equipe.
+1. Leia a [visão do projeto](../visao/visao-do-projeto.md).
+2. Consulte o [levantamento de requisitos do MVP — V6](../requisitos-mvp-v6.md), documento consolidado atual para validação da equipe.
 3. Use a seção **Pendências de decisão** da V6 para identificar as questões ainda abertas.
-4. Leia o [diagnóstico comparativo do MVP do estágio](../../diagnostico/comparativo-mvp-estagio-v1.md), com evidências do frontend/backend, resultados locais e adequações necessárias.
+4. Leia o [diagnóstico comparativo do MVP do estágio](../../00-diagnostico/comparativo-mvp-estagio-v1.md), com evidências do frontend/backend, resultados locais e adequações necessárias.
 5. Use as [tasks direcionadas de adequação e reativação](tasks-adequacao-reativacao-mvp-v1.md) para planejar mudanças no código existente.
 6. Consulte as [tasks de desenvolvimento do MVP V1](tasks-desenvolvimento-mvp-v1.md) para as histórias e os critérios funcionais originais vinculados ao roteiro.
 
@@ -90,13 +90,13 @@ residuum-documentacao/
 
 | Documento | Finalidade |
 |---|---|
-| [Visão do projeto](../../visao/visao-do-projeto.md) | Problema de negócio e solução proposta |
-| [Referências](../../visao/referencias.md) | Fontes e inspirações reunidas pelo projeto |
-| [Requisitos MVP V6](../../requisitos/requisitos-mvp-v6.md) | 53 RF, 12 RNF, regras, critérios BDD, diagramas, comparativo e pendências |
+| [Visão do projeto](../visao/visao-do-projeto.md) | Problema de negócio e solução proposta |
+| [Referências](../visao/referencias.md) | Fontes e inspirações reunidas pelo projeto |
+| [Requisitos MVP V6](../requisitos-mvp-v6.md) | 53 RF, 12 RNF, regras, critérios BDD, diagramas, comparativo e pendências |
 | [Tasks de desenvolvimento MVP V1](tasks-desenvolvimento-mvp-v1.md) | 93 tarefas por perfil: diagnóstico, funcionalidades, qualidade e decisões; cobertura dos 53 RF e 12 RNF |
 | [Tasks de adequação e reativação MVP V1](tasks-adequacao-reativacao-mvp-v1.md) | 27 pacotes direcionados ao código existente: retrabalho, ajustes, construção e validação; rastreabilidade com diagnóstico, requisitos e tasks originais |
-| [Rotina de reuniões](../../planejamento/rotina-de-reunioes.md) | Agenda semanal com Simon e com a equipe tech; horários e informações a confirmar |
-| [Diagnóstico comparativo do MVP do estágio V1](../../diagnostico/comparativo-mvp-estagio-v1.md) | Comparativo dos 53 RF e 12 RNF; 16 achados, build do frontend, testes e reproduções locais do backend |
+| [Rotina de reuniões](../../08-manutencao/rotina-de-reunioes.md) | Agenda semanal com Simon e com a equipe tech; horários e informações a confirmar |
+| [Diagnóstico comparativo do MVP do estágio V1](../../00-diagnostico/comparativo-mvp-estagio-v1.md) | Comparativo dos 53 RF e 12 RNF; 16 achados, build do frontend, testes e reproduções locais do backend |
 | [Levantamento V4](../levantamento-requisitos-v4.md) | Catálogo anterior e priorização |
 | [Levantamento V5](../levantamento-requisitos-v5.md) | Revisão anterior da presença por GPS |
 | [Backlog V2](../backlog-v2.md) | Prioridades e entregas declaradas no planejamento anterior |
