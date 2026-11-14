@@ -3,7 +3,7 @@
 [Voltar ao protótipo](../prototipo-figcraft.md)
 
 > **Estado:** revisão · **Dono:** UX · **Atualizado em:** 13/11/2026
-> **Arquivo:** `residuum-v7.figcraft`, página **2 · Usuário (390 px)** · **Tamanho das telas:** celular, 390 × 844
+> **Arquivo:** `residuum-v8.figcraft`, página **2 · Celular · 390 px** (tablet na página 3 e computador na 4) · **Tamanho das telas:** celular, 390 × 844
 > **Fontes:** `indice-correcoes-usuario.md` e `revisao-geral.md` do FigCraft; as regras vêm das decisões de 11 e 12/11/2026.
 
 ## Resumo

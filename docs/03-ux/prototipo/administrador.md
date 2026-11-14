@@ -3,7 +3,7 @@
 [Voltar ao protótipo](../prototipo-figcraft.md)
 
 > **Estado:** revisão · **Dono:** UX · **Atualizado em:** 13/11/2026
-> **Arquivo:** `residuum-v7.figcraft`, página **5 · Administrador (1440 px)** · **Tamanho das telas:** computador, 1440 × 900
+> **Arquivo:** `residuum-v8.figcraft`, página **4 · Computador · 1440 px** (módulos "Administrador") · **Tamanho das telas:** computador, 1440 × 900
 > **Fontes:** `indice-correcoes-administrador.md` e `revisao-geral.md` do FigCraft; regras das decisões de 11 e 12/11/2026.
 
 ## Resumo

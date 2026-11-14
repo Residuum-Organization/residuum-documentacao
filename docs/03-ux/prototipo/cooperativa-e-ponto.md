@@ -3,7 +3,7 @@
 [Voltar ao protótipo](../prototipo-figcraft.md)
 
 > **Estado:** revisão · **Dono:** UX · **Atualizado em:** 13/11/2026
-> **Arquivo:** `residuum-v7.figcraft`, página **4 · Cooperativa e Ponto (1440 e 390 px)** · **Tamanhos:** computador (1440 × 900) e celular (390 × 844)
+> **Arquivo:** `residuum-v8.figcraft`, páginas **4 · Computador · 1440 px** (telas de computador) e **2 · Celular · 390 px** (telas de celular) · **Tamanhos:** computador (1440 × 900) e celular (390 × 844)
 > **Fontes:** `indice-correcoes-cooperativa.md` e `revisao-geral.md` do FigCraft; regras das decisões de 11 e 12/11/2026.
 
 ## Resumo

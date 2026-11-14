@@ -1,7 +1,7 @@
 # Entrega de design do Residuum
 
 > **Estado:** revisão · **Dono:** UX · **Atualizado em:** 13/11/2026
-> **Arquivo de design:** `residuum-v7.figcraft`, feito no **FigCraft** (não no Figma). Os desenhos são exportados em **SVG** para o Figma.
+> **Arquivo de design:** `residuum-v8.figcraft`, feito no **FigCraft** (não no Figma). Os desenhos são exportados em **SVG** para o Figma.
 > **Fontes:** o próprio arquivo (reorganizado e conferido em 13/11/2026), `revisao-geral.md`, os três índices de correções e o diário do FigCraft, em `tmp/figcraft/`.
 
 ## 1. O que está sendo entregue
@@ -81,19 +81,20 @@ A comparação de azul, verde, logo, menu e avisos está na página **Para decid
 
 O arquivo tem **6 páginas**. Em cada página de perfil o desenho segue **sempre a mesma divisão**:
 
-1. **Faixa rosa, no topo: ANTES.** Todas as capturas do app atual, por módulo.
-2. **Faixa verde, embaixo: DEPOIS.** O novo desenho, clicável, por módulo.
-3. **Nota abaixo de cada tela nova:** erro, por quê (a lei de UX) e como fica.
+1. **Faixa rosa, em cima: ANTIGO.** As capturas do app atual, por perfil e módulo, **cada uma com a nota logo abaixo** (erro, por quê, como fica).
+2. **Faixa verde, embaixo: NOVO.** O novo desenho, clicável, por perfil e módulo.
 
-Os espaços vazios na zona ANTES são **telas novas**, que não existem no app atual. Cada módulo ocupa a **mesma coluna** nas duas zonas, então o antes fica em cima do depois.
+Telas sem captura no antigo são **telas novas**. O tablet não tem antigo: o app atual não tem layout de tablet.
+
+Desde 13/11 (arquivo `residuum-v8.figcraft`) as páginas se separam **por tamanho de tela**:
 
 | # | Página | Conteúdo |
 |---|---|---|
-| 1 | Comece aqui | Três cartões, um por perfil |
-| 2 | Usuário (390 px) | 31 telas, 6 módulos |
-| 3 | Tokens e componentes | Cores, tipografia e peças |
-| 4 | Cooperativa e Ponto (1440 e 390 px) | 30 telas, 7 módulos |
-| 5 | Administrador (1440 px) | 21 telas, 6 módulos |
+| 1 | Comece aqui | Três cartões: celular, tablet e computador |
+| 2 | Celular · 390 px | Usuário (31), responsável (5) e cooperativa (8) no celular: 44 telas |
+| 3 | Tablet · 768 px | As mesmas 44 telas em 768 × 1024 |
+| 4 | Computador · 1440 px | 38 telas nativas (responsável 10, cooperativa 7, administrador 21) e as 44 do celular em 1440 × 900 |
+| 5 | Tokens e componentes | Cores, tipografia e peças |
 | 6 | Para decidir (comparar) | 5 quadros de comparação |
 
 **Nomes dos quadros:** `ANTES · USU · U05 · Início`, `DEPOIS · USU · U05 · Início`, `NOTA · USU · U05 · Correções`. As siglas são **USU** (usuário), **PONTO**, **COOP** e **ADM**.
@@ -208,20 +209,20 @@ Os diagramas dos caminhos de cada perfil estão nos documentos por perfil.
 
 ## 8. Como abrir, apresentar e exportar
 
-1. Abra `tmp/figcraft/residuum-v7.figcraft` no aplicativo **FigCraft**. A pasta `tmp/` **não está no repositório**; ao trocar de computador, leve-a em ZIP.
+1. Abra `tmp/figcraft/residuum-v8.figcraft` no aplicativo **FigCraft**. A pasta `tmp/` **não está no repositório**; ao trocar de computador, leve-a em ZIP.
 2. Comece pela página **1 · Comece aqui**, entre no **modo apresentação** e siga os 12 fluxos. As ligações foram conferidas por consulta, mas **o modo apresentação ainda não foi testado com cliques reais**.
 3. Para o Figma: selecione os quadros **DEPOIS** e use **Exportar**, formato **SVG**. O texto sai como contorno (não editável); para manter o texto editável, exporte com texto como `<text>` e instale a fonte **Inter**. No Figma, arraste os `.svg` para a área de trabalho. `[VERIFICAR]` a importação não foi testada.
 4. O SVG leva só o **desenho**: não leva ligações de clique, componentes nem variáveis. Os SVG que existem em `tmp/figcraft/svg*` são de 12/11 (v6): **exporte de novo**.
 
-Arquivos de apoio em `tmp/figcraft/`: `residuum-v7-antes-da-reorganizacao.figcraft` (cópia anterior), `residuum-v6.figcraft`, `revisao-geral.md`, três índices de correções, `logo/`, `export/` e `screenshots/`. As **imagens** deste documento estão em [prototipo/img](prototipo/img/).
+Arquivos de apoio em `tmp/figcraft/`: `residuum-v7.figcraft` (organização anterior, por perfil), `residuum-v7-antes-da-reorganizacao.figcraft`, `residuum-v6.figcraft`, `revisao-geral.md`, três índices de correções, `logo/`, `export/` e `screenshots/`. As **imagens** deste documento estão em [prototipo/img](prototipo/img/).
 
 ## 9. Estado da entrega e limites
 
 | Item | Situação |
 |---|---|
-| Estrutura (antes em cima, depois embaixo, por módulo) | ✅ Feita em 13/11 nos três perfis |
+| Estrutura (páginas por tamanho de tela; antigo com notas em cima, novo embaixo) | ✅ Feita em 13/11 (v8) |
 | Telas e fluxos | ✅ 82 telas e 12 fluxos preservados (as ligações não mudaram de lugar) |
-| Erro, por quê e como fica | ✅ Em uma nota abaixo de cada tela, e não separada em "erro junto do antes" |
+| Erro, por quê e como fica | ✅ Em uma nota logo abaixo de cada captura do antigo |
 | Três larguras por tela (celular, tablet, computador) | ✅ **44 telas de celular** (31 do Usuário e 13 de Responsável e Cooperativa) têm tablet (768 × 1024) e computador (1440 × 900), com a regra de largura máxima. 🟡 As **52 telas de computador** ainda não têm tablet nem celular: precisam de desenho próprio (seção 10) |
 | Modo apresentação | ⬜ Não testado com cliques reais |
 | Estados de vazio, erro e carregando | ⬜ Só o painel do ponto tem "carregando" |
@@ -236,8 +237,9 @@ As decisões de design em aberto estão em [decisões pendentes](../00-diagnosti
 
 As **44 telas de celular** (31 do Usuário e 13 de Responsável e Cooperativa no celular) agora existem em **três tamanhos**: celular (o desenho original), **tablet (768 × 1024)** e **computador (1440 × 900)**. Os quadros novos têm o mesmo nome do original, com o sufixo `TABLET 768×1024` ou `COMPUTADOR 1440×900`.
 
-- **Usuário:** na página **2 · Usuário**, depois do módulo 6, sob a faixa azul **Responsivo** (as 4 primeiras telas são o piloto; as demais continuam abaixo).
-- **Responsável e Cooperativa no celular:** na página **4 · Cooperativa e Ponto**, no fim, sob a faixa azul **Responsivo**.
+- **Tablet:** na página **3 · Tablet · 768 px**, por perfil e módulo.
+- **Computador:** na página **4 · Computador · 1440 px**, na última faixa verde ("telas do celular em 1440 px").
+- **Limite:** os botões dessas versões ainda levam às telas do celular, que ficam em outra página; pode não funcionar na apresentação.
 
 ![Exemplo: telas do Usuário em tablet e computador](prototipo/img/piloto-responsivo.png)
 
